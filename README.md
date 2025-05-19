@@ -1,2 +1,2 @@
 # doc
-The entry point for the documentation
+The entry point for the organization documentation
