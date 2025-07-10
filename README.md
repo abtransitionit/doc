@@ -1,6 +1,9 @@
-# doc
-Entry point for the organization documentations:
-- End users
-- IT Users: Developer, Devops, SRE, Contributor
-- CS Users: contributor, Sponsor
-- Other
+# 📚 Documentation
+
+
+| **Concern** | **Description**                             |
+|---------------|---------------------------------------------------|
+| **End Users** | - Customer Support  <br> - Corporate Services      |
+| **IT Users**  | - Developers  <br> - DevOps  <br> - SRE (Site Reliability Engineers)  <br> - Contributors |
+| **CS Users**  | - Contributors  <br> - Sponsors                   |
+| **Other Users** | - (Miscellaneous or to be defined)              |
