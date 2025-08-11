@@ -3,7 +3,9 @@
 
 | **Concern** | **Description**                             |
 |---------------|---------------------------------------------------|
-| **End Users** | - Customer Support  <br> - Corporate Services      |
-| **IT Users**  | - Developers  <br> - DevOps  <br> - SRE (Site Reliability Engineers)  <br> - Code foundation Contributors |
-| **CS Users**  | - Contributors  <br> - Sponsors                   |
-| **Other Users** | - (Miscellaneous or to be defined)              |
+| **End Users** | - Customer Support  <br> - Corporate Services|
+| **IT Users**  | - **Devops**/**SRE**<br> - Developper  <br>|
+| **CS Users**  | - **C**ontributors  <br> - **S**ponsors |
+| **Other Users** | - (Miscellaneous or to be defined) |
+
+* (**S**ite **R**eliability **E**ngineers)  
