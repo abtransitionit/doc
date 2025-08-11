@@ -2,10 +2,11 @@
 
 
 | **Concern** | **Description**                             |
-|---------------|---------------------------------------------------|
-| **End Users** | - Customer Support  <br> - Corporate Services|
-| **IT Users**  | - **Devops**/**SRE**<br> - Developper  <br>|
-| **CS Users**  | - **C**ontributors  <br> - **S**ponsors |
-| **Other Users** | - (Miscellaneous or to be defined) |
+|---------------:|---------------------------------------------------|
+| **End User** | - Customer Support  <br> - Corporate Services|
+| **IT User**  | - Devops/SRE<br> - Developper  <br>|
+| **CS User**  | - **C**ontributor  <br> - **S**ponsor |
 
 * (**S**ite **R**eliability **E**ngineers)  
+---
+
