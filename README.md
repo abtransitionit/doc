@@ -1,5 +1,5 @@
 # doc
-This **repository** is an **entry point** to the documentation for the organization’s resources.
+This Git **repository** is both the **entry point** ans the **source of truth** for the documentation of the organization’s resources.
 
 # 📚 Documentation
 
