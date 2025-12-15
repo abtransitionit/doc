@@ -1,11 +1,9 @@
 # doc
-This Git **repository** is both the **entry point** ans the **source of truth** for the documentation of the organization’s resources.
+This Git **repository** is both the **entry point** and the **source of truth** for the documentation of the organization’s resources.
 
 
-
-
-## Documentation by Audience
-This documentation is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization including business users, development teams, operations teams, and governance stakeholders:
+# Documentation by Audience
+The documentation is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization including business users, development teams, operations teams, and governance stakeholders:
   - from business idea to end-user needs
   - from end-user needs to business design
   - from business design to system requirements and technical design
@@ -13,28 +11,7 @@ This documentation is designed to cover any audiences **involved** in the **life
   - from development and implementation to production operations and support
   - from production operations and support to governance loopback
 
-
-Absolutely! Here's a **production-grade, smooth, and accurate** rewrite of that introductory section:
-
----
-
-This documentation is designed to cover **all audiences involved in the lifecycle of IT projects within the organization**, including business users, development teams, operations, and governance stakeholders:
-
-* from initial business requirements and design
-* through development and implementation
-* into production operations and support
-* and up to governance, compliance, and oversight
-
----
-
-This keeps it **clear, professional, and readable**, while reflecting the **full lifecycle** of IT projects.
-
-If you want, I can also **integrate it directly with your table** for a fully polished section.
-
-
-
-### Documentation by Audience
-
+The documentation include
 
 |**Audience**|**Documentation Scope / Deliverables**|
 |-|-|
@@ -74,22 +51,6 @@ This table provides **reference translations for commonly used IT documentation 
 |Decision record (ADR)|Registre de décisions    |Traceable record of important technical or architectural decisions     |
 |Controlled vocabulary|Vocabulaire contrôlé     |Standardized set of terms used across documentation  |
 |Corporate Services|Service interne|services provided within the organization to support its internal operations, not services delivered to external customers.
-
-
-
-
-
-
-
-
-
-# Howto
-## Create a repository from `gotplrepo`
-ref. [this](https://github.com/abtransitionit/gotplrepo)
-
-
-
-
 
 
 
