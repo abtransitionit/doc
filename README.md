@@ -57,9 +57,28 @@ This table provides **reference translations for commonly used IT documentation 
 
 
 
-# Example of projects
+# Example
+## Example of projects
 
 |name|type|extension/description|comment
 |-|-|-|-|
 |kbe|acro|**K**u**b**ernetes **E**asy|<br>**create** K8s cluster on demand<br>**secure** ak8s cluster<br>make an existing k8s cluster **observable**|
 |kind|acro|**K**ubernetes **In** **D**ocker|**create** kind cluster on demand|
+
+
+## Example of definitions and concepts
+|name|type|extension/description|comment
+|-|-|-|-|
+|acid|acro|**A**tomic, **C**onsistent, **I**solated, **D**urable| relatiobnal DB concept
+| observability | concept | Understand a system state from its outputs | Includes metrics, logs, dashboard, alert |
+| security | concept | Allow a system to be 24/7 accessible and resilient by addressing known points of failure | Includes access controls, root access, backups recovery, protection against attacks, bugs reolution, CVE updates, ...|
+| security | concept | Protect a system by addressing known points of failure | Includes access controls, root access management, safe defaults, backups, recovery procedures, and protection against attacks |
+
+**ACID**
+- Actions are **atomic**: done entirely or not at all.  
+- System remains **consistent** after any action or failure.  
+- Actions are **isolated**: one sequence does not interfere with others.  
+- Effects are **durable**: once completed, changes persist or can be safely rolled back.
+- **ACID** principles can be applied to **CLI commands, API operations, and system workflows**.
+
+
