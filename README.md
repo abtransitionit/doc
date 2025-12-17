@@ -57,3 +57,9 @@ This table provides **reference translations for commonly used IT documentation 
 
 
 
+# Example of projects
+
+|name|type|extension/description|comment
+|-|-|-|-|
+|kbe|acro|**K**u**b**ernetes **E**asy|<br>**create** K8s cluster on demand<br>**secure** ak8s cluster<br>make an existing k8s cluster **observable**|
+|kind|acro|**K**ubernetes **In** **D**ocker|**create** kind cluster on demand|
