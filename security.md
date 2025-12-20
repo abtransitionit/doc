@@ -1,7 +1,7 @@
 [//]: #(Reference)
 [README]:  ./README.md
 
-# [<-][README]Definition
+# [←][README]Definition
 
 Security is the practice of protecting and safeguarding **digital systems**, resources, and data. It ensures a balance between **Prevention** and **Resilience**.
 

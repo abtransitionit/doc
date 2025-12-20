@@ -1,7 +1,7 @@
 [//]: #(Reference)
 [README]:  ./README.md
 
-# [<-][README]Kubernetes
+# [←][README]Kubernetes
 
 * aka. **cluster Kubernetes**
 * une **plateforme d’orchestration de conteneurs**
