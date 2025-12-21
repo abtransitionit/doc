@@ -102,7 +102,7 @@ Here is the same table, **only reordered by the “English Term” column (A–Z
 - around type of users, readers, stakeholders
 
 ## Questions around shared terms
-**Terms** historically are dedicated to one domain and can or become then **de facto** **generalized** or **specialized** (as definitions, principles, source of truth)
+Historically, **terms**, are dedicated to one domain and often get **generalized** or **specialized**
 
 **ACID** and relational database
 - Actions are **atomic**: done entirely or not at all.  
@@ -113,9 +113,7 @@ Here is the same table, **only reordered by the “English Term” column (A–Z
 
 
 
-### CRUD and relational databases
-
-
+**CRUD** and relational databases
 
 CRUD originates from **data persistence and record management** in relational databases, where it describes the **lifecycle of stored entities**.
 * **Create**: add a new persistent entity
