@@ -104,25 +104,29 @@ Here is the same table, **only reordered by the “English Term” column (A–Z
 ## Questions around shared terms
 Historically, **terms**, are dedicated to one domain and often get **generalized** or **specialized**
 
+### Example 1: `ACID`
+
 **ACID** and relational database
 - Actions are **atomic**: done entirely or not at all.  
 - System remains **consistent** after any action or failure.  
 - Actions are **isolated**: one sequence does not interfere with others.  
 - Effects are **durable**: once completed, changes persist or can be safely rolled back.
-- **ACID** principles can now be applied to **CLI commands, API operations, CICD, and system workflows** that are **backend** by a DB or not.
+
+**ACID** principles can now be applied to **CLI commands, API operations, CICD, and system workflows** that are **backend** by a DB or not.
 
 
+### Example 2: `CRUD`
 
-**CRUD** and relational databases
 
 CRUD originates from **data persistence and record management** in relational databases, where it describes the **lifecycle of stored entities**.
 * **Create**: add a new persistent entity
 * **Read**: retrieve or inspect an existing entity (now is inspect, get)
 * **Update** — modify, uopdate the state of an entity
 * **Delete** — remove an entity from persistence
-- **CRUD** principles can be applied to **CLI commands, API operations, CICD, and system workflows** that are **backend** by a DB or not.
-* **CRUD** is now used as a **generic action model** to describe how any **resource or stateful object** can be managed via **CLI commands, API operations, CI/CD pipelines, and system workflows**, whether they are **backed by a database or not**.
 
+**CRUD** principles can now be applied or used as a **generic action model** to describe how any **resource or stateful object** can be managed via 
+  - **CLI commands**
+  - `API` operations
+  - `CI/CD`
+  -  and **system workflows** that are **backend** by a DB or not.
 
-**CRUD** and relational database
-* this terms originates from data persistence and record management in relational databases, where it describes the lifecycle of stored entities.
