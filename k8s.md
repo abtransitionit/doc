@@ -3,11 +3,10 @@
 
 # [←][README]Kubernetes
 
-* aka. **cluster Kubernetes**
+* aka. **Kubernetes cluster**
 * une **plateforme d’orchestration de conteneurs**
-* un système qui maintient en permanence **l’état désiré** des **applications** containerisées.
+* un système qui se propose de maintenir en permanence **l’état désiré** des **applications** containerisées.
 * écrite principalement en **Go**
-* basée sur un **modèle déclaratif**
 
 Rôle :
 
