@@ -13,5 +13,5 @@
 # Terminology
 
 |name|type|extension|comment
-|-|-|-|today-|
+|-|-|-|-|
 |Linux|acro|**Linu**s torvald Uni**x**|ex: `ls`, `print`, `aws`|
