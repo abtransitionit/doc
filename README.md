@@ -49,7 +49,7 @@ An example of a table that document **names/concepts/topics/projects**. This tab
 |-|-|-|-|-|
 |acid|acro||**A**tomic, **C**onsistent, **I**solated, **D**urable|historically a concept of relational DB
 |kbe|acro||**K**u**b**ernetes **E**asy|<br>**create** K8s cluster on demand<br>**secure** ak8s cluster<br>make an existing k8s cluster **observable**|
-|kubernetes|Tool|
+|kubernetes|Platform||manages containerized app| Self healing 
 |kind|acro||**K**ubernetes **In** **D**ocker|**create** kind cluster on demand|
 |observability|concept||Understand a system state from its outputs|Includes metrics, logs, dashboard, alert|
 |security|concept||Allow a system to be 24/7 accessible and resilient by addressing known points of failure|Includes access controls, root access, backups recovery, protection against attacks, bugs reolution, CVE updates, ...|
