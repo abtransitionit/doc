@@ -43,8 +43,8 @@ The documentation include
 
 
 
-# Example
-An example of a table that document **names/concepts/topics/projects**. This table can be spit in any convenient way, to adapt to the audience.
+# Example 01
+An example of a table that document **names/terms/concepts/topics/projects**. This table can be spit in any convenient way, to adapt to different **audiences**.
 
 |name|name type|parent domain|extension/description|comment
 |-|-|-|-|-|
@@ -56,7 +56,7 @@ An example of a table that document **names/concepts/topics/projects**. This tab
 |security|concept||Allow a system to be 24/7 accessible and resilient by addressing known points of failure|Includes access controls, root access, backups recovery, protection against attacks, bugs reolution, CVE updates, ...|
 |security|concept||Protect a system by addressing known points of failure|Includes access controls, root access management, safe defaults, backups, recovery procedures, and protection against attacks|
 
-# Full Example
+# Example 02
 |name|name type|parent domain|extension/description|comment
 |-|-|-|-|-|
 |Kubernets|Concept|||[Whatis][doc.K8s]
@@ -69,11 +69,7 @@ An example of a table that document **names/concepts/topics/projects**. This tab
 
 # Terminology (English ↔ French)
 
-This table provides **reference translations for commonly used IT documentation terms** on this page, and a short explanations to ensure a shared understanding across audiences. 
-
-
-
-Here is the same table, **only reordered by the “English Term” column (A–Z)**, with **no other changes**:
+This table provides a translation and a comment of **reference terms** that are commonly used in IT documentation to ensure a shared understanding across **audiences**.
 
 | **English Term**           | **French Equivalent**       | **Notes / Usage**                                                                                                           |
 | -------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
