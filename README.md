@@ -5,25 +5,26 @@
 
 
 # doc
-This Git **repository** is both the **entry point** and the **source of truth** for the documentation of the organization’s resources.
+This Git **repository** is both
+  - an **entry point**
+  - the **source of truth** for the documentation of the organization’s resources.
 
 
 # Documentation by Audience
-The documentation is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization.
-
-The documentation is designed for 
-  - business users
-  - development teams
-  - operations teams
-  - governance stakeholders
-
-The documentation aims to document
-  - from business idea to end-user needs
-  - from end-user needs to business design
-  - from business design to needed resources (system requirements, technical design, ...)
-  - from resource and/or system requirements and design to development and implementation
-  - from development and implementation to production operations and support
-  - from production operations and support to governance loopback
+The documentation:
+  - is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization.
+  - is designed for 
+    - business users
+    - development teams
+    - operations teams
+    - governance stakeholders
+  - aims to document from 
+    - business idea to end-user needs
+    - end-user needs to business design
+    - business design to needed resources (system requirements, technical design, ...)
+    - resource and/or system requirements and design to development and implementation
+    - development and implementation to production operations and support
+    - production operations and support to governance loopback
 
 The documentation include
 
