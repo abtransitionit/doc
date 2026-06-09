@@ -1,17 +1,54 @@
 [//]: #(Reference)
+[Top]: #
 [doc.K8s]:  ./k8s.md
 [doc.Security]:  ./security.md
 [doc.Linux]:  ./Linux.md
 
 
 # doc
-This Git **repository** is both
-  - an **entry point**
-  - the **source of truth** for the documentation of the organization’s resources.
 
 
-# Documentation by Audience
-The documentation:
+# [↑][Top] What
+- a git repository
+- an entry point
+- a **source of truth** for/of the organization’s resources documentation.
+
+----
+
+----
+
+# [↑][Top] Terminology (English ↔ French)
+
+This table provides a translation and a comment of **terms** that are commonly used in IT documentation to ensure a shared understanding across **audiences**.
+
+| **English Term**           | **French Equivalent**       | **Notes / Usage**                                                                                                           |
+| -------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Architecture documentation | Dossier d’architecture      | Logical and technical architecture                                                                                          |
+| Architecture documentation | Dossier d’architecture      | Description of system structure, components, and interactions                                                               |
+| Controlled vocabulary      | Vocabulaire contrôlé        | Shared and standardized terms                                                                                               |
+| Controlled vocabulary      | Vocabulaire contrôlé        | Standardized set of terms used across documentation                                                                         |
+| Corporate Services         | Service interne             | services provided within the organization to support its internal operations, not services delivered to external customers. |
+| Decision record            | Registre de décisions (ADR) | Architecture / project decisions                                                                                            |
+| Decision record (ADR)      | Registre de décisions       | Traceable record of important technical or architectural decisions                                                          |
+| Deployment guide           | Guide de déploiement        | Install, upgrade, rollback                                                                                                  |
+| Deployment guide           | Guide de déploiement        | Procedures for installing, upgrading, or rolling back a system                                                              |
+| Design specification       | Spécification de conception | Detailed technical design                                                                                                   |
+| End User                   | Utilisateur final           | Person who uses the application in daily operations                                                                         |
+| Governance                 | Gouvernance                 | Decision-making, oversight, and control of the system                                                                       |
+| Operational documentation  | Documents d’exploitation    | Production, run, and support                                                                                                |
+| Operational documentation  | Documents d’exploitation    | Documentation required to run and support the system in production                                                          |
+| Requirements               | Exigences / Besoins         | Often split into *functional* and *technical*                                                                               |
+| Requirements               | Exigences / Besoins         | Functional or technical needs the system must satisfy                                                                       |
+| Runbook                    | Procédure opérationnelle    | Step-by-step operational actions                                                                                            |
+| Runbook                    | Procédure opérationnelle    | Step-by-step instructions for operational tasks                                                                             |
+| Stakeholder                | Partie prenante             | Any person or entity with an interest in the system (business, sponsor, regulator, etc.)                                    |
+
+
+
+----
+
+# [↑][Top] Purpose: 
+Documentation by Audience
   - is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization.
   - is designed for 
     - business users
@@ -42,8 +79,9 @@ The documentation include
 
 
 
+----
 
-# Example 01
+# [↑][Top] Example 01
 An example of a table that document **names/terms/concepts/topics/projects**. This table can be spit in any convenient way, to adapt to different **audiences**.
 
 |name|name type|parent domain|extension/description|comment
@@ -56,7 +94,9 @@ An example of a table that document **names/terms/concepts/topics/projects**. Th
 |security|concept||Allow a system to be 24/7 accessible and resilient by addressing known points of failure|Includes access controls, root access, backups recovery, protection against attacks, bugs reolution, CVE updates, ...|
 |security|concept||Protect a system by addressing known points of failure|Includes access controls, root access management, safe defaults, backups, recovery procedures, and protection against attacks|
 
-# Example 02
+----
+
+# [↑][Top] Example 02
 |name|name type|parent domain|extension/description|comment
 |-|-|-|-|-|
 |Kubernets|Concept|||[Whatis][doc.K8s]
@@ -67,35 +107,10 @@ An example of a table that document **names/terms/concepts/topics/projects**. Th
 
 
 
-# Terminology (English ↔ French)
 
-This table provides a translation and a comment of **reference terms** that are commonly used in IT documentation to ensure a shared understanding across **audiences**.
+----
 
-| **English Term**           | **French Equivalent**       | **Notes / Usage**                                                                                                           |
-| -------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Architecture documentation | Dossier d’architecture      | Logical and technical architecture                                                                                          |
-| Architecture documentation | Dossier d’architecture      | Description of system structure, components, and interactions                                                               |
-| Controlled vocabulary      | Vocabulaire contrôlé        | Shared and standardized terms                                                                                               |
-| Controlled vocabulary      | Vocabulaire contrôlé        | Standardized set of terms used across documentation                                                                         |
-| Corporate Services         | Service interne             | services provided within the organization to support its internal operations, not services delivered to external customers. |
-| Decision record            | Registre de décisions (ADR) | Architecture / project decisions                                                                                            |
-| Decision record (ADR)      | Registre de décisions       | Traceable record of important technical or architectural decisions                                                          |
-| Deployment guide           | Guide de déploiement        | Install, upgrade, rollback                                                                                                  |
-| Deployment guide           | Guide de déploiement        | Procedures for installing, upgrading, or rolling back a system                                                              |
-| Design specification       | Spécification de conception | Detailed technical design                                                                                                   |
-| End User                   | Utilisateur final           | Person who uses the application in daily operations                                                                         |
-| Governance                 | Gouvernance                 | Decision-making, oversight, and control of the system                                                                       |
-| Operational documentation  | Documents d’exploitation    | Production, run, and support                                                                                                |
-| Operational documentation  | Documents d’exploitation    | Documentation required to run and support the system in production                                                          |
-| Requirements               | Exigences / Besoins         | Often split into *functional* and *technical*                                                                               |
-| Requirements               | Exigences / Besoins         | Functional or technical needs the system must satisfy                                                                       |
-| Runbook                    | Procédure opérationnelle    | Step-by-step operational actions                                                                                            |
-| Runbook                    | Procédure opérationnelle    | Step-by-step instructions for operational tasks                                                                             |
-| Stakeholder                | Partie prenante             | Any person or entity with an interest in the system (business, sponsor, regulator, etc.)                                    |
-
-
-
-# Todo
+# [↑][Top] Todo
 ## Questions around documentation
 **how to organize the documentation**
 - around type of users, readers, stakeholders
