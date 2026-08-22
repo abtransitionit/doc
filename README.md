@@ -84,7 +84,7 @@ For example:
 | **System lifecycle** | Business and user needs ➔ Requirements ➔ Business design ➔ Architecture ➔ Technical design ➔ Development ➔ Testing and validation ➔ Deployment ➔ Production operation ➔ Monitoring and support ➔ Maintenance and evolution ➔ Continuous improvement ➔ Retirement |
 
 
-## Project lifecycle stages
+## Stages for a Project lifecycle
 
 | Stage | Purpose | Examples |
 | - | - | - |
@@ -98,7 +98,7 @@ For example:
 | **Project closure** | Formally complete the project | Acceptance, closure report, final documentation, handover |
 | **Lessons learned** | Capture experience and identify improvements | What worked, what did not work, recommendations, improvement actions |
 
-## System lifecycle stages
+## Stages for a System lifecycle
 
 | Stage | Purpose | Examples |
 | - | - | - |
