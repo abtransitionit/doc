@@ -60,7 +60,7 @@ For example:
 | **Term** | **Definition / Usage** |
 | - | - |
 | Audience | Person or group (teams, stakeholder) expected to use, review, or contribute to a document. |
-| Document | Structured information created, maintained, and shared to communicate or record knowledge, requirements, decisions, procedures, or other information. It may serve and be relevant to multiple audiences. |
+| Document | Structured information created, maintained, and shared to communicate or record knowledge, requirements, decisions, procedures, or other information. It may be relevant to multiple audiences. |
 | Architecture documentation | Documentation describing the logical and technical architecture, including system structure, components, and interactions. |
 | Controlled vocabulary | A shared and standardized set of terms used consistently across documentation. |
 | Internal Services | Services provided within the organization to support its internal operations, rather than services delivered to external customers. |
