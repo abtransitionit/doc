@@ -181,7 +181,7 @@ Each document should identify its intended audience. Typical audiences could inc
 | Audience | Description | Typical Documentation |
 | - | - | - |
 | **End Users** | Person who uses a system or service to perform daily activities. | <li>User manuals <li>user procedures <li>FAQs |
-| **Business users** | Person or group concerned with business needs, processes, and outcomes. | Business requirements, process documentation <li>project overview |
+| **Business users** | Person or group concerned with business needs, processes, and outcomes. |<li>Business requirements <li>process documentation <li>project overview |
 | **Engineering and development teams** | Team responsible for designing, developing, and implementing systems. | <li>Requirements, <li>architecture documentation <li>design specifications <li>development guides |
 | **IT Operations teams** | Team responsible for deploying, operating, monitoring, and supporting systems. | <li>Operational documentation <li>deployment guides <li>runbooks <li>incident procedures |
 | **Governance and stakeholders** | Person or group responsible for oversight, compliance, risk, and decision-making. | <li>Decision records <li>compliance documentation <li>risk documentation <li>governance records |
@@ -192,9 +192,9 @@ Each document should identify its intended audience. Typical audiences could inc
 
 A document may have more than one audience.
 
-For example:**An architecture document may** 
+For example:**An architecture document may:** 
 - primarily target engineering teams 
-- also being relevant to 
+- be relevant to:
   - operations, 
   - governance, 
   - other stakeholders.
