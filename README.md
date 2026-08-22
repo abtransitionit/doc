@@ -176,7 +176,7 @@ This structure provides a natural relationship between documents and makes it ea
 
 ## Secondary dimension: audience
 
-Each document should identify its intended audience. Typical audiences include:
+Each document should identify its intended audience. Typical audiences could include:
 
 | Audience | Description | Typical Documentation |
 | - | - | - |
