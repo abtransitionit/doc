@@ -1,8 +1,8 @@
 [//]: #(Reference)
 [Top]: #
-[doc.K8s]:  ./k8s.md
-[doc.Security]:  ./security.md
-[doc.Linux]:  ./Linux.md
+[k8s whatis]:      ./k8s.md
+[Security whatis]: ./security.md
+[Linux whatis]:    ./Linux.md
 
 
 # doc
@@ -76,7 +76,7 @@ For example:
 | System | A whole or part of a framework, service, application, tool, ... |
 
 
-# Project and System Lifecycles
+# [↑][Top] Project and System Lifecycles
 
 | lifecycle| stages|
 |-|-|
@@ -84,7 +84,7 @@ For example:
 | **System lifecycle** | Business and user needs ➔ Requirements ➔ Business design ➔ Architecture ➔ Technical design ➔ Development ➔ Testing and validation ➔ Deployment ➔ Production operation ➔ Monitoring and support ➔ Maintenance and evolution ➔ Continuous improvement ➔ Retirement |
 
 
-## Stages for a Project lifecycle
+## [↑][Top] Stages for a Project lifecycle
 
 | Stage | Purpose | Examples |
 | - | - | - |
@@ -98,7 +98,7 @@ For example:
 | **Project closure** | Formally complete the project | Acceptance, closure report, final documentation, handover |
 | **Lessons learned** | Capture experience and identify improvements | What worked, what did not work, recommendations, improvement actions |
 
-## Stages for a System lifecycle
+## [↑][Top] Stages for a System lifecycle
 
 | Stage | Purpose | Examples |
 | - | - | - |
@@ -116,7 +116,7 @@ For example:
 | **Continuous improvement** | Improve the system, its operation, and its supporting processes | Performance improvements, automation, optimization, process improvements |
 | **Retirement** | Safely remove the system from service | Decommissioning, data retention, migration, shutdown |
 
-# Cross-cutting concerns
+## [↑][Top] Cross-cutting concerns
 
 
 | Concern | Purpose | Examples |
@@ -158,8 +158,24 @@ For example, **One architecture document**
 
 # Documentation's organization
 
+- Document should have properties (aka. meta-data).
 - Documentation should be organized primarily around the **lifecycle of systems and projects**, while also being classified by **audience**.
 - A document may serve multiple audiences and may therefore be relevant to several teams or stakeholders.
+
+## Document properties
+
+Documents could be associated with the following attributes:
+
+| Attribute | Purpose | Example |
+|-|-|-|
+| **Lifecycle stage** | Identifies the document's position in the system or project lifecycle. | Planning, Requirements, Design, Build, Deployment, Operation, Retirement |
+| **Audience** | Identifies who uses or reviews the document. | Architect, Developer, Operations, End user |
+| **System / Project** | Identifies the system, service, product, or project concerned. | CRM, Kubernetes Platform, Project Alpha |
+| **Domain** | Identifies the relevant business or technical domain. | Security, Networking, Finance, Data |
+| **Document type** | Identifies the nature of the document. | Requirement, ADR, Architecture, Runbook, User guide |
+| **Owner** | Identifies who is responsible for maintaining the document. | IT Operations, Security Team, Project Manager |
+| **Status** | Identifies the document's current state. | Draft, Active, Deprecated, Archived |
+
 
 ## Primary dimension: lifecycle
 
@@ -176,18 +192,19 @@ This structure provides a natural relationship between documents and makes it ea
 
 ## Secondary dimension: audience
 
-Each document should identify its intended audience. Typical audiences could include:
+Each document should identify its intended audience. An example of audiences classification could include:
 
 | Audience | Description | Typical Documentation |
 | - | - | - |
-| **End Users** | Person who uses a system or service to perform daily activities. | <li>User manuals <li>user procedures <li>FAQs |
+| **End Users** | Person who uses a system or service to perform daily activities. | <li>User manuals <li>user procedures <li>FAQs <li>Support and service documentation<li>**L1 support** |
 | **Business users** | Person or group concerned with business needs, processes, and outcomes. |<li>Business requirements <li>process documentation <li>project overview |
-| **Engineering and development teams** | Team responsible for designing, developing, and implementing systems. | <li>Requirements, <li>architecture documentation <li>design specifications <li>development guides |
-| **IT Operations teams** | Team responsible for deploying, operating, monitoring, and supporting systems. | <li>Operational documentation <li>deployment guides <li>runbooks <li>incident procedures |
+| **Engineering and development teams** | Team responsible for designing, developing, and implementing systems. | <li>Requirements, <li>architecture documentation <li>design specifications <li>development guides <li>L3 support|
+| **IT Operations teams** | Team responsible for deploying, operating, monitoring, and supporting systems. | <li>Operational documentation <li>deployment guides <li>runbooks <li>Monitoring, backup, recovery, and incident procedures <li>L2 support|
 | **Governance and stakeholders** | Person or group responsible for oversight, compliance, risk, and decision-making. | <li>Decision records <li>compliance documentation <li>risk documentation <li>governance records |
 | **Contributor** | Person who creates, maintains, or contributes to documentation, systems, or projects. | <li>Contribution guides <li>documentation standards <li>development guidelines |
 | **Sponsor** | Person or organization providing strategic support, funding, or organizational ownership. | <li>Project overview <li>funding documentation <li>governance documentation |
 | **Corporate / Internal Services** | Internal service responsible for supporting organizational activities. | <li>Service documentation <li>user procedures <li>support documentation |
+| **Cross-cutting / Reference** | | <li>**Definitions and controlled vocabulary** <li>Standards, conventions, and guidelines |
 
 
 A document may have more than one audience.
@@ -199,30 +216,12 @@ For example, **An architecture document**:
   - governance, 
   - other stakeholders.
 
-## Document classification
-
-Each document should be associated with the following attributes:
-
-| Attribute | Purpose |
-| -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Lifecycle stage** | Identifies where the document belongs in the system or project lifecycle. |
-| **Audience** | Identifies who is expected to use or review the document. |
-| **System / Project** | Identifies the system, service, product, or project concerned. |
-| **Domain** | Identifies the business or technical domain concerned. |
-| **Document type** | Identifies the nature of the document, such as requirement, ADR, architecture document, runbook, or user guide. |
-| **Owner** | Identifies the person or team responsible for maintaining the document. |
-| **Status** | Identifies the current state of the document, such as draft, active, deprecated, or archived. |
 
 
+# Example use cases
+## Example 01: build a Terminology
 
-
-
-
-
-# Example Use cases
-## Example 01: Terminology Catalogue
-
-This example illustrates how terms can be documented using the controlled classification defined above.
+This example illustrates how *terms* can be documented using the **controlled classification** defined above.
 
 
 | Term | Type | Domain | Definition / Description | Notes |
@@ -235,104 +234,27 @@ This example illustrates how terms can be documented using the controlled classi
 | **Security** | Concept | Cross-cutting | Practices and controls used to protect systems and data from threats and unauthorized access. | Includes access control, privileged access management, secure defaults, vulnerability management, backup, and recovery. |
 | **Security** | Concept | Cross-cutting | <li>Allow a system to be 24/7 accessible and resilient... <li>Protect a system by addressing known points of failure...| Includes access control, privileged access management, secure defaults, vulnerability management, backup, and recovery. |
 
-|name|name type|parent domain|extension/description|comment
-|-|-|-|-|-|
-|acid|acro||**A**tomic, **C**onsistent, **I**solated, **D**urable|historically a concept of relational DB
-|kbe|acro||**K**u**b**ernetes **E**asy|<br>**create** K8s cluster on demand<br>**secure** ak8s cluster<br>make an existing k8s cluster **observable**|
-|kubernetes|Platform||manages containerized app| Self healing 
-|kind|acro||**K**ubernetes **In** **D**ocker|**create** kind cluster on demand|
-|observability|concept||Understand a system state from its outputs|Includes metrics, logs, dashboard, alert|
-|security|concept||Allow a system to be 24/7 accessible and resilient by addressing known points of failure|Includes access controls, root access, backups recovery, protection against attacks, bugs reolution, CVE updates, ...|
-|security|concept||Protect a system by addressing known points of failure|Includes access controls, root access management, safe defaults, backups, recovery procedures, and protection against attacks|
-
-
-Each stage may produce documentation that is relevant to one or more audiences. The repository therefore provides a common place to discover, maintain, and relate documentation across these stages.
-
-
-## Example 02:  Audience Classification
-
-This example illustrates how documentation can be classified according to its intended audience.
 
 
 
-
-Documentation by Audience
-  - is designed to cover any audiences **involved** in the **lifecycle** of any IT **projects** in the organization.
-  - is designed for 
-    - business users
-    - development teams
-    - operations teams
-    - governance stakeholders
-  - aims to document from 
-    - business idea to end-user needs
-    - end-user needs to business design
-    - business design to needed resources (system requirements, technical design, ...)
-    - resource and/or system requirements and design to development and implementation
-    - development and implementation to production operations and support
-    - production operations and support to governance loopback
-
-
-## Example 03:  Document Classification
+## Example 02: build a document's classification
 
 The following example illustrates how a document can be classified using its **lifecycle stage** and **intended audience**.
 
-| Document | Lifecycle | Audience |
-| --------------------------------- | --------------------- | ----------------------------------- |
-| **Kubernetes User Guide** | Operation / Use | End User |
-| **Kubernetes Architecture** | Design | Engineering, Operations, Governance |
-| **Kubernetes Runbook** | Operation | Operations |
-| **Kubernetes Risk Assessment** | Governance | Governance, Sponsor |
-| **Kubernetes Contribution Guide** | Development | Contributor, Engineering |
+| Document | Document Type | Lifecycle | Audience |
+| - | - | - | - |
+| [Kubernetes][k8s whatis] | Concept | Learn | Engineering |
+| [Security][Security whatis] | Concept | Learn | Engineering |
+| [What is Linux][linux whatis] | Concept | Learn | Engineering |
+| Kubernetes| User Guide | Operation / Use | End User |
+| Kubernetes| Architecture | Design | Engineering, Operations, Governance |
+| Kubernetes| Runbook | Operation | Operations |
+| Kubernetes| Risk Assessment | Governance | Governance, Sponsor |
+| Kubernetes| Contribution Guide | Development | Contributor, Engineering |
 
 
-## [↑][Top] Example 04
-|name|name type|parent domain|extension/description|comment
-|-|-|-|-|-|
-|Kubernets|Concept|||[Whatis][doc.K8s]
-|Security|Concept|||[Whatis][doc.Security]
-|Linux|Os|||[Whatis][doc.Linux]
-
-
-## [↑][Top] Example 05: Documentation by audience
-
-The documentation may include the following types of content:
-
-| Audience | Documentation scope / deliverables |
-| - | - |
-| **End Users** | User manuals<br>User procedures<br>Support and service documentation<br>**L1 support** |
-| **IT Operations** | **Operational documentation**<br>Deployment guides and runbooks<br>Monitoring, backup, recovery, and incident procedures<br>**L2 support** |
-| **IT Engineering** | **Requirements** — functional and technical<br>**Architecture documentation** — logical and technical<br>Design specifications<br>**L3 support** |
-| **Governance / Stakeholders** | Project overviews<br>Decision records<br>Compliance and risk documentation |
-| **Cross-cutting / Reference** | **Definitions and controlled vocabulary**<br>Standards, conventions, and guidelines |
-| **Contributors / Sponsors** | Contribution guides<br>Decision records<br>Funding and governance documentation |
-| **Corporate / Internal Services** | User manuals<br>User procedures<br>Support and service documentation<br>**L1 support** |
-
-
-The documentation may include
-
-|**Audience**|**Documentation Scope / Deliverables**|
-|-|-|
-|**End Users**|User manuals<br>User procedures<br>Support & service documentation <br>**L1** support |
-|**IT – Operations** (prod) |**Operational documentation**<br>Deployment guides & runbooks<br>Monitoring, backup & incident procedures <br>**L2** support|
-|**IT – Engineering** (Dev) |**Requirements** (functional & technical)<br>**Architecture documentation** (logical & technical)<br>Design specifications <br>**L3** support|
-|**Governance / Stakeholders**|Project overview<br>Decision records<br>Compliance & risk documentation|
-|**Cross-cutting / Reference**|**Definitions** & controlled vocabulary<br>Standards, conventions & guidelines|
-|**Contributors / Sponsors** |Project contribution guides<br>Decision records<br>Funding and governance documentation |
-|**Corporate Services/ Business**|User manuals<br>User procedures<br>Support & service documentation — L1|
-
-
-
-
-
-
-
-
-----
 
 # [↑][Top] Todo
-## Questions around documentation
-**how to organize the documentation**
-- around kind of users, readers, stakeholders
 
 ## Questions around shared terms
 Historically, **terms**, are dedicated to one domain and often get **generalized** or **specialized**
