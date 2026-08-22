@@ -149,7 +149,7 @@ When creating document
   - Reduce duplication, prevents conflicting versions, and improves traceability across the documentation lifecycle.
 
 
-For example:**One architecture document**
+For example, **One architecture document**
 - → owned by Engineering
 - → relevant to Operations
 - → reviewed by Governance
@@ -192,9 +192,9 @@ Each document should identify its intended audience. Typical audiences could inc
 
 A document may have more than one audience.
 
-For example:**An architecture document may:** 
-- primarily target engineering teams 
-- be relevant to:
+For example, **An architecture document**: 
+- → target primarily engineering teams 
+- → is relevant to:
   - operations, 
   - governance, 
   - other stakeholders.
