@@ -178,13 +178,17 @@ This structure provides a natural relationship between documents and makes it ea
 
 Each document should identify its intended audience. Typical audiences include:
 
-* **End users**
-* **Business users**
-* **Engineering and development teams**
-* **IT operations teams**
-* **Governance and stakeholders**
-* **Contributors and sponsors**
-* **Corporate / internal services**
+| Audience | Description | Typical Documentation |
+| - | - | - |
+| **End Users** | Person who uses a system or service to perform daily activities. | User manuals, user procedures, FAQs |
+| **Business users** | Person or group concerned with business needs, processes, and outcomes. | Business requirements, process documentation, project overview |
+| **Engineering and development teams** | Team responsible for designing, developing, and implementing systems. | Requirements, architecture documentation, design specifications, development guides |
+| **IT Operations teams** | Team responsible for deploying, operating, monitoring, and supporting systems. | Operational documentation, deployment guides, runbooks, incident procedures |
+| **Governance and stakeholders** | Person or group responsible for oversight, compliance, risk, and decision-making. | Decision records, compliance documentation, risk documentation, governance records |
+| **Contributor** | Person who creates, maintains, or contributes to documentation, systems, or projects. | Contribution guides, documentation standards, development guidelines |
+| **Sponsor** | Person or organization providing strategic support, funding, or organizational ownership. | Project overview, funding documentation, governance documentation |
+| **Corporate / Internal Services** | Internal service responsible for supporting organizational activities. | Service documentation, user procedures, support documentation |
+
 
 A document may have more than one audience.
 
@@ -250,16 +254,6 @@ Each stage may produce documentation that is relevant to one or more audiences. 
 This example illustrates how documentation can be classified according to its intended audience.
 
 
-| Audience | Description | Typical Documentation |
-| --------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **End User** | Person who uses a system or service to perform daily activities. | User manuals, user procedures, FAQs |
-| **Business** | Person or group concerned with business needs, processes, and outcomes. | Business requirements, process documentation, project overview |
-| **Engineering** | Team responsible for designing, developing, and implementing systems. | Requirements, architecture documentation, design specifications, development guides |
-| **Operations** | Team responsible for deploying, operating, monitoring, and supporting systems. | Operational documentation, deployment guides, runbooks, incident procedures |
-| **Governance** | Person or group responsible for oversight, compliance, risk, and decision-making. | Decision records, compliance documentation, risk documentation, governance records |
-| **Contributor** | Person who creates, maintains, or contributes to documentation, systems, or projects. | Contribution guides, documentation standards, development guidelines |
-| **Sponsor** | Person or organization providing strategic support, funding, or organizational ownership. | Project overview, funding documentation, governance documentation |
-| **Corporate / Internal Services** | Internal service responsible for supporting organizational activities. | Service documentation, user procedures, support documentation |
 
 
 Documentation by Audience
