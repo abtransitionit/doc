@@ -193,7 +193,7 @@ Each document should identify its intended audience. Typical audiences could inc
 A document may have more than one audience.
 
 For example, **An architecture document**: 
-- → target primarily engineering teams 
+- → primarily targets engineering teams 
 - → is relevant to:
   - operations, 
   - governance, 
