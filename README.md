@@ -1,5 +1,3 @@
-<head><link rel="stylesheet" href="/Users/max/Library/Mobile\ Documents/com\~apple\~CloudDocs/md.css"><script src="/Users/max/Library/Mobile\ Documents/com\~apple\~CloudDocs/md.js"></script></head>
-
 [//]: #(Reference)
 [Top]: #
 [doc.K8s]:  ./k8s.md
@@ -59,26 +57,23 @@ For example:
 - This **shared vocabulary** defines the preferred translations and usage of **selected terms** commonly used in IT documentation. 
 - It ensures a consistent terminology and understanding across different audiences, teams, and documents.
 
-
-| **English Term** | **French Equivalent** | **Definition / Usage** |
-| - | - | - |
-| Audience | Public cible | Person or group (teams, stakeholder) expected to use, review, or contribute to a document. |
-| Document | Document | Structured information created, maintained, and shared to communicate or record knowledge, requirements, decisions, procedures, or other information. It may serve and be relevant to multiple audiences.|
-| Architecture documentation | Dossier d’architecture | Documentation describing the logical and technical architecture, including system structure, components, and interactions. |
-| Controlled vocabulary | Vocabulaire contrôlé | A shared and standardized set of terms used consistently across documentation. |
-| Corporate Services | Services interne | Services provided within the organization to support its internal operations, rather than services delivered to external customers. |
-| Decision record (ADR) | Registre de décisions (ADR) | A traceable record of important technical or architectural choices and decisions and their rationale. |
-| Deployment guide | Guide de déploiement | Procedures for installing, upgrading, or rolling back a **system** |
-| Design specification | Spécification de conception | Detailed description of the technical design of a **system**|
-| End user | Utilisateur final | Person who uses a **system** in their daily activities or operations. |
-| Governance | Gouvernance | Decision-making, oversight, and control of a **system** or activity. |
-| Operational documentation | Documents d’exploitation | Documentation required to operate, maintain, and support a **system** in production, pre-prod, dev, ... |
-| Requirements | Exigences | Functional and/or technical needs that a system must satisfy. |
-| Runbook | Procédure opérationnelle | Step-by-step instructions for performing operational tasks. |
-| Stakeholder | Partie prenante | Any person or entity with an interest in, or that may be affected by, the system, such as a business representative, sponsor, or regulator. |
-| System | Système | a whole or part of a framework, service, application, tool, ...|
-
-
+| **Term** | **Definition / Usage** |
+| - | - |
+| Audience                   | Person or group (teams, stakeholder) expected to use, review, or contribute to a document.                                                                                                                |
+| Document                   | Structured information created, maintained, and shared to communicate or record knowledge, requirements, decisions, procedures, or other information. It may serve and be relevant to multiple audiences. |
+| Architecture documentation | Documentation describing the logical and technical architecture, including system structure, components, and interactions.                                                                                |
+| Controlled vocabulary      | A shared and standardized set of terms used consistently across documentation.                                                                                                                            |
+| Corporate Services         | Services provided within the organization to support its internal operations, rather than services delivered to external customers.                                                                       |
+| Decision record (ADR)      | A traceable record of important technical or architectural choices and decisions and their rationale.                                                                                                     |
+| Deployment guide           | Procedures for installing, upgrading, or rolling back a **system**                                                                                                                                        |
+| Design specification       | Detailed description of the technical design of a **system**                                                                                                                                              |
+| End user                   | Person who uses a **system** in their daily activities or operations.                                                                                                                                     |
+| Governance                 | Decision-making, oversight, and control of a **system** or activity.                                                                                                                                      |
+| Operational documentation  | Documentation required to operate, maintain, and support a **system** in production, pre-prod, dev, ...                                                                                                   |
+| Requirements               | Functional and/or technical needs that a system must satisfy.                                                                                                                                             |
+| Runbook                    | Step-by-step instructions for performing operational tasks.                                                                                                                                               |
+| Stakeholder                | Any person or entity with an interest in, or that may be affected by, the system, such as a business representative, sponsor, or regulator.                                                               |
+| System                     | A whole or part of a framework, service, application, tool, ...                                                                                                                                           |
 
 
 # Project and System Lifecycles
