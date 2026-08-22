@@ -201,7 +201,7 @@ For example, **An architecture document**:
 
 ## Document classification
 
-Where practical, each document should be associated with the following attributes:
+Each document should be associated with the following attributes:
 
 | Attribute | Purpose |
 | -------------------- | --------------------------------------------------------------------------------------------------------------- |
