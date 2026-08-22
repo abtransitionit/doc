@@ -156,7 +156,7 @@ For example:**One architecture document**
 - → linked from the corresponding system documentation
 
 
-# Documentation Organization
+# Documentation's organization
 
 - Documentation should be organized primarily around the **lifecycle of systems and projects**, while also being classified by **audience**.
 - A document may serve multiple audiences and may therefore be relevant to several teams or stakeholders.
@@ -164,7 +164,7 @@ For example:**One architecture document**
 ## Primary dimension: lifecycle
 
 The documentation should follow the progression of an IT initiative or system through its lifecycle:
-1. **Business and user needs**
+1. **organization's Business and user needs**
 1. **Requirements**
 1. **Architecture and design**
 1. **Development and implementation**
