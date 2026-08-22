@@ -1,12 +1,12 @@
 [//]: #(Reference)
-[doc std]:      ./governance/doc.std
-[project ep]:   ./project/README
-[system ep]:    ./system/README
-[domain ep]:    ./domain/README
-[reference ep]: ./reference/README
-[kubernetes ep]: ./system/k8s/README
-[linux ep]:      ./system/linux/README
-[security ep]:   ./reference/concept/security/README
+[doc std]:      ./governance/doc.std.md
+[project ep]:   ./project/README.md
+[system ep]:    ./system/README.md
+[domain ep]:    ./domain/README.md
+[reference ep]: ./reference/README.md
+[kubernetes ep]: ./system/k8s/README.md
+[linux ep]:      ./system/linux/README.md
+[security ep]:   ./reference/concept/security/README.md
 
 # doc
 
