@@ -1,0 +1,19 @@
+[//]: #(Reference)
+[HOME]:       ../whatis/provision.md
+[res whatis]: ../whatis/res.md
+[res howto]:  ../howto/res.md 
+[provision phy host 01 howto]: ../howto/provision.md#provision-a-physical-host
+[provision phy host 01 howto]: ../howto/provision.md#provision-an-existing-physical-host
+[provision vm howto]:          ../howto/provision.md#provision-a-vm
+[provision container howto]:   ../howto/provision.md#provision-a-container
+
+# Related topics
+- [howto for resource][res howto]
+- [whatis a resource][res whatis]
+
+# [←][HOME] List
+
+
+- [Provision a physical host][provision phy host 01 howto]
+- [Provision a VM][provision vm howto]
+- [Provision a container][provision container howto]

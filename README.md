@@ -7,7 +7,9 @@
 [kubernetes ep]: ./system/k8s/README.md
 [linux ep]:      ./system/linux/README.md
 [security ep]:   ./reference/concept/security/README.md
-
+[forge whatis]:      ./project/forge/whatis/forge.md
+[gotest whatis]:     ./project/gotest/whatis/gotest.md
+[project ep]:    ./project/README.md
 # doc
 
 - This repository contains the organization's IT documentation. 
@@ -26,8 +28,9 @@
 
 **Projects**
 
-- [Project Alpha](projects/project-alpha/)
-- [Other Projects][project ep]
+- [Forge][forge whatis]
+- [gotest][gotest whatis]
+- [All Projects][project ep]
 
 **Reference**
 

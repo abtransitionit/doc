@@ -1,25 +1,15 @@
 [//]: #(Reference)
-[doc std]: ./doc.std
-[project ep]:   ./project/README
-[system ep]:    ./system/README
-[domain ep]:    ./domain/README
-[reference ep]: ./reference/README
+[README]:  ../README.md
+[gotest whatis]: gotest/whatis/forge.md
+[forge whatis]:  forge/whatis/forge.md
 
-# doc
+# [←][README] Project
 
-This repository contains the organization's IT documentation.
+## provisioning
 
-## Documentation
+- [forge][forge whatis]
 
-* [Systems][system ep]
-* [Projects][project ep]
-* [Domains][domain ep]
-* [Reference][reference ep]
+## testing `GO` code
 
-## Documentation standard
+- [gotest][gotest whatis]
 
-The [Documentation Standard][doc std] defines how documentation is organized, classified, maintained, and linked.
-
-## Contributing
-
-See the [Documentation Standard][doc std] for documentation principles, metadata, lifecycle, audiences, and document types.
