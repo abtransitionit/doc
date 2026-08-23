@@ -37,7 +37,8 @@ Forge is a tool for provisioning any kind of [resources][res whatis] on any kind
 
 
 # Source code
-The following repositories are involved
+- The tool is written in `golang`
+- The following code repositories are involved
 
 **Core**
 
@@ -56,7 +57,7 @@ The following repositories are involved
 ## Development and API documentation
 
 - Go packages are documented using [`pkgsite`](https://pkg.go.dev/golang.org/x/pkgsite).
-- The documentation lives alongside each repository
+- The documentation lives alongside each code repository
 
 
 ## Documentation
