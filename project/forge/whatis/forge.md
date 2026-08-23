@@ -23,7 +23,8 @@
 - The project is currently defining its core concepts and architecture.
 
 
-<span style="display: block; text-align: center; font-size: 2em; font-weight: bold;">Forge</span>
+<p align="center">Host</p>
+<!-- <span style="display: block; text-align: center; font-size: 2em; font-weight: bold;">Forge</span> -->
 
 # Definition
 
