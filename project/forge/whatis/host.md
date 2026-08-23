@@ -16,9 +16,7 @@
 - [list of host][host list]
 - [concept of Host][host concept]
 
-<span style="display: block; text-align: center; font-size: 2em;">Host</span>
-
-
+<h1 align="center">Host</h1>
 
 # Definition
 - Can be physical or virtual

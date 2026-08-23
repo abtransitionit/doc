@@ -23,7 +23,7 @@
 - The project is currently defining its core concepts and architecture.
 
 
-<h1 align="center">Host</h1>
+<h1 align="center">Forge</h1>
 
 # Definition
 

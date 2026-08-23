@@ -14,7 +14,7 @@
 
 
 
-<span style="display: block; text-align: center; font-size: 2em; font-weight: bold;">Resource</span>
+<h1 align="center">Resource</h1>
 
 
 # Definition

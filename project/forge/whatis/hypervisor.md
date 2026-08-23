@@ -13,7 +13,8 @@
 - [concept of Host][host concept]
 
 
-<span style="display: block; text-align: center; font-size: 2em; font-weight: bold;">Hypervisor</span>
+<h1 align="center">Hypervisor</h1>
+
 
 # List
 - KVM
