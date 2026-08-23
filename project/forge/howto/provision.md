@@ -3,22 +3,25 @@
 [res whatis]: ../whatis/res.md
 [res list]:  ../list/res.md
 [usecase list]: ../list/usecase.md
+[cloud provider whatis]: ../whatis/cloud.provider.md
+[baremetal provider whatis]: ../whatis/baremetal.provider.md
+[baremetal whatis]: ../whatis/baremetal.md
 
 [←][HOME] Related topics
 - [whatis a resource][res whatis]
+- [whatis a cloud provider][cloud provider whatis]
 - [List of resources][res list]
 - [List of use case][usecase list]
 
 
-# Provision a physical host
+# Provision a physical host on a cloud provider
 
 **Goal**:
-1. Provision a physical host on a cloud
-1. Provision it with resource (e.g. Hypervisor, Package, VMs, Kubernetes cluster)
+1. Provision (i.e. create) a host (i.e. physical host) on a [cloud provider][cloud provider whatis]
 
 **Given**:
-* An account or connection to a Bare-metal provider on the cloud (e.g. OpenStack Ironic, MAAS, Amazon EC2 Bare Metal)
-* The Bare-metal provider exposes a **CLI** or **API** for creating Physical servers
+* An account or connection to a [Bare-metal provider][baremetal provider whatis] on the [cloud provider][cloud provider whatis] (e.g. OpenStack Ironic, MAAS, Amazon EC2 Bare Metal)
+* This Bare-metal provider exposes a **CLI** or **API** for creating Physical servers
 * The tool uses that CLI/API to provision Physical servers
 * once created, the Physical servers itself is used as a provisioning target by the tool
 
@@ -42,14 +45,15 @@ Tool
 - Resources can be provisioned on the target.
 
 
-# Provision an existing physical host
+# Provision an existing physical host on a cloud provider
 
 **Goal**:
-1. provision resources on an existing physical host
-1. the physical host itself is not provisioned/created by the tool
+1. Provision (i.e. install resources) an existing [Bare-metal server][baremetal whatis]
+1. example of resource : Hypervisor (aka. VM provider), Package, VMs, Kubernetes cluster
+1. the physical host itself is not created by the tool
 
 **Given**:
-* An existing physical host
+* An existing host (i.e. physical host) on the cloud or in local
 * An account or connection to that host
   * e.g. SSH
 

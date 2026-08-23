@@ -6,21 +6,26 @@
 [host physical list]: ../list/host.md#physical-hosts
 [host virtual list]:  ../list/host.md#virtual-hosts
 [host container list]:  ../list/host.md#container-host
+[res whatis]:    ../whatis/res.md
+[forge whatis]:  ../whatis/forge.md
 
-# Related topics
+[←][HOME] Related topics
+- [what is Forge][forge whatis]
+- [what is a resource][res whatis]
 - [list of concepts][concept list]
 - [list of host][host list]
 - [concept of Host][host concept]
 
----
+<span style="display: block; text-align: center; font-size: 2em;">Host</span>
 
-# [←][HOME] Host
 
-## Definition
-- A target that can be provisioned with resources
-- **where/how** a resource is made available
 
-## Classification
+# Definition
+- Can be physical or virtual
+- A target that can be provisioned with [resources][res whatis]
+- **where/how** a [resource][res whatis] is made available
+
+# Classification
 
 * [Physical host][host physical list]
 * [Virtual host][host virtual list]
@@ -29,7 +34,15 @@
 * [Container][host container list] (Instance of container image)
 
 
-## Virtual hosts
+## Physical host
+- Physical host
+  - → a physical machine with CPU/RAM/DISK/NETWORK
+  - → a local machine 
+- Bare-metal server
+  - → a physical machine with CPU/RAM/DISK/NETWORK
+  - → a remote machine allocated directly to you, 
+  - → without a hypervisor/VM layer between you and the hardware.
+## Virtual host
 
 The hypervisor, cloud provider, or platform are a property/attribute of a host, not a separate host category.
 

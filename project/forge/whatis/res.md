@@ -3,24 +3,28 @@
 [concept list]:   ../list/concept.md
 [resource list]:  ../list/res.md
 [host concept]:   ../list/concept.md#
+[forge whatis]:   ../whatis/forge.md
 
-# Related topics
+[←][HOME] Related topics
+- [what is forge][forge whatis]
 - [list of concepts][concept list]
 - [list of resources][resource list]
 - [concept of Host][host concept]
 
----
 
 
 
-# [←][HOME] Resource
+<span style="display: block; text-align: center; font-size: 2em; font-weight: bold;">Resource</span>
 
-## Definition
-A Resource is something that can be provisioned or operated on within an **Execution Environment**.
 
-cf. the [list of resources][resource list]
+# Definition
+- may be physical, virtual or abstract
+- can be provisioned
+- can be operated on in an **Execution Environment**
 
-## Relationship
+
+
+# Relationship
 
 ```
 Execution Environment
