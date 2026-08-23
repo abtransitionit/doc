@@ -1,11 +1,11 @@
 [//]: #(Reference)
-[README]:  ../README.md
+[HOME]:  ../README.md
 [forge whatis]: whatis/forge.md
 [res list]:     list/res.md
 [host list]:     list/host.md
 [roadmap readme]: roadmap.md
 
-# [←][README] List ADRs
+# List
 
 - [ADR-0001 — Resource Model](#adr-0001--resource-model)
 - [ADR-0002 — Host Model](#adr-0001--host-model)

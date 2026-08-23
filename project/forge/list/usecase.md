@@ -7,11 +7,12 @@
 [provision vm howto]:          ../howto/provision.md#provision-a-vm
 [provision container howto]:   ../howto/provision.md#provision-a-container
 
-# Related topics
+[←][HOME] Related topics
 - [howto for resource][res howto]
 - [whatis a resource][res whatis]
 
-# [←][HOME] List
+# List
+
 
 
 - [Provision a physical host][provision phy host 01 howto]

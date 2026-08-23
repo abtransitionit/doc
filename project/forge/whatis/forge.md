@@ -1,5 +1,6 @@
 [//]: #(Reference)
 [HOME]:        ../../README.md
+[adr list]:    ../list/adr.md
 [forge howto]: ../howto/forge.md
 [res list]:    ../list/res.md
 [res whatis]:  ../whatis/res.md
@@ -11,12 +12,16 @@
 [provision whatis]: ../whatis/provision.md
 
 [←][HOME] Related topics
-- [what is a resource][res whatis]
-- [what is a host][host whatis]
-- [what is a provisioning][provision whatis]
-- [forge architecture][arch whatis]
-- [list of concept][concept list]
-- [list of use case][usecase list]
+|||
+|-|-|
+|[what is a resource][res whatis]|internal
+|[what is a host][host whatis]|internal
+|[what is a provisioning][provision whatis]|internal
+|[list of concept][concept list]|internal
+|[list of use case][usecase list]|internal
+|[howto for Forge][forge howto]|see
+
+
 
 **Document's status**
 - Early development.
@@ -28,11 +33,10 @@
 # Definition
 
 ## Purpose
-Forge is a tool for provisioning any kind of [resources][res whatis] on any kind of [hosts][host whatis].
+Forge is a tool for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
 
 ## Key Points
 - the tool may rely on existing [resources][res whatis] and [hosts][host whatis]
-- according to the context, **provision** often means: install, add, create or define
 
 
 
@@ -60,25 +64,16 @@ Forge is a tool for provisioning any kind of [resources][res whatis] on any kind
 - The documentation lives alongside each code repository
 
 
-## Documentation
-
-- [howto for Forge][forge howto]
-- [List of resource][res list]
-- [List of host][host list]
+# Other Documents
 - [Roadmap][roadmap whatis]
 - [ADRs][adr list]
--
+- [Architecture][arch whatis]
 - [Concept](docs/concept.md)
 - [Architecture](docs/architecture.md)
 - [Requirements](docs/requirements.md)
 - [Architecture Decision Records](adr/)
 
 
-## provisioning
-
-- [forge howto][forge howto]
-- [list of resource][res list]
-- [list of host][host list]
 
 ## Risk and protection
 

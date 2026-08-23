@@ -1,9 +1,11 @@
 [//]: #(Reference)
 [HOME]:  ../whatis/forge.md
-[concept list]:   ../list/concept.md
-[resource list]:  ../list/res.md
-[host concept]:   ../list/concept.md#
-[forge whatis]:   ../whatis/forge.md
+
+[concept list]:     ../list/concept.md
+[res list]:         ../list/res.md
+[host concept]:     ../list/concept.md#
+[forge whatis]:     ../whatis/forge.md
+[provision whatis]: ../whatis/provision.md
 
 [←][HOME] Related topics
 - [what is forge][forge whatis]
@@ -18,11 +20,14 @@
 
 
 # Definition
+
+# Definition
 - may be physical, virtual or abstract
-- can be provisioned
-- can be operated on in an **Execution Environment**
+- can be [provisioned][provision whatis]
+- can be operated on / managed in an **Execution Environment**
 
-
+# Example
+- [List of resource][res list]
 
 # Relationship
 

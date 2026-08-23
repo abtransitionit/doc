@@ -1,22 +1,22 @@
 [//]: #(Reference)
 [HOME]:       ../whatis/forge.md
+
 [host whatis]: ../whatis/host.md
 [res howto]:  ../howto/host.md 
 
-# Related topics
+[←][HOME] Related topics
 - [howto for host][res howto]
 - [whatis a host][host whatis]
 
-# [←][HOME] List
+# List
+
 
 ## Physical hosts
-
-* Desktop PC, Laptop, Workstation
+* Server, Desktop PC, Laptop, Workstation, Raspberry Pi
 * Physical server, Bare-metal server
 * Blade server
 * Rack server
 * Tower server
-* Raspberry Pi
 * Other ARM SBCs
 * Network appliance capable of running an OS
 * Storage appliance / NAS

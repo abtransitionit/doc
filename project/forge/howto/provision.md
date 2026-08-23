@@ -8,11 +8,14 @@
 [baremetal whatis]: ../whatis/baremetal.md
 
 [←][HOME] Related topics
-- [whatis a resource][res whatis]
-- [whatis a cloud provider][cloud provider whatis]
-- [List of resources][res list]
-- [List of use case][usecase list]
+|||
+|-|-|
+|[what is a resource][res whatis]|internal
+|[what is a cloud provider][cloud provider whatis]|internal
+|[List of resources][res list]|internal
+|[List of use case][usecase list]|internal
 
+<h1 align="center">Provision</h1>
 
 # Provision a physical host on a cloud provider
 

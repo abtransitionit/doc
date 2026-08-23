@@ -1,14 +1,16 @@
 [//]: #(Reference)
 [HOME]:         ../whatis/forge.md
 [concept list]: ../list/concept.md
+[host whatis]:  ../whatis/host.md
 
-# Related topics
+[←][HOME] Related topics
 - [list of concepts][concept list]
 
-# [←][HOME] List
+# List
 
-|Term|extension|
-|-|-|
-|OS|**O**perating **S**ystem|
-|OS|**C**omputing **S**ystem|
-|EE|**E**xecution **E**nvironment|
+
+|Term|extension|meaning|example|
+|-|-|-|-|
+|<a id='os'></a>OS|**O**perating **S**ystem||Mac, Linux, Windows
+|<a id="cs"></a>CS|**C**omputing **S**ystem|a **system** capable of running an OS|[Host][host whatis]
+|<a id="ee"></a>EE|**E**xecution **E**nvironment||

@@ -3,11 +3,11 @@
 [res whatis]: ../whatis/res.md
 [res howto]:  ../howto/res.md 
 
-# Related topics
+[←][HOME] Related topics
 - [howto for resource][res howto]
 - [whatis a resource][res whatis]
 
-# [←][HOME] List
+# List
 
 
 * File, Directory
@@ -18,4 +18,5 @@
 * Database
 * Configuration
 * Volume mount
+* VM, Cluster
 * ...

@@ -3,10 +3,11 @@
 [res whatis]: ../whatis/res.md
 [res list]:  ../list/res.md
 
-# Related topics
+[←][HOME] Related topics
 - [whatis a resource][res whatis]
 - [List of resources][res list]
 
-# [←][HOME] Howto
+
+<h1 align="center">Resource</h1>
 
 todo
