@@ -28,140 +28,212 @@
 
 # Definition
 
-- The term **Host** describes a **role** a system can endorse
-- A system has the role of **Host** when it **hosts** something.
-- Such a system is called a **host** or **machine**
-- A so-called **host** 
-  - Provides hardware resources (`CPU / RAM / Disk / Network/ ...`) to the thing it **hosts**.
-  - Can be **physical** or **virtual**
-- The thing **being hosted** is called the **guest** or **workload**, depending on the context.
-- A target that can be [provisioned][provision whatis] with [resources][res whatis]
-- **where/how** a [resource][res whatis] is made available
-- 🚧 Can host an [OS][os whatis] or a [Hypervisor][hypervisor whatis]
-- 🚧 runs [tools][tool whatis]
-- 🚧 A **CS** with an **EE**
-
+## Machine
+- A **computing system** with hardware resources, including at least: RAM / Disk / NIC.
+- ⚠️ A **Machine** becomes a **Host** as soon as it hosts Something (often **VMs** or **Containers**)
+```
+Machine
+ ├── CPU
+ ├── RAM
+ ├── Disk
+ └── NIC
+```
 
 # Kind
 
-```
-Host
-│
-├──> Physical Machine (ready to be provisioned to become a Host)
-│      │
-│      └──> Physical Host
-│            │
-│            ├──> provision an Hypervisor ⇨ bare-metal server
-│            │          
-│            └──> provision an OS image   ⇨ bare-metal server
-│      
-└──> Virtual Machile (ready to be provisioned to become a Host)
-       │
-       └──> Virtual Host
-             │
-             └──> provision an OS image   ⇨ bare-metal server
-                    │
-                    ├──> provision a container runtime ⇨ 
-                    │
-                    └──> provision an application      ⇨ 
-```
+This section defines a taxonomy
 
 ```
-Linux OS
+System
 │
-└── Container Runtime
+└── Computing System (via CPU)
     │
-    ├── Container A
-    └── Container B
+    └── Machine
+        │
+        ├── Physical Machine
+        │      │
+        │      │
+        │      ├── Physical Host
+        │      │     │
+        │      │     ├── hosts Containers (via container runtime)
+        │      │     │
+        │      │     └── hosts VMs (via hypervisor)
+        │      │     
+        │      └── Bare-Metal Server
+        │            │
+        │            └── hosts Applications (via Host OS)
+        │       
+        └── Virtual Machine
+               │
+               ├── Virtual Host
+               │     │
+               │     └── hosts Containers (via container runtime)
+               │     
+               └── Virtual Server
+                     │
+                     └── hosts Applications
 ```
 
 ## Physical Machine (PM)
-- a machine with **physical** hardware resources (`CPU / RAM / Disk / Network/ ...`)
-- can be provisioned with a [hypervisor][hypervisor whatis] or an [OS image][os whatis]
+A **Machine** whose hardware resources are **physical**.
+```
+Physical Machine
+├── CPU
+├── RAM
+├── Disk
+└── NIC
+```
 
+## Bare-Metal Server
+- A **Physical Machine** that has no Hypervisor nor VM layer
+
+**Example**
 ```
-Physical host
-├── Physical CPU  (24)
-├── Physical RAM  (256 GB)
-├── Physical DISK (3000 GB)
-└── Physical NIC
+Bare-Metal Server
+│
+└── Host OS
+     │
+    ...
 ```
-These are **physical** hardware resources (`CPU / RAM / Disk / Network/ ...`):
-|Resource|Description|
-|-|-|
-|CPU|  physical CPU  resources. |
-|RAM|  physical MEM  resources. |
-|Disk| physical DISK resources. |
-|NIC|  physical NIC  resources. |
+- If the Host OS is provisioned with a Container runtime or a Hypervisor, the Bare-Metal Server becomes a **Physical Host**
 
 ## Virtual Machine (VM)
-- A machine with **virtual** hardware resources (`CPU / RAM / Disk / Network/ ...`)
-- Often provisioned with an [OS image][os image whatis] or a [CR][cr whatis]
-
+- A **Machine** whose hardware resources are virtual.
+- **Virtual hardware resources**
+  - is a software
+  - is backed by a **physical** hardware resource.
 ```
-VM
-├── vCPU  (4)
-├── vRAM  (8 GB)
-├── vDisk (100 GB)
+Virtual Machine
+├── vCPU
+├── vRAM
+├── vDisk
 └── vNIC
 ```
-These are **virtual** hardware resources (`CPU / RAM / Disk / Network/ ...`)
-|Resource|Description|
-|-|-|
-|vCPU| virtual  CPU  resources. Backed by physical CPU  resources|
-|vRAM| virtual  MEM  resources. Backed by physical MEM  resources|
-|vDisk| virtual DISK resources. Backed by physical DISK resources|
-|vNIC|  virtual NIC  resources. Backed by physical NIC  resources|
-
+## Host
+- ⚠️ A **Machine** that hosts something. The thing **being hosted** is called the **guest** or **workload**
+  - When the things being hosted are VMs. VMs are called **Guests**
+  - When the things being hosted are Containers. Containers are called **Workload**
+- can be virtual Host or physical Host
 
 
 ## Physical Host
-- A PM **hosting guests** 
-  - VMs created and managed by Hypervisor OR
-  - Containers created and managed by Container runtime
-- An hypervisor running on the Physical machine's hardware is not considered a **guest**
-- an OS running on the Physical machine's hardware is called **Host OS**
+- A **Host** with physical hardware resources.
+
+**Example**: Bare-metal hypervisor inside a bare-metal server
+```
+Physical Host
+    │
+    └── Hypervisor (bare-metal hypervisor)
+         │
+         ├── VM 1 → Guest OS → Linux
+         │           │
+         │           └── Application
+         │
+         ├── VM 2 → Guest OS → Linux
+         │           │
+         │           └── Application
+         │
+         └── VM 3 → Guest OS → Windows
+                    │
+                    └── Application
+```
+Meaning:
+- The [hypervisor][hypervisor whatis] 
+  - Runs on the physical host's hardware.
+  - Creates/manages the VMs.
+- Each VM 
+  - is a Guest of the physical host.
+  - Provides an isolated environment with its own Guest OS.
+- Applications run inside the Guest OS.
+
+**Example**: hosted hypervisor inside a bare-metal server
+```
+Physical Host
+    │
+    │
+    └── Host OS
+         │
+         └── Hypervisor (hosted hypervisor)
+             │
+             ├── VM 1 → Guest OS → Linux
+             │           │
+             │           └── Application
+             │
+             ├── VM 2 → Guest OS → Linux
+             │           │
+             │           └── Application
+             │
+             └── VM 3 → Guest OS → Windows
+                         │
+                         └── Application
+```
+Meaning:
+- The Host OS runs on the physical machine's hardware.
+- The [hypervisor][hypervisor whatis] 
+  - Runs on the Host OS.
+  - Creates/manages the VMs.
+- Each VM 
+  - Is a **Guest** of the physical host.
+  - Provides an isolated environment with its own Guest OS.
+  - Has its own OS kernel.
+- Applications run inside the Guest OS.
+
+**Example**: Container Runtime inside a Bare-Metal Server 
+```
+Physical Host
+    │
+    └── Host OS
+        │
+        └── Container Runtime
+            │
+            ├── Container A.     ← uses the Host OS Kernel
+            │   └── Application
+            │
+            └── Container B      ← uses the Host OS Kernel
+                └── Application
+```
+Meaning:
+- The Host OS runs on the physical machine's hardware.
+- The Container Runtime
+  - Runs on the Host OS.
+  - Creates/manages the Containers.
+- Each container
+  - Is a **Workload** of the physical host.
+  - Shares the Host OS's kernel. 
+  - Provides an isolated environment for its processes/applications.
 
 
-## Virtual Host 
-- A VM hosting **guests** 
-  - Containers workload managed by a Container runtime
-- A container runtime 
-  - is not considered a **guest**
-  - needs a Host to runs
-- an OS running inside a VM is called **Guest OS**
-- 🚧 microVM
-## Bare Metal Server
-- A physical machine remotely allocated on a [cloud provider][cloud provider whatis] 
-  - Without a virtualization layer.
-  - Running a Host OS.
+## Virtual Host
+- A **Host** with virtual hardware resources.
+
+**Example**: Container Runtime inside a **VM**
+```
+Virtual Host
+    │
+    └── Guest OS
+        │
+        └── Container Runtime
+            │
+            ├── Container A
+            │   └── Application
+            │
+            └── Container B
+                └── Application
+```
+Semantic
+- The Guest OS runs on the virtual machine's hardware (that are virtual).
+- The Container Runtime
+  - Runs on the Guest OS.
+  - Creates/manages the Containers.
+- Each container
+  - Is a **Workload** of the virtual host.
+  - Shares the Guest OS's kernel. 
+  - Provides an isolated environment for its processes/applications.
 
 
 # Todo Todo Todo Todo Todo Todo Todo Todo
-# Key points
-- The OS, hypervisor, cloud provider, or platform are a property/attribute of a host
-- hosts can additionally be classified by:
-  * Private Cloud, Public Cloud
-  * Other properties
 
-This avoids treating **AWS**, **VMware**, **KVM**, etc. as host kinds.
-
-```
-Host
-├── provider: AWS
-├── Type: VM (AWS EC2)
-└── Environment: Public Cloud
-```
-
-
-## Container
-- Containers can be created directly or be an instance of container image. 
-- Containers generally **share the host's kernel** rather than running their own OS/kernel. 
-- Containers can simultaneously be seen as **Execution Environment** and **Host** (from the tool's perspective).
-
----
-
-# Boundary Cases
+## Boundary Cases
 
 Some environments can be interpreted as either a **host** or an **execution environment** depending on the perspective of the provisioning tool.
 
@@ -179,78 +251,21 @@ Also:
 
 
 
+# Key points
+- The OS, hypervisor, cloud provider, or platform are a property/attribute of a host
+- hosts can additionally be classified by:
+  * Private Cloud, Public Cloud
+  * Other properties
 
-
-# Todo
-
-# Definition
-
-
-# Provisioning Virtual host
-- applications runs on an OS.
-```
-Machine
-│
-└── OS
-    │
-    └── Application
-```
+This avoids treating **AWS**, **VMware**, **KVM**, etc. as host kinds.
 
 ```
-┌──────────────────────────────────────────────┐
-│ Physical Server                              │
-│                                              │
-│  CPU / RAM / Disk / Network                  │
-│                                              │
-│  ┌────────────────────────────────────────┐  │
-│  │ Host OS                                │  │
-│  │                                        │  │
-│  │ Hypervisor / virtualization software   │  │
-│  │                                        │  │
-│  │ ┌──────────┐ ┌──────────┐              │  │
-│  │ │   VM 1   │ │   VM 2   │              │  │
-│  │ │ Linux    │ │ Windows  │              │  │
-│  │ └──────────┘ └──────────┘              │  │
-│  └────────────────────────────────────────┘  │
-└──────────────────────────────────────────────┘
-```
-
-```
-┌──────────────────────────────────────────────┐
-│ Physical Server                              │
-│                                              │
-│ Host OS                                      │
-│                                              │
-│ Container runtime                            │
-│                                              │
-│ ┌──────────┐ ┌──────────┐ ┌──────────┐       │
-│ │Container │ │Container │ │Container │       │
-│ │ App A    │ │ App B    │ │ App C    │       │
-│ └──────────┘ └──────────┘ └──────────┘       │
-└──────────────────────────────────────────────┘
+Host
+├── provider: AWS
+├── Type: VM (AWS EC2)
+└── Environment: Public Cloud
 ```
 
 
 
-# Virtual host
-- An **isolated** machine with virtual **hardware**: `CPU / RAM / Disk / Network`
-- microVM
-# VM 
-- An **isolated** machine with virtual **hardware**: `CPU / RAM / Disk / Network`
-- standard VM (OVH VPS, AWS EC2)
-- Managed by an [Hypervisor][hypervisor whatis]
-# Container 
-- Provide isolation of one group of processes from other processes on the same OS
-
-
-
-## todo
-- if that something is an OS. it can host software
-- if that something is a Hypervisor. it host VMs
-- "Host" does not describe what the machine is
-- "Host" describes what the machine does.
-
-So 
-- physical, VM, bare metal, OS, etc. describe what something is, while host describes its role.
-- host describes the role of that host.
 

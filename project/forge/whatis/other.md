@@ -12,6 +12,20 @@
 <h1 align="center">Other</h1>
 
 
+# Definition
+
+## System
+A set of related components considered as a single entity.
+
+## Computing System
+A **system** with computational capabilities, typically provided by CPU(s)
+```
+Computing System
+ ├── CPU
+ └── ...
+```
+
+
 # Infrastructure
 is physical or virtual
   - Computing infrastructure
@@ -63,3 +77,6 @@ A container Provides isolation between groups of processes running on the same O
   - **cgroups**              → control resource usage
   - **filesystem isolation** → give the container its own filesystem view
   - **capabilities/security mechanisms** → restrict what processes can do
+
+- Containers can be created directly or be an instance of container image. 
+- Containers can simultaneously be seen as **Execution Environment** and **Host** (from the tool's perspective).
