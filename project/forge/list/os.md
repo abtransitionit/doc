@@ -11,4 +11,10 @@
 
 - mac
 - linux
+  - Ubuntu
+  - Debian
+  - Rocky Linux
+  - Fedora
 - windows
+  - Windows Home
+  - Windows server

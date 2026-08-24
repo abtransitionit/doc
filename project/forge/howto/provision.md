@@ -6,6 +6,7 @@
 [cloud provider whatis]: ../whatis/cloud.provider.md
 [baremetal provider whatis]: ../whatis/baremetal.provider.md
 [baremetal whatis]: ../whatis/baremetal.md
+[provision whatis]: ../whatis/provision.md
 
 [←][HOME] Related topics
 |||
@@ -14,6 +15,7 @@
 |[what is a cloud provider][cloud provider whatis]|internal
 |[List of resources][res list]|internal
 |[List of use case][usecase list]|internal
+|[What is provisioning][provision whatis]|see
 
 <h1 align="center">Provision</h1>
 

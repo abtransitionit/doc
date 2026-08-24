@@ -6,7 +6,7 @@
 
 [←][HOME] Related topics
 - [howto for host][res howto]
-- [whatis a host][host whatis]
+- [what is a host][host whatis]
 
 # List
 

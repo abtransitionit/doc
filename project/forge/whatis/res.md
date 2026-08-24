@@ -19,7 +19,6 @@
 <h1 align="center">Resource</h1>
 
 
-# Definition
 
 # Definition
 - may be physical, virtual or abstract
