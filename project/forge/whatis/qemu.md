@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/forge.md
+[HOME]:  ../whatis/ep.md
 
 [//]: #(functional)
 [qemu howto]:   ../howto/qemu.md

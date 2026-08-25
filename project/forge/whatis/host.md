@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/forge.md
+[HOME]:  ../whatis/ep.md
 
 [//]: #(functional)
 [host list]:           ../list/host.md
@@ -7,7 +7,7 @@
 [host virtual list]:   ../list/host.md#virtual-hosts
 [host container list]: ../list/host.md#container-host
 [res whatis]:       ../whatis/res.md
-[forge whatis]:     ../whatis/forge.md
+[forge whatis]:     ../whatis/ep.md
 [os whatis]:        ../whatis/os.md
 [provision whatis]: ../whatis/provision.md
 [cloud provider whatis]: #

@@ -1,4 +1,4 @@
-[HOME]:       ../whatis/forge.md
+[HOME]:       ../whatis/ep.md
 
 [//]: #(functional)
 [res whatis]: ../whatis/res.md

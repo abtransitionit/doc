@@ -5,7 +5,7 @@
 [concept list]:     ../list/concept.md
 [res list]:         ../list/res.md
 [host concept]:     ../list/concept.md#
-[forge whatis]:     ../whatis/forge.md
+[forge whatis]:     ../whatis/ep.md
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 

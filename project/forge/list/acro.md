@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:         ../whatis/forge.md
+[HOME]:         ../whatis/ep.md
 
 [//]: #(functional)
 [concept list]: ../list/concept.md
