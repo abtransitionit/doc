@@ -1,5 +1,7 @@
-[//]: #(Reference)
-[README]:  ../../README.md
+[//]: #(Home)
+[HOME]:  ../whatis/forge.md
+
+[//]: #(functional)
 [forge howto]: ../howto/forge.md
 [res list]:    ../list/res.md
 [res whatis]:  ../whatis/res.md
@@ -7,7 +9,10 @@
 [host whatis]: ../whatis/host.md
 [arch whatis]: ../whatis/arch.md
 
-# [←][README] Forge Architecture
+[←][HOME]
+
+<h1 align="center">Forge Architecture</h1>
+ 
 
 ---
 

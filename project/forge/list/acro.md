@@ -1,12 +1,13 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:         ../whatis/forge.md
+
+[//]: #(functional)
 [concept list]: ../list/concept.md
 [host whatis]:  ../whatis/host.md
 
 [←][HOME] Related topics
-- [list of concepts][concept list]
 
-# List
+<h1 align="center">List of Forge Acronym</h1>
 
 
 |Term|extension|meaning|example|

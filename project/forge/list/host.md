@@ -1,12 +1,18 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:       ../whatis/forge.md
 
+[//]: #(functional)
 [host whatis]: ../whatis/host.md
 [res howto]:  ../howto/host.md 
 
 [←][HOME] Related topics
-- [howto for host][res howto]
-- [what is a host][host whatis]
+|||
+|-|-|
+|[howto for host][res howto]|see|
+|[what is a host][host whatis]|see|
+
+
+<h1 align="center">List of Forge Host</h1>
 
 # List
 

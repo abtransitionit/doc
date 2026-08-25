@@ -4,25 +4,17 @@
 [//]: #(archl)
 [arch whatis]: ../whatis/arch.md
 [adr list]:    ../list/adr.md
-[roadmap whatis]:     ../whatis/roadmap.md
+[roadmap whatis]: ../whatis/roadmap.md
+[manage whatis]: ../whatis/manage.md
+[res whatis]:     ../whatis/res.md
 
 [//]: #(functional)
-[forge howto]: ../howto/forge.md
-[res list]:    ../list/res.md
-[res whatis]:  ../whatis/res.md
-[host list]:   ../list/host.md
-[host whatis]: ../whatis/host.md
-[usecase list]: ../list/usecase.md
-[provision whatis]: ../whatis/provision.md
 
 [←][HOME] Related topics
 |||
 |-|-|
 |[what is a resource][res whatis]|internal
-|[what is a host][host whatis]|internal
-|[what is a provisioning][provision whatis]|internal
-|[list of use case][usecase list]|internal
-|[howto for Forge][forge howto]|see
+|[what mean managing][manage whatis]|see
 
 
 
@@ -36,7 +28,7 @@
 # Definition
 
 ## Purpose
-A CLI for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
+A unified CLI for [managing][manage whatis] named [resources][res whatis] and their relationships across development ecosystem (repositories, images, containers, and more).
 
 ## Key Points
 - the tool may rely on existing [resources][res whatis] and [hosts][host whatis]

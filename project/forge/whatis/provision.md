@@ -1,6 +1,7 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:  ../whatis/forge.md
 
+[//]: #(functional)
 [provision howto]: ../howto/provision.md
 [res whatis]:      ../whatis/res.md
 [forge whatis]:    ../whatis/forge.md
@@ -17,7 +18,7 @@
 
 
 
-<h1 align="center">Provision</h1>
+<h1 align="center">Forge Provision</h1>
 
 
 # Definition

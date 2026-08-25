@@ -1,6 +1,7 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]: ../whatis/forge.md
 
+[//]: #(functional)
 [hypervisor list]: ../list/tool.md#
 [hypervisor howto]: ../howto/hypervisor.md
 [tool whatis]:     ../whatis/tool.md
@@ -18,7 +19,7 @@
 |[Howto for hypervisor][hypervisor howto]|see|
 
 
-<h1 align="center">Hypervisor</h1>
+<h1 align="center">Forge Hypervisor</h1>
 
 
 # Definition

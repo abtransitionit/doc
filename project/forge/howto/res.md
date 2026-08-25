@@ -1,5 +1,6 @@
-[//]: #(Reference)
 [HOME]:       ../whatis/forge.md
+
+[//]: #(functional)
 [res whatis]: ../whatis/res.md
 [res list]:  ../list/res.md
 

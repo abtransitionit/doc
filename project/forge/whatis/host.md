@@ -1,6 +1,7 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:  ../whatis/forge.md
 
+[//]: #(functional)
 [host list]:           ../list/host.md
 [host physical list]:  ../list/host.md#physical-hosts
 [host virtual list]:   ../list/host.md#virtual-hosts
@@ -23,7 +24,7 @@
 |[list of host][host list]|internal
 |[howto for Host][host howto]|see
 
-<h1 align="center">Host</h1>
+<h1 align="center">Forge Host</h1>
 
 
 # Definition

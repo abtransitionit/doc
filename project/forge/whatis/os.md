@@ -1,6 +1,7 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:  ../whatis/forge.md
 
+[//]: #(functional)
 [os list]: ../list/os.md
 [host whatis]: ../whatis/host.md
 [tool whatis]: ../whatis/tool.md
@@ -15,7 +16,7 @@
 
 
 
-<h1 align="center">Os</h1>
+<h1 align="center">Forge Os</h1>
 
 
 # Definition

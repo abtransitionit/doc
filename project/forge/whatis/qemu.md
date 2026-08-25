@@ -1,6 +1,7 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:  ../whatis/forge.md
 
+[//]: #(functional)
 [qemu howto]:   ../howto/qemu.md
 [vm whatis]:   ../howto/qemu.md
 
@@ -12,7 +13,7 @@
 
 
 
-<h1 align="center">QEMU/KVM</h1>
+<h1 align="center">Forge QEMU/KVM</h1>
 
 
 # Definition

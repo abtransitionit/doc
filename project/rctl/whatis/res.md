@@ -1,24 +1,26 @@
-[//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[//]: #(Reference)
+[HOME]:  ../whatis/forge.md
 
 [//]: #(functional)
 [concept list]:     ../list/concept.md
 [res list]:         ../list/res.md
 [host concept]:     ../list/concept.md#
-[forge whatis]:     ../whatis/forge.md
+[rctl whatis]:     ../whatis/ep.md
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
+[manage howto]:     ../howto/manage.md
 
 [←][HOME] Related topics
-- [what is forge][forge whatis]
-- [list of concepts][concept list]
-- [list of resources][resource list]
-- [concept of Host][host concept]
+|||
+|-|-|
+|[what is rctl][rctl whatis]|internal|
+|[list of resources][resource list]|see
+|[howto manage][manage howto]|internal
 
 
 
 
-<h1 align="center">Forge Resource</h1>
+<h1 align="center">Resource</h1>
 
 
 
@@ -30,6 +32,17 @@
 # Example
 - [List of resource][res list]
 
+# Relationship
+
+```
+Execution Environment
+└── Container
+
+Host
+├── can contain/run → Execution Environment
+│                      └── operate on → Resource
+└── can be provisioned with → Resource
+```  
 
 
 ## Operation on resource
@@ -37,11 +50,16 @@ the operation is resource-specifics. Example of operation on resource are:
 
 |resource|operation|
 |-|-|
-|gom|init, list|
-|git:repo|add, update, delete|
-|container|start, stop, configure|
-|container image|start, stop, configure|
-
+|file|read, write|
+|Package|add, update, delete|
+|service|start, stop, configure|
+|file system|read, write
+|volume|access
+|GPU|use
+|network|configure, communicate over|
+|memory|consume allocated 
+|CPU|consume, allocated 
+|device|access
 
 
 

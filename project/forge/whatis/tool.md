@@ -1,14 +1,17 @@
-[//]: #(Reference)
+[//]: #(Home)
 [HOME]:  ../whatis/forge.md
 
+[//]: #(functional)
 [tool list]: ../list/tool.md
 [os whatis]: ../whatis/os.md
 
 [←][HOME] Related topics
-- [list of tools][tool list]
-- [what is an OS][os whatis]
+|||
+|-|-|
+|[list of tools][tool list]|see
+|[what is an OS][os whatis]|internal
 
-<h1 align="center">Tool</h1>
+<h1 align="center">Forge Tool</h1>
 
 
 # Definition
