@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:    ../../README.md
+[HOME]:    ../whatis/ep.md
 
 [//]: #(functional)
 [forge whatis]: whatis/forge.md

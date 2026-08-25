@@ -39,7 +39,7 @@
 
 
 - No code.
-- List resourceto manage or expect to manage.
+- List resource to manage or expect to manage.
 
 Take what you already have:
 
@@ -385,6 +385,72 @@ And I'd deliberately keep **v1 small**.
 The biggest risk isn't that `rctl` will be technically difficult. The biggest risk is **over-designing the abstraction before you've migrated enough real commands to know what the abstraction should be.**
 
 So our next step should be **Phase 0: inventory**. We can make a very small table of your existing tools/actions and use that to derive the first `rctl` resource model.
+
+
+# Alternative Roadmap
+
+| Id | Phase | Duration | Outcome |
+| - |-|-|-|
+| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** | Small Inventory of existing resources and their operations |
+| 1 |[Design](#-phase-1--design) | **2–4 h** | `rctl` command model agreed |
+| 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** | `rctl` runs, config/help/errors work |
+| 3 |[Repo resource](#-phase-3--repo) | **1–2 days** | Existing repo scripts exposed through `rctl` |
+| 4 |[`doc` registry](#-phase-4--doc) | **1 day** | `rctl` reads repository metadata |
+| 4M1 |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** | Useful replacement for your current aliases/tools |
+
+
+## Phase 0 - inventory of tool/resource
+```
+resource/tool
+  ├── purpose
+  ├── implementation
+  ├── dependencies
+  ├── dangerous?
+  ├── versioned?
+  └── replacement
+```  
+
+## Phase 1 - define the CLI
+
+Start with 5 actions for a resource:
+```
+git/repo
+  ├── list
+  ├── info
+  ├── clone
+  ├── create
+  ├── tpl
+  └── reset-history
+```  
+
+## Phase 3 — repository registry
+
+Create the machine-readable repository **manifest** in **sot** repository and make the documentation generated from it.
+
+## Phase 4 — package/release tool
+move from
+```sh
+curl | jq | base64 | sh
+```
+
+to
+```
+mx repo create ...
+```
+
+## Phase 5 — migrate existing scripts
+
+Don't rewrite them immediately. Wrap them:
+```
+mx repo reset-history
+       │
+       └── existing reset-history.sh
+```
+
+## Phase 6 — CI
+
+Have the **sot** repository validate the whole ecosystem.
+
 
 # Todo - old
 

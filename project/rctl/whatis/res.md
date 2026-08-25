@@ -5,7 +5,7 @@
 [concept list]:     ../list/concept.md
 [res list]:         ../list/res.md
 [host concept]:     ../list/concept.md#
-[rctl whatis]:     ../whatis/ep.md
+[metadata whatis]:  ../whatis/mtd.md
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 [manage howto]:     ../howto/manage.md
@@ -13,66 +13,98 @@
 [←][HOME] Related topics
 |||
 |-|-|
-|[what is rctl][rctl whatis]|internal|
 |[list of resources][resource list]|see
 |[howto manage][manage howto]|internal
+|[what is metadata][metadata whatis]|internal
 
 
 
 
-<h1 align="center">Resource</h1>
+<h1 align="center">rctl Resource</h1>
 
 
 
 # Definition
-- may be physical, virtual or abstract
-- can be [provisioned][provision whatis]
-- can be operated on / managed in an **Execution Environment**
+- can be operated on 
+- have a kind
 
+# Kind
+Example
+- git repo
+- container image repo
 # Example
 - [List of resource][res list]
 
-# Relationship
+# The model
+
+what is resource for [rctl][rctl whatis]
+```
+Resource
+├── kind
+├── name
+└── metadata
+```
+
+Example
+```
+repo/foo
+image/foo:1.2
+container/foo-dev
+```
+
+## 💡 Impl
+```
+type Resource interface {
+    Name() string
+}
+
+type Creator interface {
+    Create(...)
+}
+
+type Deleter interface {
+    Delete(...)
+}
+
+type Starter interface {
+    Start(...)
+}
+
+type Pusher interface {
+    Push(...)
+}
+```
+
+
+# Operation on resource
+Operations are resource-specifc. The [metadata files][metadata whatis] could be consumed by the **CLI**
+```sh
+rctl repo list
+rctl repo info go-tpl-lib
+rctl repo clone go-tpl-lib
+rctl repo graph
+```
+
+# 💡 CRI
+Introduce a **CRI** (**C**anonical **R**esource **I**dentifier):
+```
+repo/foo
+image/foo
+container/foo-dev
+```
+
+# 💡 Implementation
+
+```yaml
+
+Container
+    Resource
+    Creator
+    Deleter
+    Starter
+    Stopper
+    Executor
 
 ```
-Execution Environment
-└── Container
 
-Host
-├── can contain/run → Execution Environment
-│                      └── operate on → Resource
-└── can be provisioned with → Resource
-```  
-
-
-## Operation on resource
-the operation is resource-specifics. Example of operation on resource are:
-
-|resource|operation|
-|-|-|
-|file|read, write|
-|Package|add, update, delete|
-|service|start, stop, configure|
-|file system|read, write
-|volume|access
-|GPU|use
-|network|configure, communicate over|
-|memory|consume allocated 
-|CPU|consume, allocated 
-|device|access
-
-
-
-
-# Resource Model
-
-
-## Resource Relationships
-
-```text
-Execution Environment
-└── operates on → Resource
-
-Host
-├── provides/runs → Execution Environment
-└── can be provisioned with → Resource
+```

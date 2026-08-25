@@ -7,6 +7,7 @@
 
 [//]: #(functional)
 [forge howto]: ../howto/forge.md
+[roadmap whatis]: ../whatis/roadmap.md
 [res list]:    ../list/res.md
 [res whatis]:  ../whatis/res.md
 [host list]:   ../list/host.md

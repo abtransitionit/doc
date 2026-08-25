@@ -2,18 +2,22 @@
 [HOME]: ../../README.md
 
 [//]: #(archl)
-[arch whatis]: ../whatis/arch.md
-[adr list]:    ../list/adr.md
+[acro list]:      ../list/acro.md
+[arch whatis]:    ../whatis/arch.md
+[adr list]:       ../list/adr.md
 [roadmap whatis]: ../whatis/roadmap.md
-[manage whatis]: ../whatis/manage.md
+[manage whatis]:  ../whatis/manage.md
 [res whatis]:     ../whatis/res.md
+[cli whatis]:     ../whatis/cli.md
 
 [//]: #(functional)
 
 [←][HOME] Related topics
+
 |||
 |-|-|
 |[what is a resource][res whatis]|internal
+|[what is cli][cli whatis]|see
 |[what mean managing][manage whatis]|see
 
 
@@ -28,7 +32,7 @@
 # Definition
 
 ## Purpose
-A unified CLI for [managing][manage whatis] named [resources][res whatis] and their relationships across development ecosystem (repositories, images, containers, and more).
+A unified [CLI][cli whatis] for [managing][manage whatis] named [resources][res whatis] and their relationships across development ecosystem (repositories, images, containers, and more).
 
 ## Key Points
 - the tool may rely on existing [resources][res whatis] and [hosts][host whatis]
@@ -63,6 +67,7 @@ A unified CLI for [managing][manage whatis] named [resources][res whatis] and th
 - [Roadmap][roadmap whatis]
 - [ADRs][adr list]
 - [Architecture][arch whatis]
+- [Acronyms][acro list]
 - [Concept](docs/concept.md)
 - [Architecture](docs/architecture.md)
 - [Requirements](docs/requirements.md)
