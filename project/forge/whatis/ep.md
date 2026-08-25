@@ -1,13 +1,16 @@
-[//]: #(Reference)
-[HOME]:        ../../README.md
+[//]: #(Home)
+[HOME]: ../../README.md
+
+[//]: #(archl)
+[arch whatis]: ../whatis/arch.md
 [adr list]:    ../list/adr.md
+
+[//]: #(functional)
 [forge howto]: ../howto/forge.md
 [res list]:    ../list/res.md
 [res whatis]:  ../whatis/res.md
 [host list]:   ../list/host.md
 [host whatis]: ../whatis/host.md
-[arch whatis]: ../whatis/arch.md
-[concept list]: ../list/concept.md
 [usecase list]: ../list/usecase.md
 [provision whatis]: ../whatis/provision.md
 
@@ -17,7 +20,6 @@
 |[what is a resource][res whatis]|internal
 |[what is a host][host whatis]|internal
 |[what is a provisioning][provision whatis]|internal
-|[list of concept][concept list]|internal
 |[list of use case][usecase list]|internal
 |[howto for Forge][forge howto]|see
 

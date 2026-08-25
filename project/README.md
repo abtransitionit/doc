@@ -1,15 +1,11 @@
-[//]: #(Reference)
-[README]:  ../README.md
-[gotest whatis]: gotest/whatis/forge.md
-[forge whatis]:  forge/whatis/forge.md
+[//]: #(Home)
+[HOME]:    ../README.md
 
-# [←][README] Project
+[←][HOME] <h1 align="center">Project List</h1>
 
-## provisioning
 
-- [forge][forge whatis]
-
-## testing `GO` code
-
-- [gotest][gotest whatis]
-
+||type|
+|-|-|
+|[forge](forge/whatis/ep.md)|provision|
+|[rctl](rctl/whatis/ep.md)|control|
+|[gotest](gotest/whatis/ep.md)|test|
