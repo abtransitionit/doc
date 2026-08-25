@@ -7,7 +7,9 @@
 [res list]: ../list/res.md
 [host list]: ../list/host.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 
 
 
