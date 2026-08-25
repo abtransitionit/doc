@@ -15,7 +15,9 @@
 [hypervisor whatis]: ../whatis/hypervisor.md
 [host howto]: ../howto/host.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is Forge][forge whatis]|internal

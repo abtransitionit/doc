@@ -10,7 +10,9 @@
 [baremetal whatis]: ../whatis/baremetal.md
 [provision whatis]: ../whatis/provision.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is a resource][res whatis]|internal

@@ -5,7 +5,9 @@
 [hypervisor whatis]: ../whatis/hypervisor.md
 [hypervisor list]:   ../list/tool.md#list
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[whatis a hypervisor][hypervisor whatis]|internal

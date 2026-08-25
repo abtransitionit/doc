@@ -4,7 +4,9 @@
 [res whatis]: ../whatis/res.md
 [res list]:  ../list/res.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 - [whatis a resource][res whatis]
 - [List of resources][res list]
 

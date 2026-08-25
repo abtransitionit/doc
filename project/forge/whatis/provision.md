@@ -7,7 +7,9 @@
 [forge whatis]:    ../whatis/ep.md
 [host whatis]:     ../whatis/host.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is Forge][forge whatis]|internal

@@ -8,7 +8,9 @@
 [provision whatis]: ../whatis/provision.md
 [manage whatis]:    ../whatis/manage.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 | [what is rctl][rctl whatis] | internal

@@ -6,7 +6,9 @@
 [res howto]:  ../howto/res.md 
 [cli whatis]:  ../whatis/cli.md 
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[howto for resource][res howto]|see|

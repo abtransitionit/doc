@@ -4,7 +4,9 @@
 [//]: #(functional)
 [os whatis]:  ../whatis/os.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is an OS][os whatis]|see|

@@ -5,7 +5,9 @@
 [tool whatis]:  ../whatis/tool.md
 [tool list]:    ../list/tool.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 

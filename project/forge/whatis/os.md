@@ -6,7 +6,9 @@
 [host whatis]: ../whatis/host.md
 [tool whatis]: ../whatis/tool.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is a host][host whatis]|internal

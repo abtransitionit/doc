@@ -5,7 +5,9 @@
 [tool whatis]: ../whatis/tool.md
 [qemu whatis]: ../whatis/qemu.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is a tool][tool whatis]|see|

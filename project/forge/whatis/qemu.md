@@ -5,7 +5,9 @@
 [qemu howto]:   ../howto/qemu.md
 [vm whatis]:   ../howto/qemu.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[howto for QEMU][qemu howto]|see

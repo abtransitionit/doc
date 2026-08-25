@@ -4,7 +4,9 @@
 [//]: #(functional)
 [cli whatis]:       ../whatis/cli.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[what is cli][cli whatis]|see

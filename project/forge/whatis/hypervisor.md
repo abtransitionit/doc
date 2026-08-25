@@ -9,7 +9,9 @@
 [host whatis]:     ../whatis/host.md
 [vm whatis]:       ../whatis/host.md#vm
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 
 |||
 |-|-|

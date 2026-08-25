@@ -5,7 +5,9 @@
 [concept list]: ../list/concept.md
 [host whatis]:  ../whatis/host.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 
 <h1 align="center">List of rctl acronyms</h1>
 

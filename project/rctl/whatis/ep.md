@@ -12,7 +12,9 @@
 
 [//]: #(functional)
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 
 |||
 |-|-|

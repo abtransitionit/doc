@@ -9,7 +9,9 @@
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 - [what is forge][forge whatis]
 - [list of concepts][concept list]
 - [list of resources][resource list]

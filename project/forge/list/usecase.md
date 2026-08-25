@@ -9,7 +9,9 @@
 [provision vm howto]:          ../howto/provision.md#provision-a-vm
 [provision container howto]:   ../howto/provision.md#provision-a-container
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[howto for resource][res howto]|

@@ -5,7 +5,9 @@
 [host whatis]: ../whatis/host.md
 [res howto]:  ../howto/host.md 
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[howto for host][res howto]|see|

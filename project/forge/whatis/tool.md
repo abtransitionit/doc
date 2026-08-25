@@ -5,7 +5,9 @@
 [tool list]: ../list/tool.md
 [os whatis]: ../whatis/os.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 |[list of tools][tool list]|see

@@ -4,7 +4,9 @@
 [//]: #(functional)
 [cloud provider list]:   ../list/cloud.provider.md
 
-[←][HOME] Related topics
+[←][HOME] 
+
+Related topics
 |||
 |-|-|
 [list of cloud provider][cloud provider list]|see
