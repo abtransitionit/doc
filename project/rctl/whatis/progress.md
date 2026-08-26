@@ -188,17 +188,3 @@ Common dependencies:
 cf. [outcome of this phase][outcome phase0]
 
 
-# Todo - Example
-
-
-## Example
-
-- ✅ Done — Phase complete
-
-- 🟡 In Progress — Currently working on this
-
-- ⬜ Not Started — Not yet begun
-
-- 🔴 Blocked — Waiting on something
-
-- 🔁 Review — Phase done, under review
