@@ -1,12 +1,12 @@
 [//]: #(Home)
-[HOME]: ../whatis/ep.md
+[home]: ../whatis/ep.md
 [list res]: #list
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
 [res howto]:  ../howto/res.md 
 [cli whatis]:  ../whatis/cli.md 
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

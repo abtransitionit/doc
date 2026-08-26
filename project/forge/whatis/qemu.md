@@ -1,11 +1,11 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [qemu howto]:   ../howto/qemu.md
 [vm whatis]:   ../howto/qemu.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

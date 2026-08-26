@@ -1,10 +1,10 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [cli whatis]:       ../whatis/cli.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

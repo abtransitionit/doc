@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [concept list]:     ../list/concept.md
@@ -9,7 +9,7 @@
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 - [what is forge][forge whatis]

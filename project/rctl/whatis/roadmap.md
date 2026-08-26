@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]: ../whatis/ep.md  
+[home]: ../whatis/ep.md  
 [roadmap whatis]: #roadmap
 
 [//]: #(functional)
@@ -7,7 +7,7 @@
 [res list]:        ../list/res.md
 [host list]:       ../list/host.md
 
-[←][HOME]
+[←][home]
 |||
 |-|-|
 |[what is the roadmap progress][progress whatis]|see|

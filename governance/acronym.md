@@ -1,12 +1,15 @@
-[//]: #(Reference)
-[Top]: #
+[//]: #(Home)
 [home]: doc.std.md
 
+[//]: #(doc)
 [Project lfc]: #-stages-for-a-project-lifecycle
 [system lfc]:  #-stages-for-a-system-lifecycle
 
 
-# [←][home] Acronym
+[←][home]
+
+<h1 align="center">Acronym</h1>
+
 
 |term|extension|
 |-|-|

@@ -1,12 +1,16 @@
-[//]: #(Reference)
-[Top]: #
+[//]: #(Home)
 [home]: ../README.md
+[Top]: #
 
+[//]: #(doc)
 [Project lfc]: #-stages-for-a-project-lifecycle
 [system lfc]:  #-stages-for-a-system-lifecycle
 
 
-# [←][home] Lifecycle stages
+[←][home]
+
+<h1 align="center">Lifecycle stages</h1>
+
 
 # Purpose
 

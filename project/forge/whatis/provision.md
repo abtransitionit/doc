@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [provision howto]: ../howto/provision.md
@@ -7,7 +7,7 @@
 [forge whatis]:    ../whatis/ep.md
 [host whatis]:     ../whatis/host.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

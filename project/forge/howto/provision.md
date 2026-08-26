@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:       ../whatis/ep.md
+[home]:       ../whatis/ep.md
 
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
@@ -10,7 +10,7 @@
 [baremetal whatis]: ../whatis/baremetal.md
 [provision whatis]: ../whatis/provision.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

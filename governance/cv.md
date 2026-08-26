@@ -1,11 +1,14 @@
-[//]: #(Reference)
-[Top]: #
+[//]: #(Home)
 [home]: doc.std.md
+
+[//]: #(doc)
 [Project lfc]: #-stages-for-a-project-lifecycle
 [system lfc]:  #-stages-for-a-system-lifecycle
 
+# [←][home] 
 
-# [←][home] Controlled vocabulary
+<h1 align="center">Controlled vocabulary</h1>
+
 
 The controlled vocabulary defines preferred terms and their meaning. It ensures a consistent terminology and understanding across different audiences, teams, and documents.
 

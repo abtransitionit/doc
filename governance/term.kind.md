@@ -1,12 +1,12 @@
-[//]: #(Reference)
-[Top]: #
+[//]: #(Home)
 [home]: doc.std.md
 
-[Project lfc]: #-stages-for-a-project-lifecycle
-[system lfc]:  #-stages-for-a-system-lifecycle
 
 
-# [←][home] Controlled classification
+[←][home]
+
+<h1 align="center">Controlled classification</h1>
+
 
 Terms can be classified using a small, controlled set of kinds:
 

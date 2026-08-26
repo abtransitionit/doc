@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:       ../whatis/ep.md
+[home]:       ../whatis/ep.md
 
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
@@ -9,7 +9,7 @@
 [provision vm howto]:          ../howto/provision.md#provision-a-vm
 [provision container howto]:   ../howto/provision.md#provision-a-container
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

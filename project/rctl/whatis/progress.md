@@ -1,12 +1,12 @@
 [//]: #(Home)
-[HOME]: ../whatis/ep.md  
+[home]: ../whatis/ep.md  
 
 [//]: #(functional)
 [roadmap whatis]: ../whatis/roadmap.md
 [outcome phase0]: ../list/res.md#phase-0-outcome
 [phase 0]:        #phase-0
 
-[←][HOME]
+[←][home]
 |||
 |-|-|
 |[what is the roadmap][roadmap whatis]|see|

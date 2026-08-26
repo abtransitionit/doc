@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [host list]:           ../list/host.md
@@ -15,7 +15,7 @@
 [hypervisor whatis]: ../whatis/hypervisor.md
 [host howto]: ../howto/host.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

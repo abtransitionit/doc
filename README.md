@@ -7,8 +7,6 @@
 [kubernetes ep]: ./system/k8s/README.md
 [linux ep]:      ./system/linux/README.md
 [security ep]:   ./reference/concept/security/README.md
-[forge whatis]:  ./project/forge/whatis/ep.md
-[rctl whatis]:   ./project/rctl/whatis/ep.md
 [project ep]:    ./project/README.md
 
 
@@ -30,7 +28,8 @@
 
 **Projects**
 
-- [Forge][forge whatis]
+- [Forge](./project/forge/whatis/ep.md)
+- [rctl](./project/rctl/whatis/ep.md)
 - [All Projects][project ep]
 
 **Reference**

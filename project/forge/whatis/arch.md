@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [forge howto]: ../howto/forge.md
@@ -9,7 +9,7 @@
 [host whatis]: ../whatis/host.md
 [arch whatis]: ../whatis/arch.md
 
-[←][HOME]
+[←][home]
 
 <h1 align="center">Forge Architecture</h1>
  

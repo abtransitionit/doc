@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../README.md
+[home]:  ../README.md
 
 [//]: #(functional)
 [forge whatis]: whatis/forge.md
@@ -7,7 +7,7 @@
 [host list]:     list/host.md
 [roadmap readme]: roadmap.md
 
-[←][HOME]
+[←][home]
 
 <h1 align="center">List of Forge ADR</h1>
 

@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [cli howto]:        ../howto/cli.md
@@ -13,7 +13,7 @@
 [manage howto]:     ../howto/manage.md
 [metadata whatis]:  ../whatis/metadata.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

@@ -1,11 +1,11 @@
 [//]: #(Home)
-[HOME]: ../whatis/provision.md
+[home]: ../whatis/provision.md
 
 [//]: #(functional)
 [tool whatis]: ../whatis/tool.md
 [qemu whatis]: ../whatis/qemu.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

@@ -1,10 +1,10 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [cloud provider list]:   ../list/cloud.provider.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]: ../../README.md
+[home]: ../../README.md
 
 
 [//]: #(functional)
@@ -7,7 +7,7 @@
 [res list]: ../list/res.md
 [host list]: ../list/host.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 

@@ -1,11 +1,11 @@
 [//]: #(Home)
-[HOME]: ../whatis/ep.md
+[home]: ../whatis/ep.md
 
 [//]: #(functional)
 [hypervisor whatis]: ../whatis/hypervisor.md
 [hypervisor list]:   ../list/tool.md#list
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

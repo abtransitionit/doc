@@ -1,10 +1,10 @@
 [//]: #(Home)
-[HOME]: ../whatis/provision.md
+[home]: ../whatis/provision.md
 
 [//]: #(functional)
 [provider cloud whatis]: ../whatis/cloud.provider.md
 
-[←][HOME] Related topics
+[←][home] Related topics
 |||
 |-|-|
 |[what is a cloud provider][provider cloud whatis]|see|

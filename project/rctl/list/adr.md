@@ -1,12 +1,12 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [forge whatis]: ../whatis/forge.md
 [res list]:     ../list/res.md
 [host list]:    ../list/host.md
 
-[←][HOME]
+[←][home]
 
 <h1 align="center">List of Forge ADR</h1>
 

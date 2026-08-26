@@ -1,17 +1,5 @@
 [//]: #(Home)
-[HOME]: ../README.md
-[Top]: #
-
-[//]: #(functional)
-[k8s whatis]:      ./k8s.md
-[Security whatis]: ./security.md
-[Linux whatis]:    ./Linux.md
-[system stage]:    ./stage.md#-stages-for-a-system-lifecycle
-[project stage]:   ./stage.md#-stages-for-a-project-lifecycle
-[cv list]:           cv.md
-[term.kind list]:    term.kind.md
-[acronym list]:    acronym.md
-
+[home]: ../README.md
 
 
 
@@ -42,3 +30,4 @@ Use the following markers for phase progression
 - ⬜ Not Started — Not yet begun
 - 🔴 Blocked — Waiting on something
 - 🔁 Review — Phase done, under review
+

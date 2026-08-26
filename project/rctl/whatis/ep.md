@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]: ../../README.md
+[home]: ../../README.md
 [NEXT_TOPIC]: ../whatis/cli.md
 [//]: #(archl)
 [acro list]:      ../list/acro.md
@@ -12,15 +12,17 @@
 
 [//]: #(functional)
 
-[↖][HOME]
+[↖][home]
 
 Related topics
 
-|||
-|-|-|
-|[what is a resource][res whatis]|internal
-|[what mean managing][manage whatis]|internal
-|[what is cli][cli whatis]|internal
+|Topic / Artifact|Location|Kind|
+|-|-|-|
+|[what is a resource][res whatis]|internal|functional|
+|[what mean managing][manage whatis]|internal|functional|
+|[what is cli][cli whatis]|internal|functional|
+|[roadmap][roadmap whatis]|internal|planing|
+|[architecture][arch whatis]|internal|design|
 
 
 

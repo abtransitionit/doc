@@ -1,10 +1,10 @@
-[HOME]:       ../whatis/ep.md
+[home]:       ../whatis/ep.md
 
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
 [res list]:  ../list/res.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 - [whatis a resource][res whatis]

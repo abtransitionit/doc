@@ -1,11 +1,11 @@
 [//]: #(Home)
-[HOME]:       ../whatis/ep.md
+[home]:       ../whatis/ep.md
 
 [//]: #(functional)
 [host whatis]: ../whatis/host.md
 [res howto]:  ../howto/host.md 
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

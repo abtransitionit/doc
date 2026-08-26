@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]: ../../README.md
+[home]: ../../README.md
 
 [//]: #(archl)
 [arch whatis]: ../whatis/arch.md
@@ -15,7 +15,7 @@
 [usecase list]: ../list/usecase.md
 [provision whatis]: ../whatis/provision.md
 
-[↖][HOME]
+[↖][home]
 
 Related topics
 |||

@@ -1,12 +1,12 @@
 [//]: #(Home)
-[HOME]:       ../whatis/ep.md
+[home]:       ../whatis/ep.md
 
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
 [res howto]:  ../howto/res.md 
 
 
-[←][HOME] Related topics
+[←][home] Related topics
 |||
 |-|-|
 |[howto for resource][res howto]|see|

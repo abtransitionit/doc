@@ -1,5 +1,5 @@
 [//]: #(Home)
-[HOME]:  ../whatis/ep.md
+[home]:  ../whatis/ep.md
 
 [//]: #(functional)
 [concept list]:     ../list/concept.md
@@ -10,7 +10,7 @@
 [resource list]:    ../list/res.md
 [manage howto]:     ../howto/manage.md
 
-[←][HOME] 
+[←][home] 
 
 Related topics
 |||

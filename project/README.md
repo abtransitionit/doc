@@ -1,7 +1,7 @@
 [//]: #(Home)
-[HOME]:    ../README.md
+[home]:    ../README.md
 
-[↖][HOME] <h1 align="center">Project List</h1>
+[↖][home] <h1 align="center">Project List</h1>
 
 
 ||type|
