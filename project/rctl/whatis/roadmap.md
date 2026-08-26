@@ -20,12 +20,11 @@
 
 <h1 align="center">rctl Roadmap</h1>
 
-# Roadmap
-<p  id="roadmap"></p>
+# Roadmap <a  id="roadmap"></a>
 
 | Id | Phase | Estimated |Duration| Outcome | satus |
 | - |-|-|-|-|-|
-| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** |½ day| Small Inventory of existing resources and their operations/actions |🟡 [In Progress](./progress.md#-phase-0--inventory-completed-2024-01-13)
+| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** |½ day| Small Inventory of existing resources and their operations/actions |🟡 [In Progress](./progress.md#-phase-0)
 | 1 |[Design](#-phase-1--design) | **2–4 h** || <li>`rctl` command model agreed  <li> a tiny CLI specification.|⬜ Not Started|
 | 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** || <li>`rctl` runs, config/help/errors work| ⬜ Not Started
 | 3 |[Repo resource](#-phase-3--repo) | **1–2 days** || <li>Existing repo scripts exposed through `rctl` <li>Start replacing all aliases.| ⬜ Not Started

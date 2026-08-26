@@ -191,26 +191,6 @@ cf. [outcome of this phase][outcome phase0]
 # Todo - Example
 
 
-### 🟡 Phase 1 — Design (Started 2024-01-14)
-**Next:** Finalize action verbs
-**Blockers:** Need to decide on `get` vs `list` convention
-**Decisions:**
-- Resource model: repo, image, container
-- Actions: create, list, delete, info
-- Config location: `~/.rctl/config.yaml`
-
-### ⬜ Phase 2 — Core (Not Started)
-Will start when design is approved.
-
-## 📍 Current Status
-|||
-|-|-|
-|Phase|[Phase 1 - Design](#-phase-1--design)  
-|Progress|70% complete  
-|Started|2024-01-14  
-|Est. Completion|2024-01-16  
-|See [progress.md](./progress.md) for detailed logs
-
 ## Example
 
 - ✅ Done — Phase complete
