@@ -1,6 +1,6 @@
 [//]: #(Home)
 [HOME]: ../whatis/ep.md
-
+[list res]: #list
 [//]: #(functional)
 [res whatis]: ../whatis/res.md
 [res howto]:  ../howto/res.md 
@@ -17,49 +17,199 @@ Related topics
 
 <h1 align="center">List of rctl Resource</h1>
 
+<p id='list'></p>
+
 # List
-|Res type|Description|Example|
-|-|-|-|
-|git repository|github, gitlab, local|
-|go module|
-|container image|
-|container| (instance of container image)
-|environment variable|
-|cli|
+
+[Example list](#phase-0-outcome) for the phase 0 of the roadmap 
+
+|Res type||Description|Provider|Example|
+|-|-|-|-|-|
+|[git authentication](#-git-authentication)|[gitrepo](#git-repository)|github, gitlab, local||
+|[git repository](#git-repository)|[gitrepo](#git-repository)||github, gitlab, local|
+|go module|gomod|
+|[container registry](#-container-registry)|contrepo|
+|[container image](#-container-image)|cim|
+|[container](#-container)|| (instance of container image)
+|[environment variable](#-environment-variables)|envar|
+|[cli](#-cli)|||VSCode, Browser
+|[Shell History](#-shell-history)|list|
+|[Other](#-other)|
 
 
+```
+                 Resource
+                    │
+        ┌───────────┼───────────┐
+        │           │           │
+      Repo        Image      Container
+        │           │           │
+        ▼           ▼           ▼
+    operations   operations   operations
+```
 
-## Git repository
-|res|action/operation|description|
-|-|-|-|
-|repo/git|create|
-|repo/git|list|list all or some github/gitlab:repo (abtransitionit and abelgacem)
-|repo/git|history|
-|repo/git|history-reset|delete history on remote/local
-|repo/git|clone, create|locally
-|repo/git|clone-tpl|clone + placeholder
-|repo/git|create|on remote
-|repo/git|delete|remote
-|repo/git|archive|remote
+```
+                  Resource framework
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+        repo           image        container
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+              common infrastructure
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+       config          output          auth
+       logging         errors          state
+       discovery       plugins         docs
+```
+## [↑][list res] Git
 
-Example/Kind of operations
-- deleting history
-- changing visibility
-- archiving repositories
-- deleting repositories
-- rewriting branches
-- changing remotes
+### Git repository
+- git/repository can be **local** or *remote*
+- remote git/repository can be provided by `github `or `gitlab`
+- remote git/repository can be provided by `public `or `private`
 
-# Kind
-- repo can be public or private
-- repo can be local or remote
+```
+GitHub
+  └── repositories
+        ├── list
+        ├── create
+        └── delete
+```
 
-# possible flags
+Grammar could be:
 ```sh
+rctl github repo [list | delete | create]
+```
+
+---
+---
+
+| Resource | Action          | Type                   | Provider |
+| -------- | --------------- | ---------------------- | -------- |
+| repo     | reset-history   | workflow / destructive | Git      |
+| repo     | clone           | primitive              | Git      |
+| repo     | inspect-history | diagnostic             | Git      |
+| repo     | reinitialize    | primitive              | Git      |
+| repo     | set-remote      | primitive              | Git      |
+| repo     | commit          | primitive              | Git      |
+
+---
+---
+
+Std operation could be
+```yaml
+- list remote|local repo:history
+- clone remote repo locally
+- clone remote repo template locally # clone + placeholder
+- archive remote|local repo
+```
+
+Other risked operation could be
+```yaml
+- delete remote|local repo
+- delete local|remote repo:history
+- change repo:visibility # from private to public
+```
+Other operation
+```yaml
+- change remote
+- rewrite branche
+```
+
+**Todo**
+
+| Resource | Action | Provider | Current implementation        |
+| -------- | ------ | -------- | ----------------------------- |
+| git/repo | list   | GitHub   | `gh`                          |
+| git/repo | create | GitHub   | GitHub API → remote `init.sh` |
+| git/repo | delete | GitHub   | `gh`                          |
+
+```
+repo create
+    │
+    └── fetch versioned file init.sh
+            │
+            └── execute shell script locally
+````
+
+### [↑][list res] Git authentication
+
+- git/authentication can be provided by `github` or `gitlab`
+```
+GitHub
+  └── authentication
+        ├── status
+        ├── login
+        ├── logout
+        └── setup-git
+```
+
+Grammar could be:
+```sh
+rctl github auth [status | login | logout | setup-git]
+```
+### Example workflow
+```sh
+# what user enter
+rctl repo reset-history foo
+```
+
+```sh
+# what happnes internally
+rctl repo reset-history foo
+              │
+              ▼
+       ResetHistory()
+              │
+       ┌──────┼──────┐
+       ▼      ▼      ▼
+     clone   clean   init
+                     │
+                  remote
+                     │
+                  commit
+```
+
+
+### Kind
+- git/repo can be public or private
+- git/repo can be local or remote
+- git/repo remote can be provided by `github` or `gitlab`
+- git/authentication can be provided by `github` or `gitlab`
+
+
+
+### possible flags
+```sh
+--remote
+--local
 --public
 --private
 --all
+--github
+--gitlab
 ```
+
+### Sumary
+```
+GitHub
+ ├── authentication
+ │    ├── status
+ │    ├── login
+ │    ├── logout
+ │    └── setup-git
+ │
+ └── repositories
+      ├── list
+      ├── create
+      └── delete
+```
+
+
 ## Example
 ```sh
 mx repo create foo --template go-lib@v1.4.0
@@ -90,7 +240,7 @@ rctl repo github history reset abelgacem/foo
 rctl repo github history-reset  abelgacem/foo
 ```
 
-## Container registry
+## [↑][list res] Container registry
 **Kind**
 - local
 - remote
@@ -98,7 +248,7 @@ rctl repo github history-reset  abelgacem/foo
 **Kind**
 - public
 - private
-## Container image
+## [↑][list res] Container image
 |res|action/operation|description|
 |-|-|-|
 |cimage|list|
@@ -126,7 +276,7 @@ rctl image build foo
 rctl image push foo
 ```
 
-## Container
+## [↑][list res] Container
 |res|action/operation|description|
 |-|-|-|
 |cont|start|
@@ -147,24 +297,9 @@ rctl container start foo
 rctl container exec foo
 ```
 
-## Cli
-|res|action/operation|description|
-|-|-|-|
-|cli/vscode|start vscode|
-|cli/vscode|Edit a file in vscode
-|cli/vscode|Display vscode welcome
+## [↑][list res] Shell History
 
-## Other
-|res|action/operation|description|
-|-|-|-|
-|project|list|
-|project|status|
-|volume|list|
-|namespace|list|
-|registry|list, add, delete|
-|registry|list, add, delete|
-
-### Variable
+## [↑][list res] Environment Variables
 |res|action/operation|description|
 |-|-|-|
 |envar|list|list SHELL envar (env)
@@ -179,6 +314,119 @@ MxHome
            └── MxBinary_Vscode
 ```
 > 💡 could eventually become `rctl` configuration,
+
+## [↑][list res] CLI
+### `go` cli
+- 
+### `vscode` cli
+```yaml
+cli
+ ├── vscode
+ │    ├── start
+ │    └── welcome
+ │
+ ├── gh
+ │    ├── create repo
+ │    └── ...
+ │    
+ ├── awscli
+ │    ├── ...
+ │    └── ...
+ │    
+ │    
+ ├── browser
+ │    ├── open frame
+ │    ├── open window
+ │    └── ...
+ │    
+ ├── ...
+ │    ├── ...
+ │    └── ...
+ │
+ └── go
+      ├── list module
+      ├── list go envar
+      ├── list module installed version
+      ├── list remote module version
+      └── list cached module
+
+cli/vscode
+  └── start
+      └──  MxHome_Go
+      │    └── MxBinary_Go
+      └── MxHome_VsCode
+           └── MxBinary_Vscode
+`
+```
+### `browser` cli
+|res|action/operation|description|
+|-|-|-|
+|cli/vscode|start vscode|
+|cli/vscode|Edit a file in vscode
+|cli/vscode|Display vscode welcome
+
+## [↑][list res] Other
+|res|action/operation|description|
+|-|-|-|
+|project|list|
+|project|status|
+|volume|list|
+|namespace|list|
+|registry|list, add, delete|
+|registry|list, add, delete|
+
+
+# Phase 0 outcome
+
+**The list**
+```yaml
+repo
+  list
+  create
+  delete
+
+GitHub/auth
+  status
+  login
+  logout
+  setup-git
+
+Go/environment
+  env
+
+Go/module
+  version
+  cache.list
+
+Go/CLI
+  list
+
+shell/history
+  list
+
+VSCode
+  start
+  welcome
+```
+
+**The same list ordered**
+```yaml
+CORE rctl
+  repo
+  GitHub authentication
+
+POSSIBLE rctl
+  Go
+  image
+  container
+  ...
+
+OUTSIDE / LOW PRIORITY
+  shell configuration
+  shell history
+  VSCode
+````
+
 # Todo
 * File, Directory
 * Package, User, Service

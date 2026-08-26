@@ -45,3 +45,6 @@ My Needs
 - what if later the tool also manage container, container image and other things. Is the evolution easy ?
 ```
 
+# ADR-0002 — `SOT`
+
+The bigger architectural question I'd explore next is whether your doc repository should become a declarative inventory/registry (almost like a tiny internal catalog) and whether mx should support both imperative operations (mx repo create) and declarative reconciliation (mx sync). That choice has a big impact on how well this scales from 50 repositories to 200+.

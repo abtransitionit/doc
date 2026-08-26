@@ -1,45 +1,54 @@
 [//]: #(Home)
 [HOME]: ../whatis/ep.md  
-[Roadmap]: #roadmap
+[roadmap whatis]: #roadmap
 
 [//]: #(functional)
-[rctl whatis]: ../whatis/ep.md
-[res list]:    ../list/res.md
-[host list]:   ../list/host.md
+[progress whatis]: ../whatis/progress.md
+[res list]:        ../list/res.md
+[host list]:       ../list/host.md
 
 [←][HOME]
 |||
 |-|-|
-|[what is rctl][rctl whatis]|see|
+|[what is the roadmap progress][progress whatis]|see|
 
-<h1 align="center" id="roadmap">rctl Roadmap</h1>
-
-
-
-| Id | Phase | Duration | Outcome |
-| - |-|-|-|
-| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** | Small Inventory of existing resources and their operations |
-| 1 |[Design](#-phase-1--design) | **2–4 h** | `rctl` command model agreed |
-| 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** | `rctl` runs, config/help/errors work |
-| 3 |[Repo resource](#-phase-3--repo) | **1–2 days** | Existing repo scripts exposed through `rctl` |
-| 4 |[`doc` registry](#-phase-4--doc) | **1 day** | `rctl` reads repository metadata |
-| 4M1 |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** | Useful replacement for your current aliases/tools |
-| 5 |[Packaging/release](#-phase-5--distribution) | **0.5–1 day** | Install/version/upgrade |
-| 6 |[Image resource](#) | **1 day** | `rctl image ...` |
-| 7 |Container resource | **1 day** | `rctl container ...` |
-| 8 |Relationships | **0.5–1 day** | Resources can reference each other |
-| 8M2 |[rctl v0.2](#-m2--add-resources) | **~7–10 days total** | Repo + image + container |
-| 9 |Cleanup/documentation | **1–2 days** | Team-ready |
-| 9M3 |[v1.0](#-m3--relationships) | **~2 weeks total** | Stable everyday tool |
+# Index
+- [Roadmap](#roadmap)
+- [Roadmap Timeline](#primary-roadmap-timeline)
+- [Risk](#risk)
 
 
+<h1 align="center">rctl Roadmap</h1>
+
+# Roadmap
+<p  id="roadmap"></p>
+
+| Id | Phase | Estimated |Duration| Outcome | satus |
+| - |-|-|-|-|-|
+| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** |½ day| Small Inventory of existing resources and their operations/actions |🟡 [In Progress](./progress.md#-phase-0--inventory-completed-2024-01-13)
+| 1 |[Design](#-phase-1--design) | **2–4 h** || <li>`rctl` command model agreed  <li> a tiny CLI specification.|⬜ Not Started|
+| 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** || <li>`rctl` runs, config/help/errors work| ⬜ Not Started
+| 3 |[Repo resource](#-phase-3--repo) | **1–2 days** || <li>Existing repo scripts exposed through `rctl` <li>Start replacing all aliases.| ⬜ Not Started
+| 4 |[`doc` registry](#-phase-4--doc) | **1 day** || `rctl` reads repository metadata | ⬜ Not Started
+| 4M1 |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** || Useful replacement for your current aliases/tools | ⬜ Not Started
+| 5 |[Packaging/release](#-phase-5--distribution) | **0.5–1 day** || <li>Install/version/upgrade <li> `run version` works <li>`rctl` is distribuable/installable in a specific release| ⬜ Not Started
+| 6 |[Image resource](#) | **1 day** || `rctl image ...` | ⬜ Not Started
+| 7 |Container resource | **1 day** || `rctl container ...` | ⬜ Not Started
+| 8 |Relationships | **0.5–1 day** || Resources can reference each other | ⬜ Not Started
+| 8M2 |[rctl v0.2](#-m2--add-resources) | **~7–10 days total** || Repo + image + container | ⬜ Not Started
+| 9 |Cleanup/documentation | **1–2 days** || Team-ready | ⬜ Not Started
+| 9M3 |[v1.0](#-m3--relationships) | **~2 weeks total** || Stable everyday tool | ⬜ Not Started
 
 
-# [↑][Roadmap] Phase 0 — Inventory
 
 
-- No code.
-- List resource to manage or expect to manage.
+## [↑][roadmap whatis] Phase 0 — Inventory
+
+|||
+|-|-|
+|Outcome|<li>a small inventory <li>List of the tool/resource and their actions to be managed by `rctl`
+|Purpose|<li>understand what already exists without changing anything <li>derive from that table the first `rctl` resource model and design from reality rather than from theory|
+
 
 Take what you already have:
 
@@ -52,7 +61,7 @@ GitHub API calls
 GitLab API calls
 ```
 
-and make a simple map:
+and make a simple map resource/actions per resource:
 
 ```text
 repo
@@ -73,9 +82,19 @@ container
  └── ...
 ```
 
+```
+resource/tool
+  ├── purpose
+  ├── implementation
+  ├── dependencies
+  ├── dangerous?
+  ├── versioned?
+  └── replacement
+```  
+
 **Deliverable:** list of resources + actions.
 
-# [↑][Roadmap] Phase 1 — Design
+## [↑][roadmap whatis] Phase 1 — Design
 
 
 Decide only:
@@ -112,7 +131,24 @@ Also decide:
 
 No 50-page architecture document.
 
-# [↑][Roadmap] Phase 2 — Core
+
+### Todo
+**define the grammar genuinely**
+```
+# with flags an options
+rctl <resource> <action> ...
+```
+
+**define a small universal vocabulary set, with resource-specific actions layered on top.**
+```
+get, list, create, delete, etc.
+```
+
+**do we need to freeze the concepts**
+- `operation` vs. `actions`
+
+
+## [↑][roadmap whatis] Phase 2 — Core
 
 
 Build the skeleton:
@@ -135,30 +171,26 @@ rctl version
 
 works.
 
-# [↑][Roadmap] Phase 3 — Repo
+## [↑][roadmap whatis] Phase 3 — Repo
 
-
-This is where the project becomes useful.
-
-Don't rewrite your existing tools.
-
-Wrap them.
+- Don't rewrite existing tools.
+- Only Wrap them.
 
 For example:
 
 ```bash
+# Invoke the existing shell script.
 rctl repo reset-history foo
 ```
 
-can initially invoke your existing shell script.
 
 Likewise:
 
 ```bash
+# Invoke the existing template mechanism.
 rctl repo create foo
 ```
 
-can use the existing template mechanism.
 
 The architecture becomes:
 
@@ -182,18 +214,35 @@ rctl
      Go implementation
 ```
 
-**Deliverable:** you can start replacing your aliases.
+**Deliverable:** Start replacing your aliases.
+
+Start with 5 actions for the git/repo resource:
+```
+git/repo
+  ├── list
+  ├── info
+  ├── clone
+  ├── create
+  ├── tpl
+  └── reset-history
+```  
+
+### Todo
+Don't rewrite them immediately. Wrap them:
+```
+mx repo reset-history
+       │
+       └── existing reset-history.sh
+```
 
 
-# [↑][Roadmap] M1 — `rctl v0.1`
+## [↑][roadmap whatis] M1 — `rctl v0.1`
 
-At this point I'd actually stop.
-
-Use it for several days.
-
-Don't immediately build containers.
-
-You want to discover whether:
+- At this point:stop.
+- This is an important milestone because **the user experience is more important than the architecture at this stage.**
+- Use `rctl` for several days.
+- Don't immediately build containers.
+- Discover whether the grammar and the code feels good:
 
 ```bash
 rctl repo create foo
@@ -201,17 +250,12 @@ rctl repo clone foo
 rctl repo reset-history foo
 ```
 
-actually feels good.
 
-This is an important milestone because **the user experience is more important than the architecture at this stage.**
+## [↑][roadmap whatis] Phase 4 — `doc`
 
-
-# [↑][Roadmap] Phase 4 — `doc`
-
-
-Now connect the existing `doc` repository.
-
-I'd keep this extremely simple initially.
+- Create the machine-readable repository **manifest** in **sot** repository and make the documentation generated from it.
+- connect the existing `SOT` (i.e. `doc`) repository.
+- Keep this extremely simple initially.
 
 Something like:
 
@@ -223,34 +267,30 @@ repositories:
     template: ...
 ```
 
-Then:
+Then check the following cde can consume it.:
 
 ```bash
 rctl repo list
 rctl repo info foo
 ```
 
-can consume it.
-
-Don't build a database.
-
-Don't build a service.
-
-Don't build a synchronization engine.
-
-It's just a **versioned registry file in Git**.
+- Don't build a database.
+- Don't build a service.
+- Don't build a synchronization engine.
+- It's just a **versioned registry file in Git**.
 
 
-# [↑][Roadmap] Phase 5 — Distribution
+
+## [↑][roadmap whatis] Phase 5 — Distribution
 
 
-Make:
+Run:
 
 ```bash
 rctl version
 ```
 
-and provide a simple installation mechanism.
+Provide a simple installation mechanism.
 
 You want this:
 
@@ -268,10 +308,23 @@ rather than:
 
 That's a significant improvement over your current approach.
 
+### Todo
+move from
+```sh
+curl | jq | base64 | sh
+```
 
-# [↑][Roadmap] M2 — Add resources
+to
+```
+mx repo create ...
+```
 
-Now the fun part.
+
+## [↑][roadmap whatis] M2 — Add resources
+- Test whether the resource abstraction is actually useful.
+- **Do not design the image/container architecture before implementing them.**
+- Implement `repo` first then **image**, then **container**
+- Let the common abstraction emerge from the three actual cases.
 
 ### Image
 
@@ -293,26 +346,14 @@ rctl container exec foo
 rctl container stop foo
 ```
 
-At this point we're testing whether your resource abstraction is actually useful.
+### Todo
+- Have the **sot** repository validate the whole ecosystem.
 
-And this is important:
-
-> **Do not design the image/container architecture before implementing them.**
-
-Implement `repo` first.
-
-Then image.
-
-Then container.
-
-Let the common abstraction emerge from the three actual cases.
-
-
-# [↑][Roadmap] M3 — Relationships
+## [↑][roadmap whatis] M3 — Relationships
+- Start exploiting the fact that everything is a resource.
 
 **½–1 day**
 
-Only now start exploiting the fact that everything is a resource.
 
 For example:
 
@@ -336,14 +377,11 @@ Then perhaps:
 rctl repo info foo
 ```
 
-can show related resources.
+- can show related resources.
+- This is where the `SOT` repository (i.e. `doc`)  starts becoming much more interesting.
 
-This is where your `doc` repository starts becoming much more interesting.
 
-
-# My recommended timeline
-
-If you can spend a focused day or two on it:
+# Roadmap Timeline
 
 ```text
 Day 1
@@ -363,7 +401,9 @@ Day 5
        ↓
 
      M1 / v0.1
-     USE IT
+      └── USE rctl
+       ↓
+     
 
 Day 6
  └── image
@@ -378,79 +418,17 @@ Day 9–10
  └── cleanup / documentation / migration
 ```
 
-**So I'd estimate ~5 days to get something genuinely useful, and ~10 days to get the first complete version you're describing.**
-
-And I'd deliberately keep **v1 small**.
-
-The biggest risk isn't that `rctl` will be technically difficult. The biggest risk is **over-designing the abstraction before you've migrated enough real commands to know what the abstraction should be.**
-
-So our next step should be **Phase 0: inventory**. We can make a very small table of your existing tools/actions and use that to derive the first `rctl` resource model.
+- ~5 days to get something genuinely useful
+- ~10 days to get the first complete described version
+- **v1.0** is deliberately kept **small**.
 
 
-# Alternative Roadmap
-
-| Id | Phase | Duration | Outcome |
-| - |-|-|-|
-| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** | Small Inventory of existing resources and their operations |
-| 1 |[Design](#-phase-1--design) | **2–4 h** | `rctl` command model agreed |
-| 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** | `rctl` runs, config/help/errors work |
-| 3 |[Repo resource](#-phase-3--repo) | **1–2 days** | Existing repo scripts exposed through `rctl` |
-| 4 |[`doc` registry](#-phase-4--doc) | **1 day** | `rctl` reads repository metadata |
-| 4M1 |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** | Useful replacement for your current aliases/tools |
 
 
-## Phase 0 - inventory of tool/resource
-```
-resource/tool
-  ├── purpose
-  ├── implementation
-  ├── dependencies
-  ├── dangerous?
-  ├── versioned?
-  └── replacement
-```  
 
-## Phase 1 - define the CLI
-
-Start with 5 actions for a resource:
-```
-git/repo
-  ├── list
-  ├── info
-  ├── clone
-  ├── create
-  ├── tpl
-  └── reset-history
-```  
-
-## Phase 3 — repository registry
-
-Create the machine-readable repository **manifest** in **sot** repository and make the documentation generated from it.
-
-## Phase 4 — package/release tool
-move from
-```sh
-curl | jq | base64 | sh
-```
-
-to
-```
-mx repo create ...
-```
-
-## Phase 5 — migrate existing scripts
-
-Don't rewrite them immediately. Wrap them:
-```
-mx repo reset-history
-       │
-       └── existing reset-history.sh
-```
-
-## Phase 6 — CI
-
-Have the **sot** repository validate the whole ecosystem.
-
+# Risk
+- Isn't that `rctl` will be technically difficult. 
+- The biggest risk is **over-designing the abstraction before migrated enough real commands to know what the abstraction should be.**
 
 # Todo - old
 
@@ -468,3 +446,4 @@ Have the **sot** repository validate the whole ecosystem.
 | 8. Container resource | 2–3 weeks | Containers manageable through `rctl` |
 | 9. Relationships / graph | 1–2 weeks | Resources can describe dependencies |
 | 10. Hardening & documentation | | |
+

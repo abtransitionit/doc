@@ -4,7 +4,6 @@
 [//]: #(functional)
 [cli howto]:        ../howto/cli.md
 [res list]:         ../list/res.md
-[res whatis]:       ../whatis/res.md
 [host concept]:     ../list/concept.md#
 [rctl whatis]:      ../whatis/ep.md
 [provision whatis]: ../whatis/provision.md
@@ -16,7 +15,6 @@
 Related topics
 |||
 |-|-|
-|[what is rctl][rctl whatis]|internal|
 |[what is a resource][res whatis]|internal
 |[howto for cli][cli howto]|see
 |[howto manage][manage howto]|internal
@@ -74,6 +72,37 @@ Exit codes:
 
 # The Model
 ```
+                  rctl CLI
+                     │
+             stable command API
+                     │
+              resource layer
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+      repo          image      container
+        │            │            │
+        ▼            ▼            ▼
+    providers      engines     runtimes
+```
+
+```
+repo
+ ├── GitHub
+ └── GitLab
+
+image
+ ├── Docker
+ └── Podman/buildkit/etc.
+
+container
+ ├── Docker
+ └── Podman
+```
+This means resource semantics stay stable while implementations/providers can evolve.
+
+# The Model
+```
                    rctl
                     │
        ┌────────────┼─────────────┐
@@ -91,6 +120,7 @@ Exit codes:
 # The Model
 ```sh
 rctl <resource> <action> [name] [options]
+rctl <resource> --help
 ```
 
 # Examples
@@ -109,7 +139,7 @@ rctl repo git info foo
                         │
                         ▼
                   ┌───────────┐
-                  │    mx     │
+                  │    rctl   │
                   └─────┬─────┘
                         │
              ┌──────────┼──────────┐
@@ -173,4 +203,60 @@ rctl mx upgarde
 Meaning:
 - Upgrade the tool itself.
 
-# Example
+# The Implementation
+```
+type GitProvider interface {
+    CreateRepository(...)
+    DeleteRepository(...)
+    Clone(...)
+}
+
+type ContainerRegistryRuntimeProvider interface {
+    CreateRepository(...)
+    DeleteRepository(...)
+    Clone(...)
+}
+
+type ContainerRuntime interface {
+    Run(...)
+    Stop(...)
+    Exec(...)
+}
+
+type ContainerImageRegistry interface {
+    Push(...)
+    Pull(...)
+    Tags(...)
+}
+```
+allow
+```
+GitProvider (GitRepositoryProvider) ... too restrictive
+ ├── GitHub
+ └── GitLab
+
+ContainerRuntime (ContainerProvider)
+ ├── Docker
+ └── Podman
+
+ImageRegistry (ContainerImageProvider)
+ ├── GHCR
+ ├── GitLab Registry
+ └── Docker Hub
+```
+
+
+# The grammar model
+- some cde needs confirmation other don't
+```sh
+# need confirmation
+rctl repo reset-history foo
+
+# bypass confirmation if automation - possible synatx
+rctl repo reset-history foo --yes
+rctl repo reset-history foo --confirmation no
+rctl repo reset-history foo --confirmation yes
+
+# no confirmation needed
+rctl repo info foo
+```

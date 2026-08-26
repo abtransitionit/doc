@@ -10,6 +10,7 @@
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 [manage howto]:     ../howto/manage.md
+[architecture whatis]: ../whatis/arch.md
 
 [←][HOME] 
 
@@ -18,6 +19,7 @@ Related topics
 |-|-|
 |[what is rctl][rctl whatis]|internal|
 |[what is a resource][res whatis]|internal
+|[what is a architecture][architecture whatis]|internal
 |[howto for cli][cli howto]|see
 |[howto manage][manage howto]|internal
 
@@ -106,4 +108,24 @@ rctl repo dependents go-tpl-lib
 rctl repo children go-service
 rctl repo graph
 rctl template update go-service
+```
+
+# Example
+```
+repositories:
+  - name: foo
+    github: abtransitionit/foo
+    gitlab: abtransitionit/foo
+
+    images:
+      - name: foo
+        registry: ghcr.io
+        repository: abtransitionit/foo
+        tags:
+          - latest
+          - "1.4"
+
+    containers:
+      - name: foo-dev
+        image: foo:1.4
 ```

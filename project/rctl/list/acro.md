@@ -16,3 +16,4 @@ Related topics
 |-|-|-|-|
 | SOT |**S**ource **O**f **T**rust|
 | CRI |**C**anonical **R**esource **I**dentifier|
+| RCTL |**R**esource **C**on**T**ro**L**|

@@ -5,7 +5,7 @@
 [concept list]:     ../list/concept.md
 [res list]:         ../list/res.md
 [host concept]:     ../list/concept.md#
-[metadata whatis]:  ../whatis/mtd.md
+[metadata whatis]:  ../whatis/metadata.md
 [provision whatis]: ../whatis/provision.md
 [resource list]:    ../list/res.md
 [manage howto]:     ../howto/manage.md
@@ -27,13 +27,14 @@ Related topics
 
 
 # Definition
-- can be operated on 
+- something can be operated on 
 - have a kind
 
 # Kind
+
 Example
-- git repo
-- container image repo
+- a repo can be a **git** repo, a **package** repo, a **container** image repo
+
 # Example
 - [List of resource][res list]
 
@@ -53,6 +54,23 @@ repo/foo
 image/foo:1.2
 container/foo-dev
 ```
+# The model
+```
+Resource
+├── identity
+│   └── name
+├── metadata
+├── state
+├── relationships
+└── resource-specific actions
+```
+
+Example
+| Resource   | Identity  | Actions                               |
+| ---------- | --------- | ------------------------------------- |
+| repository | `foo`     | create, clone, archive, reset-history |
+| Container image      | `foo:1.2` | build, tag, push, pull                |
+| container  | `foo-dev` | create, start, stop, exec, remove     |
 
 ## 💡 Impl
 ```
@@ -95,9 +113,43 @@ image/foo
 container/foo-dev
 ```
 
-# 💡 Implementation
 
+# 💡 Implementation
+```go
+type Resource interface {
+    Name() string
+}
+
+type Creator interface {
+    Create(...)
+}
+
+type Deleter interface {
+    Delete(...)
+}
+
+type Starter interface {
+    Start(...)
+}
+
+type Pusher interface {
+    Push(...)
+}
+```
+
+Then
 ```yaml
+Repository
+    Resource
+    Creator
+    Deleter
+
+Image
+    Resource
+    Deleter
+    Pusher
+    Puller
+    Builder
 
 Container
     Resource
@@ -106,7 +158,4 @@ Container
     Starter
     Stopper
     Executor
-
-```
-
 ```

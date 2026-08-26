@@ -1,6 +1,6 @@
 [//]: #(Home)
 [HOME]: ../../README.md
-
+[NEXT_TOPIC]: ../whatis/cli.md
 [//]: #(archl)
 [acro list]:      ../list/acro.md
 [arch whatis]:    ../whatis/arch.md
@@ -12,15 +12,15 @@
 
 [//]: #(functional)
 
-[←][HOME] 
+[↖][HOME]
 
 Related topics
 
 |||
 |-|-|
 |[what is a resource][res whatis]|internal
-|[what is cli][cli whatis]|see
-|[what mean managing][manage whatis]|see
+|[what mean managing][manage whatis]|internal
+|[what is cli][cli whatis]|internal
 
 
 
@@ -35,6 +35,9 @@ Related topics
 
 ## Purpose
 A unified [CLI][cli whatis] for [managing][manage whatis] named [resources][res whatis] and their relationships across development ecosystem (repositories, images, containers, and more).
+
+
+A coherent, extensible [CLI][cli whatis] for operating on a given ecosystem of named resources
 
 ## Key Points
 - the tool may rely on existing [resources][res whatis] and [hosts][host whatis]
