@@ -7,8 +7,11 @@
 [←][home] 
 
 Related topics
-- [whatis a resource][res whatis]
-- [List of resources][res list]
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a resource][res whatis]|
+|[List of resources][res list]|
 
 
 <h1 align="center">Resource</h1>

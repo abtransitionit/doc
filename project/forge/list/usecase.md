@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:       ../whatis/ep.md
 
 [//]: #(functional)
@@ -12,10 +12,11 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[howto for resource][res howto]|
-|[whatis a resource][res whatis]|
+
+| Topic | Location | Kind |
+|-|-|-|
+|[Howto for resource][res howto]|
+|[What is a resource][res whatis]|
 
 <h1 align="center">List of Forge Use case</h1>
 

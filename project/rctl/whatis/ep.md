@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../../README.md
 [NEXT_TOPIC]: ../whatis/cli.md
 [//]: #(archl)
@@ -16,11 +16,11 @@
 
 Related topics
 
-|Topic / Artifact|Location|Kind|
+| Topic | Location| Kind |
 |-|-|-|
-|[what is a resource][res whatis]|internal|functional|
+|[What is a resource][res whatis]|internal|functional|
 |[what mean managing][manage whatis]|internal|functional|
-|[what is cli][cli whatis]|internal|functional|
+|[What is cli][cli whatis]|internal|functional|
 |[roadmap][roadmap whatis]|internal|planing|
 |[architecture][arch whatis]|internal|design|
 

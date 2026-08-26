@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:         ../whatis/ep.md
 
 [//]: #(functional)
@@ -7,7 +7,6 @@
 
 [←][home] 
 
-Related topics
 
 <h1 align="center">List of rctl acronyms</h1>
 

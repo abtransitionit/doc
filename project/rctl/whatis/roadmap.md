@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md  
 [roadmap whatis]: #roadmap
 
@@ -8,9 +8,12 @@
 [host list]:       ../list/host.md
 
 [←][home]
-|||
-|-|-|
-|[what is the roadmap progress][progress whatis]|see|
+
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is the roadmap progress][progress whatis]|see|functiunal
 
 # Index
 - [Roadmap](#roadmap)

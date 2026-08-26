@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -12,9 +12,11 @@
 [←][home] 
 
 Related topics
-- [what is forge][forge whatis]
-- [list of concepts][concept list]
-- [list of resources][resource list]
+|||
+|-|-|
+- [What is forge][forge whatis]
+- [List of concepts][concept list]
+- [List of resources][resource list]
 - [concept of Host][host concept]
 
 

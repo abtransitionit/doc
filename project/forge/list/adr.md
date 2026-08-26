@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../README.md
 
 [//]: #(functional)

@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -7,9 +7,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-[list of cloud provider][cloud provider list]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+[List of cloud provider][cloud provider list]|see
 
 <h1 align="center">Forge Cloud Provider</h1>
 

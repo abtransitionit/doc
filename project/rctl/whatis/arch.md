@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -16,13 +16,14 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is rctl][rctl whatis]|internal|
-|[what is a resource][res whatis]|internal
-|[howto for cli][cli howto]|internal
-|[what is cli][cli whatis]|internal
-|[howto manage][manage howto]|internal
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is rctl][rctl whatis]|internal|
+|[What is a resource][res whatis]|internal
+|[Howto for cli][cli howto]|internal
+|[What is cli][cli whatis]|internal
+|[Howto manage][manage howto]|internal
 
 
 

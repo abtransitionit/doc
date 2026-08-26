@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md
 [list res]: #list
 [//]: #(functional)
@@ -9,11 +9,12 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[howto for resource][res howto]|see|
-|[what is a resource][res whatis]|see|
-|[what is cli][cli whatis]|see|
+
+| Topic | Location | Kind |
+|-|-|-|
+|[Howto for resource][res howto]|see|
+|[What is a resource][res whatis]|see|
+|[What is cli][cli whatis]|see|
 
 <h1 align="center">List of rctl Resource</h1>
 

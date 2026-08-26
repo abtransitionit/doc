@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:    ../whatis/ep.md
 
 [//]: #(functional)

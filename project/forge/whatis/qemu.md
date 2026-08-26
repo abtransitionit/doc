@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -8,9 +8,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[howto for QEMU][qemu howto]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[Howto for QEMU][qemu howto]|see
 
 
 

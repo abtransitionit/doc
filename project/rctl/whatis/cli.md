@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -13,11 +13,12 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is a resource][res whatis]|internal
-|[howto for cli][cli howto]|see
-|[howto manage][manage howto]|internal
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a resource][res whatis]|internal
+|[Howto for cli][cli howto]|see
+|[Howto manage][manage howto]|internal
 
 
 
@@ -124,7 +125,7 @@ rctl <resource> --help
 ```
 
 # Examples
-cf. [list of resource][res list]
+cf. [List of resource][res list]
 ```sh
 rctl repo git create foo --template go-lib
 rctl repo git clone foo

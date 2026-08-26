@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -9,11 +9,12 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is a host][host whatis]|internal
-|[what is a tool][tool whatis]|internal
-|[list of OS][os list]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a host][host whatis]|internal
+|[What is a tool][tool whatis]|internal
+|[List of OS][os list]|see
 
 
 

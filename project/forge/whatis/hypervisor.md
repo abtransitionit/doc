@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md
 
 [//]: #(functional)
@@ -13,10 +13,10 @@
 
 Related topics
 
-|||
-|-|-|
+| Topic | Location | Kind |
+|-|-|-|
 |[List of tool][tool list]|internal|
-|[what is a VM][vm whatis]|internal|
+|[What is a VM][vm whatis]|internal|
 |[List of hypervisors][hypervisor list]|see|
 |[Howto for hypervisor][hypervisor howto]|see|
 

@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md  
 
 [//]: #(functional)
@@ -9,7 +9,7 @@
 [←][home]
 |||
 |-|-|
-|[what is the roadmap][roadmap whatis]|see|
+|[What is the roadmap][roadmap whatis]|see|
 
 
 <h1 align="center">rctl Roadmap Progress Log</h1>

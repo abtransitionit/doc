@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:    ../README.md
 
 [↖][home] <h1 align="center">Project List</h1>

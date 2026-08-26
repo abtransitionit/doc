@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../../README.md
 
 [//]: #(archl)
@@ -18,13 +18,14 @@
 [↖][home]
 
 Related topics
-|||
-|-|-|
-|[what is a resource][res whatis]|internal
-|[what is a host][host whatis]|internal
-|[what is a provisioning][provision whatis]|internal
-|[list of use case][usecase list]|internal
-|[howto for Forge][forge howto]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a resource][res whatis]|internal
+|[What is a host][host whatis]|internal
+|[What is a provisioning][provision whatis]|internal
+|[List of use case][usecase list]|internal
+|[Howto for Forge][forge howto]|see
 
 
 

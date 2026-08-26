@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -8,10 +8,11 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[list of tools][tool list]|see
-|[what is an OS][os whatis]|internal
+
+| Topic | Location | Kind |
+|-|-|-|
+|[List of tools][tool list]|see
+|[What is an OS][os whatis]|internal
 
 <h1 align="center">Forge Tool</h1>
 

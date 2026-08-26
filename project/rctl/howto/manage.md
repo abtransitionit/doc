@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -11,11 +11,12 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-| [what is rctl][rctl whatis] | internal
-| [what is a resource ][res whatis] | internal
-| [what is managing ][manage whatis] | see
+
+| Topic | Location | Kind |
+|-|-|-|
+| [What is rctl][rctl whatis] | internal
+| [What is a resource ][res whatis] | internal
+| [What is managing ][manage whatis] | see
 
 
 

@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -18,13 +18,14 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is Forge][forge whatis]|internal
-|[what is a resource][res whatis]|internal
-|[what is an OS][os whatis]|internal
-|[list of host][host list]|internal
-|[howto for Host][host howto]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is Forge][forge whatis]|internal
+|[What is a resource][res whatis]|internal
+|[What is an OS][os whatis]|internal
+|[List of host][host list]|internal
+|[Howto for Host][host howto]|see
 
 <h1 align="center">Forge Host</h1>
 

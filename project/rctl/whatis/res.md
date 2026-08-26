@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -13,11 +13,12 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[list of resources][resource list]|see
-|[howto manage][manage howto]|internal
-|[what is metadata][metadata whatis]|internal
+
+| Topic | Location | Kind |
+|-|-|-|
+|[List of resources][resource list]|see
+|[Howto manage][manage howto]|internal
+|[What is metadata][metadata whatis]|internal
 
 
 

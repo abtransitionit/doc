@@ -1,8 +1,13 @@
 [//]: #(Home)
 [home]: ../README.md
 
+[//]: #(doc)
+[doc std whatis]: ./doc.std.md
 
 [←][home]
+|||
+|-|-|
+|[what is documentation standard][doc std whatis]|see|
 
 <h1 align="center">Documentation Standard Improvement</h1>
 

@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md
 
 [//]: #(functional)
@@ -8,10 +8,11 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is a Hypervisor](../whatis/hypervisor.md)|internal
-|[what is a Host](../whatis/host.md)|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a Hypervisor](../whatis/hypervisor.md)|internal
+|[What is a Host](../whatis/host.md)|see
 
 
 <h1 align="center">Host</h1>

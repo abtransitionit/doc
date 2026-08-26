@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -8,10 +8,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
 
-|[list of tools][tool list]|
+| Topic | Location | Kind |
+|-|-|-|
+|[List of tools][tool list]|
 
 
 

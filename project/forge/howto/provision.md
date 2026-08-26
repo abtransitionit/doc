@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:       ../whatis/ep.md
 
 [//]: #(functional)
@@ -13,10 +13,11 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is a resource][res whatis]|internal
-|[what is a cloud provider][cloud provider whatis]|internal
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a resource][res whatis]|internal
+|[What is a cloud provider][cloud provider whatis]|internal
 |[List of resources][res list]|internal
 |[List of use case][usecase list]|internal
 |[What is provisioning][provision whatis]|see

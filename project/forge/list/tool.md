@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/provision.md
 
 [//]: #(functional)
@@ -8,9 +8,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is a tool][tool whatis]|see|
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a tool][tool whatis]|see|
 
 <h1 align="center">List of Forge Tool</h1>
 

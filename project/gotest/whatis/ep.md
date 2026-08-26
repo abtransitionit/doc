@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../../README.md
 
 
@@ -9,7 +9,6 @@
 
 [←][home] 
 
-Related topics
 
 
 

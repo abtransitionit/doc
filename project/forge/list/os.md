@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]: ../whatis/ep.md
 
 [//]: #(functional)
@@ -7,9 +7,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is an OS][os whatis]|see|
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is an OS][os whatis]|see|
 
 
 <h1 align="center">List of Forge OS</h1>

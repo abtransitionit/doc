@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:       ../whatis/ep.md
 
 [//]: #(functional)
@@ -6,11 +6,14 @@
 [res howto]:  ../howto/res.md 
 
 
-[←][home] Related topics
-|||
-|-|-|
-|[howto for resource][res howto]|see|
-|[what is a resource][res whatis]|see|
+[←][home] 
+
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[Howto for resource][res howto]|see|
+|[What is a resource][res whatis]|see|
 
 
 <h1 align="center">List of Forge Resource</h1>

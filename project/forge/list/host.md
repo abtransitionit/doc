@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:       ../whatis/ep.md
 
 [//]: #(functional)
@@ -8,10 +8,11 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[howto for host][res howto]|see|
-|[what is a host][host whatis]|see|
+
+| Topic | Location | Kind |
+|-|-|-|
+|[Howto for host][res howto]|see|
+|[What is a host][host whatis]|see|
 
 
 <h1 align="center">List of Forge Host</h1>

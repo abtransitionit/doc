@@ -1,4 +1,4 @@
-[//]: #(Home)
+[//]: #(home)
 [home]:  ../whatis/ep.md
 
 [//]: #(functional)
@@ -7,9 +7,10 @@
 [←][home] 
 
 Related topics
-|||
-|-|-|
-|[what is cli][cli whatis]|see
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is cli][cli whatis]|see
 
 
 

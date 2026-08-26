@@ -7,9 +7,12 @@
 [Controlled vocabulary list]:           ./cv.md
 [term.kind list]:    ./term.kind.md
 [acronym list]:      ./acronym.md
-[doc improve whatis]: ./doc.std.improve.md 
+[doc std improve whatis]: ./doc.std.improve.md 
 
 [←][home]
+|||
+|-|-|
+|[how to improve documentation standard][doc std improve whatis]|see|
 
 <h1 align="center">Documentation Standard</h1>
 
