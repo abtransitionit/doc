@@ -4,7 +4,7 @@
 [//]: #(functional)
 [roadmap whatis]: ../whatis/roadmap.md
 [outcome phase0]: ../list/res.md#phase-0-outcome
-[phase 0]:        #toto
+[phase 0]:        #phase-0
 
 [←][HOME]
 |||
@@ -16,7 +16,7 @@
 
 
 
-# 🟡 [Phase 0](./roadmap.md#-phase-0--inventory) <a id='toto'></a>
+# 🟡 [Phase 0](./roadmap.md#-phase-0--inventory) <a id='phase-0'></a>
 - [Status](#-p0-status)
 - [Log](#-p0-log)
 - [outcome](#-p0-outcome)
