@@ -1,9 +1,12 @@
 [//]: #(home)
 [home]: ../whatis/ep.md  
+[top]: #
+
+[//]: #(planing)
 [roadmap whatis]: #roadmap
 
 [//]: #(functional)
-[progress whatis]: ../whatis/progress.md
+[roadmap log whatis]: ../whatis/roadmap.log.md
 [res list]:        ../list/res.md
 [host list]:       ../list/host.md
 
@@ -13,33 +16,33 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is the roadmap progress][progress whatis]|see|functiunal
+|[What is the roadmap progression log][roadmap log whatis]|see|functiunal
 
 # Index
 - [Roadmap](#roadmap)
-- [Roadmap Timeline](#primary-roadmap-timeline)
-- [Risk](#risk)
+- [Roadmap Timeline](#roadmap-timeline)
+- [Risk](#-risk)
 
 
 <h1 align="center">rctl Roadmap</h1>
 
 # Roadmap <a  id="roadmap"></a>
 
-| Id | Phase | Estimated |Duration| Outcome | satus |
+| Id | Status |Phase | Estimated |Duration| Outcome |
 | - |-|-|-|-|-|
-| 0 |[Inventory](#-phase-0--inventory) | **2–4 h** |½ day| Small Inventory of existing resources and their operations/actions |🟡 [In Progress](./progress.md#-phase-0)
-| 1 |[Design](#-phase-1--design) | **2–4 h** || <li>`rctl` command model agreed  <li> a tiny CLI specification.|⬜ Not Started|
-| 2 |[Core CLI](#-phase-2--core) | **0.5–1 day** || <li>`rctl` runs, config/help/errors work| ⬜ Not Started
-| 3 |[Repo resource](#-phase-3--repo) | **1–2 days** || <li>Existing repo scripts exposed through `rctl` <li>Start replacing all aliases.| ⬜ Not Started
-| 4 |[`doc` registry](#-phase-4--doc) | **1 day** || `rctl` reads repository metadata | ⬜ Not Started
-| 4M1 |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** || Useful replacement for your current aliases/tools | ⬜ Not Started
-| 5 |[Packaging/release](#-phase-5--distribution) | **0.5–1 day** || <li>Install/version/upgrade <li> `run version` works <li>`rctl` is distribuable/installable in a specific release| ⬜ Not Started
-| 6 |[Image resource](#) | **1 day** || `rctl image ...` | ⬜ Not Started
-| 7 |Container resource | **1 day** || `rctl container ...` | ⬜ Not Started
-| 8 |Relationships | **0.5–1 day** || Resources can reference each other | ⬜ Not Started
-| 8M2 |[rctl v0.2](#-m2--add-resources) | **~7–10 days total** || Repo + image + container | ⬜ Not Started
-| 9 |Cleanup/documentation | **1–2 days** || Team-ready | ⬜ Not Started
-| 9M3 |[v1.0](#-m3--relationships) | **~2 weeks total** || Stable everyday tool | ⬜ Not Started
+| 0 | [✅](./roadmap.log.md#-phase-0) | [Inventory](#-phase-0--inventory) | **2–4 h** |½ day| Small Inventory of existing resources and their operations/actions |
+| 1 | [🟡](./roadmap.log.md#-phase-1) |[Design](#-phase-1--design) | **2–4 h** || <li>`rctl` command model agreed  <li> a tiny CLI specification.||
+| 2 | ⬜ |[Core CLI](#-phase-2--core) | **0.5–1 day** || <li>`rctl` runs, config/help/errors work|
+| 3 | ⬜ |[Repo resource](#-phase-3--repo) | **1–2 days** || <li>Existing repo scripts exposed through `rctl` <li>Start replacing all aliases.|
+| 4 | ⬜ |[`doc` registry](#-phase-4--doc) | **1 day** || `rctl` reads repository metadata |
+| 4M1 | ⬜ |[rctl v0.1](#-m1--rctl-v01) | **~4–6 days** || Useful replacement for your current aliases/tools |
+| 5 | ⬜ |[Packaging/release](#-phase-5--distribution) | **0.5–1 day** || <li>Install/version/upgrade <li> `run version` works <li>`rctl` is distribuable/installable in a specific release|
+| 6 | ⬜ |[Image resource](#) | **1 day** || `rctl image ...` |
+| 7 | ⬜ |Container resource | **1 day** || `rctl container ...` |
+| 8 | ⬜ |Relationships | **0.5–1 day** || Resources can reference each other |
+| 8M2 | ⬜ |[rctl v0.2](#-m2--add-resources) | **~7–10 days total** || Repo + image + container |
+| 9 | ⬜ |Cleanup/documentation | **1–2 days** || Team-ready |
+| 9M3 | ⬜ |[v1.0](#-m3--relationships) | **~2 weeks total** || Stable everyday tool |
 
 
 
@@ -97,15 +100,23 @@ resource/tool
 **Deliverable:** list of resources + actions.
 
 ## [↑][roadmap whatis] Phase 1 — Design
+Do not freeze yet the concepts of **action**
+- it may be a workflow (set of operation)
+- it may be a single operation
+
+Define a small universal vocabulary set for **actions**, with resource-specific actions layered on top.
+```
+get, list, create, delete, etc.
+```
 
 
-Decide only:
+Define the grammar:
 
 ```bash
+rctl <resource> <action> ...
 rctl <resource> <action> [name] [options]
 ```
 
-and the first vocabulary.
 
 For example:
 
@@ -129,25 +140,26 @@ Also decide:
 * exit codes
 * versioning
 
-**Deliverable:** a tiny CLI specification.
+**Deliverable:** 
+- a tiny CLI specification.
+- Not 50-page architecture document.
 
-No 50-page architecture document.
-
+Define information like (only for one resource to not waste to much time)
+- resource naming
+- action naming
+- arguments
+- options
+- common actions (list, get, delete, etc.)
+- resource-specific actions
+- how providers are selected
+- configuration
+- output
+- errors
+- exit codes
 
 ### Todo
-**define the grammar genuinely**
-```
-# with flags an options
-rctl <resource> <action> ...
-```
 
-**define a small universal vocabulary set, with resource-specific actions layered on top.**
-```
-get, list, create, delete, etc.
-```
 
-**do we need to freeze the concepts**
-- `operation` vs. `actions`
 
 
 ## [↑][roadmap whatis] Phase 2 — Core
@@ -383,7 +395,7 @@ rctl repo info foo
 - This is where the `SOT` repository (i.e. `doc`)  starts becoming much more interesting.
 
 
-# Roadmap Timeline
+# [↑][roadmap whatis] Roadmap Timeline
 
 ```text
 Day 1
@@ -428,9 +440,9 @@ Day 9–10
 
 
 
-# Risk
-- Isn't that `rctl` will be technically difficult. 
-- The biggest risk is **over-designing the abstraction before migrated enough real commands to know what the abstraction should be.**
+# [↑][top] Risk
+- wasting time **over-designing** the abstraction before migrated enough real commands to know what the abstraction should be.
+- reduce this risk => start coding soon after [phase 0](#-phase-0--inventory) with one resource.
 
 # Todo - old
 

@@ -20,7 +20,6 @@ Related topics
 
 <p id='list'></p>
 
-# List
 
 [Example list](#phase-0-outcome) for the phase 0 of the roadmap 
 
@@ -66,9 +65,26 @@ Related topics
        logging         errors          state
        discovery       plugins         docs
 ```
-## [↑][list res] Git
 
-### Git repository
+# [↑][list res] Git
+## [↑][list res] Git authentication
+
+- git/authentication can be provided by `github` or `gitlab`
+```
+GitHub
+  └── authentication
+        ├── status
+        ├── login
+        ├── logout
+        └── setup-git
+```
+
+Grammar could be:
+```sh
+rctl github auth [status | login | logout | setup-git]
+```
+
+## Git repository
 - git/repository can be **local** or *remote*
 - remote git/repository can be provided by `github `or `gitlab`
 - remote git/repository can be provided by `public `or `private`
@@ -86,8 +102,6 @@ Grammar could be:
 rctl github repo [list | delete | create]
 ```
 
----
----
 
 | Resource | Action          | Type                   | Provider |
 | -------- | --------------- | ---------------------- | -------- |
@@ -98,8 +112,6 @@ rctl github repo [list | delete | create]
 | repo     | set-remote      | primitive              | Git      |
 | repo     | commit          | primitive              | Git      |
 
----
----
 
 Std operation could be
 ```yaml
@@ -135,90 +147,15 @@ repo create
     └── fetch versioned file init.sh
             │
             └── execute shell script locally
-````
-
-### [↑][list res] Git authentication
-
-- git/authentication can be provided by `github` or `gitlab`
 ```
-GitHub
-  └── authentication
-        ├── status
-        ├── login
-        ├── logout
-        └── setup-git
-```
-
-Grammar could be:
-```sh
-rctl github auth [status | login | logout | setup-git]
-```
-### Example workflow
-```sh
-# what user enter
-rctl repo reset-history foo
-```
-
-```sh
-# what happnes internally
-rctl repo reset-history foo
-              │
-              ▼
-       ResetHistory()
-              │
-       ┌──────┼──────┐
-       ▼      ▼      ▼
-     clone   clean   init
-                     │
-                  remote
-                     │
-                  commit
-```
-
-
-### Kind
-- git/repo can be public or private
-- git/repo can be local or remote
-- git/repo remote can be provided by `github` or `gitlab`
-- git/authentication can be provided by `github` or `gitlab`
-
-
-
-### possible flags
-```sh
---remote
---local
---public
---private
---all
---github
---gitlab
-```
-
-### Sumary
-```
-GitHub
- ├── authentication
- │    ├── status
- │    ├── login
- │    ├── logout
- │    └── setup-git
- │
- └── repositories
-      ├── list
-      ├── create
-      └── delete
-```
-
-
-## Example
+### Example
 ```sh
 mx repo create foo --template go-lib@v1.4.0
 ```
 Meaning:
 - Use version 1.4.0 of the go-lib template to create foo.
 
-## Example
+### Example
 
 ``` sh
 rctl repo github list --all
@@ -240,6 +177,63 @@ rctl repo github delete abelgacem/foo
 rctl repo github history reset abelgacem/foo
 rctl repo github history-reset  abelgacem/foo
 ```
+
+### Kind
+- git/repo can be public or private
+- git/repo can be local or remote
+- git/repo remote can be provided by `github` or `gitlab`
+- git/authentication can be provided by `github` or `gitlab`
+
+
+
+### Flags management 
+
+**possible flags**
+```sh
+--remote
+--local
+--public
+--private
+--all
+--github
+--gitlab
+
+--template
+--provider
+```
+**example usage**
+```sh
+# create local repo from remote template repo
+rctl repo create --template go-tpl-lib foo
+```
+
+```sh
+# create remote repo on github/gitlab
+rctl repo create foo --provider github
+rctl repo create foo --provider gitlab
+
+# create remote repo on xxx (defaulted to what is defined in conf/context)
+rctl repo create foo 
+
+```
+
+
+## Summary
+```
+GitHub
+ ├── authentication
+ │    ├── status
+ │    ├── login
+ │    ├── logout
+ │    └── setup-git
+ │
+ └── repositories
+      ├── list
+      ├── create
+      └── delete
+```
+
+
 
 ## [↑][list res] Container registry
 **Kind**
@@ -277,6 +271,22 @@ rctl image build foo
 rctl image push foo
 ```
 
+### Flags management 
+**possible flags**
+```sh
+--tag
+```
+
+**example usage**
+```sh
+rctl image build foo --tag 1.2.0
+rctl image push foo --tag 1.2.0
+```
+```sh
+rctl image push foo --provider ghcr
+rctl image push foo --provider gitlab
+```
+
 ## [↑][list res] Container
 |res|action/operation|description|
 |-|-|-|
@@ -297,6 +307,24 @@ container:
 rctl container start foo
 rctl container exec foo
 ```
+### Flags management 
+**possible flags**
+```sh
+--tag
+```
+
+**example usage**
+```sh
+# instanciate container from image
+rctl container create foo-dev --image foo:1.2
+
+
+rctl container exec foo-dev -- /bin/sh
+```
+
+
+
+
 
 ## [↑][list res] Shell History
 

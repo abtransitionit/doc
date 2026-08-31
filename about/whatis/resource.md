@@ -1,32 +1,55 @@
 [//]: #(home)
-[home]:  ../whatis/ep.md
 
-[//]: #(functional)
-[concept list]:     ../list/concept.md
-[res list]:         ../list/res.md
-[host concept]:     ../list/concept.md#
-[metadata whatis]:  ../whatis/metadata.md
-[provision whatis]: ../whatis/provision.md
-[resource list]:    ../list/res.md
-[manage howto]:     ../howto/manage.md
-
-[←][home] 
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[List of resources][resource list]|see
-|[Howto manage][manage howto]|internal
-|[What is metadata][metadata whatis]|internal
+|[What is operating ](../whatis/operate.md) |concept
+|[What is provisioning](../whatis/provision.md)|concept
+
+
+<h1 align="center">Resource</h1>
 
 
 
 
-<h1 align="center">rctl Resource</h1>
+# Definition
+- May be physical, virtual or abstract
+- Can be [provisioned](../whatis/provision.md)
+- can be [operated](../whatis/operate.md) on
+
+# Example
+- [List of resource][res list]
 
 
 
+## Operation on resource
+Operation on a resources are often resource-specifics. Example of operation on resource are:
+
+|resource|operation|
+|-|-|
+|gom|init, list|
+|git:repo|add, update, delete|
+|container|start, stop, configure|
+|container image|start, stop, configure|
+
+
+
+
+
+# Resource Model
+
+
+## Resource Relationships
+
+```text
+Execution Environment
+└── operates on → Resource
+
+Host
+├── provides/runs → Execution Environment
+└── can be provisioned with → Resource
 # Definition
 - something can be operated on 
 - have a kind

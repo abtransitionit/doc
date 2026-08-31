@@ -3,11 +3,9 @@
 
 [//]: #(functional)
 [cli howto]:        ../howto/cli.md
+[cli v0.1 whatis]:  ../whatis/cli.v0.1.md
 [res list]:         ../list/res.md
-[host concept]:     ../list/concept.md#
-[rctl whatis]:      ../whatis/ep.md
-[provision whatis]: ../whatis/provision.md
-[resource list]:    ../list/res.md
+[res whatis]:       ../whatis/res.md
 [manage howto]:     ../howto/manage.md
 
 [←][home] 
@@ -19,6 +17,7 @@ Related topics
 |[What is a resource][res whatis]|internal
 |[Howto for cli][cli howto]|see
 |[Howto manage][manage howto]|internal
+|[cli v0.1][cli v0.1 whatis]|see
 
 
 
@@ -260,4 +259,20 @@ rctl repo reset-history foo --confirmation yes
 
 # no confirmation needed
 rctl repo info foo
+```
+
+# The flags
+like [action](../whatis/action.md#kind). There should be  
+- common flags
+- specific flags
+
+**Example of common flag**
+```
+rctl cim push foo --provider ghcr
+rctl cim push foo --provider gitlab
+
+rctl repo get go-tpl-lib --provider gitlab
+
+rctl container start foo --provider docker
+rctl container start foo --provider podman
 ```

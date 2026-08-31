@@ -73,32 +73,6 @@ repository
 > 💡 keep the domain operations specific to each resource.
 
 
-# Action
-- an action on a resource can be a workflow
-
-**Example**:
-- Resource: git/repo
-- Action: reset-history
-```sh
-rctl repo reset-history foo
-```
-Is convert into a sequence of several actions on the git/repo resource
-```sh
-# what happnes internally
-rctl repo reset-history foo
-              │
-              ▼
-       ResetHistory()
-              │
-       ┌──────┼──────┐
-       ▼      ▼      ▼
-     clone   clean   init
-                     │
-                  remote
-                     │
-                  commit
-```
-
 # Provider
 Providers/implementations should be separate
 
@@ -120,3 +94,41 @@ repo
   - templates
   - providers
   - etc.
+
+# CLI grammar
+- the CLI canonical form is
+```sh
+# canonical form: comes before action
+rctl <resource> <action> ...
+
+# example
+rctl repo get go-tpl-lib
+rctl image get foo
+rctl container get foo-dev
+```
+- later the cli should support
+```sh
+# natural form
+rctl get repo/go-tpl-lib
+rctl get image/foo
+rctl get container/foo-dev
+```  
+
+**Canonical**:
+   ```
+  rctl <resource> <action> <name> [options]
+   ```
+
+**Collection**:
+   ```
+    rctl <resource> list [options]
+   ```
+
+**Rules (👮‍♂️)**:
+- positional = resource identity
+- options    = operation parameters
+- provider   = normally inferred
+
+## Rules (👮‍♂️)
+- Common verbs are reused when their semantics genuinely match
+- resource-specific operations stay under the resource

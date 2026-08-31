@@ -8,15 +8,18 @@
 
 [←][home]
 
+<a  id='list'></a>
 <h1 align="center">List of Forge ADR</h1>
 
-# List
+# Index
 
-- [ADR-0001 — Project bootstrap](#adr-0001--project-bootsrap)
+- [ADR-0001 — Project bootstrap](#-adr-0001--project-bootsrap)
+- [ADR-0002 — Source Of Trust](#-adr-0002--sot)
+- [ADR-0003 — CLI grammar](#-adr-0003--technical)
 
 
 
-# ADR-0001 — Project Bootsrap
+# [↑](#list--idlist) ADR-0001 — Project Bootsrap
 ChatGpt prompt is
 ```
 Context
@@ -45,6 +48,25 @@ My Needs
 - what if later the tool also manage container, container image and other things. Is the evolution easy ?
 ```
 
-# ADR-0002 — `SOT`
+# [↑](#list--idlist) ADR-0002 — `SOT`
 
 The bigger architectural question I'd explore next is whether your doc repository should become a declarative inventory/registry (almost like a tiny internal catalog) and whether mx should support both imperative operations (mx repo create) and declarative reconciliation (mx sync). That choice has a big impact on how well this scales from 50 repositories to 200+.
+
+# [↑](#list--idlist) ADR-0003 — Technical
+
+- the CLI grammar canonical form is
+```sh
+rctl <resource> <action> ...
+
+# example
+rctl repo get go-tpl-lib
+rctl image get foo
+rctl container get foo-dev
+```
+- The resource comes before action
+- later the cli should support
+```sh
+rctl get repo/go-tpl-lib
+rctl get image/foo
+rctl get container/foo-dev
+```

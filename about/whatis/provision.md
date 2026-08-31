@@ -1,46 +1,36 @@
-[//]: #(home)
-[home]:  ../whatis/ep.md
+[//]: #(doc)
+[res whatis]:      ../whatis/resource.md
+[operate whatis]:  ../whatis/operate.md
 
-[//]: #(functional)
-[provision howto]: ../howto/provision.md
-[res whatis]:      ../whatis/res.md
-[forge whatis]:    ../whatis/ep.md
-[host whatis]:     ../whatis/host.md
-
-[←][home] 
-
-Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is Forge][forge whatis]|internal
-|[What is a resource][res whatis]|internal
-|[What is a host][host whatis]|internal
-|[What is a operating ][operate whatis] |
-|[Howto provision][provision howto]|see
+|[What is a Resource ](../whatis/resource.md) |concept
+|[What is operating](../whatis/operate.md)|concept
 
 
 
 
-<h1 align="center">Forge Provision</h1>
+<h1 align="center">Provision</h1>
 
 
 # Definition
 
 ## Provision
 * The action of provisioning a [resource][res whatis].
-* Prepares a resource for use
-* *Provisioning a resource* make that [resource][res whatis] available and ready for use.
-* Depending on the context, **provision** generally means: 
+* **Provisioning a resource**, 
+  - make that [resource][res whatis] available and ready for use.
+  - Prepares a resource for use
+  - Is the very first step to make it available
+* Depending on the context, **operate** generally means: 
   - **install, create, add, configure, manage or define**
 
 ## Provisioner
 - An **Automation** concept
-- Something that creates/configures/manages infrastructure
-- By extension: something that creates/configures/manages resources
+- Something that creates/configures/manages infrastructures/resources
 - Example
-  - VM provisioner creates/configures VMs ready to be provisioned
-  - Bare-metal provisioner creates/configures Bare-metal servers ready to be provisioned
+  - A VM provisioner creates VMs (ready to be provisioned)
+  - A Bare-metal provisioner creates Bare-metal servers (ready to be provisioned)
 
 # Example
 **Provision a host** could mean

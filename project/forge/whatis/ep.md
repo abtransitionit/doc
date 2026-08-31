@@ -13,7 +13,7 @@
 [host list]:   ../list/host.md
 [host whatis]: ../whatis/host.md
 [usecase list]: ../list/usecase.md
-[provision whatis]: ../whatis/provision.md
+[provision whatis]: ../../../whatis/provision.md
 
 [↖][home]
 
@@ -38,11 +38,10 @@ Related topics
 
 # Definition
 
-## Purpose
-Forge is a tool for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
 
-## Key Points
-- the tool may rely on existing [resources][res whatis] and [hosts][host whatis]
+- A project concerning a tool for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
+- The [code name](../../../tool/metadoc/whatis/ep.md) of the [system](../whatis/system.md) that emerged from that project.
+- The system/tool may rely on existing [resources][res whatis]
 
 
 

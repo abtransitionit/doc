@@ -1,7 +1,5 @@
 [//]: #(Reference)
 [doc std]:       ./governance/doc.std.md
-[project ep]:    ./project/README.md
-[system ep]:     ./system/README.md
 [domain ep]:     ./domain/README.md
 [reference ep]:  ./reference/README.md
 [kubernetes ep]: ./system/k8s/README.md
@@ -14,49 +12,47 @@
 
 <h1 align="center">doc</h1>
 
+
 # Purpose
-- This git **repository** contains the organization's IT documentation. 
-- It provides a consistent and structured documentation covering the **full lifecycle of IT initiatives**
-- The documentation is organized to serve different audiences involved in the **lifecycle of a system or project**.
+This `MetaDoc` Git repository hosts the IT knowledge base and the single source of truth for the organization. 
 
-# Classification
-**Systems**
-
-- [Kubernetes][kubernetes ep]
-- [Linux][linux ep]
-- [Other system][system ep]
+# Index of Key Documentation
 
 **Projects**
 
+- [MetaDoc](./project/metadoc/whatis/ep.md)
 - [Forge](./project/forge/whatis/ep.md)
 - [rctl](./project/rctl/whatis/ep.md)
-- [All Projects][project ep]
+- [All Projects](./project/README.md)
 
-**Reference**
+**Tool**
+- [MetaDoc](./tool/metadoc/whatis/ep.md)
+- [rctl](./tool/rctl/whatis/ep.md)
+- [All Tools](./tool/README.md)
 
-- [Security][security ep]
-- [Terminology](reference/terminology.md)
-- [Other Reference][reference ep]
+**Systems**
+
+- [Kubernetes](./system/k8s/whatis/ep.md)
+- [Linux](./system/linux/whatis/ep.md)
+- [Other system](./system/README.md)
+
+
 
 **Governance**
 
-- [Documentation Standard][doc std]
+- [Documentation Standard]()
+
+
+**Reference**
+
+- [Terminology](./about/term.md)
+- [Other Reference](./about/README.md)
 
 **Other**
 
-- [Domains][domain ep]
-
-
-# Documentation standard
-
-The [Documentation Standard][doc std] defines how documentation is organized, classified, maintained, and linked.
-
+- [Security](./security/ep.md)
+- [List of Domains](./about/list/domain.md)
 
 # Contributing
 
-See the [Documentation Standard][doc std] for documentation principles, metadata, lifecycle, audiences, and document types.
-
-
-# Howto
-
-See the [Howtos](./governance/doc.howto.md) to onboard with writing documents
+See this [section](./governance/doc.howto.md) to familiarize authoring documentation

@@ -1,11 +1,15 @@
 [//]: #(home)
 [home]:    ../README.md
 
-[↖][home] <h1 align="center">Project List</h1>
+[↖][home] 
+
+<h1 align="center">List of Projects</h1>
 
 
-||type|
+|Name|Purpose|
 |-|-|
-|[forge](forge/whatis/ep.md)|provision|
-|[rctl](rctl/whatis/ep.md)|control|
-|[gotest](gotest/whatis/ep.md)|test|
+|[metadoc](metadoc/whatis/ep.md)|manage documentation|
+||
+|[forge](forge/whatis/ep.md)|provision resourceq on hostq|
+|[rctl](rctl/whatis/ep.md)|control operation on resource|
+|[gotest](gotest/whatis/ep.md)|test go module|

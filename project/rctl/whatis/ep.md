@@ -1,12 +1,16 @@
 [//]: #(home)
 [home]: ../../README.md
 [NEXT_TOPIC]: ../whatis/cli.md
+
+[//]: #(doc)
+[system whatis]: ../../../whatis/system.md
+
 [//]: #(archl)
 [acro list]:      ../list/acro.md
 [arch whatis]:    ../whatis/arch.md
 [adr list]:       ../list/adr.md
 [roadmap whatis]: ../whatis/roadmap.md
-[manage whatis]:  ../whatis/manage.md
+[operate whatis]:  ../whatis/operate.md
 [res whatis]:     ../whatis/res.md
 [cli whatis]:     ../whatis/cli.md
 
@@ -19,7 +23,7 @@ Related topics
 | Topic | Location| Kind |
 |-|-|-|
 |[What is a resource][res whatis]|internal|functional|
-|[what mean managing][manage whatis]|internal|functional|
+|[what mean operating][operate whatis]|internal|functional|
 |[What is cli][cli whatis]|internal|functional|
 |[roadmap][roadmap whatis]|internal|planing|
 |[architecture][arch whatis]|internal|design|
@@ -35,14 +39,16 @@ Related topics
 
 # Definition
 
-## Purpose
-A unified [CLI][cli whatis] for [managing][manage whatis] named [resources][res whatis] and their relationships across development ecosystem (repositories, images, containers, and more).
+- A project concerning a tool for [operating][operate whatis] on named [resources][res whatis]
+- The [code name](../../../tool/rctl/whatis/ep.md) of the [system][system whatis] that emerged from that project.
+- The system/tool may rely on existing [resources][res whatis]
 
 
-A coherent, extensible [CLI][cli whatis] for operating on a given ecosystem of named resources
+## Requirements
+- coherent:
+- extensible:
+- unified CLI:
 
-## Key Points
-- the tool may rely on existing [resources][res whatis] and [hosts][host whatis]
 
 
 
@@ -70,7 +76,7 @@ A coherent, extensible [CLI][cli whatis] for operating on a given ecosystem of n
 - The documentation lives alongside each code repository
 
 
-# Other Documents
+# All Documents
 - [Roadmap][roadmap whatis]
 - [ADRs][adr list]
 - [Architecture][arch whatis]
