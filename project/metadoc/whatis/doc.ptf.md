@@ -6,6 +6,13 @@
 
 [↖][home]
 
+[↖][home]
+
+Related topics
+
+| Topic                                            | Location | Kind    |
+| ------------------------------------------------ | -------- | ------- |
+| [What is a document](../whatis/document.md) | internal | concept |
 
 
 

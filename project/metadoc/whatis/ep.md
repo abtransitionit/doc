@@ -12,8 +12,8 @@ Related topics
 
 | Topic                                            | Location | Kind    |
 | ------------------------------------------------ | -------- | ------- |
-| [What is a documentation platform](./doc.ptf.md) | internal | concept |
-| [What is a System][system whatis] | external | concept |
+| [What is a documentation platform](../whatis/doc.ptf.md) | internal | concept |
+| [What is a System](/about/whatis/system.md) | external | concept |
 | [What is the Roadmap](../about/roadmap.md)|internal|
 
 **Document's status**
