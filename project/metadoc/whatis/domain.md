@@ -11,7 +11,7 @@ Related topics
 |---|---|---|
 |[What is DocRoot](../whatis/docroot.md)|internal|functional
 |[What is a DocSet](../whatis/docset.md)|internal|functional
-|[Howto for Domain](../howto/domain.md)|internal|functional
+|[How-to for Domain](../howto/domain.md)|internal|functional
 
 <h1 align="center">MetaDoc Domain</h1>
 

@@ -9,8 +9,8 @@
 
 | Topic | Location | Kind |
 |---|---|---|
-|[Howto for Docset](../howto/docset.md)|internal|functional
-|[Howto for DocRoot](../howto/docroot.md)|internal|functional
+|[How-to for Docset](../howto/docset.md)|internal|functional
+|[How-to for DocRoot](../howto/docroot.md)|internal|functional
 |[What is a DocSet](../whatis/docset.md)|internal|see
 
 <h1 align="center">MetaDoc Domain</h1>

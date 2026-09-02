@@ -21,9 +21,9 @@ Related topics
 |-|-|-|
 |[What is rctl][rctl whatis]|internal|
 |[What is a resource][res whatis]|internal
-|[Howto for cli][cli howto]|internal
+|[How-to for cli][cli howto]|internal
 |[What is cli][cli whatis]|internal
-|[Howto manage][manage howto]|internal
+|[How-to manage][manage howto]|internal
 
 
 

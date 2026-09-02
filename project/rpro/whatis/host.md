@@ -25,7 +25,7 @@ Related topics
 |[What is a resource][res whatis]|internal
 |[What is an OS][os whatis]|internal
 |[List of host][host list]|internal
-|[Howto for Host][host howto]|see
+|[How-to for Host][host howto]|see
 
 <h1 align="center">Forge Host</h1>
 

@@ -12,7 +12,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[Howto for resource][res howto]|see|
+|[How-to for resource][res howto]|see|
 |[What is a resource][res whatis]|see|
 
 

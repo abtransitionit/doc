@@ -3,7 +3,7 @@
 [NEXT_TOPIC]: ../whatis/cli.md
 
 [//]: #(doc)
-[system whatis]: ../../../whatis/system.md
+[system whatis]: ../../../about/whatis/system.md
 
 [//]: #(archl)
 [acro list]:      ../list/acro.md
@@ -36,6 +36,8 @@ Related topics
 
 
 <h1 align="center">rctl</h1>
+
+<a id='system'></a>
 
 # Definition
 

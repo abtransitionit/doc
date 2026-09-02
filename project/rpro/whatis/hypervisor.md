@@ -18,7 +18,7 @@ Related topics
 |[List of tool][tool list]|internal|
 |[What is a VM][vm whatis]|internal|
 |[List of hypervisors][hypervisor list]|see|
-|[Howto for hypervisor][hypervisor howto]|see|
+|[How-to for hypervisor][hypervisor howto]|see|
 
 
 <h1 align="center">Forge Hypervisor</h1>

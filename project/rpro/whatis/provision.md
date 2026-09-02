@@ -17,7 +17,7 @@ Related topics
 |[What is a resource][res whatis]|internal
 |[What is a host][host whatis]|internal
 |[What is a operating ][operate whatis] |
-|[Howto provision][provision howto]|see
+|[How-to provision][provision howto]|see
 
 
 

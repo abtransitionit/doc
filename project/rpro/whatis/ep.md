@@ -25,7 +25,7 @@ Related topics
 |[What is a host][host whatis]|internal
 |[What is a provisioning][provision whatis]|internal
 |[List of use case][usecase list]|internal
-|[Howto for Forge][forge howto]|see
+|[How-to for Forge][forge howto]|see
 
 
 
@@ -34,12 +34,12 @@ Related topics
 - The project is currently defining its core concepts and architecture.
 
 
-<h1 align="center">Forge</h1>
+<h1 align="center">RPro</h1>
 
 # Definition
 
 
-- A project concerning a tool for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
+- A [system](#) for [provisioning][provision whatis] any kind of [resources][res whatis] on any kind of [hosts][host whatis].
 - The [code name](../../../tool/metadoc/whatis/ep.md) of the [system](../whatis/system.md) that emerged from that project.
 - The system/tool may rely on existing [resources][res whatis]
 

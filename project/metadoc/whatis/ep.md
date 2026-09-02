@@ -4,7 +4,7 @@
 [//]: #(doc)
 [doc platform whatis]: ../whatis/doc.ptf.md
 [metadoc howto]:       ../howto/metadoc.md
-[system whatis]:       ../../../whatis/system.md
+[system whatis]:       /about/whatis/system.md
 
 [↖][home]
 
@@ -13,7 +13,7 @@ Related topics
 | Topic                                            | Location | Kind    |
 | ------------------------------------------------ | -------- | ------- |
 | [What is a documentation platform](../whatis/doc.ptf.md) | internal | concept |
-| [What is a System](/about/whatis/system.md) | external | concept |
+| [What is a System][system whatis] | external | concept |
 | [What is the Roadmap](../about/roadmap.md)|internal|
 
 **Document's status**
@@ -22,6 +22,7 @@ Related topics
 
 <h1 align="center">MetaDoc</h1>
 
+
 # Definition
 
 - A project concerning a [documentation platform][doc platform whatis].
@@ -29,5 +30,10 @@ Related topics
 
 
 
+
+# Requirements
+- Distinguish the concept of a `project` (Class) from an **instance** of a `project` (Object: e.g. rctl, rpro, metadoc)
+- Distinguish the concept of a `tool` (Class) from an **instance** of a `too` (Object: e.g. rctl, rpro, metadoc)
+- Distinguish the concept of a `system` (Class) from an **instance** of a `system` (Object: e.g. OpenStack, Kubernetes)
 
 

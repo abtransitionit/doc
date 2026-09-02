@@ -1,0 +1,25 @@
+h1   { color: orange }
+h2   { color: green }
+b, strong {
+    color: orangered;
+    }
+
+i, em {
+    color: olive;
+    }
+ 
+code  {
+    color: none;
+}    
+/* table td, table td * {
+    vertical-align: top;
+}     */
+
+/* li:before {content:"\2665"; text-indent: -10px;} */
+/* li:before {content:"\2026"; text-indent: -10px;} */
+/* h2:after {content: ' \00A7';} */
+
+/* Entities:
+\2665
+\2026
+\00A7 */

@@ -11,7 +11,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[Howto for QEMU][qemu howto]|see
+|[How-to for QEMU][qemu howto]|see
 
 
 

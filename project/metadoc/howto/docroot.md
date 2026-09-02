@@ -9,7 +9,7 @@ Related topics
 
 | Topic | Location | Kind |
 |---|---|---|
-|[Howto for MetaDoc](../howto/metadoc.md)|internal|
+|[How-to for MetaDoc](../howto/metadoc.md)|internal|
 |[What is MetaDoc](../whatis/ep.md)|internal|see
 |[List of Rules](../list/rule.md)|internal|
 

@@ -17,7 +17,7 @@ Related topics
 |[What is rctl][rctl whatis] |
 |[What is a resource ][res whatis] |
 |[What is a provisioning ][provision whatis] |
-|[Howto manage ][manage howto] |
+|[How-to manage ][manage howto] |
 
 
 

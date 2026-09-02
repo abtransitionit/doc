@@ -17,7 +17,7 @@ Related topics
 | Topic | Location | Kind |
 |-|-|-|
 |[List of resources][resource list]|see
-|[Howto manage][manage howto]|internal
+|[How-to manage][manage howto]|internal
 |[What is metadata][metadata whatis]|internal
 
 

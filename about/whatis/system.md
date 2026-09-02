@@ -1,13 +1,16 @@
-[//]: #(home)
+Related topics
 
-
+| Topic | Location | Kind |
+|-|-|-|
+|[rctl](../../project/rctl/whatis/ep.md)|internal|project
+|[Metadoc](../../project/metadoc/whatis/ep.md)|internal|project
 
 <h1 align="center">System</h1>
 
 
 # Definition
 
-- Denotes something considered as a whole or part of a whole.
+- Something considered as a whole or part of a whole.
 - A system's final denomination depends on its characteristics
 - Example
   - In software development, a system could end-up in a platform, framework, software, tool, CLI, ...

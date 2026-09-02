@@ -10,7 +10,7 @@ Related topics
 
 | Topic                                            | Location | Kind    |
 | ------------------------------------------------ | -------- | ------- |
-| [Howto for DocRoot](../howto/docroot.md) | internal | concept |
+| [How-to for DocRoot](../howto/docroot.md) | internal | concept |
 | [What is MetaDoc](../whatis/ep.md)|internal|see
 
 **Document's status**

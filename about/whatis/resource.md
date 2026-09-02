@@ -1,6 +1,3 @@
-[//]: #(home)
-
-
 Related topics
 
 | Topic | Location | Kind |

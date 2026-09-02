@@ -11,7 +11,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[Howto for host][res howto]|see|
+|[How-to for host][res howto]|see|
 |[What is a host][host whatis]|see|
 
 

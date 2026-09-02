@@ -15,8 +15,8 @@ Related topics
 | Topic | Location | Kind |
 |-|-|-|
 |[What is a resource][res whatis]|internal
-|[Howto for cli][cli howto]|see
-|[Howto manage][manage howto]|internal
+|[How-to for cli][cli howto]|see
+|[How-to manage][manage howto]|internal
 |[cli v0.1][cli v0.1 whatis]|see
 
 

@@ -10,8 +10,8 @@
 | Topic | Location | Kind |
 |---|---|---|
 |[What is a Domain](../whatis/domain.md)|internal|functional
-|[Howto for Domain](../howto/domain.md)|internal|functional
-|[Howto for DocSet](../howto/docset.md)|internal|see
+|[How-to for Domain](../howto/domain.md)|internal|functional
+|[How-to for DocSet](../howto/docset.md)|internal|see
 
 <h1 align="center">MetaDoc DocSet</h1>
 

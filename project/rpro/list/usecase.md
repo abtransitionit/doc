@@ -15,7 +15,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[Howto for resource][res howto]|
+|[How-to for resource][res howto]|
 |[What is a resource][res whatis]|
 
 <h1 align="center">List of Forge Use case</h1>

@@ -3,6 +3,8 @@
 [operate whatis]:  ../whatis/operate.md
 
 
+Related topics
+
 | Topic | Location | Kind |
 |-|-|-|
 |[What is a Resource ](../whatis/resource.md) |concept
