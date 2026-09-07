@@ -5,8 +5,10 @@
 
 <h1 align="center">List of Systems</h1>
 
+# Navigation Index
 
-|Name|Purpose|
-|-|-|
-|[kubernetes](./k8s/whatis/ep.md)|container orchestration|
-|[Linux](./linux/whatis/ep.md)|an OS|
+
+| System | Purpose |
+|--------|---------|
+| **[Kubernetes](./k8s/whatis/ep.md)** | Container orchestration |
+| **[Linux](./linux/whatis/ep.md)** | Operating system |

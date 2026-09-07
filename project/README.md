@@ -12,10 +12,12 @@ Related topics
 <h1 align="center">List of Projects</h1>
 
 
-|Name|Purpose|
-|-|-|
-|[MetaDoc](metadoc/whatis/ep.md)|A documentation platform|
-||
-|[RPro](forge/whatis/ep.md)|provision resources on host|
-|[RCtl](rctl/whatis/ep.md)|control operation on resources|
-|[GoTest](gotest/whatis/ep.md)|test go module|
+# Navigation Index
+
+
+| Tool | Purpose |
+|------|---------|
+| **[MetaDoc](./metadoc/whatis/ep.md)** | Documentation platform — authoring, rendering, and publishing |
+| **[RPro](./forge/whatis/ep.md)** | Resource provisioning — deploy and configure resources on hosts |
+| **[RCtl](./rctl/whatis/ep.md)** | Resource control — manage operations on provisioned resources |
+| **[GoTest](./gotest/whatis/ep.md)** | Go module testing — validate and verify Go packages |

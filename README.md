@@ -12,36 +12,66 @@
 
 <h1 align="center">doc</h1>
 
-
 # Purpose
-This `MetaDoc` Git repository hosts the IT knowledge base and the single source of truth of the organization. 
 
-# Index of Key Documentation
+- This `MetaDoc` Git repository hosts the IT knowledge base and is the single source of truth of the organization. 
 
-**Concepts**
+# Quick Start
+
+**New here?** 
+
+- Start with the [Concept overview](./concept/README.md) to understand the foundation
+- Explore [Projects](./project/README.md) you're interested in.
+- See this [section](./governance/doc.howto.md) to start authoring documentation
+
+# Navigation Index
+
+| Section | Description | Main Topics |
+|---------|-------------|------------|
+| **[Concept](./concept/README.md)** | Foundational ideas & definitions | [Project](./concept/project/whatis/ep.md) • [System/Framework/Tool/CLI](./concept/tool/whatis/ep.md) |
+| **[Project](./project/README.md)** | Active development work | [MetaDoc](./project/metadoc/whatis/ep.md) • [rpro](./project/forge/whatis/ep.md) • [rctl](./project/rctl/whatis/ep.md) |
+| **[Tool](./tool/README.md)** | Utility & execution layers | [MetaDoc](./tool/metadoc/whatis/ep.md) • [rctl](./tool/rctl/whatis/ep.md) |
+| **[System](./system/README.md)** | Infrastructure & platforms | [Kubernetes](./system/k8s/whatis/ep.md) • [Linux](./system/linux/whatis/ep.md) |
+| **[Language](./language/README.md)** |  | [Arabic](./language/arabic/whatis/ep.md) • [Go](./language/go/ep.md) |
+
+
+# Browse By Type
+
+📘 [All Concepts](./concept/README.md): Understanding the fundamentals:
+
 - [Project](./concept/project/whatis/ep.md)
 - [System, Framework, Tool, CLI](./concept/tool/whatis/ep.md)
-- [List of Concepts](./concept/README.md)
+- [Security](./concept/security/whatis/ep.md)
 
-**Projects**
+🛠️ [Projects](./project/README.md): initiatives
 
 - [MetaDoc](./project/metadoc/whatis/ep.md)
 - [rpro](./project/forge/whatis/ep.md)
 - [rctl](./project/rctl/whatis/ep.md)
-- [All Projects](./project/README.md)
 
-**Tool**
+🧩 [Applicartions](./tool/README.md): Utility, Tool, Software, CLI
 
 - [MetaDoc](./tool/metadoc/whatis/ep.md)
 - [rctl](./tool/rctl/whatis/ep.md)
-- [All Tools](./tool/README.md)
 
-**Systems**
+🖥️ [Systems](./system/README.md): Infrastructure, System and platforms:
 
 - [Kubernetes](./system/k8s/whatis/ep.md)
 - [Linux](./system/linux/whatis/ep.md)
-- [Other system](./system/README.md)
 
+
+## 🔄 Cross-Reference Matrix
+
+| Name | Concept | Project | Tool | System |
+|------|---------|---------|------|--------|
+| MetaDoc | ✓ | ✓ | ✓ | |
+| rctl | ✓ | ✓ | ✓ | |
+| rpro | ✓ | ✓ | | |
+| Kubernetes | | | | ✓ |
+| Linux | | | | ✓ |
+
+
+# Todo
 
 
 **Governance**
@@ -53,10 +83,4 @@ This `MetaDoc` Git repository hosts the IT knowledge base and the single source 
 
 - [Terminology](./about/governance/term.md)
 - [Security](./concept/security/whatis/ep.md)
-- [WebServer](./tool/webserver/whatis/ep.md)
-- [Jelly](./tool/Jelly/whatis/ep.md)
 
-
-# Contributing
-
-See this [section](./governance/doc.howto.md) to familiarize authoring documentation

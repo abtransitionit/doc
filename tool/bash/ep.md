@@ -9,6 +9,15 @@
 
 [↖][home]
 
+Related topics
+
+| Topic                                            | Location | Kind    |
+| ------------------------------------------------ | -------- | ------- |
+| [What is Jelly][Jelly github whatis]|external|github
+
+**Document's status**
+- Early stage.
+- The project is currently being defined (concepts, architecture, ...)
 
 <h1 align="center">Jelly</h1>
 

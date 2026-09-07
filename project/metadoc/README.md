@@ -4,6 +4,58 @@
 
 # Todo
 
+# 📁 Full Directory Structure
+
+```
+.
+├── concept/
+│   ├── project/
+│   │   └── whatis/
+│   │       └── ep.md          # What is a Project?
+│   └── tool/
+│       └── whatis/
+│           └── ep.md          # System/Framework/Tool/CLI
+│
+├── project/
+│   ├── metadoc/
+│   │   └── whatis/
+│   │       └── ep.md          # MetaDoc project
+│   ├── forge/
+│   │   └── whatis/
+│   │       └── ep.md          # rpro project
+│   └── rctl/
+│       └── whatis/
+│           └── ep.md          # rctl project
+│
+├── tool/
+│   ├── metadoc/
+│   │   └── whatis/
+│   │       └── ep.md          # MetaDoc tool
+│   └── rctl/
+│       └── whatis/
+│           └── ep.md          # rctl tool
+│
+└── system/
+    ├── k8s/
+    │   └── whatis/
+    │       └── ep.md          # Kubernetes
+    └── linux/
+        └── whatis/
+            └── ep.md          # Linux
+```
+
+---
+
+## 📝 Legend
+
+- **`whatis/ep.md`** – Entry point / overview document
+- **Bold** = Top-level category
+- **✓** = Exists in this category
+
+
+
+# Todo
+
 # Purpose
 - This Git repository is serves as a centralized IT knowledge base, documentation, and single source of truth for the organization.
 - It provides structured, consistent documentation covering the full **lifecycle** of **initiatives, projects, standards, systems, ...**.

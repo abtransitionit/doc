@@ -36,6 +36,9 @@ Related topics
 
 <h1 align="center">RPro</h1>
 
+# Purpose
+this section provides the vison, requirements, architecture, roadmap, and implementation
+
 # Definition
 
 

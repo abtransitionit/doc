@@ -4,10 +4,12 @@
 [↖][home]
 
 
+<h1 align="center">What is Security</h1>
 
 # Definition
 
-Security is the practice of protecting and safeguarding **digital systems**, resources, and data. It ensures a balance between **Prevention** and **Resilience**.
+- Security is the practice of protecting and safeguarding **digital systems**, resources, and data. 
+- It ensures a balance between **Prevention** and **Resilience**.
 
 A well-implemented security strategy **creates a resilient, secure, and highly available environment** for digital assets.  
 
@@ -15,7 +17,6 @@ A well-implemented security strategy **creates a resilient, secure, and highly a
 
 **Security** deal with several other concepts:
 
-* Security
 * Resilience
 * Availability
 * Fault tolerance

@@ -21,13 +21,17 @@ Related topics
 
 
 # Definition
-Takes **inputs** and activities/work to create **outputs** (product, service, or result) that provide value to a stakeholder.
+
+```
+
+- Takes **inputs** and activities/work 
+- Creates **outputs** (product, service, or result) that provide value to a stakeholder.
 
 ```
 Project → creates → Product / Service / Result → provides → Value (for stakeholders)
 ```
 
-**The flow**
+## The flow
 
 ```text
 Inputs
@@ -62,12 +66,11 @@ Outputs can enable or generate **outcomes**, which in turn create or contribute 
 
 # Project vs. Product / Service / Result
 
-An important distinction in project management is the difference between **the project** and **what the project delivers**.
 
 | Concept     | Meaning                                                 |
 | ----------- | ------------------------------------------------------- |
-| **Project** | Temporary work undertaken to create something unique    |
-| **Product** | A tangible or intangible thing created or delivered     |
+| **Project** | Temporary work undertaken to create a **product**, **service** or **result**.    |
+| **Product** | A tangible or intangible thing created or delivered from a project     |
 | **Service** | A capability or activity provided to users or customers |
 | **Result**  | An outcome or consequence produced by the project       |
 
