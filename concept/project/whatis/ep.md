@@ -2,7 +2,7 @@
 [home]: ../../README.md
 
 [//]: #(ref)
-[lifecycle whatis]: ../whatis/lfc.md
+[prj lfc whatis]: ../whatis/lfc.product.md
 
 
 
@@ -13,50 +13,35 @@ Related topics
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 | [What is a program](../whatis/program.md)      | Internal | |
-| [What is a lifecycle](../whatis/lfc.md)      | Internal ||
-| [How-to for project](../howto/ep.md)           | Internal | See  |
+| [What is a project lifecycle](../whatis/lfc.prj.md)      | Internal ||
+| [What is a product lifecycle](../whatis/lfc.product.md)      | Internal ||
+| [How-to for project](../howto/ep.md) | Internal | See  |
 | [List of projects](../../../project/README.md) | Internal | See  |
 
 <h1 align="center">What is a Project</h1>
 
 
 # Definition
-
-```
-
 - Takes **inputs** and activities/work 
 - Creates **outputs** (product, service, or result) that provide value to a stakeholder.
-
-```
-Project → creates → Product / Service / Result → provides → Value (for stakeholders)
-```
-
-## The flow
+- Projects, products, and services have a [lifecycle][lfc whatis].
 
 ```text
-Inputs
-  ↓
-Project work / activities
-  ↓
-Outputs
-  ↓
-Outcomes
-  ↓
-Value
+Inputs → Activities → Outputs → Outcomes → Value
 ```
 
 
 ## Inputs
 
-- Inputs are the things a project uses or receives to perform its work.
+- What a project uses or receives to perform its work.
 - Examples include: Ideas, Needs, Requests, Materials, Knowledge, Information, Resources
 
 ## Outputs
 
-- Outputs are the **products, services, or results** produced by the project.
-- Examples include: Products, Services, Deliverables, Artifacts, Results
-
-Outputs can enable or generate **outcomes**, which in turn create or contribute to **value** for stakeholders.
+- The **products**, **services**, or **results** produced by the project.
+- Examples include: Deliverables, Artifacts, Results
+- Once created, may be operated/used **without the project continuing**.
+- Can enable/generate **outcomes**, which create/contribute to **value** for stakeholders.
 
 # Key Characteristics of a project
 
@@ -74,47 +59,10 @@ Outputs can enable or generate **outcomes**, which in turn create or contribute 
 | **Service** | A capability or activity provided to users or customers |
 | **Result**  | An outcome or consequence produced by the project       |
 
-In other words:
-
-- The project is the temporary work.
-- The product, service, or result is what the project delivers.
-
-Once created, a product or service may continue to be operated or delivered **without the project continuing**.
-
-Projects, products, and services each have a [lifecycle][lifecycle whatis].
 
 
 
-# Project vs. Operations
 
-Projects and operations can both produce products or services, but they serve different purposes.
-
-| Project                                    | Operations                                |
-| ------------------------------------------ | ----------------------------------------- |
-| **Temporary**                              | **Ongoing**                               |
-| Has a defined start and end                | Continues indefinitely or repeatedly      |
-| Creates something unique                   | Repeatedly produces or delivers something |
-| Changes, creates, or establishes something | Runs, maintains, or supports something    |
-
-**Example**
-
-- Building a new online store is a **project**.
-- Running that online store is **operations**.
-
----
-
-# Lifecycle
-
-
-See: [Lifecycle — What is it?][lifecycle whatis]
-
-The lifecycle of the **project** concerns the progression of the temporary work required to achieve its objective.
-
-The lifecycle of the **product or service** concerns the progression of what is created or delivered over its existence.
-
-These lifecycles may overlap, but they are **not the same thing**.
-
----
 
 # Key Characteristics of a Project
 
@@ -168,3 +116,21 @@ The essential distinction is:
 > **Project = temporary work**
 > **Product / Service / Result = what the project delivers**
 > **Operations = ongoing work that operates or repeatedly delivers what has been created**
+
+
+# Todo
+## Project vs. Operations
+
+Projects and operations can both produce products or services, but they serve different purposes.
+
+| Project                                    | Operations                                |
+| ------------------------------------------ | ----------------------------------------- |
+| **Temporary**                              | **Ongoing**                               |
+| Has a defined start and end                | Continues indefinitely or repeatedly      |
+| Creates something unique                   | Repeatedly produces or delivers something |
+| Changes, creates, or establishes something | Runs, maintains, or supports something    |
+
+**Example**
+
+- Building a new online store is a **project**.
+- Running that online store is **operations**.

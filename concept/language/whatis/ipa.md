@@ -9,13 +9,13 @@
 [↖][home]
 
 
-<h1 align="center">Language IPA</h1>
+<h1 align="center">IPA</h1>
 
 
 
 # Definition
 - Stands for **I**nternational **P**honetic **A**lphabet
-- A system for writing speech sounds, regardless of which language they come from.
+- A system, used for writing speech sounds, regardless of the language (En, Fr, Ar, etc.).
 
 # Sounds of English and French Aplhabet Letters
 
@@ -52,11 +52,11 @@
 
 | Latin letter | English IPA           | French IPA |
 | ------------ | --------------------- | ---------- |
-| CH           | /tʃ/ chair, cheese    | /ʃ/ chemin |
+| CH           | /tʃ/ **ch**air, **ch**eese    | /ʃ/ **ch**emin |
 | É            |                       | /e/        |
 | Ail          |                       | /aj/       |
-| Eye, I       | /aɪ/                  |            |
-| You          | /ju:/                 |            |
 | Ou           |                       | /u/        |
+| You          | /ju:/                 |            |
+| Eye, I       | /aɪ/                  |            |
 | food         | /fu:d/ long u         |            |
 

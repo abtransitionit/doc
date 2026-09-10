@@ -21,15 +21,15 @@ Related topics
 
 <h1 align="center">Concept of Tool</h1>
 
+This section provides a terminology (Program, OS, System, Framework, Tool, etc.) that helps define a tool.
 
 
 # Definition
-This section provides a terminology (Program, OS, System, Framework, Tool, etc.) that helps define a tool.
 
 
 ## (CPU) Operation
 - The lowest atomic action executed in computing a [systems][system whatis].
-- Executed directly by the CPU [Hardware][hres whatis] (e.g., bitwise shift, register read, memory store).
+- Executed at **runtime** directly by the CPU [Hardware][hres whatis] (e.g., bitwise shift, register read, memory store).
 
 
 ```go
@@ -62,6 +62,7 @@ OPERATION 7: Update CPU flags
 - Is translated (at **compiltime** by a compiler/linker or interpreter) into assembly/machine Statements
 
 
+
 ```go
 // a statement 
 x := x + a 
@@ -69,7 +70,7 @@ x := x + a
 
 
 ## Block of code
-- A set of single statements considered as a whole
+- A set of Language statements considered as a whole
 - Performs a task
 
 ```go
@@ -82,9 +83,8 @@ if index < 0 || index >= len(slice) {
 
 ## Function/Procedure
 
-- A named, reusable block of code considered as a whole
-- Performs a task
-- Can receive inputs (parameters).
+- A reusable, named block of code
+- Configurable through inputs (parameters).
 - Procedure: Traditionally **does not return a value** to its caller.
 - Function:  Usually **returns a value** to its caller.
 - The fundamental building block for **Program**
@@ -105,19 +105,16 @@ def square(a, b):
 
 ```
 
-1. statements are translated into machine instructions
-1. machine instructions cause the CPU to perform operations.
-
-
 
 ## Library
 - A collection of functions and procedures often packaged in an [artifact][artifact whatis].
 
 ## Software / Program
 
-- A set of code, configuration and libraries assembled together to executes/perfoms an action or task.
+- A set of code, configuration and libraries assembled together
+- Executes/perfoms an action or task.
 - The granularity of the action or task ranges from 
-  - **low-level** OS operations (e.g., file I/O) to 
+  - **low-level** OS operations (e.g., file I/O) **to**
   - **high-level** platform workflows (e.g., environment provisioning).
 - Provides the capability to **perform, enable, simplify, or automate** an action or task.
 
@@ -125,9 +122,9 @@ def square(a, b):
 ## Tool <a id='tool'></a>
 - A software or program invoked by an [Agent](#agent).
 - Examples:
-  - functions, softawre, programs, 
-  - compilers, CLI commands, APIs, servers, IDEs.
-  - Word, Excel, ...
+  - compilers, servers, etc.
+  - CLI, Cde, APIs, etc.
+  - IDEs, Browsers, Word, Excel, etc.
 
 ## Agent <a id='agent'></a>
 Invokes (i.e initiates, executes) a [tool](#tool).

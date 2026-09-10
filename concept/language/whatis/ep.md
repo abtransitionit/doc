@@ -21,10 +21,10 @@
 - A system of signs and rules used to communicate information, ideas, thoughts, emotions, or instructions.
 - can be formally defined in mathematics, in particular within the **theory of formal languages**.
 - can be classified into the following categories:
-  * **programming languages**
-  * **body language**
-  * **legal language**
-  * **sign languages**
+  * programming languages
+  * body language
+  * legal language
+  * sign languages
   * ...
 - can also, be arbitrarily classified into two categories: 
   * written languages.
@@ -33,16 +33,16 @@
 ## Written languages
 
 Examples include:
-* **Programming languages**
-* **Natural languages** (French, Belgian Dutch, German, American English, Arabic, etc.)
-* **Domain-specific languages** (mathematics, medicine, philosophy, history, etc.)
+* Programming languages
+* Natural languages (French, Belgian Dutch, German, American English, Arabic, etc.)
+* Domain-specific languages (mathematics, medicine, philosophy, history, etc.)
 
 ## Non-written languages
 
 Examples include:
-* **Spoken languages**
-* **Body language**
-* **Sign languages**
+* Spoken languages
+* Body language
+* Sign languages
 * ...
 
 # Written Natural Language
@@ -82,5 +82,5 @@ a, b, c, ..., z
 
 ## Sound
 - Each letter of an alphabet is associated with a conventional spoken name (or sound) when the alphabet is recited.
-- Ecf. [IPA][ipa whatis]
+- Cf. [IPA][ipa whatis]
 

@@ -1,5 +1,5 @@
 [//]: #(home)
-[home]: ../../README.md
+[home]: ../whatis/ep.md
 
 
 
@@ -14,6 +14,15 @@ Related topics
 
 
 <h1 align="center">KPI</h1>
+
+# Todo
+
+- **KPIs (Key Performance Indicators):** Measure progress at every step. Here are a few core examples:
+    - **Phase 1:** Stakeholder Alignment % (Are we all on the same page?)
+    - **Phase 4:** On-Time Delivery % & Budget Adherence (Are we building it on time and on budget?)
+    - **Phase 5:** Defect Detection % (How well are we finding problems?)
+    - **Phase 6:** Uptime % & SLA Compliance (Is the service reliable?)
+    - **Phase 7:** Customer Satisfaction (NPS/CSAT) (Are our users happy?)
 
 # Definition
 
