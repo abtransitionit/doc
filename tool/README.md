@@ -11,12 +11,11 @@
 
 | Product | Type | Purpose |
 |------|---------|---------|
-| Algernon | [Tool](./tool/webserver/whatis/ep.md) | Web server — serves markdown file on the fly|
-| Jelly | [Tool](./tool/Jelly/whatis/ep.md) | Manages Multimedia resources (audio, video) |
-| RPro | [Project](../project/rpro/whatis/ep.md) | vison, requirements, architecture, roadmap, and implementation |
-| RPro | [Tool](./tool/rpro/whatis/ep.md) | CLI for provisioning resources on hosts |
-| RCtl | [Project](./project/rctl/whatis/ep.md) | vison, requiirements, architecture, roadmap, and implementation |
-| RCtl | [Tool](./tool/rctl/whatis/ep.md) | CLI for controlling operations on resources |
+| Algernon | [Tool](./algernon/whatis/ep.md) | Web server — serves markdown file on the fly|
+| Jelly | [Tool](./Jelly/whatis/ep.md) | Manages Multimedia resources (audio, video) |
+| RPro | [Tool](./rpro/whatis/ep.md), [Project](../project/rpro/whatis/ep.md) | CLI for provisioning resources on hosts |
+| RCtl | [Tool](./rctl/whatis/ep.md), [Project](./project/rctl/whatis/ep.md) | CLI for controlling operations on resources |
+| Cerbot | [Tool](./cerbot/whatis/ep.md) | |
 
 ## 🧭 Quick Navigation
 
@@ -35,7 +34,3 @@
 | [Tool](./tool/rctl/whatis/ep.md) | Usage — CLI commands, examples, and configuration |
 
 
-## 🧭 Quick Navigation
-
-| Product | Type | Purpose |
-|---------|------|---------|

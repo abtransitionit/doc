@@ -14,23 +14,25 @@
 
 # Purpose
 
-- This `MetaDoc` Git repository hosts the IT knowledge base and is the single source of truth of the organization. 
+This `MetaDoc` Git repository hosts 
+  - The IT knowledge base of the organization. 
+  - The single source of truth for the organization. 
 
 # Quick Start
 
 **New here?** 
 
 - Start with the [Concept overview](./concept/README.md) to understand the foundation
-- Explore [Projects](./project/README.md) you're interested in.
+- Explore [Projects](./project/README.md) or [tools](./tool/README.md) you're interested in.
 - See this [section](./governance/doc.howto.md) to start authoring documentation
 
 # Navigation Index
 
-| Section | Description | Main Topics |
+| Section | Description | Quick access |
 |---------|-------------|------------|
 | **[Concept](./concept/README.md)** | Foundational ideas & definitions | [Project](./concept/project/whatis/ep.md) • [System/Framework/Tool/CLI](./concept/tool/whatis/ep.md) |
-| **[Project](./project/README.md)** | Active development work | [MetaDoc](./project/metadoc/whatis/ep.md) • [rpro](./project/forge/whatis/ep.md) • [rctl](./project/rctl/whatis/ep.md) |
-| **[Tool](./tool/README.md)** | Utility & execution layers | [MetaDoc](./tool/metadoc/whatis/ep.md) • [rctl](./tool/rctl/whatis/ep.md) |
+| **[Project](./project/README.md)** | Active development work | [MetaDoc](./project/metadoc/whatis/ep.md) • [RPro](./project/forge/whatis/ep.md) • [RCtl](./project/rctl/whatis/ep.md) |
+| **[Tool](./tool/README.md)** | Utility & execution layers | [MetaDoc](./tool/metadoc/whatis/ep.md) • [RCtl](./tool/rctl/whatis/ep.md) |
 | **[System](./system/README.md)** | Infrastructure & platforms | [Kubernetes](./system/k8s/whatis/ep.md) • [Linux](./system/linux/whatis/ep.md) |
 | **[Language](./language/README.md)** |  | [Arabic](./language/arabic/whatis/ep.md) • [Go](./language/go/ep.md) |
 

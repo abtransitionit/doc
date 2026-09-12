@@ -2,7 +2,8 @@
 [home]: ../../README.md
 
 [//]: #(ref)
-[prj lfc whatis]: ../whatis/lfc.product.md
+[lfc whatis]: ../whatis/lfc.md
+[roadmap whatis]: ../whatis/roadmap.md
 
 
 
@@ -23,11 +24,17 @@ Related topics
 
 # Definition
 - Takes **inputs** and activities/work 
-- Creates **outputs** (product, service, or result) that provide value to a stakeholder.
-- Projects, products, and services have a [lifecycle][lfc whatis].
+- Creates **outputs** (e.g. product, service, result) that provide value to stakeholders.
+- the [lifecycle][lfc whatis] and [roadmap][roadmap][roadmap whatis] help bootsrap and organize a project
+
+```
+Project
+   ├── Lifecycle
+   └── Roadmap
+```  
 
 ```text
-Inputs → Activities → Outputs → Outcomes → Value
+Inputs → Activities → Outputs → Outcomes → Value (for stakeholders)
 ```
 
 
@@ -45,92 +52,23 @@ Inputs → Activities → Outputs → Outcomes → Value
 
 # Key Characteristics of a project
 
-- **Temporary**: has a defined start and end
-- **Unique**: produces something new or different
-- **Constrained**: limited by time, cost, scope, and resources
-
-# Project vs. Product / Service / Result
-
-
-| Concept     | Meaning                                                 |
-| ----------- | ------------------------------------------------------- |
-| **Project** | Temporary work undertaken to create a **product**, **service** or **result**.    |
-| **Product** | A tangible or intangible thing created or delivered from a project     |
-| **Service** | A capability or activity provided to users or customers |
-| **Result**  | An outcome or consequence produced by the project       |
+| Key     | Meaning | Note |
+| ------- | ------- | ---- |
+|Temporary|has a defined start and end |
+|Unique|produces something new or different | context, stakeholders, requirements, environment, or constraints.
+|Constrained|limited by time, cost, scope, and resources | influence how the project is planned, executed, and controlled.
 
 
-
-
-
-
-# Key Characteristics of a Project
-
-A project has three fundamental characteristics:
-
-### 1. Temporary
-
-A project has a **defined beginning and end**.
-
-Temporary does **not** necessarily mean short. A project may last days, years, or longer; what matters is that the project itself is not an ongoing operation.
-
-### 2. Unique
-
-A project creates a **unique product, service, or result**.
-
-Even when projects are similar, each project can differ in its context, stakeholders, requirements, environment, or constraints.
-
-### 3. Constrained
-
-A project operates within **constraints**, such as:
-
-* Time
-* Cost
-* Scope
-* Resources
-
-These constraints influence how the project is planned, executed, and controlled.
-
----
 
 # Summary
 
-> **A project is temporary work undertaken to create a unique product, service, or result.**
-
-Its basic logic is:
-
-```text
-Inputs
-  ↓
-Project activities
-  ↓
-Outputs
-  ↓
-Outcomes
-  ↓
-Value for stakeholders
-```
-
-The essential distinction is:
-
-> **Project = temporary work**
-> **Product / Service / Result = what the project delivers**
-> **Operations = ongoing work that operates or repeatedly delivers what has been created**
 
 
-# Todo
-## Project vs. Operations
+|||
+|-|-|
+| Project | temporary work to create / deliver an output (i.e. Prodcut, Service or Result)
+| Product | can tangible or intangible
+| Service | capability / activity provided to users / customers |
+| Operations | actions that operates on the delivery
 
-Projects and operations can both produce products or services, but they serve different purposes.
 
-| Project                                    | Operations                                |
-| ------------------------------------------ | ----------------------------------------- |
-| **Temporary**                              | **Ongoing**                               |
-| Has a defined start and end                | Continues indefinitely or repeatedly      |
-| Creates something unique                   | Repeatedly produces or delivers something |
-| Changes, creates, or establishes something | Runs, maintains, or supports something    |
-
-**Example**
-
-- Building a new online store is a **project**.
-- Running that online store is **operations**.

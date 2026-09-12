@@ -1,5 +1,5 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home]: ../whatis/lfc.md
 
 [//]: #(ref)
 [product phase whatis]: ../whatis/phase.md
@@ -20,6 +20,7 @@ Related topics
 
 <h1 align="center">Product Lifecycle</h1>
 
+# Definition
 
 - The sequence of [phases][phase whatis] that a product/service passes through from its first **Release** to its **retirement**.
 

@@ -1,5 +1,5 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home]: ../whatis/lfc.md
 
 [//]: #(ref)
 [phase whatis]: ../whatis/phase.md
@@ -25,8 +25,9 @@ Related topics
 
 
 # Definition
-- The sequence of [phases][phase whatis] that a [project][home] passes through from its **initiation** to its **closure**.
-- Exists, regardless of its [methodology][methodology list] (Waterfall, Agile, etc.).
+- A sequence of [phases][phase whatis] that a [project][home] passes through from its **initiation** to its **closure**.
+- Exists, regardless of its [methodology][methodology list] (Waterfall, Agile, etc.)
+- Exists, regardless of the kind of project (software, events, etc.)
 - The [roadmap][roadmap whatis] add constraints to this sequence.
 
 
@@ -43,8 +44,8 @@ Project
           ├── Phase 3 — Design
           ├── Phase 4 — Implementation
           ├── Phase 5 — Validation
-          ├── Phase 7 — Delivery
-          └── Phase 8 — Closure
+          ├── Phase 6 — Delivery
+          └── Phase 7 — Closure
 ```  
 
 Example 02:
@@ -135,11 +136,12 @@ Project
 
 ## [↑](#cycle) Vision  <a id='vision'></a>
 
-- **Core Question:** Why?
-- Define the name, purpose, and objectives
+- **Core Question:** Why? (What problem does it solve?)
+- Define the name, purpose, goal, objective
 - Idea, Discovery, Vision, Goal
 - Aligns with business / project objectives
-- What problem are you solving? (e.g., "Make knowledge easy to share.") |
+- example of answers
+  - Make knowledge easy to share.
 
 
 
@@ -147,9 +149,9 @@ Project
 
 - **Core Question:** What?
 - Define what is needed (product or service)
-- Focus on *what*, not *how* (e.g., "Must support document search," not "Use Elasticsearch.")
+- Focus on *the what*, not *the how* (e.g., "Must support document search," not "Use Elasticsearch.")
 - Aligns with product / service definition
-- Capture what’s needed to achieve the goal. Focus on *what*, not *how*.  |
+- Capture what’s needed to achieve the goal.
 
 
 ## [↑](#cycle)  Roadmap  <a id='roadmap'></a>

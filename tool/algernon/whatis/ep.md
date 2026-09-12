@@ -1,5 +1,5 @@
 [//]: #(home)
-[home]: ../../../README.md
+[home]: ../../README.md
 
 [//]: #(doc)
 
@@ -14,15 +14,14 @@ Related topics
 - Early stage.
 - The project is currently being defined (concepts, architecture, ...)
 
-<h1 align="center">Webserbvr</h1>
+<h1 align="center">What is Algernon</h1>
 
 
 # Definition
-
-- host files and folder
+- a webserver for `markdown` files
 
 
 
 
 # List
-- https://github.com/xyproto/algernon: render `.md` files
+- https://github.com/xyproto/algernon : render `.md` files

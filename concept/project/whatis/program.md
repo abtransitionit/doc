@@ -6,12 +6,6 @@
 
 [↖][home]
 
-Related topics
-
-| Topic | Location | Kind |
-|-|-|-|
-|[What is a project][home]|internal
-
 
 <h1 align="center">Project</h1>
 

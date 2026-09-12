@@ -1,14 +1,20 @@
 [//]: #(home)
-[home]: ../../../README.md
+[home]: ../../README.md
 
 [//]: #(doc)
-[doc platform whatis]: ../whatis/doc.ptf.md
-[metadoc howto]:       ../howto/metadoc.md
-[system whatis]:       /about/whatis/system.md
 [Jelly github whatis]:       https://github.com/jellyfin/jellyfin
 
 [↖][home]
 
+Related topics
+
+| Topic                                            | Location | Kind    |
+| ------------------------------------------------ | -------- | ------- |
+| [What is Jelly][Jelly github whatis]|external|github
+
+**Document's status**
+- Early stage.
+- The project is currently being defined (concepts, architecture, ...)
 
 <h1 align="center">Jelly</h1>
 
@@ -42,3 +48,7 @@ If that returns a list of categories, **we're in business**.
 - https://github.com/worldofiptvcom/xtream-codes-api/blob/master/docs/player-api/overview.md?utm_source=chatgpt.com "xtream-codes-api/docs/player-api/overview.md at master · worldofiptvcom/xtream-codes-api · GitHub"
 - https://xtreamiptv.codes/xtream-codes/api/?utm_source=chatgpt.com "Xtream Codes API: The Complete Reference | XtreamIP TV Codes"
 - https://github.com/jellyfin/jellyfin
+
+
+
+
