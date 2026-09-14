@@ -14,7 +14,7 @@
 
 # Purpose
 
-This `MetaDoc` Git repository hosts 
+This Git repository hosts/is a `MetaDoc` repository
   - The IT knowledge base of the organization. 
   - The single source of truth for the organization. 
 

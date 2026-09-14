@@ -1,5 +1,8 @@
 [//]: #(home)
 [home]: ../whatis/ep.md
+
+[//]: #(ref)
+[phase whatis]:    ../whatis/p
 [prj lfc]:         ../whatis/lfc.prj.md
 [prj product lfc]: ../whatis/lfc.product.md
 

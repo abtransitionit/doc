@@ -2,50 +2,49 @@
 [home]: ../../README.md
 
 [//]: #(ref)
-[phase whatis]: ../whatis/phase.md
-
+[project whatis]: ../../../concept/project/whatis/ep.md
+[roadmap whatis]: ../whatis/roadmap.md
 
 
 [↖][home]
-
-Related topics
-
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
-| [What is a program](../whatis/program.md)      | Internal | |
+| [What is a project][project whatis]      | Internal | |
+
 
 <h1 align="center">What is a Lifecycle</h1>
 
 
 
 # Definition
-- can be formally defined in mathematics, in particular within **graph theory** and its extension **Petri nets**.
-- Model the evolution of something (e.g. entity, system, process, activity) through a sequence of **phases** over time.
+- Model the evolution of something (e.g. system, process, activity) through a sequence of **phases**.
+- can be formally defined in mathematics, using **graph theory** and its extension **Petri nets**.
+- can have a [roadmap][roadmap whatis]
 
-## Example
+## Example <a id='example'></a> 
 
 | Context | Lifecycle |
 |-|-|
 | Theoretical | `A` → `B` → `C` → `D` → `A` → `A` → `D`
-| Software | `development` → `testing` → `deployment` → `operation` → `retirement`
-| Project | `initiation` → `planning` → `execution` → `closure`
-| Product | `conception` → `development` → `launch` → `maturity` → `decline`
-| Organization | `creation` → `growth` → `maturity` → `transformation/dissolution`
 | Biology | `birth` → `development` → `reproduction` → `death`
-| Data | `creation` → `processing` → `storage` → `archival/deletion`
-| Document | `draft` → `review` → `approval` → `publication` → `archival`
+| [Software](#software) | `development` → `testing` → `deployment` → `operation` → `retirement`
+| [Project](#project) | `initiation` → `planning` → `execution` → `closure`
+| [Product](#product) | `conception` → `development` → `launch` → `maturity` → `decline`
+| [Organization](#organization) | `creation` → `growth` → `maturity` → `transformation/dissolution`
+| [Data](#data) | `creation` → `processing` → `storage` → `archival/deletion`
+| [Document](#document) | `draft` → `review` → `approval` → `publication` → `archival`
 
 - each arrow represents a **transition** from one phase to another
 
-# Terminology
+## Terminology
 
 | Term | Meaning |
 | - | - |
-| **phase**      | <li>A named stage <li>represents a state  <li>produces/creates an **output** |
-| **transition** | <li>is represented by the arrow in the lifecycle <li>is caused/triggered by an event <li>has a **source** phase and a **destination** phase|
+| **phase**      | <li>A named stage <li>represents a state  <li>can produces/creates an **output** and/or **outcomes** |
+| **transition** | <li>is represented by the arrow in the lifecycle <li>is caused/triggered by an **event** <li>has a **source** phase and a **destination** phase|
 | **event**      | What triggers/permits/causes a transition |
-| **output**	  | <li>is internal to a phase <li>can be the input of another phase |
-| **outcome**	  | <li>The resulting state/effect after a transition <li>Answers "where are we now?" |
+| **output**	  | <li>what a phase produced |
+| **outcome**	  | <li>what a phase achieves |
 
 # Kind
 
@@ -58,295 +57,97 @@ Related topics
 
 
 
+# Examples detailed
 
-# Output vs. Outcome
-
-When an entity (document, project, software) goes through the stages of it lifecycle. At each stage two things are true:
-
-| | Plain question | Answer |
-| - | - | - |
-| **Output** | What did this stage **produce**? | <li>tool: code, tests, package… <li>doc: ... <li>project:|
-| **Outcome** | What **state** is the entity in now? | <>software:estable, live… <project>: ... <li>doc: ...|
-
-
-
-| | Output | Outcome |
-| - | - | - |
-| Phase concerned | the **src** phase | the **dst** phase |
-| Definition | A thing **produced** by the (work of the) **src** phase | The **resulting state** of a **dst** phase |
-| Answers | *"What did the phase make?"* | *"What state did we land in?"* |
-| Grammatical form | a **noun** | an **adjective / condition** |
-| Countable? | one or more nouns | one state per dst phase |
-| Example | code, report, package | Is testable, Is live, Is closed |
-
-- **Output** concerns the src phase.
-- **Outcome** concerns the dst phase.
-
-**todo**
-- an output is often an **artifact/delivery**.
-- an outcome is a resulting state or condition.
-
-
-```
-development → testing
-```
-
-- `development`: **output** = *source code + builded artifacts*
-- `development → testing`: **outcome** = *software is testable*
-
-```
-deployment → operation
-```
-
-- `deployment`:output = the release package and config
-- `deployment → operation`: **outcome** = software is live (i.e. installed and running on the production servers)
-
-**todo**
-
-Before that, in `deployment`, the software was *being installed*. After the transition, it is *running*. "Live" is just the short word for **"running in production."**
-
-## Use Case: Software lifecycle
+## [↑](#example) Software lifecycle <a id='software'></a>
 
 ```
 development → test → deployment → operation → retirement
 ```
 
-- An outcome is a resulting state, status, or condition.
-- An outcome describes the readiness state (or milestone) that an entity (such as software) achieves at the end of each phase.
-- Adding a dedicated Status / Milestone column highlights the state the entity reaches before moving forward.
 
-### Software Lifecycle with Readiness States
 
-| Stage | What Happens | Output Produced | Status / Milestone | Next Stage |
-| --- | --- | --- | --- | --- |
-| **Development** | Write code, build initial features | Source code, compiled artifacts | Software **is testable** | Testing |
-| **Testing** | Run automated & manual tests, fix bugs | Test reports, bug fixes | Software **is deployable** | Deployment |
-| **Deployment** | Install release on production environment | Configuration, live environment setup | Software **is live** | Operation |
-| **Operation** | Run in production, monitor, apply patches | Logs, telemetry data, hotfixes | Software **is end-of-life** | Retirement |
-| **Retirement** | Turn off servers, archive remaining data | Final database archive | Software **is decommissioned** | — |
-
-Using *"software is [state]"* creates a clear gatekeeping checklist: you don't move to **Deployment** until the software **is deployable**, and you don't move to **Operation** until the software **is live**.
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Development` | <li>Write code <li>Create initial features <li>Fix initial bugs | <li>Requirements <li>User stories             | <li>Source code <li>Build artifacts <li>Developer documentation            | Software is ready for testing        | `Test`       |
+| `Test`        | Run automated and manual tests to find bugs                     | Build                                         | <li>Test results <li>Bug reports <li>Verified release package              | Software is verified                 | `Deployment` |
+| `Deployment`  | Install and configure the build on live servers                 | <li>Verified release package <li>Config files | <li>Deployed application <li>Deployment logs <li>Deployment configuration  | Application is running in production | `Operation`  |
+| `Operation`   | <li>Run the app in production <li>Monitor <li>Fix bugs          | Deployed application                          | <li>Monitoring data <li>Bug fixes <li>Operational updates <li>New releases | Application is operational           | `Retirement` |
+| `Retirement`  | <li>Decommission servers <li>Migrate user data <li>Shut down    | <li>Live application <li>Migration plan       | <li>Archived data <li>Migrated data <li>Decommissioning records            | Application is retired               | —            |
 
 
 
-| Stage | What Happens | What Goes In (Input) | What Comes Out (Output) | What Triggers the Next Step |
-| --- | --- | --- | --- | --- |
-| Development| <li>Write code <li>create initial features <li>fix initial bugs. | <li>Requirements <li>user stories | <li>Source code <li>compiled code <li>artifacts | <li>Code passes peer review <li> Code is ready for QA. |
-| Test | Run automated and manual tests to find bugs. | Compiled build artifacts | <li>Test reports <li>bug fixes | <li>All critical tests pass <li>release is approved. |
-| Deployment | Install and configure the build on live servers. | <li>Verified release package <li>config files | Live running application | Deployment completes successfully and passes smoke tests. |
-| Operation | <li>Run the app in production <li>monitor <li>fix bugs. | Live application | <li>Logs <li>metrics <li>patch updates | <li>Management decides the software is outdated OR <li> Software is no longer needed. |
-| Retirement | <li>Decommission servers <li>migrate user data <li>shutting down. | Live application, migration plan | Data archives, turned-off servers | The system is fully powered down (End of Life). |
+## [↑](#example) Project lifecycle <a id='project'></a>
 
-| Stage | What happens | Output (produced) | What ends the stage | Next stage |
-| - | - | - | - | - |
-| `development`| write code        | <li>src code <li>builded artifacts| code is ready   | `testing` |
-| `testing`    | run tests         | test reports, fixes  | tests pass      | `deployment` |
-| `deployment` | install release   | <li>release package <li>config   | release is live | `operation` |
-| `operation`  | run in production | logs, patches      | end-of-life decision | `retirement` |
-| `retirement` | shut down         | final archive      | — | - |
-
-
-| Phase (src) | → Transition → | Phase (dst) | Src Phase Output | Dst Phase Outcome|
-| - | :-: | - | - | - |
-| `development` | → | `testing` | source code, build artifacts | software *is testable* |
-| `testing` | → | `deployment` | test reports, bug fixes | software *is deployable* |
-| `deployment` | → | `operation` | release package, config | software *is live* |
-| `operation` | → | `retirement` | logs, maintenance patches | software *is decommissioned* |
-
-
-
-software *is testable* 
-software *is deployable* 
-software *is live* 
-software *is decommissioned*
-
-
-
-Arriving in `operation` → the state is **"the software is live"** (i.e. running in production).
-
-If "live" still feels vague, a more explicit version of the outcome would be:
-
-> ✅ **the software is running in production for real users**
-
-Would you like me to use that longer, plainer phrasing in the table instead of the word "live"?
-
-### Terminology
-- **"Is live"** means
-
-   | Context | meaning |
-   | - | - |
-   | Sotfware | is running in production and real users are using it |
-   | Website | the site is reachable at its real URL |
-   | App | users can download and use it |
-   | API | it responds to real requests |
-   | Feature | it is switched on for real users (not behind a flag) |
-
-- **"operational"** means: is being used, day to day.
-
-## Use Case: Project lifecycle 
-
-| Phase (src) | → Transition → | Phase (dst) | Output — (src phase delivery) | Outcome — (dst phase state) |
-| - | :-: | - | - | - |
-| `initiation` | → | `planning` | charter, business case | the project *is approved* |
-| `planning` | → | `execution` | schedule, budget, plan | the project *is ready to run* |
-| `execution` | → | `closure` | deliverables, product | the project *is complete* |
-| `closure` | → | *(end)* | final report, lessons learned | the project *is closed* |
-
-## Use Case: Document lifecycle 
-
-| Phase (src) | → Transition → | Phase (dst) | Output — (src phase delivery) | Outcome — (dst phase state) |
-| - | :-: | - | - | - |
-| `draft` | → | `review` | 
-| `review` | → | `approval` | 
-| `approval` | → | `publication` | 
-| `publication` | → | `archival` |
-
-
-
-# Todo
-
-```
-                 Transition
-                     │
-                     ▼
-[src phase] ────────→ [dst phase]
-     │                     │
-     │                     │
-   Output                Outcome
-     │                     │
-     ▼                     ▼
-What was produced     What became true
+```text
+initiation → planning → execution → closure
 ```
 
-```
-planning
-   │
-   │  execute
-   ▼
-execution
-```
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Initiation` | <li>Define the project <li>Identify objectives <li>Identify stakeholders     | <li>Business need <li>Initial requirements                           | <li>Project charter <li>Initial requirements <li>Stakeholder list | Project is defined and approved | `Planning`  |
+| `Planning`   | <li>Define scope <li>Plan activities <li>Estimate resources and costs        | <li>Project charter <li>Requirements <li>Constraints                 | <li>Project plan <li>Schedule <li>Budget <li>Risk register        | Project is ready for execution  | `Execution` |
+| `Execution`  | <li>Perform planned activities <li>Produce deliverables <li>Monitor progress | <li>Project plan <li>Resources <li>Budget                            | <li>Project deliverables <li>Progress reports <li>Project records | Project objectives are achieved | `Closure`   |
+| `Closure`    | <li>Deliver final results <li>Close contracts <li>Capture lessons learned    | <li>Project deliverables <li>Acceptance criteria <li>Project records | <li>Final deliverables <li>Closure report <li>Lessons learned     | Project is formally completed   | —           |
 
-The output of planning might be:
 
-schedule + budget + project plan
-
-The outcome of the transition is:
-
-project is ready to run
-## Transition
-
-- **Input/output** describes what enters and leaves a transition.
-- **Outcome** describes the resulting state/effect of the transition.
-
+## [↑](#example) Product lifecycle <a id='product'></a>
 
 ```
-Input :   a phase
-Outcome : a phase
+conception → development → launch → maturity → decline
 ```
 
-Representation
-```
-phase A. ── transition ──> phase B.
-```
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Conception`  | <li>Identify user needs <li>Define the product concept <li>Define initial requirements     | <li>User needs <li>Market opportunities                       | <li>Product concept <li>Product requirements <li>Initial design | Product is defined and ready for development         | `Development` |
+| `Development` | <li>Design the product <li>Build the product <li>Validate the product                      | <li>Product requirements <li>Product concept                  | <li>Product <li>Technical documentation <li>Validation results  | Product is ready for launch                          | `Launch`      |
+| `Launch`      | <li>Release the product <li>Make it available to users <li>Promote the product             | <li>Validated product <li>Launch plan <li>Marketing materials | <li>Released product <li>Sales channels <li>Launch data         | Product is available in the market                   | `Maturity`    |
+| `Maturity`    | <li>Operate and maintain the product <li>Improve features <li>Support users                | <li>Product <li>User feedback <li>Market data                 | <li>Product updates <li>Support data <li>Performance data       | Product is established and reaches stable demand     | `Decline`     |
+| `Decline`     | <li>Reduce or stop development <li>Manage decreasing demand <li>Prepare product retirement | <li>Product <li>Market data <li>Retirement plan               | <li>Final product version <li>Retirement plan <li>Archived data | Product is no longer actively maintained or marketed | —             |
 
-## Phase
 
-- Represents a state.
-```
-input → processing → outcome
-```
-```
-        transition
-   ┌──────────────────┐
-   │                  │
-Input ──────────────> Outcome
-   │                  │
-   └──────────────────┘
-```
-## Lifecycle
-- Model the evolution of something (e.g. entity, system, process, activity) through a sequence of **phases** over time.
-- May be linear, branching, or cyclic
 
-```
-Phase A. → Phase B. → Phase C.
+
+## [↑](#example) Organization lifecycle <a id='organization'></a>
+
+```text
+creation → growth → maturity → transformation/dissolution
 ```
 
-```
-Phase A
-   │
-   │ input/event
-   ▼
-Transition
-   │
-   │ outcome
-   ▼
-Phase B
-```
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Creation`                   | <li>Define the organization <li>Establish its structure <li>Set initial objectives | <li>Mission <li>Resources <li>Initial objectives                               | <li>Organization structure <li>Roles and responsibilities <li>Initial processes | Organization is established and operational | `Growth`                     |
+| `Growth`                     | <li>Expand activities <li>Acquire resources <li>Develop capabilities               | <li>Organization structure <li>Resources <li>Market opportunities              | <li>New capabilities <li>Expanded operations <li>New processes                  | Organization is expanding and developing    | `Maturity`                   |
+| `Maturity`                   | <li>Operate at scale <li>Optimize processes <li>Maintain capabilities              | <li>Established operations <li>Resources <li>Performance data                  | <li>Optimized processes <li>Performance data <li>Organizational knowledge       | Organization is established and stable      | `Transformation/Dissolution` |
+| `Transformation/Dissolution` | <li>Transform the organization <li>Merge or restructure <li>End activities         | <li>Organization <li>Strategic decision <li>Transformation or dissolution plan | <li>New organization structure <li>Transition records <li>Archived data         | Organization is transformed or dissolved    | —                            |
 
-A lifecycle is a model of successive state transitions, where each transition transforms an input phase into an outcome phase.
+
+
+## [↑](#example) Data lifecycle <a id='data'></a>
 
 ```
-Draft ── submit ──> Review ── approve ──> Published
+creation → processing → storage → archival/deletion
 ```
 
-- `Draft` = input phase
-- `submit` = transition
-- `Review` = outcome phase
-- `approve` = next transition
-- `Published` = next outcome phase
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Creation`          | <li>Generate data <li>Capture data <li>Validate initial data  | <li>Events <li>User input <li>Source systems              | <li>Raw data <li>Metadata <li>Creation records               | Data is available for processing        | `Processing`        |
+| `Processing`        | <li>Clean data <li>Transform data <li>Enrich data             | <li>Raw data <li>Processing rules <li>Reference data      | <li>Processed data <li>Derived data <li>Processing records   | Data is ready for use or storage        | `Storage`           |
+| `Storage`           | <li>Store data <li>Organize data <li>Manage access            | <li>Processed data <li>Storage policies <li>Access rules  | <li>Stored data <li>Indexes <li>Access records               | Data is available for ongoing use       | `Archival/Deletion` |
+| `Archival/Deletion` | <li>Archive data <li>Delete data <li>Apply retention policies | <li>Stored data <li>Retention policies <li>Deletion rules | <li>Archived data <li>Deletion records <li>Retention records | Data is retained or permanently removed | —                   |
 
-## Output vs. Outcome
-- Output is usually something produced:
-```
-Input: source code
-Output: compiled binary
-```
-
-- Outcome is the resulting state/effect:
-```
-Input: draft document
-Outcome: document is approved
-```
-
-
-
-# development
-```
-   ┌───────────────────────────────────────┐
-   │ development                           │
-   │                                       │
-   │  inputs:  requirements, design        │
-   │  work:    write, compile, build       │
-   │  outputs: source code, build artifact │
-   └───────────────────────────────────────┘
-                    │
-                    │ transition: "code complete"
-                    ▼
-   ┌───────────────────────────────────────┐
-   │ testing                               │
-   │  state (outcome): "software is        │
-   │                    testable"          │
-   └───────────────────────────────────────┘
-```   
-
-
-
-
-
-## Corrected framing
+## [↑](#example) Document lifecycle <a id='document'></a>
 
 ```
-        phase (works)              transition (moves)
-   ┌─────────────────────┐      ┌──────────────────┐
-   │  development        │ ───> │  testing         │
-   │  produces:          │      │  state:          │
-   │  source code        │      │  is testable     │
-   └─────────────────────┘      └──────────────────┘
-        ↑ OUTPUT                     ↑ OUTCOME
-        (by this phase)              (of arriving here)
+draft → review → approval → publication → archival
 ```
 
-
-## The clean rule
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Draft`       | <li>Create the document <li>Write initial content <li>Format the document      | <li>Requirements <li>Source information     | <li>Draft document <li>Source references                          | Document is ready for review               | `Review`      |
+| `Review`      | <li>Check content <li>Identify errors <li>Request changes                      | <li>Draft document <li>Review criteria      | <li>Review comments <li>Correction requests <li>Reviewed document | Document is ready for approval             | `Approval`    |
+| `Approval`    | <li>Evaluate the document <li>Confirm compliance <li>Approve the final content | <li>Reviewed document <li>Approval criteria | <li>Approved document <li>Approval record                         | Document is approved for publication       | `Publication` |
+| `Publication` | <li>Publish the document <li>Distribute it <li>Make it available to users      | <li>Approved document <li>Publication plan  | <li>Published document <li>Publication record                     | Document is officially available           | `Archival`    |
+| `Archival`    | <li>Store the document <li>Apply retention rules <li>Control access            | <li>Published document <li>Retention policy | <li>Archived document <li>Archival record                         | Document is preserved for future reference | —             |
 
 

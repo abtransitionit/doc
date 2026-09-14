@@ -2,8 +2,7 @@
 [home]: ../../README.md
 
 [//]: #(ref)
-[lfc whatis]: ../whatis/lfc.md
-[roadmap whatis]: ../whatis/roadmap.md
+[lfc whatis]:     ../../../concept/lifecycle/whatis/ep.md
 
 
 
@@ -14,29 +13,26 @@ Related topics
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 | [What is a program](../whatis/program.md)      | Internal | |
-| [What is a project lifecycle](../whatis/lfc.prj.md)      | Internal ||
-| [What is a product lifecycle](../whatis/lfc.product.md)      | Internal ||
+| [What is a lifecycle][lfc whatis]      | Internal ||
 | [How-to for project](../howto/ep.md) | Internal | See  |
 | [List of projects](../../../project/README.md) | Internal | See  |
 
 <h1 align="center">What is a Project</h1>
 
 
-# Definition
-- Takes **inputs** and activities/work 
-- Creates **outputs** (e.g. product, service, result) that provide value to stakeholders.
-- the [lifecycle][lfc whatis] and [roadmap][roadmap][roadmap whatis] help bootsrap and organize a project
 
+## Definition
+
+- Usually starts as an **idea** or **vision**.
+- Defines a path to transform this into **value** for one or more stakeholders.
+- Can be formalized using a [lifecycle][lfc whatis] (and a roadmap)
+
+  
 ```
 Project
    ├── Lifecycle
    └── Roadmap
 ```  
-
-```text
-Inputs → Activities → Outputs → Outcomes → Value (for stakeholders)
-```
-
 
 ## Inputs
 

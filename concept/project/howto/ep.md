@@ -1,8 +1,6 @@
 [//]: #(home)
 [home]: ../whatis/ep.md
-[vision whatis]: ../whatis/phase.vision.md
-[model whatis]: ../whatis/phase.model.md
-[req whatis]: ../whatis/phase.req.md
+[lifecycle whatis]: ../../../concept/lifecycle/whatis/ep.md
 
 [↖][home]
 
@@ -17,7 +15,7 @@ Related topics
 
 # bootsrap a project
 
-- Use This 8-Step Universal Project Framework as a guideline for your project.
+- find a suitable project [lifecycle][lifecycle whatis]
 - It can be used from building software to planning a wedding
 - It's based on answering a core set of questions in order.
 

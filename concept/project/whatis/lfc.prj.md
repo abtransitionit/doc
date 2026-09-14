@@ -2,12 +2,21 @@
 [home]: ../whatis/lfc.md
 
 [//]: #(ref)
-[phase whatis]: ../whatis/phase.md
-[roadmap whatis]: ../whatis/roadmap.md
-[methodology list]: ../list/meth.ep
-[prj howto]: ../howto/ep.md
-[product lfc whatis]: ../whatis/lfc.product.md
-[roadmap whatis]: ../whatis/roadmap.md
+[phase whatis]:        ../whatis/phase.md
+[roadmap whatis]:      ../whatis/roadmap.md
+[methodology list]:    ../list/meth.ep
+[prj howto]:           ../howto/ep.md
+[product lfc whatis]:  ../whatis/lfc.product.md
+[roadmap whatis]:      ../whatis/roadmap.md
+[phase vision whatis]: ../whatis/phase.md#vision
+[phase requirement whatis]: ../whatis/phase.md#requirement
+[phase improve whatis]: ../whatis/phase.md#improve
+[phase impl whatis]: ../whatis/phase.md#implementation
+[phase ope whatis]: ../whatis/phase.md#operation
+[phase feedback whatis]: ../whatis/phase.md#feedback
+[phase check whatis]: ../whatis/phase.md#check
+[phase roadmap whatis]: ../whatis/phase.md#roadmap
+[phase model whatis]: ../whatis/phase.md#model
 
 [↖][home]
 
@@ -30,6 +39,8 @@ Related topics
 - Exists, regardless of the kind of project (software, events, etc.)
 - The [roadmap][roadmap whatis] add constraints to this sequence.
 
+
+# Examples of project's lifecycle  <a id='lifecycle'></a>
 
 
 Example 01:
@@ -67,30 +78,7 @@ Project
 ```
 
 
-# A Generic Universal Framework <a id='cycle'></a>
-
-- A simple sequence of phases
-- Works for any project (software, events, etc.)
-- Based on answering a core set of questions in order
-
-
-| Phase | Name | Answer |
-|----|------|----|
-| 1 | [Vision](#vision) / Goal | Why? 
-| 2 | [Model](#model) | 
-| 3 | [Requirements](#req) | What? |
-| 4 | [Roadmap](#roadmap) / Planned Work | When & Who?
-| 5 | [Implementation](#implementation) |  How |
-| 6 | [Verification](#verification) & Validation | Does it work? |
-||
-| 7 | [Operations](#operation) | How to run it? |
-| 8 | [Measurement](#improvement) & Improvement | How well? |
-| 9 | [Feedback](#feedback) Loop | What's next? |
-
-
-
-
-## Visual Lifecycle
+Example 03:
 
 ```
                     ┌─────────────────────────────────────┐
@@ -131,72 +119,27 @@ Project
 ```
 
 
+Example 04:
+
+| Phase | Name | Answer | Description |
+| - | - | - | -| 
+| 1 | [Vision][phase vision whatis] / Goal | Why? | define the project
+| 2 | [Model][phase model whatis] | 
+| 3 | [Requirements][phase requirement whatis] | What? |
+| 4 | [Roadmap][phase roadmap whatis] / Planned Work | When & Who?
+| 5 | [Implementation][phase impl whatis] |  How |
+| 6 | [Verification][phase check whatis] & Validation | Does it work? |
+||
+| 7 | [Operations][phase ope whatis] | How to run it? |
+| 8 | [Measurement][phase improve whatis] & Improvement | How well? |
+| 9 | [Feedback][phase feedback whatis] Loop | What's next? |
 
 
 
-## [↑](#cycle) Vision  <a id='vision'></a>
-
-- **Core Question:** Why? (What problem does it solve?)
-- Define the name, purpose, goal, objective
-- Idea, Discovery, Vision, Goal
-- Aligns with business / project objectives
-- example of answers
-  - Make knowledge easy to share.
 
 
 
-## [↑](#cycle) Requirements  <a id='requirement'></a>
 
-- **Core Question:** What?
-- Define what is needed (product or service)
-- Focus on *the what*, not *the how* (e.g., "Must support document search," not "Use Elasticsearch.")
-- Aligns with product / service definition
-- Capture what’s needed to achieve the goal.
-
-
-## [↑](#cycle)  Roadmap  <a id='roadmap'></a>
-
-- **Core Question:** When & Who?
-- Outline planned work and timeline
-- Sets strategic direction and milestones
-- Break the work into a timeline and assign responsibilities. (e.g., "Phase 1: MVP," "Phase 2: Add Search.") 
-
-
-## [↑](#cycle) Implementation  <a id='implementation'></a>
-
-- **Core Question:** How?
-- The construction/development process
-- Build, create, or execute the planned work. (e.g., Write code, construct a building, deliver training.) 
-
-## [↑](#cycle) Verification  <a id='verification'></a>
-
-- **Core Question:** Does it work?
-- Test and validate deliverables
-- Quality assurance (ensure correctness + fitness for purpose)
-- Test and review the output to ensure it meets the requirements and satisfies stakeholders.
-
-## [↑](#cycle) Operations  <a id='operation'></a>
-
-- **Core Question:** How to run it?
-- Deploy, launch, maintain the product/service/output (e.g., Hosting a website, staffing a service.)
-- Covers ongoing support and maintenance
-
-
-## [↑](#cycle) Improvement  <a id='improvement'></a>
-
-- **Core Question:** How well?
-- Measure performance and identify improvements
-- Continuous refinement and optimization
-- Track performance data and feedback to identify what can be better. 
-
-## [↑](#cycle) Feedback  <a id='feedback'></a>
-
-- **Core Question:** What's next?
-- Feed insights back to the beginning
-- Continuous cycle for ongoing alignment
-- Use insights from measurement
-- Update the Vision and start the cycle again
-- Ensure continuous improvement.
 
 ### Visual Flow (Linear + Loop)
 
