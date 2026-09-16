@@ -16,6 +16,7 @@
 - Add constraints to the [lifecycle][home]
 - constraints might be milestones, releases, dependencies, priorities, deadlines, etc.
 - Can be revised without changing the project's [lifecycle][home].
+- Plans how we move through the lifecycle.
 - Displays the project's progress over time towards its objectives.
 
 ## Key points

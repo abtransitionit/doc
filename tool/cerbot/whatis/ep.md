@@ -24,7 +24,7 @@ Related topics
 - Talks to the `ACME` API
 - Proves you control a domain (name), 
 - can downloads/renews [certs][cert whatis]
-- convert a `HHTP` website access to `HTTPS` website access
+- convert a `HHTP` website access to `HTTPS` access
 
 
 # How it works to get a certificate
@@ -75,4 +75,17 @@ First, you install `cerbot`
 
 
 
+# Todo
+
+The most common type is the **HTTP-01 challenge**:
+
+1. You tell Certbot: "I want a cert for `omt.ovh`."
+2. Certbot asks Let's Encrypt: "Give me a challenge for `omt.ovh`."
+3. Let's Encrypt replies with a **random token**, e.g. `x7f9a2...` and says:
+   > "Serve this exact string at `http://omt.ovh/.well-known/acme-challenge/x7f9a2...`"
+4. Certbot writes a file with that content into your web root (or has nginx serve it).
+5. Let's Encrypt's servers **fetch that URL from the public internet**.
+6. If they get back the expected string → you proved control → cert issued.
+
+The logic: only someone who controls the domain's DNS + web server could place that file there.
 

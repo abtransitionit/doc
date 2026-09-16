@@ -3,6 +3,7 @@
 
 [//]: #(doc)
 [cert whatis]: ../whatis/cert.md
+[cert howto]:  ../howto/cert.md
 [challenge whatis]: ../whatis/challenge.md
 
 [↖][home]
@@ -12,6 +13,7 @@ Related topics
 | Topic | Location | Kind |
 |-|-|-|
 |[What is a Challenge][challenge whatis]|internal
+|[How-to for Certificate][cert howto]|internal
 
 
 
@@ -23,7 +25,7 @@ Related topics
 - It says 
   - that website is **"SURE"**
   - you can access it via `HTTPS`
-  - we know the entity who owns it.
+  - I (the entity that delivers the certificate) know the entity who owns it.
 
 
 # Kind

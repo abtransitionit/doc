@@ -4,8 +4,7 @@
 [//]: #(functional)
 [provision howto]: ../howto/provision.md
 [res whatis]:      ../whatis/res.md
-[forge whatis]:    ../whatis/ep.md
-[host whatis]:     ../whatis/host.md
+[env whatis]:      ../whatis/host.md
 
 [←][home] 
 
@@ -13,10 +12,9 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is RPro][forge whatis]|internal
 |[What is a resource][res whatis]|internal
-|[What is a host][host whatis]|internal
-|[What is a operating ][operate whatis] |
+|[What is a host][env whatis]|internal
+|[What is a operation ][operate whatis] |
 |[How-to provision][provision howto]|see
 
 
@@ -33,8 +31,9 @@ Related topics
 
 ## Provisioner
 - An **Automation** concept
-- Something that creates/configures/manages infrastructure
-- By extension: something that creates/configures/manages resources
+- Something that do the provisioning creates/configures/manages infrastructure
+- Something that do the provisioning of a resource in an [environment][env whatis]
+- By extension: something that provision a resource creates/configures/manages resources
 - Example
   - VM provisioner creates/configures VMs ready to be provisioned
   - Bare-metal provisioner creates/configures Bare-metal servers ready to be provisioned

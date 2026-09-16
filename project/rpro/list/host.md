@@ -15,7 +15,7 @@ Related topics
 |[What is a host][host whatis]|see|
 
 
-<h1 align="center">List of Forge Host</h1>
+<h1 align="center">List of RPro Host</h1>
 
 # List
 
@@ -73,6 +73,16 @@ Also:
 * Kubernetes Pod/container
 * ECS task
 * Cloud Run container
+
+## Environment
+
+* local-machine
+* remote-host
+* virtual-machine
+* container-runtime
+* kubernetes
+* OpenStack
+* cloud
 
 # Todo
 ```

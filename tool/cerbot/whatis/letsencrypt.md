@@ -13,6 +13,6 @@
 - A **bot**
 - A free, **automated** [certificate](#) [authority](#)
 - Requestable by **API**
-- It hands out a [cert][cert whatis] for diffrenet kind of domain name (e.g. `omt.ovh`, `*.omt.ovh`, ...) to anyone who asks.
+- It hands out a [cert][cert whatis] for diffrent kind of domain name (e.g. `omt.ovh`, `*.omt.ovh`, ...) to anyone who asks.
 - it can checks the asker is actually controling the domain for which he ask a [certificate][cert whatis]
 

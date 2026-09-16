@@ -3,6 +3,7 @@
 
 [//]: #(functional)
 [os list]: ../list/os.md
+[res whatis]:  ../whatis/res.md
 [host whatis]: ../whatis/host.md
 [tool whatis]: ../whatis/tool.md
 
@@ -19,11 +20,11 @@ Related topics
 
 
 
-<h1 align="center">Forge Os</h1>
+<h1 align="center">What is an Os</h1>
 
 
 # Definition
-- Runs over the **hardware** (`CPU / RAM / Disk / Network/ ...`)  of a [host][host whatis]
+- Runs over the **hardware** [resources][res whatis] (`CPU / RAM / Disk / Network/ ...`)  of a [host][host whatis]
 - What an [application][tool whatis] runs in
 - Provides things the application depends on:
   - Hardware resources management (`CPU / RAM / Disk / Network/ ...`)

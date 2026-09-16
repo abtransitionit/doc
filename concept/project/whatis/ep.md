@@ -14,7 +14,7 @@ Related topics
 | ---------------------------------------------- | -------- | ---- |
 | [What is a program](../whatis/program.md)      | Internal | |
 | [What is a lifecycle][lfc whatis]      | Internal ||
-| [How-to for project](../howto/ep.md) | Internal | See  |
+| [How-to for Software project](../howto/ep.md) | Internal | See  |
 | [List of projects](../../../project/README.md) | Internal | See  |
 
 <h1 align="center">What is a Project</h1>
@@ -24,7 +24,7 @@ Related topics
 ## Definition
 
 - Usually starts as an **idea** or **vision**.
-- Defines a path to transform this into **value** for one or more stakeholders.
+- Defines a path to transform this idea into **value** for stakeholders.
 - Can be formalized using a [lifecycle][lfc whatis] (and a roadmap)
 
   

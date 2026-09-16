@@ -4,9 +4,10 @@
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md
-[machine whatis]: ../whatis/ep.md
-[term list]: ../list/term.md
-[tool whatis]: ../../tool/whatis/ep.md
+[machine whatis]: ../whatis/host.md
+[term list]:      ../list/term.md
+[tool whatis]:    ../../tool/whatis/ep.md
+[res whatis]:     ../whatis/res.md
 
 
 
@@ -17,6 +18,7 @@ Related topics
 | Topic | Location | Kind |
 |-|-|-|
 |[List of terms][term list]|internal|
+|[What is a resource][res whatis]|internal|
 
 
 
@@ -24,8 +26,7 @@ Related topics
 
 
 # Definition
-- A device 
-- Can be real or virtual
+- A device real or virtual
 - Used to build [Machines][machine whatis]
 - A **virtual hardware resource** is a [software][tool whatis] that communicate with the backed **real hardware resource**.
 

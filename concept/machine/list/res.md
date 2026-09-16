@@ -1,32 +1,60 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
-[list res]: #list
-[//]: #(functional)
-[res whatis]: ../whatis/res.md
-[res howto]:  ../howto/res.md 
-[cli whatis]:  ../whatis/cli.md 
+[home]: ../../README.md
+[top]: #
 
-[←][home] 
+[//]: #(ref)
+[res whatis]: ../whatis/ep.md
+
+[↖][home]
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[How-to for resource][res howto]|see|
-|[What is a resource][res whatis]|see|
-|[What is cli][cli whatis]|see|
-
-<h1 align="center">List of rctl Resource</h1>
-
-<p id='list'></p>
+|[What is a Resource][res whatis]|see|
 
 
-[Example list](#phase-0-outcome) for the phase 0 of the roadmap 
+<h1 align="center">List of Resources</h1> <a id='res'></a>
+
+
+
+# List
+
+
+* File, Directory, Filesystem, Volume mount
+* Process
+* Package, User, Service
+* Disk
+* Database
+* Configuration
+* VM, Vontainer, Cluster
+* Network, Network configuration
+* ...
+
+
+# Operation on resources <a id='ope'></a>
+- [repo/git](#repo-git)
+
+## [↑](#ope) repo/git
+- collection
+  - list
+  - info
+- individual
+  - delete repo:history 
+  - change visibility
+  - archive
+  - delete repo
+  - reset-history
+  - rewrite branches
+  - change remotes
+  - info
+  - clone remote repo
+  - create local repo
 
 |Res type||Description|Provider|Example|
 |-|-|-|-|-|
-|[git authentication](#-git-authentication)|[gitrepo](#git-repository)|github, gitlab, local||
-|[git repository](#git-repository)|[gitrepo](#git-repository)||github, gitlab, local|
+|[git authentication](#git-authent)|[gitrepo](#git-repository)|github, gitlab, local||
+|[git repository](#git-repo)|[gitrepo](#git-repository)||github, gitlab, local|
 |go module|gomod|
 |[container registry](#-container-registry)|contrepo|
 |[container image](#-container-image)|cim|
@@ -66,8 +94,8 @@ Related topics
        discovery       plugins         docs
 ```
 
-# [↑][list res] Git
-## [↑][list res] Git authentication
+# [↑][top] Git <a id='git'></a>
+## [↑](#res) Git authentication <a id='git-authent'></a>
 
 - git/authentication can be provided by `github` or `gitlab`
 ```
@@ -84,10 +112,10 @@ Grammar could be:
 rctl github auth [status | login | logout | setup-git]
 ```
 
-## Git repository
-- git/repository can be **local** or *remote*
+## [↑](#res) Git repository <a id='git-repo'></a>
+- A git repository can be **local** or **remote**
 - remote git/repository can be provided by `github `or `gitlab`
-- remote git/repository can be provided by `public `or `private`
+- remote git/repository can be`public `or `private`
 
 ```
 GitHub

@@ -1,88 +1,37 @@
-[//]: #(Reference)
-[doc std]:       ./governance/doc.std.md
-[domain ep]:     ./domain/README.md
-[reference ep]:  ./reference/README.md
-[kubernetes ep]: ./system/k8s/README.md
-[linux ep]:      ./system/linux/README.md
-[security ep]:   ./reference/concept/security/README.md
-[project ep]:    ./project/README.md
+# Documentation System
 
+Welcome to the central knowledge portal. This workspace is organized into four distinct spaces to keep permanent reference separate from active project work.
 
+---
 
+## 🏛️ Reference & Evergreen Knowledge
 
-<h1 align="center">doc</h1>
+| Space | Focus | Entry Point |
+| :--- | :--- | :--- |
+| **Concept** | Domain theory, system models, host/machine taxonomy, and shared IT infrastructure standards. | [`/concept/README.md`](../concept/README.md) |
+| **Language** | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). | [`/language/README.md`](../language/README.md) |
+| **Tool** | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). | [`/tool/README.md`](../tool/README.md) |
 
-# Purpose
+---
 
-This Git repository hosts/is a `MetaDoc` repository
-  - The IT knowledge base of the organization. 
-  - The single source of truth for the organization. 
+## 🚀 Execution & Lifecycle
 
-# Quick Start
+| Space | Focus | Entry Point |
+| :--- | :--- | :--- |
+| **Project** | Active work, roadmaps, design specs (RFCs), and sprint backlogs for in-flight initiatives. | [`/project/README.md`](../project/README.md) |
 
-**New here?** 
+---
 
-- Start with the [Concept overview](./concept/README.md) to understand the foundation
-- Explore [Projects](./project/README.md) or [tools](./tool/README.md) you're interested in.
-- See this [section](./governance/doc.howto.md) to start authoring documentation
+### 📂 Active Projects Dashboard
 
-# Navigation Index
+Quick links to in-flight work streams and active specs inside `/project`:
 
-| Section | Description | Quick access |
-|---------|-------------|------------|
-| **[Concept](./concept/README.md)** | Foundational ideas & definitions | [Project](./concept/project/whatis/ep.md) • [System/Framework/Tool/CLI](./concept/tool/whatis/ep.md) |
-| **[Project](./project/README.md)** | Active development work | [MetaDoc](./project/metadoc/whatis/ep.md) • [RPro](./project/forge/whatis/ep.md) • [RCtl](./project/rctl/whatis/ep.md) |
-| **[Tool](./tool/README.md)** | Utility & execution layers | [MetaDoc](./tool/metadoc/whatis/ep.md) • [RCtl](./tool/rctl/whatis/ep.md) |
-| **[System](./system/README.md)** | Infrastructure & platforms | [Kubernetes](./system/k8s/whatis/ep.md) • [Linux](./system/linux/whatis/ep.md) |
-| **[Language](./language/README.md)** |  | [Arabic](./language/arabic/whatis/ep.md) • [Go](./language/go/ep.md) |
+* **[gotest](../project/gotest/README.md)** — Go testing framework & suite development
+* **[omtovh](../project/omtovh/README.md)** — Infrastructure migration to OVH
+* **[rctl](../project/rctl/README.md)** — Remote control CLI utility
+* **[rpro](../project/rpro/README.md)** — Resource provisioning engine
+* **[metadoc](../project/metadoc/README.md)** — Meta-documentation system improvements
 
+---
 
-# Browse By Type
-
-📘 [All Concepts](./concept/README.md): Understanding the fundamentals:
-
-- [Project](./concept/project/whatis/ep.md)
-- [System, Framework, Tool, CLI](./concept/tool/whatis/ep.md)
-- [Security](./concept/security/whatis/ep.md)
-
-🛠️ [Projects](./project/README.md): initiatives
-
-- [MetaDoc](./project/metadoc/whatis/ep.md)
-- [rpro](./project/forge/whatis/ep.md)
-- [rctl](./project/rctl/whatis/ep.md)
-
-🧩 [Applicartions](./tool/README.md): Utility, Tool, Software, CLI
-
-- [MetaDoc](./tool/metadoc/whatis/ep.md)
-- [rctl](./tool/rctl/whatis/ep.md)
-
-🖥️ [Systems](./system/README.md): Infrastructure, System and platforms:
-
-- [Kubernetes](./system/k8s/whatis/ep.md)
-- [Linux](./system/linux/whatis/ep.md)
-
-
-## 🔄 Cross-Reference Matrix
-
-| Name | Concept | Project | Tool | System |
-|------|---------|---------|------|--------|
-| MetaDoc | ✓ | ✓ | ✓ | |
-| rctl | ✓ | ✓ | ✓ | |
-| rpro | ✓ | ✓ | | |
-| Kubernetes | | | | ✓ |
-| Linux | | | | ✓ |
-
-
-# Todo
-
-
-**Governance**
-
-- [Documentation Standard]()
-
-
-**Other Domains**
-
-- [Terminology](./about/governance/term.md)
-- [Security](./concept/security/whatis/ep.md)
-
+> **Golden Rule:** Permanent definitions live in `concept/`, `language/`, and `tool/` using the `whatis/`, `howto/`, and `list/` pattern. In-flight designs and task tracking live exclusively under `project/`.

@@ -17,24 +17,28 @@
 
 
 # Definition
-- Model the evolution of something (e.g. system, process, activity) through a sequence of **phases**.
+- Model the evolution of something (e.g. system, process, activity).
+- Basically a sequence of **phases**.
 - can be formally defined in mathematics, using **graph theory** and its extension **Petri nets**.
 - can have a [roadmap][roadmap whatis]
 
 ## Example <a id='example'></a> 
 
-| Context | Lifecycle |
+| Context | Lifecycle's phases |
 |-|-|
 | Theoretical | `A` → `B` → `C` → `D` → `A` → `A` → `D`
 | Biology | `birth` → `development` → `reproduction` → `death`
 | [Software](#software) | `development` → `testing` → `deployment` → `operation` → `retirement`
 | [Project](#project) | `initiation` → `planning` → `execution` → `closure`
+| [Software Project](#sproject) | `vision` → `domain` → `model` → `prototype` → `implementation` → `validation` → `release` → `operation`|
 | [Product](#product) | `conception` → `development` → `launch` → `maturity` → `decline`
 | [Organization](#organization) | `creation` → `growth` → `maturity` → `transformation/dissolution`
 | [Data](#data) | `creation` → `processing` → `storage` → `archival/deletion`
 | [Document](#document) | `draft` → `review` → `approval` → `publication` → `archival`
 
 - each arrow represents a **transition** from one phase to another
+- Lifecycle can be used to model the building of software to planning a wedding
+
 
 ## Terminology
 
@@ -54,7 +58,6 @@
 | **Branching** | `A → B → C`<br> `       ↘ D` | A main path continues, but an alternative path splits off at some point. |
 | **Cyclic** | `A → B → A → B → ...` | The process repeats in a loop, returning to an earlier stage. |
 | **Mixed** | `A → B → B → ...`<br>`    ↘ D ➚` | Combines branching and repetition: there is a loop back to an earlier stage and an alternate branch that rejoins the main flow. |
-
 
 
 # Examples detailed
@@ -89,6 +92,111 @@ initiation → planning → execution → closure
 | `Planning`   | <li>Define scope <li>Plan activities <li>Estimate resources and costs        | <li>Project charter <li>Requirements <li>Constraints                 | <li>Project plan <li>Schedule <li>Budget <li>Risk register        | Project is ready for execution  | `Execution` |
 | `Execution`  | <li>Perform planned activities <li>Produce deliverables <li>Monitor progress | <li>Project plan <li>Resources <li>Budget                            | <li>Project deliverables <li>Progress reports <li>Project records | Project objectives are achieved | `Closure`   |
 | `Closure`    | <li>Deliver final results <li>Close contracts <li>Capture lessons learned    | <li>Project deliverables <li>Acceptance criteria <li>Project records | <li>Final deliverables <li>Closure report <li>Lessons learned     | Project is formally completed   | —           |
+
+## [↑](#example) Software Project lifecycle <a id='sproject'></a>
+
+```
+vision → domain → model → prototype → implementation → validation → release → operation
+```
+
+```
+Discovery ➔ Design ➔ Dev ➔ Test ➔ Release / Deployment
+                          │
+                   FINAL SPEC CREATED
+                 (Base for Software Hub)
+```
+
+
+**simplified table**:
+
+| Phase            | Purpose                                                           |
+| ---------------- | ----------------------------------------------------------------- |
+| `Vision`         | Define the purpose, problem, goals, and direction.                |
+| `Domain`         | Understand the problem space, concepts, rules, and relationships. |
+| `Model`          | Structure the domain into system abstractions and behavior.       |
+| `Prototype`      | Explore the solution and test assumptions.                        |
+| `Implementation` | Build the actual system.                                          |
+| `Validation`     | Verify that the system satisfies its requirements and purpose.    |
+| `Release`        | Make a validated version available for use.                       |
+| `Operation`      | Use and maintain the system in its real environment.              |
+
+
+**detailed table**:
+
+
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Vision` | <li>Define the purpose <li>Identify the problem <li>Establish goals and direction                     | <li>Needs <li>Opportunities <li>Stakeholder expectations                         | <li>Vision statement <li>Goals <li>Initial constraints                          | The purpose and direction of the system are defined                         | `Domain`         |
+| `Domain` | <li>Identify concepts <li>Understand rules and relationships <li>Define the problem space             | <li>Vision <li>Requirements <li>Domain knowledge <li>Constraints                 | <li>Domain concepts <li>Domain rules <li>Domain boundaries                      | The problem space and its essential rules are understood                    | `Model`          |
+| `Model` | <li>Structure the domain <li>Define system abstractions <li>Specify behavior and relationships        | <li>Domain concepts <li>Domain rules <li>Requirements                            | <li>System model <li>Architecture <li>Behavior specifications                   | The system is sufficiently specified to be explored and built               | `Prototype`      |
+| `Prototype` | <li>Explore solutions <li>Test assumptions <li>Experiment with interactions and behavior              | <li>System model <li>Hypotheses <li>Technical constraints                        | <li>Prototype <li>Experiments <li>Findings                                      | The proposed solution is explored and assumptions are tested                | `Implementation` |
+| `Implementation` | <li>Build the system <li>Integrate components <li>Produce the intended behavior | <li>System model <li>Prototype findings <li>Technical resources | <li>Implemented system <li>Source code <li>Technical records | The system is built according to the model and prototype findings | `Validation` |
+| `Validation` | <li>Verify behavior <li>Evaluate requirements <li>Identify and resolve defects                        | <li>Implemented system <li>Requirements <li>Acceptance criteria <li>Test results | <li>Validated system <li>Validation results <li>Defect records                  | The system is demonstrated to satisfy its intended purpose and requirements | `Release`        |
+| `Release` | <li>Prepare the system for use <li>Deploy the system <li>Make the system available to users           | <li>Validated system <li>Release criteria <li>Deployment resources               | <li>Released system <li>Release documentation <li>Deployment records            | The system is made available for operational use                            | `Operation`      |
+| `Operation` | <li>Use the system <li>Monitor behavior <li>Maintain reliability and performance                      | <li>Released system <li>Operational resources <li>User activity                  | <li>Operational system <li>Usage data <li>Operational records <li>Feedback      | The system provides value in its real operating environment                 | |
+
+
+**detailed table 2**:
+
+```
+VISION
+  │
+  ├── Vision
+  └── Initial goals
+       ↓
+DOMAIN
+  │
+  ├── Requirements
+  ├── Domain concepts
+  └── Domain rules
+       ↓
+MODEL
+  │
+  ├── System model
+  ├── Architecture
+  ├── Design decisions
+  └── ADRs
+       ↓
+PROTOTYPE
+  │
+  ├── Experiments
+  ├── Technical validation
+  └── Prototype findings
+       ↓
+IMPLEMENTATION
+  │
+  ├── Development
+  ├── Tests
+  └── Documentation
+       ↓
+VALIDATION
+  │
+  ├── Requirements verification
+  ├── Acceptance tests
+  └── Defect resolution
+       ↓
+RELEASE
+  │
+  ├── Release preparation
+  ├── Packaging
+  └── Deployment
+       ↓
+OPERATION
+```
+**Extra phase**:
+```
+
+              ┌──────────────────────────────┐
+              │                              ↓
+vision → domain → model → prototype → implementation → validation
+ ↑                                                        ↓
+ └──────────── evolution ← operation ← release ←─────────┘
+``` 
+
+
+| Stage | What Happens | Inputs | Output | Outcome | Nex stage |
+| - | - | - | - | - | - |
+| `Evolution` | <li>Observe changing needs <li>Analyze feedback and operational data <li>Adapt and improve the system | <li>Operational feedback <li>Usage data <li>New needs <li>Environmental changes  | <li>New requirements <li>System changes <li>Updated model <li>Evolution roadmap | The system continuously adapts to remain useful and relevant                | `Vision`         |
 
 
 ## [↑](#example) Product lifecycle <a id='product'></a>
@@ -149,5 +257,15 @@ draft → review → approval → publication → archival
 | `Approval`    | <li>Evaluate the document <li>Confirm compliance <li>Approve the final content | <li>Reviewed document <li>Approval criteria | <li>Approved document <li>Approval record                         | Document is approved for publication       | `Publication` |
 | `Publication` | <li>Publish the document <li>Distribute it <li>Make it available to users      | <li>Approved document <li>Publication plan  | <li>Published document <li>Publication record                     | Document is officially available           | `Archival`    |
 | `Archival`    | <li>Store the document <li>Apply retention rules <li>Control access            | <li>Published document <li>Retention policy | <li>Archived document <li>Archival record                         | Document is preserved for future reference | —             |
+
+
+## [↑](#example) Other Software lifecycle <a id='other'></a>
+
+```
+vision → requirements → design → implementation → validation → release → operation
+```
+
+**requirements**:
+- Describe what The Software must be able to do.
 
 
