@@ -6,11 +6,11 @@ Welcome to the central knowledge portal. This workspace is organized into four d
 
 ## 🏛️ Reference & Evergreen Knowledge
 
-| Space | Focus | Entry Point |
-| :--- | :--- | :--- |
-| **Concept** | Domain theory, system models, host/machine taxonomy, and shared IT infrastructure standards. | [`/concept/README.md`](../concept/README.md) |
-| **Language** | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). | [`/language/README.md`](../language/README.md) |
-| **Tool** | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). | [`/tool/README.md`](../tool/README.md) |
+| Space | Focus |
+| :--- | :--- |
+| **[Concept](../concept/README.md)** | Domain theory, system models, host/machine taxonomy, and shared IT infrastructure standards. |
+| **[Language](../language/README.md)** | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). |
+| **[Tool](../tool/README.md)** | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). |
 
 ---
 
