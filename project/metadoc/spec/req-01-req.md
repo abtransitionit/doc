@@ -1,29 +1,43 @@
-# REQ-01: Functional & Technical Requirements
+# Step 02: Initial Requirements
+
+This document defines the functional capabilities, structural standards, and operational constraints required for the initial release of `metadoc`. These requirements expand upon `RFC-01-vision.md` and remain independent of specific tools, parsers, or implementation details.
+
+---
 
 ## 1. Functional Requirements
 
-| Requirement ID | Module | Description | Priority |
-|---|---|---|---|
-| REQ-F-001 | Scaffolder | Instantiate the generic sub-hub directory layout (`concept/`, `language/`, `tool/`, `project/`) with standardized `whatis/ep.md` entry points | High |
-| REQ-F-002 | Link Indexer | Traverse and index nested sub-hub entry paths (`<hub>/<namespace>/whatis/ep.md`) into a central graph | High |
-| REQ-F-003 | AST Validator | Verify cross-hub relative links across distinct taxonomy namespaces and fail on dead links | High |
-| REQ-F-004 | Search Engine | Query metadata across both foundational hubs (`concept`, `language`, `tool`) and ephemeral hubs (`project`) | Medium |
-| REQ-F-005 | Federation Engine | Resolve and link entry points (`ep.md`) across external remote metadoc instances | Low |
+| ID | Requirement | Priority | Target Phase / Milestone |
+| --- | --- | --- | --- |
+| **R01** | Define a standardized directory layout for organizing knowledge hubs across repositories. | High | Phase 1 / M01 |
+| **R02** | Support custom sub-hub taxonomy declarations within the Master Entry Point (`README.md`). | High | Phase 1 / M01 |
+| **R03** | Enforce standardized entry points (`whatis/ep.md`) across sub-hub namespaces. | High | Phase 1 / M01 |
+| **R04** | Establish cross-referencing conventions for linking documents across sub-hubs. | Medium | Phase 1 / M02 |
+| **R05** | Support multi-hub federation standards to interlink separate, domain-specific repositories. | Medium | Phase 2 / M01 |
 
-## 2. Non-Functional Requirements
+---
 
-| Requirement ID | Category | Target Metric / Constraint | Priority |
-|---|---|---|---|
-| REQ-NF-001 | Performance | Parse and build link graph for 5,000 Markdown files across all hubs in under 1 second | High |
-| REQ-NF-002 | Determinism | Enforce strict zero-HTML Markdown table formatting and predictable path resolution | High |
-| REQ-NF-003 | Zero-Dependency | Single static binary execution across Linux, macOS, and Windows environments | High |
+## 2. Interface Requirements
 
-## 3. Requirement Traceability
+| ID | Requirement | Priority | Target Phase / Milestone |
+| --- | --- | --- | --- |
+| **R06** | Require clean, standardized Markdown structure for all hub entry points and taxonomies. | High | Phase 1 / M01 |
+| **R07** | Use relative path resolution rules for all internal and cross-hub document links. | High | Phase 1 / M01 |
+| **R08** | Maintain explicit navigation indices within every sub-hub `README.md` and `ep.md`. | Medium | Phase 1 / M02 |
 
-| Requirement | Specification Target | Verification Artifact |
-|---|---|---|
-| REQ-F-001 | `doc/project/metadoc/spec/spec-01-architecture.md` | Scaffolder Integration Unit Tests |
-| REQ-F-002 | `doc/project/metadoc/spec/dom-01-domain-model.md` | AST Graph Traversal Tests |
-| REQ-F-003 | `doc/project/metadoc/spec/dom-01-domain-model.md` | CI Validation Engine Tests |
+---
 
+## 3. Operational & System Constraints
 
+| ID | Constraint | Rationale |
+| --- | --- | --- |
+| **C01** | Remain platform-agnostic and fully readable using plain Markdown viewings/renderers. | Ensures zero lock-in to proprietary documentation platforms or specific build engines. |
+| **C02** | Maintain strict separation between long-term knowledge hubs (`concept`, `language`, `tool`) and ephemeral work (`project`). | Prevents historical knowledge rot and keeps daily active work isolated from foundational specifications. |
+
+---
+
+## 4. Requirement Verification Matrix
+
+```text
+[ R01 - R03 ] ──► Validated by: Static linting of hub file trees and entry point paths
+[ R04 - R05 ] ──► Validated by: Link resolution testing across local and remote hub manifests
+[ R06 - R08 ] ──► Validated by: Markdown AST structure validation and relative path checks

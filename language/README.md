@@ -3,7 +3,7 @@
 
 [↖][home] 
 
-<h1 align="center">List of Tools</h1>
+<h1 align="center">List of Languages</h1>
 
 
 # Navigation Index

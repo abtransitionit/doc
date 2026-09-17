@@ -1,4 +1,5 @@
-content("text/html")
+content("text/html; charset=utf-8")
+
 
 local f = io.open("README.md", "r")
 

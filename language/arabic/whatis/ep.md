@@ -2,6 +2,7 @@
 [home]: ../../../README.md
 
 [//]: #(doc)
+[number whatis]:       ../whatis/number.md
 [doc platform whatis]: ../whatis/doc.ptf.md
 [language whatis]: /concept/language/whatis/ep.md
 [ipa whatis]:      /concept/language/whatis/ipa.md
@@ -16,6 +17,7 @@ Related topics
 |-|-|-|
 |[learn arabic][arabic 01 whatis]|external|
 |[arabic alphabet svg][arabic Alphabet svg whatis]|external|
+|[what is Number][number whatis]|external|
 
 <h1 align="center">Arabic Language</h1>
 
@@ -57,13 +59,13 @@ The Arabic [language][language whatis] is made of 28 letters. [IPA][ipa whatis] 
 | 28 | ي  | Yāʾ    |   /j/ | /jaː/       | /jaː/      | **y** as in **yes**
 
 
-## Alphabet in image
+## Isolated Alphabet letters in image
 The arabic language may be written using different font chars, as in this alphabet of Isolated letters.
 
 ![arabic alphabet](../img/alphabet.01.png)
 
 
-## Arabic Alphabet by Letter Shapes
+## Arabic Alphabet ordered by Letter Shapes
 
 - In Arabic Alphabet many letters shares the same **shape**
 - Rule 01: `A letter is written differently depending on whether it is at the beginning, in the middle, or at the end of a word.`
@@ -91,7 +93,7 @@ The arabic language may be written using different font chars, as in this alphab
 | 18 |     ي    |          |          | Yāʾ              |  ـي |   ـيـ  |   يـ  |
 
 
-## Arabic Alphabet by position
+## Arabic Alphabet ordered by position
 
 
 ![arabic alphabet](../img/alphabet.02.png)
@@ -99,7 +101,7 @@ The arabic language may be written using different font chars, as in this alphab
 
 
 
-## Arabic Alphabet by Similar Sounds
+## Arabic Alphabet ordered by Similar Sounds
 - This section groups letters that may sound similar to non-Arabic speakers.
 
 - To help distinguish between them, several example words are provided for each letter.

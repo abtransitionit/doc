@@ -1,4 +1,9 @@
-# Project: metahdoc (Documentation Hub)
+[//]: #(home)
+[home]: ../../README.md
+
+[↖][home]
+
+# Project: metadoc (Documentation Hub)
 
 
 ## 1. Project Lifecycle Framework
