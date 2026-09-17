@@ -2,7 +2,7 @@
 [home]: ../whatis/lfc.prj.md
 
 [//]: #(ref)
-[lifecycle whatis]: ../whatis/lfc.md
+[lfc whatis]: ../whatis/lfc.md
 
 
 
@@ -12,6 +12,12 @@
 
 <h1 align="center">Project Lifecycle's phases in detail</h1>
 
+# Definition
+- a distinct stage within a project's overall [Lifecycle][lfc whatis].
+- can produces status, conditions, artifacts known as outputs or outcomes
+
+
+# Todo
 This section describes:
   - what the project
   - why it exists

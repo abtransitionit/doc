@@ -2,7 +2,7 @@
 [home]: ../whatis/ep.md
 
 [//]: #(ref)
-[phase whatis]:    ../whatis/p
+[phase whatis]:    ../whatis/phase.md
 [prj lfc]:         ../whatis/lfc.prj.md
 [prj product lfc]: ../whatis/lfc.product.md
 

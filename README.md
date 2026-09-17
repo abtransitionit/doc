@@ -1,37 +1,48 @@
-# Documentation System
+# Documentation Hub
 
-Welcome to the central knowledge portal. This workspace is organized into four distinct spaces to keep permanent reference separate from active project work.
-
----
-
-## 🏛️ Reference & Evergreen Knowledge
-
-| Space | Focus |
-| :--- | :--- |
-| **[Concept](../concept/README.md)** | Domain theory, system models, host/machine taxonomy, and shared IT infrastructure standards. |
-| **[Language](../language/README.md)** | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). |
-| **[Tool](../tool/README.md)** | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). |
+Master navigation for technical concepts, languages, software tooling, and active project lifecycles.
 
 ---
 
-## 🚀 Execution & Lifecycle
+## Navigation Matrix
 
-| Space | Focus | Entry Point |
+| Hub | Focus | Direct Entry Point (`ep.md`) |
 | :--- | :--- | :--- |
-| **Project** | Active work, roadmaps, design specs (RFCs), and sprint backlogs for in-flight initiatives. | [`/project/README.md`](../project/README.md) |
+| **`concept/`** | Theoretical foundations, shared IT infrastructure, and taxonomies | [`concept/machine/whatis/ep.md`](../concept/machine/whatis/ep.md) |
+| **`language/`** | Language references, idiomatic patterns, and syntax guides | [`language/bash/whatis/ep.md`](../language/bash/whatis/ep.md) |
+| **`tool/`** | Concrete software products, runtimes, and operational tools | [`tool/algernon/whatis/ep.md`](../tool/algernon/whatis/ep.md) |
+| **`project/`** | Ephemeral active work, portfolio roadmaps, and specs | [`project/README.md`](../project/README.md) |
 
 ---
 
-### 📂 Active Projects Dashboard
+## Core Knowledge Domains
 
-Quick links to in-flight work streams and active specs inside `/project`:
+### 🧠 Concepts (`/concept`)
+* **Machine Taxonomy:** [`machine/whatis/ep.md`](../concept/machine/whatis/ep.md) *(Hosts, VMs, Bare-Metal, Containers)*
+* **Architecture:** [`lifecycle/`](../concept/lifecycle/) \| [`security/`](../concept/security/) \| [`aiagent/`](../concept/aiagent/)
 
-* **[gotest](../project/gotest/README.md)** — Go testing framework & suite development
-* **[omtovh](../project/omtovh/README.md)** — Infrastructure migration to OVH
-* **[rctl](../project/rctl/README.md)** — Remote control CLI utility
-* **[rpro](../project/rpro/README.md)** — Resource provisioning engine
-* **[metadoc](../project/metadoc/README.md)** — Meta-documentation system improvements
+### 🔤 Languages (`/language`)
+* **Shell:** [`bash/whatis/ep.md`](../language/bash/whatis/ep.md)
+* **Systems:** [`go/whatis/ep.md`](../language/go/whatis/ep.md)
+
+### 🛠️ Tools & Systems (`/tool`)
+* **Web Server:** [`algernon/whatis/ep.md`](../tool/algernon/whatis/ep.md)
+* **Security & Ops:** [`certbot/whatis/ep.md`](../tool/certbot/whatis/ep.md) \| [`jelly/whatis/ep.md`](../tool/jelly/whatis/ep.md)
 
 ---
 
-> **Golden Rule:** Permanent definitions live in `concept/`, `language/`, and `tool/` using the `whatis/`, `howto/`, and `list/` pattern. In-flight designs and task tracking live exclusively under `project/`.
+## 🚀 Active Projects (`/project`)
+
+Track active development, design specs, and sprint backlogs:
+
+| Project | Description | Primary Spec / Status |
+| :--- | :--- | :--- |
+| **`gotest`** | Go Testing Framework / Suite | [`project/gotest/README.md`](../project/gotest/README.md) |
+| **`omtovh`** | OVH Infrastructure Migration | [`project/omtovh/README.md`](../project/omtovh/README.md) |
+| **`rctl`** | Control CLI Tooling | [`project/rctl/README.md`](../project/rctl/README.md) |
+| **`rpro`** | Production Resource Provisioner | [`project/rpro/README.md`](../project/rpro/README.md) |
+| **`metadoc`** | Documentation System Architecture | [`project/metadoc/README.md`](../project/metadoc/README.md) |
+
+---
+
+> **Golden Rule:** Permanent system truth lives in `concept/`, `language/`, and `tool/` formatted as `whatis/`, `howto/`, and `list/`. Active work and draft RFCs live exclusively under `project/`.

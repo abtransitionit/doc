@@ -3,6 +3,7 @@
 
 [//]: #(ref)
 [lfc whatis]:     ../../../concept/lifecycle/whatis/ep.md
+[roadmap whatis]: ../../../concept/lifecycle/whatis/ep.md
 
 
 
@@ -25,7 +26,7 @@ Related topics
 
 - Usually starts as an **idea** or **vision**.
 - Defines a path to transform this idea into **value** for stakeholders.
-- Can be formalized using a [lifecycle][lfc whatis] (and a roadmap)
+- Can be formalized using a [lifecycle][lfc whatis] and a [roadmap][roadmap whatis]
 
   
 ```
