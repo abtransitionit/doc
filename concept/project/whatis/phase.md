@@ -1,16 +1,20 @@
 [//]: #(home)
-[home]: ../whatis/lfc.prj.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [lfc whatis]: ../whatis/lfc.md
 
 
 
-[↖][home]
 
 
 
 <h1 align="center">Project Lifecycle's phases in detail</h1>
+
+concept of project:phase
 
 # Definition
 - a distinct stage within a project's overall [Lifecycle][lfc whatis].

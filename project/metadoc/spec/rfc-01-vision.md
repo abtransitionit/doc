@@ -8,6 +8,18 @@
 <h1 align="center">Metadoc specification</h1>
 
 # Step 01: The Project's Vision
+- document that are nor instance nor kind
+  - documents below concepts/
+- document that are instance
+  - the "class" is defined in concept
+  - documents below language/ project/ tool/ system/
+- document that are kind of (instance of a class)
+  - a "kind of" tool
+  - a "kind of" project
+  - a "kind of" language
+  - a "kind of" system
+
+# Step 01: The Project's Vision
 
 ## Executive Summary
 metadoc is a documentation specification, methodology, and set of guidelines designed to standardize how teams structure, interlink, and maintain knowledge bases across distributed repositories. 

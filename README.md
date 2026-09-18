@@ -14,24 +14,33 @@ Welcome to the organization knowledge portal. This workspace is organized into d
 
 
 
-# 📂 Execution & Lifecycle
+# 📂 Project Board
+
+Todo: list 
+- active projects
+- archived projects
+- current  projects when working on several
 
 | Space | Focus |
 | :--- | :--- |
 | [Project](./project/README.md) | Active work, roadmaps, design specs (RFCs), and sprint backlogs for in-flight initiatives. |
 
 
+
 # 🚀 Quick Access Dashboard
 
-Todo: content should be dynamic - based on user's navigation (define a suitable algorithm)
+Todo: 
+- content should be dynamic
+- based on user's navigation
+- define the algorithm that will do that 
+- description shoud be imported (inject)
 
-| Topic | Kind | Focus |
+| Topic | Kind | Description |
 | :--- | - | :--- |
 | [project](./concept/project/whatis/ep.md) | concept |
 | [metadoc](./project/metadoc/whatis/ep.md) | project | |
 | [rctl](./project/rctl/whatis/ep.md) | project | |
-| [gotest](../project/gotest/whatis/ep.md) | | Go testing framework & suite development |
+| [rpro](../project/rpro/whatis/ep.md) | | 
+| [gotest](../project/gotest/whatis/ep.md) | project| |
 | [omtovh](./project/omtovh/whatis/ep.md) | project |
-| [rctl](../project/rctl/whatis/ep.md) | | Remote control CLI utility |
-| [rpro](../project/rpro/whatis/ep.md) | | Resource provisioning engine |
 

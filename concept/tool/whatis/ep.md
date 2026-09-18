@@ -23,7 +23,8 @@ Related topics
 
 <h1 align="center">What is a Tool</h1>
 
-This section provides a terminology (Program, OS, System, Framework, Tool, etc.) that helps define a tool.
+The concept of tool
+
 
 
 # Definition
@@ -399,3 +400,5 @@ Sentence → Instruction → Procedure → Function → Program
 
 
 
+# Todo : terminology
+This section provides a terminology (Program, OS, System, Framework, Tool, etc.) that helps define a tool.

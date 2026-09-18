@@ -1,19 +1,21 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home doc]:     ../../../README.md
+[home parent]:  ../whatis/ep.md
+
+[↖ Project][home parent] · [↖ Doc][home doc]
 
 [//]: #(ref)
-
-[↖][home]
-
+[lfc whatis]: ../../../concept/lifecycle/whatis/ep.md
 
 
-<h1 align="center">What is a Lifecycle's Roadmap</h1>
 
+<h1 align="center">What is a Project's Roadmap</h1>
 
+The concept of project:roadmap
 
 # Definition
 
-- Add constraints to the [lifecycle][home]
+- Add constraints to the [lifecycle][lfc whatis] of a project
 - constraints might be milestones, releases, dependencies, priorities, deadlines, etc.
 - Can be revised without changing the project's [lifecycle][home].
 - Plans how we move through the lifecycle.

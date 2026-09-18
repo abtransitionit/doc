@@ -6,7 +6,7 @@
 
 [//]: #(ref)
 [lfc whatis]:     ../../../concept/lifecycle/whatis/ep.md
-[roadmap whatis]: ../../../concept/lifecycle/whatis/ep.md
+[roadmap whatis]: ../whatis/roadmap.md
 
 
 
@@ -17,12 +17,12 @@ Related topics
 | ---------------------------------------------- | -------- | ---- |
 | [What is a program](../whatis/program.md)      | Internal | |
 | [What is a lifecycle][lfc whatis]      | Internal ||
-| [How-to for Software project](../howto/ep.md) | Internal | See  |
+| [What is a Software project](../kind/software/whatis/ep.md) | Internal | See  |
 | [List of projects](../../../project/README.md) | Internal | See  |
 
 <h1 align="center">What is a Project</h1>
 
-
+The concept of project
 
 # Definition
 ## Project
@@ -61,7 +61,7 @@ idea --> Phase1  --> Phase1  --> Phase3 --> values
 | **Outcome** | *What a phase achieves after its work is done.*<br>**Examples:** Completed work, validated capability, decision achieved           | *What the project achieves.*<br>**Examples:** Business value, organizational change, benefit, objective achieved |
 
 
-# Example of product
+# Example of project's product
 
 The outputs of a project are often **products**, **services** or **results**
 

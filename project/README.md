@@ -13,7 +13,7 @@ Related topics
 
 Welcome to the Projects portal. This space ...
 
-# Navigation Index
+# 🔍 Navigation Index
 
 
 | Project | Purpose |
@@ -23,3 +23,19 @@ Welcome to the Projects portal. This space ...
 | [RCtl](./rctl/whatis/ep.md) | Resource control — manage operations on provisioned resources |
 | [GoTest](./gotest/whatis/ep.md) | Go module testing — validate and verify Go packages |
 | [OmtOvh](./omtovh/whatis/ep.md) | |
+
+
+# 🚀 Quick Access Dashboard
+
+Todo: 
+- content should be dynamic
+- based on user's navigation
+- define the algorithm that will do that 
+- description shoud be imported (inject)
+
+| Topic | Kind | Focus |
+| :--- | - | :--- |
+| [MetaDoc](./metadoc/whatis/ep.md) | Documentation platform — authoring, rendering, and publishing |
+| [RCtl](./rctl/whatis/ep.md) | Resource control — manage operations on provisioned resources |
+| [OmtOvh](./omtovh/whatis/ep.md) | |
+

@@ -1,9 +1,14 @@
 [//]: #(home)
-[home]: ../../../README.md
+[home doc]:     ../../../README.md
+[home parent]:  ../whatis/ep.md
+
+[↖ Arabic Language][home parent] · [↖ Doc][home doc]
+
+
+
 
 [//]: #(doc)
 [arabic number howto]: https://preply.com/en/blog/arabic-numbers/
-[↖][home]
 
 | Topic | Location | Kind |
 |-|-|-|

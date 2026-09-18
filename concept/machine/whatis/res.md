@@ -26,6 +26,7 @@ Related topics
 
 <h1 align="center">What is a Resource</h1>
 
+The concept of resource
 
 
 # Definition

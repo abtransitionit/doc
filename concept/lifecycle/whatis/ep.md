@@ -18,6 +18,7 @@ Related topics
 
 <h1 align="center">What is a Lifecycle</h1>
 
+The concept of lifecycle
 
 
 # Definition
@@ -27,7 +28,7 @@ Related topics
 
 ## Example <a id='example'></a> 
 
-The lifecycle can be used to model in various contetfrom building software to planning a wedding
+A lifecycle can be used, in various context, from building software to planning a wedding
 
 | Context | representation of the lifecycle's phases |
 |-|-|

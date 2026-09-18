@@ -13,6 +13,9 @@
 
 <h1 align="center">What is a Concept</h1>
 
+The concept of concept: a meta concept
+
+
 # Definition
 - **At first**, a concept invokes in mind a representation of the world or part of the world.
 - This representation can be something real, concrete, abstract or virtual.

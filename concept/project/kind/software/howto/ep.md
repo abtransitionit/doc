@@ -1,21 +1,30 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home set]:    ../../../../README.md
+[home doc]:    ../../../../../README.md
+[home parent]: ../../../whatis/ep.md
+
+[↖ Project][home parent] · [↖ Concept][home set] · [↖ Doc][home doc]
+
+[//]: #(ref)
+[project software whatis]: ../whatis/ep.md
 [lfc whatis]:         ../../../concept/lifecycle/whatis/ep.md
 [prj roadmap whats]:  ../../../concept/lifecycle/whatis/roadmap.md
 [prj lfc whatis]:     ../../../concept/lifecycle/whatis/ep.md#sproject
-[↖][home]
+
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is a Lifecycle][lfc whatis]|internal
+|[What is a Software project][project software whatis]|internal
 
 
 
 <h1 align="center">How-to for Software Project</h1>
 
+The concept of software project Howto
 
+# Howto
 
 This kind of project must manage both:
 - a project lifecycle (timeline, milestones, progress) 

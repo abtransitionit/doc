@@ -8,7 +8,7 @@
 Welcome to the Tools portal. This space ...
 
 
-# Navigation Index
+# 🔍 Navigation Index
 
 
 | Tool | Type | Purpose |
@@ -19,7 +19,8 @@ Welcome to the Tools portal. This space ...
 | RCtl | [Tool](./rctl/whatis/ep.md), [Project](./project/rctl/whatis/ep.md) | CLI for controlling operations on resources |
 | Cerbot | [Tool](./cerbot/whatis/ep.md) | |
 
-## 🧭 Quick Navigation
+# 🚀 Quick Access Dashboard
+
 
 ### ⚙️ RPro
 
