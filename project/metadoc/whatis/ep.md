@@ -8,7 +8,7 @@
 
 [↖][home]
 
-<h1 align="center">Project: metadoc</h1>
+<h1 align="center">Project: Metadoc</h1>
 
 A Documentation Hub
 
@@ -16,7 +16,7 @@ A Documentation Hub
 
 # The Lifecycle
 
-- This [project][project whatis] follows the following [Software Project Lifecycle][project software lfc whatis]. 
+- This [project][project whatis] follows the [Software Project Lifecycle][project software lfc whatis]. 
 - See the [phase log][phase log status whatis] for the current active phases status and historical gate approvals.
 
 

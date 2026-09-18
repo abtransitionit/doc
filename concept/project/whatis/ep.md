@@ -26,11 +26,13 @@ Related topics
 ## Project
 - Usually starts as an **idea** or **vision**.
 - Usually end up with one or more **values** for one or more stakeholders.
-- Defines a path to transform this **idea** into those **values**.
+- Defines a path to transform that **idea** into those **values**.
 - Can be modeled and represented using the concept of [lifecycle][lfc whatis] and a [roadmap][roadmap whatis]
 
 ## Program
-- a collection of related projects
+- a collection of projects
+- Allow to manage very large projects
+- Split very large projects into a set of smaller related projects
 
 ## Representation of a project
 
@@ -70,6 +72,17 @@ idea --> Phase1  --> Phase1  --> Phase3 --> values
 | **Outputs** | *What a phase produces as part of its work.*<br>**Examples:** Phase deliverables, artifacts, results, decisions, information       | *What the project produces.*<br>**Examples:** **Products, Services, Results**                                    |
 | **Outcome** | *What a phase achieves after its work is done.*<br>**Examples:** Completed work, validated capability, decision achieved           | *What the project achieves.*<br>**Examples:** Business value, organizational change, benefit, objective achieved |
 
+
+# Todo : definition
+
+A **Project** is an ephemeral workspace designed to move a specific technical initiative from discovery to live production. Once a project completes its scope, its artifacts transition into permanent system documentation (`concept/`, `language/`, or `tool/`) and the project workspace is archived.
+
+```text
+Project Lifecycle Flow
+├── 1. Discovery (RFC / Draft Spec in project/*/specs/)
+├── 2. Implementation (Active work tracked in project/*/backlog.md)
+├── 3. Promotion (Publish clean docs to concept/, language/, or tool/)
+└── 4. Archival (Mark project status Done & archive workspace)
 
 # Todo : terminology
 

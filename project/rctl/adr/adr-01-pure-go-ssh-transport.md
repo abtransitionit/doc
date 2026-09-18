@@ -1,4 +1,12 @@
-# ADR-01: Pure Go SSH Transport
+[//]: #(home)
+[home]: ./README.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">Rctl ADR 01: Pure Go SSH Transport</h1>
+
 
 * **Status:** Accepted
 * **Date:** 2026-09-17

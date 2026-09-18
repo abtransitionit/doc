@@ -1,8 +1,20 @@
-# Architectural Decision Records (ADRs)
+[//]: #(home)
+[home]: ../whatis/ep.md
 
-These decisions govern the technical design of `rctl`. Each ADR is an immutable record created during Phase 4 (Architecture) and enforced through Phase 5 (Implementation) and Phase 6 (Validation).
+[//]: #(doc)
 
-## Architectural Decision Index
+[←][home]
+
+<h1 align="center">Rctl ADR</h1>
+
+
+These decisions govern the technical design. 
+
+Each ADR Is:
+  - an immutable record created during Phase:Architecture
+  - enforced through Phase:Implementation and Phase:Validation.
+
+# Index
 
 | ADR ID | Title | Status | Primary Requirement | Local File |
 | :---: | :--- | :---: | :---: | :--- |

@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">metadoc specification</h1>
+
 # Step 02: Initial Requirements
 
 This document defines the functional capabilities, structural standards, and operational constraints required for the initial release of `metadoc`. These requirements expand upon `RFC-01-vision.md` and remain independent of specific tools, parsers, or implementation details.

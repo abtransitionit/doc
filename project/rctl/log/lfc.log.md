@@ -3,7 +3,7 @@
 
 [//]: #(doc)
 
-[↖][home]
+[←][home]
 
 <h1 align="center">Rctl phase log</h1>
 

@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">metadoc specification</h1>
+
 # Step 01: The Project's Vision
 
 ## Executive Summary

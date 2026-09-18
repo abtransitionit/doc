@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">metadoc specification</h1>
+
 # REQ-01: Functional & Technical Requirements
 
 ## 1. Functional Requirements

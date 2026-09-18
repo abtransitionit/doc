@@ -1,9 +1,9 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home]: ../../whatis/ep.md
 
 [//]: #(doc)
 
-[↖][home]
+[←][home]
 
 <h1 align="center">Rctl Task</h1>
 

@@ -2,6 +2,9 @@
 [home]: ../../README.md
 
 [//]: #(doc)
+[project whatis]: ../../../concept/project/whatis/ep.md
+[project software lfc whatis]: #
+[phase log status whatis]: ../log/phase.log.md
 
 [↖][home]
 
@@ -10,12 +13,11 @@
 A Resource controller CLI
 
 
-`rctl` is a lightweight , agentless CLI execution engine designed for ad-hoc remote operations and environment inspection across heterogeneous infrastructure.
 
-## 1. Project Lifecycle Framework
+# The Lifecycle
 
-- This project follows the following Software Project Lifecycle. 
-- For current active phase status and historical gate approvals, see [`LIFECYCLE.md`](../log/lfc.log.md).
+- This [project][project whatis] follows the following [Software Project Lifecycle][project software lfc whatis]. 
+- See the [phase log][phase log status whatis] for the current active phases status and historical gate approvals.
 
 
 | # | Phase | Outputs | Outcomes |
@@ -29,9 +31,8 @@ A Resource controller CLI
 | **7** | **Release** | Tagged Binary, Changelog | Binaries versioned (`v1.0.0`) and distributed. |
 | **8** | **Operation** | Diátaxis Manuals (`tool/rctl/`) | Manuals promoted to `/tool/rctl/`; specs archived. |
 
----
 
-## 2. Project Roadmap
+# The Roadmap
 
 This initial roadmap define sequencing and scope—not calendar dates.
 

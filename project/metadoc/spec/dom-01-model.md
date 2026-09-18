@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">metadoc specification</h1>
+
 # Step 03: Domain Model
 
 This document defines the core concepts, business rules, entity models, and relationships that govern the `metadoc` problem space. It establishes a vocabulary and conceptual framework independent of specific CLI tools, parsing libraries, or file system APIs.

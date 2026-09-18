@@ -1,4 +1,12 @@
-# ADR-02: Decoupled Output Formatting
+[//]: #(home)
+[home]: ./README.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">Rctl ADR 02: Decoupled Output Formatting</h1>
+
 
 * **Status:** Accepted
 * **Date:** 2026-09-17

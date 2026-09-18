@@ -3,7 +3,7 @@
 
 [//]: #(doc)
 
-[↖][home]
+[←][home]
 
 <h1 align="center">Metadoc project Board</h1>
 

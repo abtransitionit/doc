@@ -1,4 +1,12 @@
-# ADR-03: Statutory Non-Root Local Scope
+[//]: #(home)
+[home]: ./README.md
+
+[//]: #(doc)
+
+[←][home]
+
+<h1 align="center">Rctl ADR 03: Statutory Non-Root Local Scope</h1>
+
 
 * **Status:** Accepted
 * **Date:** 2026-09-17
