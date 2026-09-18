@@ -1,11 +1,13 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Tool][home set] · [↖ Doc][home doc]
 
 [//]: #(doc)
 [cert whatis]:      ../whatis/cert.md
 [challenge whatis]: ../whatis/cert.md
 
-[↖][home]
 
 Related topics
 

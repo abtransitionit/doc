@@ -1,5 +1,8 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [res list]:         ../list/res.md
@@ -10,7 +13,6 @@
 [operation whatis]: ../whatis/res.operation.md
 [env whatis]:       ../whatis/host.md
 
-[↖][home]
 
 Related topics
 

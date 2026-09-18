@@ -1,5 +1,8 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [hres whatis]: ../../../concept/machine/whatis/hres.md
@@ -8,7 +11,6 @@
 [artifact whatis]: #
 
 
-[↖][home]
 
 Related topics
 
@@ -19,7 +21,7 @@ Related topics
 
 
 
-<h1 align="center">Concept of Tool</h1>
+<h1 align="center">What is a Tool</h1>
 
 This section provides a terminology (Program, OS, System, Framework, Tool, etc.) that helps define a tool.
 

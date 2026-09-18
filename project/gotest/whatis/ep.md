@@ -1,14 +1,14 @@
 [//]: #(home)
-[home]: ../../README.md
+[home project]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Project][home project] · [↖ Doc][home doc]
 
 
 [//]: #(functional)
 [forge howto]: ../howto/forge.md
 [res list]: ../list/res.md
 [host list]: ../list/host.md
-
-[←][home] 
-
 
 
 

@@ -1,17 +1,15 @@
 [//]: #(home)
-[home set]: ../../README.md
-[home doc]:     ../../../README.md
-
-[↖ Concept][home set] · [↖ Doc][home doc]
+[home]: ../../README.md
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md
 
 
 
+[↖][home]
 
 
-<h1 align="center">What is an AI Agent</h1>
+<h1 align="center">AI Agent</h1>
 
 
 # Definition

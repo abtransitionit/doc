@@ -1,9 +1,11 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Tool][home set] · [↖ Doc][home doc]
 
 [//]: #(doc)
 
-[↖][home]
 
 Related topics
 

@@ -1,12 +1,14 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Project][home set] · [↖ Doc][home doc]
 
 [//]: #(doc)
 [project whatis]: ../../../concept/project/whatis/ep.md
 [project software lfc whatis]: #
 [phase log status whatis]: ../log/phase.log.md
 
-[↖][home]
 
 <h1 align="center">Project: Rctl</h1>
 

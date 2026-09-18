@@ -1,15 +1,17 @@
 [//]: #(home)
-[home]:    ../README.md
+[home doc]:     ../README.md
 
-[↖][home] 
+[↖ Doc][home doc]
 
-<h1 align="center">List of Systems</h1>
+<h1 align="center">List of Tools</h1>
+
+Welcome to the Tools portal. This space ...
 
 
 # Navigation Index
 
 
-| Product | Type | Purpose |
+| Tool | Type | Purpose |
 |------|---------|---------|
 | Algernon | [Tool](./algernon/whatis/ep.md) | Web server — serves markdown file on the fly|
 | Jelly | [Tool](./Jelly/whatis/ep.md) | Manages Multimedia resources (audio, video) |

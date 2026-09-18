@@ -1,5 +1,8 @@
 [//]: #(home)
-[home]:  ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(functional)
 [host list]:           ../list/host.md
@@ -16,7 +19,6 @@
 [hypervisor whatis]: ../whatis/hypervisor.md
 [host howto]: ../howto/host.md
 
-[↖][home] 
 
 Related topics
 

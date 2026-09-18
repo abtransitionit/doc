@@ -1,9 +1,11 @@
 [//]: #(home)
-[home]:    ../README.md
+[home doc]:     ../README.md
 
-[↖][home] 
+[↖ Doc][home doc]
 
 <h1 align="center">List of Languages</h1>
+
+Welcome to the Languages portal. This space ...
 
 
 # Navigation Index
@@ -11,5 +13,5 @@
 | Language | Purpose |
 |------|---------|
 | [Arabic](./arabic/whatis/ep.md) | |
-| [Bash](./arabic/whatis/ep.md) |  |
-| [Go](./go/whatis/ep.md) | |
+| [Bash](#) |  |
+| [Go](#) | |

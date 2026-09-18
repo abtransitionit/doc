@@ -1,12 +1,15 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [project whatis]: ../../../concept/project/whatis/ep.md
 [roadmap whatis]: ../whatis/roadmap.md
 
+Related topics
 
-[↖][home]
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 | [What is a project][project whatis]      | Internal | |

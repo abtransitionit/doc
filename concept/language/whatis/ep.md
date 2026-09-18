@@ -1,12 +1,16 @@
 [//]: #(home)
-[home]: ../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Concept][home set] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [ipa whatis]: ../whatis/ipa.md
 [arabic whatis]: ../../../language/arabic/whatis/ep.md
 
 
-[↖][home]
+Related topics
+
 | Topic | Location | Kind |
 |-|-|-|
 |[What is IPA][ipa whatis]|internal|

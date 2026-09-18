@@ -1,5 +1,8 @@
 [//]: #(home)
-[home]: ../../../README.md
+[home set]: ../../README.md
+[home doc]:     ../../../README.md
+
+[↖ Language][home set] · [↖ Doc][home doc]
 
 [//]: #(doc)
 [number whatis]:       ../whatis/number.md
@@ -9,7 +12,8 @@
 [arabic 01 whatis]: https://burujacademy.com/blog/vowels-in-arabic/
 [arabic Alphabet svg whatis]:https://commons.wikimedia.org/wiki/Category:Arabic_glyphs_in_SVG
 
-[↖][home]
+
+
 
 Related topics
 
