@@ -97,6 +97,15 @@ initiation → planning → execution → closure
 
 ## [↑](#example) Software Project lifecycle <a id='sproject'></a>
 
+
+```text
+Project Lifecycle Flow
+├── 1. Discovery (RFC / Draft Spec in project/*/specs/)
+├── 2. Implementation (Active work tracked in project/*/backlog.md)
+├── 3. Promotion (Publish clean docs to concept/, language/, or tool/)
+└── 4. Archival (Mark project status Done & archive workspace)
+```
+
 ```
 vision → domain → model → prototype → implementation → validation → release → operation
 ```

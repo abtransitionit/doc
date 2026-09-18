@@ -49,7 +49,19 @@ idea --> Project --> values
 idea --> Phase1  --> Phase1  --> Phase3 --> values
 ```  
 
+
+# Terminology
+
+| Concept | Phase | Project |
+| - | - | - |
+| **Inputs**  | *What a phase receives to perform its work.*<br>**Examples:** Ideas, Needs, Requests, Materials, Knowledge, Information, Resources | *The initial inputs of the project.*<br>**Examples:** Deliverables, Artifacts, Results                           |
+| **Outputs** | *What a phase produces as part of its work.*<br>**Examples:** Phase deliverables, artifacts, results, decisions, information       | *What the project produces.*<br>**Examples:** **Products, Services, Results**                                    |
+| **Outcome** | *What a phase achieves after its work is done.*<br>**Examples:** Completed work, validated capability, decision achieved           | *What the project achieves.*<br>**Examples:** Business value, organizational change, benefit, objective achieved |
+
+
 # Example of product
+
+The outputs of a project are often **products**, **services** or **results**
 
 | Category | Examples |
 |----------|----------|
@@ -64,40 +76,7 @@ idea --> Phase1  --> Phase1  --> Phase3 --> values
 
 - Service*: capability or activity provided to users or customers.
 
-## Terminology
-
-| Concept | Phase | Project |
-| - | - | - |
-| **Inputs**  | *What a phase receives to perform its work.*<br>**Examples:** Ideas, Needs, Requests, Materials, Knowledge, Information, Resources | *The initial inputs of the project.*<br>**Examples:** Deliverables, Artifacts, Results                           |
-| **Outputs** | *What a phase produces as part of its work.*<br>**Examples:** Phase deliverables, artifacts, results, decisions, information       | *What the project produces.*<br>**Examples:** **Products, Services, Results**                                    |
-| **Outcome** | *What a phase achieves after its work is done.*<br>**Examples:** Completed work, validated capability, decision achieved           | *What the project achieves.*<br>**Examples:** Business value, organizational change, benefit, objective achieved |
-
-
 # Todo : definition
 
 A **Project** is an ephemeral workspace designed to move a specific technical initiative from discovery to live production. Once a project completes its scope, its artifacts transition into permanent system documentation (`concept/`, `language/`, or `tool/`) and the project workspace is archived.
-
-```text
-Project Lifecycle Flow
-├── 1. Discovery (RFC / Draft Spec in project/*/specs/)
-├── 2. Implementation (Active work tracked in project/*/backlog.md)
-├── 3. Promotion (Publish clean docs to concept/, language/, or tool/)
-└── 4. Archival (Mark project status Done & archive workspace)
-
-# Todo : terminology
-
-|||
-|-|-|
-| Operations | actions that operates on the delivery
-
-
-# Todo : key Characteristics of a project
-
-| Key     | Meaning | Note |
-| ------- | ------- | ---- |
-|Temporary|has a defined start and end |
-|Unique|produces something new or different | context, stakeholders, requirements, environment, or constraints.
-|Constrained|limited by time, cost, scope, and resources | influence how the project is planned, executed, and controlled.
-
-
 

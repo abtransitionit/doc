@@ -5,7 +5,7 @@
 
 [←][home]
 
-<h1 align="center">metadoc specification</h1>
+<h1 align="center">Metadoc specification</h1>
 
 # REQ-01: Functional & Technical Requirements
 
