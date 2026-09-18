@@ -1,4 +1,12 @@
-# Initial Master Backlog (`/doc/project/metahdoc/log/backlog.md`)
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[↖][home]
+
+<h1 align="center">Metadoc backlog</h1>
+
 
 | ID | Phase | Priority | Status | Description | Reference |
 | --- | --- | --- | --- | --- | --- |

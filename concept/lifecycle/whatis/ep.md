@@ -10,6 +10,7 @@
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 | [What is a project][project whatis]      | Internal | |
+| [What is a roadmap][roadmap whatis]      | Internal | |
 
 
 <h1 align="center">What is a Lifecycle</h1>
@@ -17,14 +18,15 @@
 
 
 # Definition
-- Model the evolution of something (e.g. system, process, activity).
-- Basically a sequence of **phases**.
+- Model the evolution of an entity (e.g. system, process, activity).
+- Basically an ordered sequence of **phases**.
 - can be formally defined in mathematics, using **graph theory** and its extension **Petri nets**.
-- can have a [roadmap][roadmap whatis]
 
 ## Example <a id='example'></a> 
 
-| Context | Lifecycle's phases |
+The lifecycle can be used to model in various contetfrom building software to planning a wedding
+
+| Context | representation of the lifecycle's phases |
 |-|-|
 | Theoretical | `A` → `B` → `C` → `D` → `A` → `A` → `D`
 | Biology | `birth` → `development` → `reproduction` → `death`
@@ -36,18 +38,18 @@
 | [Data](#data) | `creation` → `processing` → `storage` → `archival/deletion`
 | [Document](#document) | `draft` → `review` → `approval` → `publication` → `archival`
 
-- each arrow represents a **transition** from one phase to another
-- Lifecycle can be used to model the building of software to planning a wedding
+- Each arrow represents a **transition** from one phase to another
 
 
 ## Terminology
 
 | Term | Meaning |
 | - | - |
-| **phase**      | <li>A named stage <li>represents a state  <li>can produces/creates an **output** and/or **outcomes** |
+| **phase**      | <li>A named stage <li>represents a state  <li>can produces/creates **outputs** and/or **outcomes** |
 | **transition** | <li>is represented by the arrow in the lifecycle <li>is caused/triggered by an **event** <li>has a **source** phase and a **destination** phase|
 | **event**      | What triggers/permits/causes a transition |
-| **output**	  | <li>what a phase produced |
+| **output**	  | <li>what a phase produced <li>can be used by the next pahese as **input**|
+| **input**	    | <li>what a phase consumed |
 | **outcome**	  | <li>what a phase achieves |
 
 # Kind

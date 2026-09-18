@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[↖][home]
+
+<h1 align="center">Rctl Task</h1>
+
 # TASK-01: Define Core CLI Command Taxonomy
 
 **TASK-01** (Taxonomy): Fixes the user interface boundary (rctl exec --host ..., rctl inventory list).

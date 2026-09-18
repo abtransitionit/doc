@@ -1,15 +1,23 @@
 [//]: #(home)
 [home]: ../../README.md
 
+[//]: #(doc)
+[project whatis]: ../../../concept/project/whatis/ep.md
+[project software lfc whatis]: #
+[phase log status whatis]: ../log/phase.log.md
+
 [↖][home]
 
-# Project: metadoc (Documentation Hub)
+<h1 align="center">Project: metadoc</h1>
+
+A Documentation Hub
 
 
-## 1. Project Lifecycle Framework
 
-- This project follows the following Software Project Lifecycle. 
-- For current active phase status and historical gate approvals, see [`LIFECYCLE.md`](../log/lfc.log.md).
+# The Lifecycle
+
+- This [project][project whatis] follows the following [Software Project Lifecycle][project software lfc whatis]. 
+- See the [phase log][phase log status whatis] for the current active phases status and historical gate approvals.
 
 
 | # | Phase | Outputs | Outcomes |
@@ -23,8 +31,9 @@
 | **7** | **Release** | Tagged Binary, Changelog | Binaries versioned (`v1.0.0`) and distributed. |
 | **8** | **Operation** | Diátaxis Manuals (`tool/rctl/`) | Manuals promoted to `/tool/rctl/`; specs archived. |
 
+---
 
-## 2. Project Roadmap
+# The Roadmap
 
 This initial roadmap define sequencing and scope—not calendar dates.
 
@@ -37,12 +46,7 @@ This initial roadmap define sequencing and scope—not calendar dates.
 
 ---
 
-
-
-
-
-
-## 3. Documents Index
+# Documents Index
 
 | Document | Category | Target Audience | Owner | Link |
 | :--- | :--- | :--- | :--- | :--- |

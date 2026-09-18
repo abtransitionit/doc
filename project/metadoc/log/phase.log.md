@@ -5,13 +5,13 @@
 
 [↖][home]
 
-<h1 align="center">Rctl phase log</h1>
+<h1 align="center">Metadoc phase log</h1>
 
 
 
-# rctl Lifecycle Log
 
-## Active Lifecycle Phase
+
+# Active Lifecycle Phase
 
 * **Current Phase:** Phase 5: Implementation
 * **Status:** Active
@@ -20,9 +20,8 @@
   * [`src/`](../src/)
 * **Task Tracker:** [`log/backlog.md`](./backlog.md)
 
----
 
-## Lifecycle Phase History
+# Lifecycle Phase History
 
 | # | Phase | Output Artifact | Completion Date | Status |
 | :---: | :--- | :--- | :---: | :---: |

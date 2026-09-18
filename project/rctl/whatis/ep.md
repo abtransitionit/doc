@@ -1,9 +1,14 @@
 [//]: #(home)
-[home]:    ../../README.md
+[home]: ../../README.md
 
-[↖][home] 
+[//]: #(doc)
 
-# Project: rctl (Control CLI)
+[↖][home]
+
+<h1 align="center">Project: Rctl</h1>
+
+A Resource controller CLI
+
 
 `rctl` is a lightweight , agentless CLI execution engine designed for ad-hoc remote operations and environment inspection across heterogeneous infrastructure.
 

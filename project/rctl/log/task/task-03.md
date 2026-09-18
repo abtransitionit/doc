@@ -1,3 +1,12 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[↖][home]
+
+<h1 align="center">Rctl Task</h1>
+
 # TASK-03: Initialize Go Module and Package Structure
 
 **TASK-03** & **TASK-04** (Module & Core Interfaces): Establishes the Go packages to back those exact commands and schemas.

@@ -1,3 +1,13 @@
+[//]: #(home)
+[home]: ../whatis/ep.md
+
+[//]: #(doc)
+
+[↖][home]
+
+<h1 align="center">Rctl Specification</h1>
+
+
 # Step 01: The Project's Vision
 
 Build a unified control CLI system (`rctl`) to manage infrastructure, hosts, and operational workloads across local and remote environments.
