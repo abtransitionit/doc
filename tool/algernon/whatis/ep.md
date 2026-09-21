@@ -5,12 +5,14 @@
 [↖ Tool][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
-
+[algernon whatis]: https://github.com/xyproto/algernon
+[algernon git]:    https://github.com/akumansley/aft
 
 Related topics
 
-| Topic                                            | Location | Kind    |
-| ------------------------------------------------ | -------- | ------- |
+| Topic | Location | Kind    |
+| - | - | - |
+|[algernon on github][algernon git]|external| 
 
 **Document's status**
 - Early stage.
@@ -25,11 +27,6 @@ Related topics
 - renders Markdown files, HTML, and JSX on-demand.
 - is configurable via Lua scripts
 
-
-
-
-# List
-- https://github.com/xyproto/algernon : render `.md` files
 
 
 # How it works

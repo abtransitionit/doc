@@ -19,6 +19,7 @@ Related topics
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 | [What is a Project][project whatis] | Internal | class  |
+| [What is a Software][tool whatis] | Internal | parent  |
 | [What is a Software Lifecycle][lfc whatis]      | Internal | Member|
 | [What is a Software Roamdap][rm software whatis] | Internal | Member  |
 | [How-to for Software project](../howto/ep.md) | Internal | See  |
@@ -34,6 +35,35 @@ The concept of software project
 # Definition
 - a [project][project whatis] that leads to/output a [software][tool whatis]
 - has a specific well known lifecycle (from best practices of CMMI, ITIL, PRINCE, ...)
+
+
+## The structure
+
+There are **two levels**, and each level has the same shape:
+
+```
+┌─ LEVEL 1: PROJECT (generic) ──────────────────────────────┐
+│                                                            │
+│   Project constraints ──┐                                  │
+│                         ├──> Project lifecycle             │
+│   Project idea/scope ───┘         │                        │
+│                                   │ constrained by         │
+│                                   ▼                        │
+│                          Project roadmap                   │
+└────────────────────────────────────────────────────────────┘
+                            │
+                            │ specialized into
+                            ▼
+┌─ LEVEL 2: SOFTWARE PROJECT ───────────────────────────────┐
+│                                                            │
+│   Software constraints ──┐                                 │
+│                          ├──> Software lifecycle           │
+│   Software goal ─────────┘         │                       │
+│                                    │ constrained by        │
+│                                    ▼                       │
+│                          Software roadmap                  │
+└────────────────────────────────────────────────────────────┘
+```
 
 # Example of a Software Lifecycle
 

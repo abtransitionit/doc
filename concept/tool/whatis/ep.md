@@ -9,15 +9,20 @@
 [term list]: ../list/term.md
 [system whatis]: #
 [artifact whatis]: #
-
-
+[prj software whatis]: /concept/project/kind/software/whatis/ep.md
+[tool list]:       /tool/README.md
+[language list]:   /language/README.md
+[language whatis]: /concept/language/whatis/ep.md
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[List of terms][term list]|internal|
-|[What is a Hardware Resource][hres whatis]|internal|
+|[What is a Language][language whatis]|internal| 
+|[What is a Hardware Resource][hres whatis]|internal| 
+|[What is a Software Project][prj software whatis]|internal|
+|[List of tools][tool list]|internal| list |
+|[List of languagess][language list]|internal| list |
 
 
 
@@ -37,8 +42,8 @@ The concept of tool
 
 ```go
 // Examples of CPU operations
-Read R1
-Send R1 to ALU input A
+OPERATION 1:Read R1
+OPERATION 2:Send R1 to ALU input A
 ```
 
 ## Assembly Statement
@@ -60,7 +65,7 @@ OPERATION 7: Update CPU flags
 ```
 
 ## Language Statement
-- a sentence written in a human understandable language (Shell, Java, Python, Go, etc.)
+- a sentence written in a human understandable [language][language whatis] (Shell, Java, Python, Go, etc.)
 - performs a task
 - Is translated (at **compiltime** by a compiler/linker or interpreter) into assembly/machine Statements
 

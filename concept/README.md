@@ -3,13 +3,19 @@
 
 [↖ Doc][home doc]
 
+[//]: #(ref)
+[concept whatis]: /concept/concept/whatis/ep.md
 
 
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a Concept][concept whatis]|internal|
 
 <h1 align="center">List of Concepts</h1>
 
 Welcome to the Concepts portal. This space helps dig, clarify, or understand a concept
-
 
 # 🔍 Navigation Index
 

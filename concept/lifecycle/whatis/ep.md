@@ -1,6 +1,6 @@
 [//]: #(home)
-[home domain]: ../../README.md
-[home doc]:     ../../../README.md
+[home domain]: ../../../../README.md
+[home doc]:    /README.md
 
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
@@ -10,7 +10,7 @@
 [lfc prj whatis]:      ../../../concept/lifecycle/kind/project/whatis/ep.md
 [lfc software whatis]: ../../../concept/lifecycle/kind/software/whatis/ep.md
 [lfc howto]: ../howto/ep.md
-
+[lfc list]:  ../list/ep.md
 Related topics
 
 | Topic                                          | Location | Kind |
@@ -20,6 +20,7 @@ Related topics
 | [What is a project lifecycle][lfc prj whatis]      | internal | kind |
 | [What is a software lifecycle][lfc software whatis] | internal | kind |
 | [How-to for lifecycle][lfc howto] | internal | kind |
+| [List of lifecycles][lfc list] | internal | list |
 
 
 <h1 align="center">What is a Lifecycle</h1>
@@ -34,6 +35,7 @@ The concept of lifecycle
 
 ## Example <a id='example'></a> 
 
+cf. [list of licecycle][lfc list]
 A lifecycle can be used, in various context, from building software to planning a wedding
 
 | Context | representation of the lifecycle's phases |

@@ -6,6 +6,13 @@
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md
+[concept list]:     /concept/README.md
+
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[List of Concepts][concept list]|internal|
 
 
 

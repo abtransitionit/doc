@@ -5,16 +5,19 @@
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
-[ipa whatis]: ../whatis/ipa.md
+[ipa whatis]:    ../whatis/ipa.md
 [arabic whatis]: ../../../language/arabic/whatis/ep.md
-
+[tool whatis]:   /concept/tool/whatis/ep.md
+[language list]: /language/README.md
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
 |[What is IPA][ipa whatis]|internal|
-|[Introduction to Arabic Language][arabic whatis]|internal|
+|[What is a Software][tool whatis]|internal|
+|[List of Languages][language list]|internal|
+
 
 
 <h1 align="center">The Concept of Language</h1>

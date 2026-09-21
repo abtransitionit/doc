@@ -33,8 +33,7 @@ Todo: list
 Todo: 
 - content should be dynamic
 - based on user's navigation
-- define the algorithm that will do that 
-- description shoud be imported (inject)
+- description shoud be injected
 
 | Topic | Kind | Description |
 | :--- | - | :--- |

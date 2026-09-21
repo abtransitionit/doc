@@ -1,20 +1,28 @@
 [//]: #(home)
-[home]: ../whatis/ep.md
+[home domain]: ../../../../README.md
+[home doc]:    /README.md
+[home topic]:  ../whatis/ep.md
+
+[↖ Lifecycle][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 
 [//]: #(ref)
 [lfc whatis]: ../whatis/ep.md
+[lfc list]:   ../list/ep.md
 
-[↖][home]
 
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
 |[What is a Lifecycle][lfc whatis]|see
+|[List of Lifecycles][lfc list]|see
+
 
 
 <h1 align="center">How-to for Lifecycle</h1>
+
+The concept of lifecycle
 
 # Build a lifecycle
 

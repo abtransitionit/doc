@@ -3,18 +3,33 @@
 
 [↖ Doc][home doc]
 
+
+
+[//]: #(ref)
+[tool whatis]: /concept/tool/whatis/ep.md
+[language whatis]: /concept/language/whatis/ep.md
+
+
+
+
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a Software][tool whatis]|internal|
+|[What is a Language][language whatis]|internal|
+
 <h1 align="center">List of Languages</h1>
 
 Welcome to the Languages portal. This space ...
 
-
 # 🔍 Navigation Index
 
-| Language | Purpose |
-|------|---------|
-| [Arabic](./arabic/whatis/ep.md) | |
-| [Bash](#) |  |
-| [Go](#) | |
+| Language | kind | Purpose |
+| - | - | - |
+| [Arabic](./arabic/whatis/ep.md) | written |
+| [Bash](#) | script |
+| [Go](#) | compiled |
 
 # 🚀 Quick Access Dashboard
 

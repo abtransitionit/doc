@@ -1,18 +1,3 @@
-## 3. Update — `roadmap/kind/project/whatis/ep.md`
-
-Change the `Related topics` row and `See also` link from:
-
-```
-[How to build a project roadmap](../howto/ep.md)
-```
-
-to:
-
-```
-[How to build a roadmap](../../../howto/ep.md)
-```
-
-
 [//]: #(home)
 [home domain]:    ../../../../README.md
 [home doc]:    /README.md

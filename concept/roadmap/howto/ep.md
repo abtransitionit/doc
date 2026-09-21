@@ -12,6 +12,7 @@
 [tool whatis]: ../kind/project/whatis/ep.md
 [rm project]: ../kind/project/whatis/ep.md
 [rm software]: ../kind/software/whatis/ep.md
+[rm list]:     ../list/ep.md
 [lfc prj whatis]:      ../../../concept/lifecycle/kind/project/whatis/ep.md
 [lfc software whatis]: ../../../concept/lifecycle/kind/software/whatis/ep.md
 
@@ -22,6 +23,7 @@ Related topics
 | [What is a roadmap][home topic]               | Internal | Parent |
 | [What is a project roadmap][rm project]        | Internal | Kind |
 | [What is a software roadmap][rm software]      | Internal | Kind |
+| [List of Roadmaps][rm list]      | Internal | Kind |
 
 <h1 align="center">How-to for Roadmap</h1>
 
