@@ -1,26 +1,28 @@
 [//]: #(home)
-[home set]:    ../../../../README.md
-[home doc]:    ../../../../../README.md
-[home parent]: ../../../whatis/ep.md
+[home domain]:    ../../../../README.md
+[home doc]:    /README.md
+[home topic]: ../../../whatis/ep.md
 
-[↖ Project][home parent] · [↖ Concept][home set] · [↖ Doc][home doc]
+[↖ Project][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
-[model whatis]:   ../../../../../concept/model/whatis/ep.md
+[project software list]:   ../../../../../project/README.md
+[model whatis]:   /concept/model/whatis/ep.md
+[rm software whatis]: /concept/roadmap/kind/software/whatis/ep.md
+[rm project whatis]:  /concept/roadmap/kind/software/whatis/ep.md
 [project whatis]: ../../../whatis/ep.md
-[tool whatis]:    ../../../../../concept/tool/whatis/ep.md
-[lfc whatis]:    ../../../../../concept/lifecycle/whatis/ep.md
+[tool whatis]:    /concept/tool/whatis/ep.md
+[lfc whatis]:    /concept/lifecycle/kind/software/whatis/ep.md
 
 Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
-| [What is a program](../whatis/program.md)      | Internal | |
-| [What is a lifecycle][lfc whatis]      | Internal ||
+| [What is a Project][project whatis] | Internal | class  |
+| [What is a Software Lifecycle][lfc whatis]      | Internal | Member|
+| [What is a Software Roamdap][rm software whatis] | Internal | Member  |
 | [How-to for Software project](../howto/ep.md) | Internal | See  |
-| [What is a Software project](../whatis/prj.software.md) | Internal | See  |
-| [List of projects](../../../project/README.md) | Internal | See  |
-| [How-to for Software project](../howto/ep.md) | Internal | See  |
+| [List of Software Projects][project software list] | Internal | See  |
 
 
 
@@ -46,9 +48,11 @@ The concept of software project
 | [Software Project](#sproject) | `vision` → `domain` → `model` → `prototype` → `implementation` → `validation` → `release` → `operation`|
 
 
-# What each "phase" mean 
+# What each "phase" used to mean in context
 ## Vision       <a></a>
-- the initial idea (staleholders, primary idea)
+the initial idea 
+- primary idea
+- staleholders
 ## Discovery    <a></a>
 - the diging of the visiion
 ## Domain       <a></a>

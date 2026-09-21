@@ -489,7 +489,7 @@ Kubernetes
 # Todo
 This tutorial:
   - uses a [lifecycle][lfc whatis] to structure the software lifecycle 
-  - uses a [roadmap][roadmap whats] to plan what will be delivered.
+  - uses a [rm][rm whats] to plan what will be delivered.
   - explain how to build a software project from an initial idea to its first usable release, then continue with subsequent releases.
 
 The idea: follow tvhis steps: `Ìdea → Lifecycle → Roadmap → Implementation → Release → Next release`

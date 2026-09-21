@@ -1,8 +1,8 @@
 [//]: #(home)
 [home doc]:     ../../../README.md
-[home parent]:  ../whatis/ep.md
+[home topic]:  ../whatis/ep.md
 
-[↖ Concept Concept][home parent] · [↖ Doc][home doc]
+[↖ Concept Concept][home topic] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md

@@ -80,6 +80,189 @@ doc             <-- Master Hub Root
 ├── project/    <-- Ephemeral active work, portfolio roadmaps, & specs
 └── README.md   <-- Master Entry Point
 ```
+```
+doc             <-- Root
+├── concept/    <-- Theoretical foundations, IT infrastructure, & taxonomies
+|   ├── project/       <-- concept of project
+|   |   ├── whatis/    <-- concept specific to that concept
+|   |   ├── howto/     <-- howto specific to that concept
+|   |   ├── list/      <-- 
+|   |   └── kind/      <-- document related content
+|   |        └── software/       <-- concept of software project
+|   |             ├── whatis/    <-- concept specific to that concept
+|   |             └── howto/     <-- howto specific to that concept
+|   ├── lifecycle/     <-- concept of lifecycle
+|   |   ├── whatis/    <-- concept specific to that concept
+|   |   ├── howto/     <-- howto specific to that concept
+|   |   ├── list/      <-- 
+|   |   └── kind/      <-- document related content
+|   |        └── software/       <-- concept of software lifecycle
+|   |             ├── whatis/    <-- concept specific to that concept
+|   |             └── howto/     <-- howto specific to that concept
+|   └── roadmap/       <-- concept of roadmap
+├── tool/       <-- Concrete software products, runtimes, & operational tools, guide, admin, ref
+|    ├── rpro/       <-- a software 
+|    ├── rctl/       <-- a software
+|    └── metadoc/    <-- a software
+└── project/    <-- Ephemeral active work, portfolio roadmaps, & specs
+    ├── rpro/       <-- a project
+    ├── rctl/       <-- a project
+    └── metadoc/    <-- a project
+
+```
+
+```
+doc/
+├── index.md                                  ← Master Hub
+│
+├── concept/
+│   ├── index.md
+│   │
+│   ├── project/
+│   │   ├── index.md
+│   │   ├── whatis/
+│   │   │   ├── ep.md                         ← What is a project
+│   │   │   └── (siblings as needed)
+│   │   ├── howto/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   ├── list/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   └── kind/
+│   │       └── software/
+│   │           ├── index.md
+│   │           ├── whatis/
+│   │           │   ├── ep.md                 ← What is a software project
+│   │           │   └── (siblings as needed)
+│   │           ├── howto/
+│   │           │   ├── ep.md
+│   │           │   └── (siblings as needed)
+│   │           └── list/
+│   │               ├── ep.md
+│   │               └── (siblings as needed)
+│   │
+│   ├── lifecycle/
+│   │   ├── index.md
+│   │   ├── whatis/
+│   │   │   ├── ep.md                         ← What is a lifecycle
+│   │   │   └── (siblings, e.g. phase.md)
+│   │   ├── howto/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings, e.g. phase.md)
+│   │   ├── list/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings, e.g. terms.md, acronyms.md)
+│   │   └── kind/
+│   │       └── software/
+│   │           ├── index.md
+│   │           ├── whatis/
+│   │           │   ├── ep.md                 ← What is a software lifecycle
+│   │           │   └── (siblings as needed)
+│   │           ├── howto/
+│   │           │   ├── ep.md
+│   │           │   └── (siblings as needed)
+│   │           └── list/
+│   │               ├── ep.md
+│   │               └── (siblings as needed)
+│   │
+│   └── roadmap/
+│       ├── index.md
+│       ├── whatis/
+│       │   ├── ep.md                         ← What is a roadmap
+│       │   └── (siblings, e.g. phase.md, milestone.md)
+│       ├── howto/
+│       │   ├── ep.md
+│       │   └── (siblings, e.g. phase.md)
+│       ├── list/
+│       │   ├── ep.md
+│       │   └── (siblings as needed)
+│       └── kind/
+│           └── software/
+│               ├── index.md
+│               ├── whatis/
+│               │   ├── ep.md                 ← What is a software roadmap
+│               │   └── (siblings as needed)
+│               ├── howto/
+│               │   ├── ep.md
+│               │   └── (siblings as needed)
+│               └── list/
+│                   ├── ep.md
+│                   └── (siblings as needed)
+│
+├── tool/
+│   ├── index.md
+│   ├── rpro/
+│   │   ├── index.md
+│   │   ├── whatis/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   ├── howto/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   └── list/
+│   │       ├── ep.md
+│   │       └── (siblings as needed)
+│   ├── rctl/
+│   │   ├── index.md
+│   │   ├── whatis/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   ├── howto/
+│   │   │   ├── ep.md
+│   │   │   └── (siblings as needed)
+│   │   └── list/
+│   │       ├── ep.md
+│   │       └── (siblings as needed)
+│   └── metadoc/
+│       ├── index.md
+│       ├── whatis/
+│       │   ├── ep.md
+│       │   └── (siblings as needed)
+│       ├── howto/
+│       │   ├── ep.md
+│       │   └── (siblings as needed)
+│       └── list/
+│           ├── ep.md
+│           └── (siblings as needed)
+│
+└── project/
+    ├── index.md
+    ├── rpro/
+    │   ├── index.md
+    │   ├── whatis/
+    │   │   ├── ep.md
+    │   │   └── (siblings as needed)
+    │   ├── howto/
+    │   │   ├── ep.md
+    │   │   └── (siblings as needed)
+    │   └── list/
+    │       ├── ep.md
+    │       └── (siblings as needed)
+    ├── rctl/
+    │   ├── index.md
+    │   ├── whatis/
+    │   │   ├── ep.md
+    │   │   └── (siblings as needed)
+    │   ├── howto/
+    │   │   ├── ep.md
+    │   │   └── (siblings as needed)
+    │   └── list/
+    │       ├── ep.md
+    │       └── (siblings as needed)
+    └── metadoc/
+        ├── index.md
+        ├── whatis/
+        │   ├── ep.md
+        │   └── (siblings as needed)
+        ├── howto/
+        │   ├── ep.md
+        │   └── (siblings as needed)
+        └── list/
+            ├── ep.md
+            └── (siblings as needed)
+```
+
 
 ### Sub-Hub Taxonomy
 

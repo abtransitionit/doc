@@ -30,7 +30,7 @@ how to build a software project from an initial idea to its first usable release
 vision → domain → model → prototype → implementation → validation → release → operation
 ```
 
-- adopt or define a [roadmap][roadmap whats] to plan what will be delivered. Example [this one][prj roadmap whatis]:
+- adopt or define a [rm][rm whats] to plan what will be delivered. Example [this one][prj roadmap whatis]:
 
   - explain 
 

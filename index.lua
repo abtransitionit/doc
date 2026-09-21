@@ -1,3 +1,5 @@
+-- Tell Algernon that the response we're going to send is HTML.
+-- The browser will therefore interpret the result as a web page.
 content("text/html; charset=utf-8")
 
 

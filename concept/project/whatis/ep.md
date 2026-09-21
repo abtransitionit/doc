@@ -1,13 +1,13 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ Concept][home set] · [↖ Doc][home doc]
+[↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
-[lfc whatis]:     ../../../concept/lifecycle/whatis/ep.md
-[roadmap whatis]: ../whatis/roadmap.md
-
+[lfc whatis]:             ../../../concept/lifecycle/whatis/ep.md
+[lfc project whatis]:     ../../../concept/lifecycle/kind/project/whatis/ep.md
+[rm project whatis]: ../../../concept/roadmap/kind/project/whatis/ep.md
 
 
 
@@ -15,9 +15,9 @@ Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
-| [What is a program](../whatis/program.md)      | Internal | |
-| [What is a lifecycle][lfc whatis]      | Internal ||
-| [What is a Software project](../kind/software/whatis/ep.md) | Internal | See  |
+| [What is a project lifecycle][lfc project whatis]      | Internal | Member |
+| [What is a Project Roadmap][rm project whatis] | Internal | Member  |
+| [What is a Software project](../kind/software/whatis/ep.md) | Internal | kind  |
 | [List of projects](../../../project/README.md) | Internal | See  |
 
 <h1 align="center">What is a Project</h1>
@@ -29,7 +29,8 @@ The concept of project
 - Usually starts as an **idea** or **vision**.
 - Usually end up with one or more **values** for one or more stakeholders.
 - Defines a path to transform that **idea** into those **values**.
-- Can be modeled and represented using the concept of [lifecycle][lfc whatis] and a [roadmap][roadmap whatis]
+- Can be modeled and represented using the concept of [lifecycle][lfc whatis] and a [rm][rm project whatis]
+- Is represented by a lifecycle (its stages).
 
 ## Program
 - a collection of projects
@@ -54,7 +55,7 @@ idea --> Phase1  --> Phase1  --> Phase3 --> values
 
 # Terminology
 
-| Concept | Phase | Project |
+| Concept | Phase context | Project context |
 | - | - | - |
 | **Inputs**  | *What a phase receives to perform its work.*<br>**Examples:** Ideas, Needs, Requests, Materials, Knowledge, Information, Resources | *The initial inputs of the project.*<br>**Examples:** Deliverables, Artifacts, Results                           |
 | **Outputs** | *What a phase produces as part of its work.*<br>**Examples:** Phase deliverables, artifacts, results, decisions, information       | *What the project produces.*<br>**Examples:** **Products, Services, Results**                                    |

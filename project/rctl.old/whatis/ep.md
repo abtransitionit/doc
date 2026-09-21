@@ -9,7 +9,7 @@
 [acro list]:      ../list/acro.md
 [arch whatis]:    ../whatis/arch.md
 [adr list]:       ../list/adr.md
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../whatis/roadmap.md
 [operate whatis]:  ../whatis/operate.md
 [res whatis]:     ../whatis/res.md
 [cli whatis]:     ../whatis/cli.md
@@ -25,7 +25,7 @@ Related topics
 |[What is a resource][res whatis]|internal|functional|
 |[what mean operating][operate whatis]|internal|functional|
 |[What is cli][cli whatis]|internal|functional|
-|[roadmap][roadmap whatis]|internal|planing|
+|[rm][rm whatis]|internal|planing|
 |[architecture][arch whatis]|internal|design|
 
 
@@ -79,7 +79,7 @@ Related topics
 
 
 # All Documents
-- [Roadmap][roadmap whatis]
+- [Roadmap][rm whatis]
 - [ADRs][adr list]
 - [Architecture][arch whatis]
 - [Acronyms][acro list]

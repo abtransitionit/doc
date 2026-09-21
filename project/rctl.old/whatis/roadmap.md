@@ -3,10 +3,10 @@
 [top]: #
 
 [//]: #(planing)
-[roadmap whatis]: #roadmap
+[rm whatis]: #roadmap
 
 [//]: #(functional)
-[roadmap log whatis]: ../whatis/roadmap.log.md
+[rm log whatis]: ../whatis/roadmap.log.md
 [res list]:        ../list/res.md
 [host list]:       ../list/host.md
 
@@ -16,7 +16,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is the roadmap progression log][roadmap log whatis]|see|functiunal
+|[What is the roadmap progression log][rm log whatis]|see|functiunal
 
 # Index
 - [Roadmap](#roadmap)
@@ -47,7 +47,7 @@ Related topics
 
 
 
-## [↑][roadmap whatis] Phase 0 — Inventory
+## [↑][rm whatis] Phase 0 — Inventory
 
 |||
 |-|-|
@@ -99,7 +99,7 @@ resource/tool
 
 **Deliverable:** list of resources + actions.
 
-## [↑][roadmap whatis] Phase 1 — Design
+## [↑][rm whatis] Phase 1 — Design
 Do not freeze yet the concepts of **action**
 - it may be a workflow (set of operation)
 - it may be a single operation
@@ -162,7 +162,7 @@ Define information like (only for one resource to not waste to much time)
 
 
 
-## [↑][roadmap whatis] Phase 2 — Core
+## [↑][rm whatis] Phase 2 — Core
 
 
 Build the skeleton:
@@ -185,7 +185,7 @@ rctl version
 
 works.
 
-## [↑][roadmap whatis] Phase 3 — Repo
+## [↑][rm whatis] Phase 3 — Repo
 
 - Don't rewrite existing tools.
 - Only Wrap them.
@@ -250,7 +250,7 @@ mx repo reset-history
 ```
 
 
-## [↑][roadmap whatis] M1 — `rctl v0.1`
+## [↑][rm whatis] M1 — `rctl v0.1`
 
 - At this point:stop.
 - This is an important milestone because **the user experience is more important than the architecture at this stage.**
@@ -265,7 +265,7 @@ rctl repo reset-history foo
 ```
 
 
-## [↑][roadmap whatis] Phase 4 — `doc`
+## [↑][rm whatis] Phase 4 — `doc`
 
 - Create the machine-readable repository **manifest** in **sot** repository and make the documentation generated from it.
 - connect the existing `SOT` (i.e. `doc`) repository.
@@ -295,7 +295,7 @@ rctl repo info foo
 
 
 
-## [↑][roadmap whatis] Phase 5 — Distribution
+## [↑][rm whatis] Phase 5 — Distribution
 
 
 Run:
@@ -334,7 +334,7 @@ mx repo create ...
 ```
 
 
-## [↑][roadmap whatis] M2 — Add resources
+## [↑][rm whatis] M2 — Add resources
 - Test whether the resource abstraction is actually useful.
 - **Do not design the image/container architecture before implementing them.**
 - Implement `repo` first then **image**, then **container**
@@ -363,7 +363,7 @@ rctl container stop foo
 ### Todo
 - Have the **sot** repository validate the whole ecosystem.
 
-## [↑][roadmap whatis] M3 — Relationships
+## [↑][rm whatis] M3 — Relationships
 - Start exploiting the fact that everything is a resource.
 
 **½–1 day**
@@ -395,7 +395,7 @@ rctl repo info foo
 - This is where the `SOT` repository (i.e. `doc`)  starts becoming much more interesting.
 
 
-# [↑][roadmap whatis] Roadmap Timeline
+# [↑][rm whatis] Roadmap Timeline
 
 ```text
 Day 1

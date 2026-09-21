@@ -1,8 +1,9 @@
 [//]: #(home)
 [home]: ../whatis/ep.md
-[vision whatis]: ../whatis/phase.vision.md
-[model whatis]: ../whatis/phase.model.md
-[req whatis]: ../whatis/phase.req.md
+
+
+[//]: #(ref)
+[lfc whatis]: ../whatis/ep.md
 
 [↖][home]
 
@@ -10,11 +11,27 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is a project Lifecycle](../whatis/lfc.prj.md)|see
+|[What is a Lifecycle][lfc whatis]|see
 
 
-<h1 align="center">How-to for Project</h1>
+<h1 align="center">How-to for Lifecycle</h1>
 
+# Build a lifecycle
+
+It consist of building a lifecycle adpated to a subject (e.g project lifecycle, software lifecycle)
+
+## Prerequisites
+
+Before you start, you need:
+
+| Input | Description |
+| ----- | ----------- |
+| A **subject** | define the subject for which you want to build a lifeycle [project][prj whatis], [software][tool whatis], ... 
+
+# Step 1: the phases name
+- find meaningfull phases name
+
+# Todo
 # bootsrap a project
 
 - Use This 8-Step Universal Project Framework as a guideline for your project.

@@ -131,7 +131,7 @@ Since your documents are mostly **explanatory/educational**, use:
 | [What is a Resource?][res-whatis] | 📘 Glossary | All |
 | [What is Managing?][manage-whatis] | 📘 Glossary | All |
 | [What is CLI?][cli-whatis] | 📘 Glossary | Devs |
-| [Roadmap][roadmap-whatis] | 🗺️ Plan | Stakeholders |
+| [Roadmap][rm-whatis] | 🗺️ Plan | Stakeholders |
 | [Architecture][arch-whatis] | 🏛️ Design | Devs |
 
 

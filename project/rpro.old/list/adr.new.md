@@ -5,7 +5,7 @@
 [forge whatis]: whatis/forge.md
 [res list]:     list/res.md
 [host list]:     list/host.md
-[roadmap readme]: roadmap.md
+[rm readme]: roadmap.md
 
 [←][home]
 

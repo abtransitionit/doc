@@ -1,8 +1,8 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ System][home set] · [↖ Doc][home doc]
+[↖ System][home domain] · [↖ Doc][home doc]
 
 [//]: #(Reference)
 [README]:  ./README.md

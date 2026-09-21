@@ -2,7 +2,7 @@
 [home]: ../whatis/ep.md  
 
 [//]: #(functional)
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../whatis/roadmap.md
 [outcome phase0]: ../list/res.md#phase-0-outcome
 [outcome phase1]: ../whatis/arch.md#cli-grammar
 [res list]:       ../list/res.md
@@ -10,7 +10,7 @@
 [←][home]
 | Topic | Location | Kind |
 |-|-|-|
-|[What is the roadmap][roadmap whatis]|see|functional
+|[What is the roadmap][rm whatis]|see|functional
 |[List of resources][res list]|internal|functional
 
 

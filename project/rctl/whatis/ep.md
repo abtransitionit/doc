@@ -1,8 +1,8 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ Project][home set] · [↖ Doc][home doc]
+[↖ Project][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
 [project whatis]: ../../../concept/project/whatis/ep.md

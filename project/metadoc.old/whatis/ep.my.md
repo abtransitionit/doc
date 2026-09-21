@@ -2,7 +2,7 @@
 [home]: ../../README.md
 
 [//]: #(doc)
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../whatis/roadmap.md
 [term list]:      ../list/term.md
 [bootstrap howto]: ../howto/bootsrap.md
 
@@ -12,7 +12,7 @@ Related topics
 
 | Topic | Location| Kind |
 |-|-|-|
-|[roadmap][roadmap whatis]|internal|planing|
+|[rm][rm whatis]|internal|planing|
 |[List of terms][term list]|internal||
 
 
@@ -28,7 +28,7 @@ Build an extensible, documentation system
 
 
 # All Documents
-- [Roadmap][roadmap whatis]
+- [Roadmap][rm whatis]
 - [How to bootstrap the project][bootstrap howto]
 - [List of terms][term list]
 

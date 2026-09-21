@@ -1,19 +1,25 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ Concept][home set] · [↖ Doc][home doc]
+[↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [project whatis]: ../../../concept/project/whatis/ep.md
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../../../concept/roadmap/whatis/ep.md
+[lfc prj whatis]:      ../../../concept/lifecycle/kind/project/whatis/ep.md
+[lfc software whatis]: ../../../concept/lifecycle/kind/software/whatis/ep.md
+[lfc howto]: ../howto/ep.md
 
 Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
-| [What is a project][project whatis]      | Internal | |
-| [What is a roadmap][roadmap whatis]      | Internal | |
+| [What is a project][project whatis]      | Internal | see |
+| [What is a roadmap][rm whatis]      | Internal | see |
+| [What is a project lifecycle][lfc prj whatis]      | internal | kind |
+| [What is a software lifecycle][lfc software whatis] | internal | kind |
+| [How-to for lifecycle][lfc howto] | internal | kind |
 
 
 <h1 align="center">What is a Lifecycle</h1>
@@ -22,7 +28,7 @@ The concept of lifecycle
 
 
 # Definition
-- Model the evolution of an entity (e.g. system, process, activity).
+- Model the evolution of an entity (e.g. system, process, activity, software, project).
 - Basically an ordered sequence of **phases**.
 - can be formally defined in mathematics, using **graph theory** and its extension **Petri nets**.
 

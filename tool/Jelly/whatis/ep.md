@@ -1,8 +1,8 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ Tool][home set] · [↖ Doc][home doc]
+[↖ Tool][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
 [Jelly github whatis]:       https://github.com/jellyfin/jellyfin

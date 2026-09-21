@@ -3,15 +3,18 @@
 
 [↖ Doc][home doc]
 
+[//]: #(ref)
+[project software whatis]: /concept/project/kind/software/whatis/ep.md
+
 Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
-|[What is a project](/concept/project/whatis/ep.md)|internal
+|[What is a Sofware Project][project software whatis]|internal
 
-<h1 align="center">List of Projects</h1>
+<h1 align="center">List of Software Projects</h1>
 
-Welcome to the Projects portal. This space ...
+Welcome to the Software Projects portal. This space ...
 
 # 🔍 Navigation Index
 

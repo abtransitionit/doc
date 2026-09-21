@@ -1,8 +1,8 @@
 [//]: #(home)
 [home doc]:     ../../../README.md
-[home parent]:  ../whatis/ep.md
+[home topic]:  ../whatis/ep.md
 
-[↖ Arabic Language][home parent] · [↖ Doc][home doc]
+[↖ Arabic Language][home topic] · [↖ Doc][home doc]
 
 
 

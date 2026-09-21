@@ -30,7 +30,7 @@ This document defines how to manage documents into the organization's IT documen
 1. [Create a roadmap](#build-a-project-roadmap) or a simple plan specifying the duration of each project milestone, phase, or stage.
 1. As the project progresses, 
     - add files and content to the project
-    - update the [roadmap table](#) and the [roadmap progression log](#).
+    - update the [rm table](#) and the [rm progression log](#).
 
 # Manage Roadmaps
 ## Create a project's roadmap
@@ -52,7 +52,7 @@ This document defines how to manage documents into the organization's IT documen
 - It is maintained by the designated activity lead or task owner.
 - See [example](../project/rctl/whatis/roadmap.log.md).
 
-Use the following template to define a phase in the [roadmap progression log](#).
+Use the following template to define a phase in the [rm progression log](#).
 ```
 # 🟡 [Phase 1](./roadmap.md#-phase-1--design) <a id='phase-1'></a>
 - [Status](#-p1-status)

@@ -16,6 +16,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 
 | Concept | Definition |
 |---------|---------|
+| [Log](./log/whatis/ep.md) |  |
 | [Model](./model/whatis/ep.md) | Simplified representation of something — built to focus on a specific aspect for a given purpose |
 | [Concept](./concept/whatis/ep.md) | Mental representation carried by a string — articulated through definitions, examples, and models to be shared |
 | [Resource](./machine/whatis/res.md) | Allocatable capacity — CPU, memory, storage, and network consumed by workloads |
@@ -23,6 +24,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 | [Tool](./tool/whatis/ep.md) | Software stack — from operating systems to command-line utilities |
 | [Project](./project/whatis/ep.md) | Active development work — planning, building, and shipping |
 | [Lifecycle](./lifecycle/whatis/ep.md) | Stages a thing goes through — from creation to operation, change, and retirement |
+| [Roadmap](./roadmap/whatis/ep.md) |  |
 | [Security](./security/whatis/ep.md) | Access control, encryption, compliance, and threat management |
 | [AI Agent](./aiagent/whatis/ep.md) | Autonomous agents, LLM integration, and intelligent automation |
 | [AI](./ai/whatis/ep.md) | Using statistic and probality to code rather than predictable standard "boring" code |

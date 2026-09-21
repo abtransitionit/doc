@@ -2,7 +2,7 @@
 [home]: ../whatis/ep.md
 
 [//]: #(doc)
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../whatis/roadmap.md
 
 
 [←][home] 
@@ -12,7 +12,7 @@ Related topics
 
 | Topic | Location| Kind |
 |-|-|-|
-|[roadmap][roadmap whatis]|internal|planing|
+|[rm][rm whatis]|internal|planing|
 
 
 

@@ -11,6 +11,7 @@ Welcome to the organization knowledge portal. This workspace is organized into d
 | [Language](./language/README.md) | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). |
 | [Tool](./tool/README.md) | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). |
 | [System](./system/README.md) | cloud, Os, Openstack, Kubernetes, etc. |
+| Template|Template vs. Class (Practical usage ) template of a concept, language, tool, system | 
 
 
 

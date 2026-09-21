@@ -7,7 +7,7 @@
 
 [//]: #(functional)
 [forge howto]: ../howto/forge.md
-[roadmap whatis]: ../whatis/roadmap.md
+[rm whatis]: ../whatis/roadmap.md
 [res list]:    ../list/res.md
 [res whatis]:  ../whatis/res.md
 [host list]:   ../list/host.md
@@ -73,7 +73,7 @@ this section provides the vison, requirements, architecture, roadmap, and implem
 
 
 # Other Documents
-- [Roadmap][roadmap whatis]
+- [Roadmap][rm whatis]
 - [ADRs][adr list]
 - [Architecture][arch whatis]
 - [Concept](docs/concept.md)

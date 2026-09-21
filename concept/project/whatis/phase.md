@@ -1,8 +1,8 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]:     ../../../README.md
 
-[↖ Concept][home set] · [↖ Doc][home doc]
+[↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [lfc whatis]: ../whatis/lfc.md
