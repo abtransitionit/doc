@@ -25,11 +25,17 @@ Related topics
 The concept of project
 
 # Definition
+
+## Project
+A subject/entity 
+  - that has a [lifecycle][lfc whatis]
+  - to which is attach a [lifecycle][lfc whatis]
+
 ## Project
 - Usually starts as an **idea** or **vision**.
 - Usually end up with one or more **values** for one or more stakeholders.
 - Defines a path to transform that **idea** into those **values**.
-- Can be modeled and represented using the concept of [lifecycle][lfc whatis] and a [rm][rm project whatis]
+- Can be modeled and represented using the concept of [lifecycle][lfc whatis] and [roadmap][rm project whatis]
 - Is represented by a lifecycle (its stages).
 
 ## Program
@@ -37,9 +43,21 @@ The concept of project
 - Allow to manage very large projects
 - Split very large projects into a set of smaller related projects
 
+## Member
+```yaml
+project:
+  - lifecycle:
+    - constraints: # if presents it become a roadmap
+```
+
 ## Representation of a project
 
-  
+```yaml
+project
+  └── has constraints
+        └── modeled as constraints on the lifecycle
+              └── = roadmap
+```                
 ```yaml
 # Global view
 idea --> Project --> values
@@ -48,7 +66,7 @@ idea --> Project --> values
             ├── Lifecycle (the sequence of stage)
             └── Roadmap   (additional constraints on stages)   
 
-# Detail view
+# Detailed view
 idea --> Phase1  --> Phase1  --> Phase3 --> values
 ```  
 

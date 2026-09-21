@@ -10,6 +10,7 @@
 [system whatis]: #
 [artifact whatis]: #
 [prj software whatis]: /concept/project/kind/software/whatis/ep.md
+[software whatis]: ../whatis/software.md
 [tool list]:       /tool/README.md
 [language list]:   /language/README.md
 [language whatis]: /concept/language/whatis/ep.md
@@ -19,7 +20,7 @@ Related topics
 | Topic | Location | Kind |
 |-|-|-|
 |[What is a Language][language whatis]|internal| 
-|[What is a Hardware Resource][hres whatis]|internal| 
+|[What is a Hardware Resource][hres whatis]|internal| kind |
 |[What is a Software Project][prj software whatis]|internal|
 |[List of tools][tool list]|internal| list |
 |[List of languagess][language list]|internal| list |
@@ -28,8 +29,7 @@ Related topics
 
 <h1 align="center">What is a Tool</h1>
 
-The concept of tool
-
+The concept of tool ([software][software whatis])
 
 
 # Definition

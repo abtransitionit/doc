@@ -33,9 +33,16 @@ The concept of software project
 
 
 # Definition
-- a [project][project whatis] that leads to/output a [software][tool whatis]
+- a [project][project whatis] whose output is a [software][tool whatis]
 - has a specific well known lifecycle (from best practices of CMMI, ITIL, PRINCE, ...)
 
+
+```
+software project
+  └── has constraints
+        └── modeled as constraints on the software lifecycle
+              └── = software roadmap
+```
 
 ## The structure
 

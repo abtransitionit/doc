@@ -21,20 +21,19 @@ Related topics
 
 <h1 align="center">What is a Roadmap Constraint</h1>
 
-The concept of constraint (in a roadmap)
+The concept of Roadmap constraint
 
 # Definition
 
 ## Constraint
-- An **additional piece of information** attached to a [lifecycle][lfc whatis]'s phase.
-- Turns a bare lifecycle into a [rm][home topic].
-- Allows to track progression inside the lifecycle.
-- Can have **properties** that are domain-specific.
+- Turns a **bare** lifecycle into a [roadmap][home topic].
+- An **additional** piece/atomic information  attached to each [lifecycle][lfc whatis]'s phase.
+- Each **additional piece of information** can have **properties** that are entity-specific.
 
 
 # Generic constraints
 
-These constraints may exist in any domain (e.g. project roadmap, software roadmap):
+These constraints may exist for any entity (e.g. project roadmap, software roadmap):
 
 | Constraint | Role |
 | ---------- | ---- |

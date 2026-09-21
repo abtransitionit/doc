@@ -24,13 +24,14 @@ The concept of model
 - abstraction
 
 ## Model
-- a simplified version of something real, abstract or virtual
-- abstracts away the complexity of an initial entity to **focus** on a specific desired aspect
+- A simplified version of something
+- That sometning can be real, abstract, conceptual, virtual
+- Abstracts away the complexity of the initial entity to **focus** on a specific desired aspect
 - defines a simplified version (the model) of a complex entity
 - **"something"** includes anything: entities, relations between entities, processes, ...
 
 ## Modeling
-- the action of creating a model
+- The action of creating a model
 - it **deliberately** preserves some aspects of the original and drops others
 - the simplification is directed: a model is always **a model of X, for Y, for purpose Z**
 

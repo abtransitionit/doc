@@ -5,6 +5,7 @@
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
+[model whatis]:   /concept/model/whatis/ep.md
 [cst whatis]: ../whatis/constraint.md
 [rm constraint whatis]: ../whatis/constraint.md
 [rm howto]: ../howto/ep.md
@@ -30,16 +31,38 @@ Related topics
 
 The concept of roadmap
 
-# Definition
 
-## Roadmap
-- Add [constraints][cst whatis] to [lifecycle][lfc whatis]'s phases
-- Those constraints add indication of the progression inside the lifecycle.
-- Can exist **independently** of any lifecycle (e.g. a career roadmap).
-- Answers the questions: 
-  - **Where are we now?** 
-  - **Where are we going?** 
-  - **How do we get there?**
+
+
+# Definition
+- A [lifecycle][lfc whatis] with [constraints][rm constraint whatis].
+- A lifecycle **that** is constrained.
+- Adds/attachs [constraints][cst whatis] to [lifecycle][lfc whatis]'s phases
+- [Model][model whatis] a [lifecycle][lfc whatis] with [constraints][rm constraint whatis]
+- **Purpose**: track progression inside the lifecycle.
+
+# Model
+
+```yaml
+Rodamop:
+  - Lycycle:
+    - constraint 1
+    - constraint 2
+    - constraint 3
+```    
+
+# Purpose
+- adds indication of the **progression** inside a decided/deducted [lifecycle][lfc whatis] of an *entity* 
+- provides the following **information**: 
+   - the **phase** we are in inside the lifecycle of an entity 
+
+## Constraint
+constraints maybe 
+- generic
+- subject/entity-specific
+- generic-semantic-extented (same syntax different meaning)
+- generic-syntaxic-extented (same semantic different syntax)
+
 
 ## Constraint
 - The roadmap may define one or more **constraints** to attach to the lifecycle phases.
@@ -57,8 +80,7 @@ The concept of roadmap
 
 # Representations
 
-There are different possible representations.
-
+inherited from [lifecycle][lfc whatis]
 ## Graph
 
 ```yaml
@@ -126,3 +148,17 @@ Core model    Local provisioning    Remote provisioning
 A roadmap stays high-level. A plan and a schedule add detail under it.
 
 
+
+
+# Todo
+
+## Lifecycle vs roadmap
+- A lifecycle defines the **stages**.
+- A [roadmap][rm whatis] is a lifecycle **with constraints**.
+- **lifecycle = stages. roadmap = stages + constraints.**
+
+
+# Idea
+## Common meaning that confort my model of roadmap as alifecycle
+- the term **roadmap** = a sequence of town in film .. but each stage brings its constraint
+- the lifecycle = the sequence of town (dynamic/static). the constraints (what is lived in each town)

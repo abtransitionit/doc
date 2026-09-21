@@ -22,6 +22,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 
 | Concept | Definition |
 |---------|---------|
+| [Thing](./thing/whatis/ep.md) |  |
 | [Log](./log/whatis/ep.md) |  |
 | [Model](./model/whatis/ep.md) | Simplified representation of something — built to focus on a specific aspect for a given purpose |
 | [Concept](./concept/whatis/ep.md) | Mental representation carried by a string — articulated through definitions, examples, and models to be shared |
@@ -47,7 +48,8 @@ Todo:
 
 | Topic | Kind | Description |
 | :--- | - | :--- |
-| [project](./concept/project/whatis/ep.md) | concept |
+| [Software project](./project/kind/software/whatis/ep.md) | concept |
+| [Project](./project/whatis/ep.md) | concept |
 | [metadoc](./project/metadoc/whatis/ep.md) | project | |
 | [rctl](./project/rctl/whatis/ep.md) | project | |
 | [rpro](../project/rpro/whatis/ep.md) | | 
