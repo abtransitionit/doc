@@ -16,12 +16,12 @@ Welcome to the organization knowledge portal. This workspace is organized into d
 
 
 # 📂 Project Board
-
+```
 Todo: list 
 - active projects
 - archived projects
 - current  projects when working on several
-
+```
 | Space | Focus |
 | :--- | :--- |
 | [Project](./project/README.md) | Active work, roadmaps, design specs (RFCs), and sprint backlogs for in-flight initiatives. |
@@ -29,12 +29,12 @@ Todo: list
 
 
 # 🚀 Quick Access Dashboard
-
+```
 Todo: 
 - content should be dynamic
 - based on user's navigation
 - description shoud be injected
-
+```
 | Topic | Kind | Description |
 | :--- | - | :--- |
 | [project](./concept/project/whatis/ep.md) | concept |
