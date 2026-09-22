@@ -1,4 +1,4 @@
-# Documentation System
+<h1 align="center">Documentation System</h1>
 
 Welcome to the organization knowledge portal. This workspace is organized into distinct spaces.
 

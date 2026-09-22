@@ -19,6 +19,7 @@ Related topics
 | [What is a Project Roadmap][rm project whatis] | Internal | Member  |
 | [What is a Software project](../kind/software/whatis/ep.md) | Internal | kind  |
 | [List of projects](../../../project/README.md) | Internal | See  |
+| [How-to Bootstrap a project](../howto/ep.v1.md) | Internal | See  | Member
 
 <h1 align="center">What is a Project</h1>
 
