@@ -1,40 +1,68 @@
-[//]: #(home)
+[//]: #\(home\)
 [home domain]: ../../README.md
-[home doc]:     ../../../README.md
+[home doc]: ../../../README.md
 
 [↖ Project][home domain] · [↖ Doc][home doc]
 
-[//]: #(doc)
+[//]: #\(doc\)
 [lfc whatis]: /concept/lifecycle/whatis/ep.md
 [poc whatis]: /concept/test/whatis/poc.md
 [mvp whatis]: /concept/test/whatis/mvp.md
 [rm constraint whatis]: /concept/roadmap/whatis/constraint.md
-
+[bootsrap howto]:  ../howto/boostrap.md
 
 Related topics
 
-| Topic | Location | Kind |
-|-|-|-|
-|[Whatis a Lifecycle][lfc whatis]|internal|
+| Topic                            | Location | Kind |
+| -------------------------------- | -------- | ---- |
+| [Whatis a Lifecycle][lfc whatis] | internal |      |
+| [How-to bootsrap a software project][bootsrap howto] | internal |      |
 
-<h1 align="center">Project: Project Blueprint</h1>
+<h1 align="center">Project: Project Blue</h1>
 
 a Software Project Management Blueprint
 
 # 1. Purpose
 
-A framework for **defining, planning, executing, documenting, and delivering software projects**.
 
-The blueprint framework provides a step by step guideline to go from **vision** to **production release**:
+The **Software Project Blueprint** defines a reusable model for **defining, planning, executing, documenting, and delivering software projects**.
+
+The blueprint defines the common structure and rules of a software project, including:
+
+* Project lifecycle
+* Documentation structure
+* Project management conventions
+* Decision mechanisms
+* Milestones and quality gates
+* Templates and standards
+* Validation and delivery practices
+
+
+The blueprint provides a structured path from **vision** to **production release and evolution**:
+
 
 * Initial **vision and goals**
 * **Project evolution and roadmap**
 * Iterative development
 * Validation and decision points
-* Tracking of [PoC][poc whatis] and [MVP][mvp whatis] to **progressively** demonstrate product value.
+* [PoC][poc whatis] and [MVP][mvp whatis] validation.
 * **Production release and evolution**
 
-The blueprint is designed to be **instantiated for individual projects**. Each project inherits the blueprint's structure, principles, documentation standards, and lifecycle while remaining adaptable to its specific needs.
+The blueprint is designed to be **instantiated for individual projects**. Each project instance contains the **project-specific** information
+
+
+```text
+Software Project Blueprint
+        │
+        │ instantiation
+        ▼
+   Project Instance
+        │
+        ├── my-project
+        ├── another-project
+        └── future-project
+```
+
 
 # 2. Objectives
 
@@ -50,11 +78,49 @@ The blueprint aims to:
 * Support projects of different **sizes and levels of complexity**.
 * Enable new projects to be created from a **consistent template**.
 
+```
+Software Project Blueprint
+        │
+        │ instantiates
+        ▼
+   Project Instance
+        │
+        ├── my-project
+        ├── another-project
+        └── future-project
+```
+
+# Vision
+
+Instantiation may be performed manually or by a dedicated tool. This keeps the blueprint independent of today's tooling.
+
+```text
+                 Blueprint
+                     │
+          ┌──────────┴──────────┐
+          │                     │
+      Manual                 Generator
+    instantiation           / bootstrap
+          │                     │
+          └──────────┬──────────┘
+                     ▼
+              Project Instance
+```
+
+In the future tool could be something simple like:
+
+```text
+project create my-project
+project create my-project --blueprint software-project --template java-service
+```
+without requiring the blueprint itself to change conceptually.
+
+
+
 
 # 3. Core Principles
 
 The blueprint is based on the following principles.
-
 
 ## 3.1 Explicit Decisions
 
@@ -73,7 +139,8 @@ ADRs provide a **traceable history of the decisions** that shape the project and
 
 ## 3.2 Incremental Delivery
 
-The project should use **Agile** pethodology: Progress through **small, measurable increments**. 
+
+The project should use **iterative/incremental delivery** progress through **small, measurable increments**.
 
 Each increment should:
 
@@ -83,7 +150,6 @@ Each increment should:
 4. Feed the results and learnings into the next increment.
 
 This allows the project to continuously adapt its scope, priorities, and implementation based on validated information.
-
 
 # 4. Project Lifecycle
 
@@ -96,16 +162,16 @@ The blueprint defines a standardized [lifecycle][lfc whatis] for taking a softwa
 | 3  | **Discovery**        | Explore the domain, existing solutions, assumptions, constraints, and risks.                   |
 | 4  | **Requirements**     | Define what the product must provide, including functional and non-functional requirements.    |
 | 5  | **Specification**    | Structure the requirements into product scope, use cases, workflows, and expected behavior.    |
-| 6  | **Design**           | Define the product and technical design required to implement the specified solution. |
+| 6  | **Design**           | Define the product and technical design required to implement the specified solution.          |
 | 7  | **Architecture**     | Define the technical structure and key architectural decisions.                                |
 | 8  | **Development**      | Iteratively build, test, and evolve the product.                                               |
-| 9 | **Validation**       | Verify that the product meets its requirements and intended outcomes.                          |
+| 9  | **Validation**       | Verify that the product meets its requirements and intended outcomes.                          |
 | 10 | **Release**          | Prepare, deploy, and document a production release.                                            |
 | 11 | **Operate & Evolve** | Monitor, maintain, measure, and continuously improve the product.                              |
 
 This lifecycle represents the **evolution of a project**, not necessarily a strictly linear process. The project may revisit an earlier phase when new information, risks, or assumptions require further investigation.
 
-Project knowledge, requirements, decisions, and outcomes are documenteded in the project documentation and should **evolve alongside the project**.
+Project knowledge, requirements, decisions, and outcomes are documented in the project documentation and should **evolve alongside the project**.
 
 ## 4.1 Phase → Vision
 
@@ -206,7 +272,6 @@ requirements/
 
 The requirements are sufficiently defined, traceable, and testable to proceed to specification.
 
-
 ## 4.5 Phase → Specification
 
 **Objective**
@@ -256,7 +321,6 @@ design/
 
 The solution is sufficiently designed to define its architecture and implementation approach.
 
-
 ## 4.7 Phase → Architecture
 
 **Objective**
@@ -283,11 +347,9 @@ architecture/
     └── ADR-003-deployment.md
 ```
 
-
 **Exit Criteria**
 
 The architecture is sufficiently defined to support implementation and the required architectural decisions are documented.
-
 
 ## 4.8 Phase → Development
 
@@ -295,13 +357,11 @@ The architecture is sufficiently defined to support implementation and the requi
 
 Build the product through incremental implementation and continuous testing.
 
-
 Build the product incrementally while continuously validating its requirements and architecture.
 
 Development should be organized around **deliverable increments** rather than purely technical tasks.
 
 Each increment should ideally produce something demonstrable.
-
 
 **Typical Cycle**
 
@@ -329,7 +389,6 @@ NEXT ITERATION
 * Refactoring
 * Incremental delivery
 
-
 **Expected Deliverables**
 
 ```text
@@ -345,15 +404,11 @@ development/
 
 The planned increment or release scope is implemented and ready for validation.
 
-
-
 ## 4.9 Phase → Validation
 
 **Objective**
 
 Verify that the product satisfies its requirements and intended outcomes.
-
-Verify that the product satisfies its defined requirements and provides the intended outcome.
 
 **Activities**
 
@@ -364,16 +419,6 @@ Validation should cover multiple dimensions:
 * Acceptance testing
 * Technical validation
 * Regression testing
-
-And also
-
-* Functional correctness
-* Technical correctness
-* Performance
-* Security
-* Usability
-* Reliability
-* Operational readiness
 
 **Expected Deliverables**
 
@@ -388,16 +433,11 @@ validation/
 
 The release scope has been validated against its defined requirements and acceptance criteria.
 
-
-
 ## 4.10 Phase → Release
 
 **Objective**
 
-Prepare and deliver 
-- a validated product increment to production.
-- production-ready version of the product.
-
+Prepare and deliver a validated, production-ready version of the product.
 
 **Activities**
 
@@ -416,7 +456,6 @@ release/
 ├── rollback.md
 └── release-notes.md
 ```
-
 
 **Release Checklist**
 
@@ -437,7 +476,6 @@ A release should address, where applicable:
 **Exit Criteria**
 
 The release is deployed successfully and the required production documentation is available.
-
 
 ## 4.11 Phase → Operate & Evolve
 
@@ -479,7 +517,6 @@ Post-release activities may include:
 * New feature development
 * Continuous improvement
 
-
 **Expected Deliverables**
 
 ```text
@@ -492,18 +529,17 @@ operation/
 
 **Exit Criteria**
 
-- There is no permanent exit criteria for this phase. 
-- The project continues through **operate → learn → evolve → release** cycles.
-
+* There is no permanent exit criterion for this phase.
+* The project continues through **operate → learn → evolve → release** cycles.
 
 # 5. Roadmap Constraints
 
 The roadmap combines the **project lifecycle** with [constraints][rm constraint whatis].
+
 * It defines **how the project progresses**.
 * It provides a **clear view of the project's evolution**.
 
 This framework defines **milestones** as a type of [constraint][rm constraint whatis] applied to the project [lifecycle][lfc whatis].
-
 
 ```text
 Milestones
@@ -512,7 +548,7 @@ Milestones
 └── Release(s)
 ```
 
-Projects may define additional milestones, properties, or other constraints as required.
+Projects may define additional milestones or other constraints as required.
 
 Each constraint may also define its own **properties** to provide the information required to track and manage it.
 
@@ -536,28 +572,72 @@ Roadmap
 
 **Objective**
 
-The [PoC][poc whatis] as **milestone** validate technical feasibility and reduce technical uncertainty.
+The [PoC][poc whatis] is a **milestone**. It is a **lightweight product implementation** designed to demonstrate the product concept and reach a useful result quickly.
 
+To speed up development, a PoC may use technologies and implementations that differ from the target MVP implementation.
+
+For example, a PoC may use:
+
+* SQLite instead of PostgreSQL.
+* Simplified authentication instead of the final security model.
+* Local infrastructure instead of production infrastructure.
+* Simplified interfaces instead of the final UI.
+* Simplified integrations instead of production integrations.
+* Other temporary or substitute technologies.
+
+The purpose of these simplifications is to **reduce implementation effort while preserving the product behavior that needs to be demonstrated**.
 
 **Typical PoC Questions**
 
-* Is the required technology suitable?
-* Can the architecture support the required workload?
-* Can external systems be integrated?
-* Can the required performance be achieved?
-* Are there unexpected technical constraints?
-* Is the proposed approach viable?
+The PoC should help answer questions such as:
+
+* Does the product solve the intended problem?
+* Does the core workflow work as expected?
+* Does the product behave as intended from the user's perspective?
+* Can the proposed features be demonstrated effectively?
+* Are there important product assumptions that prove to be incorrect?
+* Can the concept be demonstrated without implementing the full production solution?
+* Are the proposed technical approaches viable?
+* Are there important technical constraints that must be addressed?
+* Can required external systems be integrated sufficiently to demonstrate the concept?
 
 **PoC Deliverables**
 
 ```text
 poc/
 ├── objective.md
-├── hypotheses.md
-├── experiments.md
+├── scope.md
+├── features.md
+├── implementation.md
+├── target-delta.md
 ├── results.md
 └── conclusion.md
 ```
+
+The `target-delta.md` document records the differences between the **MVP target defined by the project** and the **PoC implementation**.
+
+For example:
+
+```text
+MVP Target                  PoC Implementation
+──────────────────────      ──────────────────────
+PostgreSQL                  SQLite
+Required authentication     Simplified authentication
+Required security           Minimal security
+Production infrastructure  Local infrastructure
+Usable UI                   Simplified UI
+Production integration      Temporary integration
+```
+
+For each difference, the project should determine whether the PoC implementation:
+
+* Must be replaced before the MVP.
+* Can remain unchanged in the MVP.
+* Must be improved or extended.
+* Requires further investigation.
+* Is intentionally deferred beyond the MVP.
+
+This makes the PoC implementation choices explicit and prevents temporary PoC shortcuts from becoming accidental MVP decisions.
 
 **Possible Outcomes**
 
@@ -570,13 +650,17 @@ PARTIALLY_VALIDATED
 REQUIRES_FURTHER_INVESTIGATION
 ```
 
-A failed PoC is considered a successful project outcome when it prevents unnecessary investment in an invalid technical approach.
+A PoC may be considered successful even when its implementation is discarded, provided that it produces sufficient evidence to validate the product target or identify what must change before further investment.
 
 # 7. Minimum Viable Product (MVP)
 
 **Objective**
 
-The [MVP][mvp whatis] as a **milestone** validate the core product proposition.
+The [MVP][mvp whatis] is a **milestone** representing the minimum viable implementation of the product.
+
+The MVP defines the **target product implementation** that the project intends to deliver after the product concept has been sufficiently validated.
+
+The MVP should provide the validated core product value while using the appropriate technologies, architecture, security, infrastructure, and other technical foundations required for its intended level of viability.
 
 **Definition**
 
@@ -587,6 +671,7 @@ The MVP should explicitly define:
 * Core workflow
 * Required features
 * Excluded features
+* Required technical capabilities
 * Acceptance criteria
 * Success metrics
 
@@ -597,16 +682,20 @@ mvp/
 ├── definition.md
 ├── scope.md
 ├── features.md
+├── implementation.md
 ├── acceptance-criteria.md
 └── success-metrics.md
 ```
 
+The MVP definition should provide the target against which the PoC implementation can be compared.
 
+The project therefore defines **what the MVP should be**, while the PoC may use a deliberately simplified implementation to demonstrate that target quickly.
+
+After the PoC, its results and identified implementation differences are used to determine the work required to reach the MVP.
 # 8. Project Instance Model
 
-The blueprint itself is **not a project**.
-
 It is a template from which projects are created.
+The blueprint is a template. A project is an instance of that template.
 
 Conceptually:
 
@@ -639,7 +728,6 @@ The project instance then provides:
 * Metrics
 * Release information
 
-
 # 9. Recommended Repository Structure
 
 The blueprint repository itself should be separated from individual project instances.
@@ -663,8 +751,7 @@ software-project-blueprint/
 │   ├── 08-development/
 │   ├── 09-validation/
 │   ├── 10-release/
-│   └── 11-operation/
-│
+│   └── 11-operate-evolve/
 │
 ├── templates/
 │   ├── vision.md
@@ -685,7 +772,6 @@ software-project-blueprint/
 └── examples/
 ```
 
-
 # 10. Project Instance Structure
 
 A project generated from the blueprint may use the following structure:
@@ -705,20 +791,18 @@ my-project/
 ├── 08-development/
 ├── 09-validation/
 ├── 10-release/
-└── 11-operation/
+└── 11-operate-evolve/
 ```
 
 The exact structure may be adapted depending on project complexity.
 
-
 # 11. Quality Gates
-
 
 A **Quality Gate** is a [constraint][rm constraint whatis] used to determine whether the project can progress through the [lifecycle][lfc whatis].
 
 Each major phase should have an explicit **quality gate**.
 
-A quality gate provides a formal, measurable indication that the project is ready to progress. It answers:
+A quality gate provides a formal indication that the project is ready to progress. It answers:
 
 > "Do we have enough evidence to proceed?"
 
@@ -741,7 +825,6 @@ VISION
 
 Quality gates should not exist merely as administrative checkpoints. Their purpose is to prevent the project from progressing while critical uncertainties remain unresolved.
 
-
 # 12. Project Status
 
 A project should expose its current lifecycle state clearly.
@@ -749,7 +832,8 @@ A project should expose its current lifecycle state clearly.
 Example:
 
 ```text
-STATUS: MVP
+STATUS: DEVELOPMENT
+MILESTONE: MVP
 VERSION: 0.3
 HEALTH: ON_TRACK
 ```
@@ -757,17 +841,17 @@ HEALTH: ON_TRACK
 Possible lifecycle states:
 
 ```text
-IDEA
 VISION
+TERMINOLOGY
 DISCOVERY
+REQUIREMENTS
 SPECIFICATION
-POC
+DESIGN
 ARCHITECTURE
-MVP
 DEVELOPMENT
 VALIDATION
 RELEASE
-OPERATION
+OPERATE
 ARCHIVED
 ```
 
@@ -779,7 +863,6 @@ For example:
 STATUS: DEVELOPMENT
 HEALTH: AT_RISK
 ```
-
 
 # 13. Documentation Principles
 
@@ -793,7 +876,6 @@ All project documentation should be:
 * Updated as the project evolves
 
 The documentation repository should serve as the project's **single source of truth**.
-
 
 # 14. Project Rendering & Publication
 
@@ -825,8 +907,6 @@ PROJECT KNOWLEDGE
  DOCUMENTATION
 ```
 
-
-
 # 15. Definition of Done
 
 The blueprint itself is considered operational when:
@@ -841,10 +921,9 @@ The blueprint itself is considered operational when:
 * Documentation can be rendered through Algernon.
 * A developer can understand how to use the blueprint without requiring additional instructions.
 
-
 # 16. Guiding Principle
 
-The blueprint should ultimately answer four questions at every stage of a project:
+The blueprint should ultimately answer four questions throughout the project:
 
 > **Why are we building this?**
 > **What are we building?**
@@ -889,31 +968,4 @@ RELEASE
    │
    ▼
 OPERATE & EVOLVE
-```
-
-
-
-# the repository structure
-
-We can structure it around three layers:
-
-```text
-BLUEPRINT
-├── Framework
-│   ├── lifecycle
-│   ├── principles
-│   └── standards
-│
-├── Templates
-│   ├── vision
-│   ├── requirements
-│   ├── poc
-│   ├── architecture
-│   ├── mvp
-│   ├── feature
-│   ├── adr
-│   └── release
-│
-└── Project Instance
-    └── generated from the blueprint
 ```
