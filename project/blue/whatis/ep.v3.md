@@ -22,25 +22,40 @@ Related topics
 
 a Software Project Management Blueprint
 
+
 # 1. Purpose
 
+The project defines a reusable **project model** - independent of its physical representation - that can be **instantiated** to create software projects.
 
-- The project defines...and the blueprint is the thing defining the model.
+The project model defines the **logical structure and behavior** that a software project is expected to conform to, including:
 
-The project defines a reusable project model (not it physical representation) that can be **instanciated** to create software project
+- Project lifecycle
+- Project artifacts
+- Relationships between artifacts
+- Project information model
+- Decision mechanisms
+- Milestones and quality gates
+- Project management conventions
+- Project standards
+- Validation and delivery practices
+
+The physical representation of the project model is not defined by the blueprint.
+
+A project instance may represent its artifacts using:
+
+* A single document
+* Multiple documents
+* Structured files
+* Database records
+* A combination of representations
+* Another suitable representation
+
+> 📍 The representation and storage mechanism are implementation choices. They do not change the project model.
+
+> 📍 The mechanism used to instantiate the project is also independent of the blueprint. A project may be instantiated manually or by a software tool.
 
 
-The project model defines the logical structure and behavior a software project must conform including:
-
-* Project lifecycle
-* Documentation structure
-* Project management conventions
-* Decision mechanisms
-* Milestones and quality gates
-* Templates and standards
-* Validation and delivery practices
-
-
+# mx : todo
 The blueprint provides a structured path from **vision** to **production release and evolution**:
 
 
@@ -65,43 +80,90 @@ Software Project Blueprint
         ├── another-project
         └── future-project
 ```
+# mx : todo
 
-```
-                Project Blueprint
-                       │
-                       │ defines
-                       ▼
-                Project Model
-                       │
-              ┌────────┼────────┐
-              │        │        │
-              ▼        ▼        ▼
-           1 file   many files  database
-             │        │        │
-             └────────┼────────┘
-                      ▼
-                Project Instance
-```
+# 2. Project Model
 
-```
-                    BLUEPRINT
-                       │
-                       ▼
-                 PROJECT MODEL
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-       Artifact     Artifact     Artifact
-        Vision      Requirement     ADR
-          │            │            │
-          └────────────┼────────────┘
-                       ▼
-                REPRESENTATION
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-       Markdown      Database      API/tool
-```
+The blueprint defines a **logical project model**.
+
+The project model consists of project artifacts, their relationships, lifecycle, rules, and management mechanisms.
+
+An artifact is a logical unit of project information or project state.
+
+Examples include:
+
+* Vision
+* Goal
+* Requirement
+* Feature
+* Use case
+* Architecture
+* Decision
+* Risk
+* Milestone
+* Release
+* Validation result
+
+The blueprint defines the **meaning, structure, and relationships** of these artifacts. It does not prescribe how they must be physically stored or represented.
+
+For example, a **Vision** artifact may be represented as:
+
+* A section in a document
+* A Markdown file
+* A structured file
+* A database record
+* A record managed through a project management tool
+
+These representations are different implementations of the same logical artifact.
+
+The project model therefore remains independent from the tools, formats, storage mechanisms, and interfaces used to manage the project.
+
+This separation allows the blueprint to define **artifacts and their semantics** without making a particular physical representation, such as a Markdown file structure, a permanent part of the project model.
+
+# 3. Artifact Representation
+
+The blueprint does not prescribe how project artifacts are physically represented.
+
+The representation is chosen when the project model is **instantiated**.
+
+> **Note:** The representation may change during the lifetime of a project without changing the underlying project model.
+>
+> For example, a project may initially represent its artifacts as Markdown files and later migrate them to a database.
+
+
+**Possible representations include**:
+
+* A single document containing multiple artifacts
+* Multiple documents
+* Structured files such as YAML or JSON
+* Database records
+* Records managed through an application or service
+* A combination of representations
+
+
+The blueprint therefore defines **what information exists and how it relates**, while it instanciation determines **where and how that information is stored and accessed**.
+
+
+# 4. Project Instantiation
+
+**Instantiation** of the blueprint creates a project instance from the blueprint.
+
+During instantiation, project-specific information and implementation choices are established.
+
+These choices may include:
+
+* Project identity
+* Project-specific artifacts
+* Artifact representation
+* Storage mechanism
+* Access mechanism
+* Project tooling
+
+The instantiation mechanism is not defined by the blueprint.
+
+A project may be instantiated manually or by a tool.
+
+The blueprint therefore defines **what information exists and how it relates**, while **the instantiation determines where and how that information is stored and accessed**.
 
 
 # 2. Objectives
