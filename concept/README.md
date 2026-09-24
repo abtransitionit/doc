@@ -22,7 +22,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 
 | Concept | Definition |
 |---------|---------|
-| [Thing](./thing/whatis/ep.md) |  |
+| [Entity](./entity/whatis/ep.md) |  |
 | [Log](./log/whatis/ep.md) |  |
 | [Model](./model/whatis/ep.md) | Simplified representation of something — built to focus on a specific aspect for a given purpose |
 | [Concept](./concept/whatis/ep.md) | Mental representation carried by a string — articulated through definitions, examples, and models to be shared |
@@ -36,6 +36,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 | [AI Agent](./aiagent/whatis/ep.md) | Autonomous agents, LLM integration, and intelligent automation |
 | [AI](./ai/whatis/ep.md) | Using statistic and probality to code rather than predictable standard "boring" code |
 | [Language](./language/whatis/ep.md) | System of signs — written, spoken, signed, or formal — used to express and share meaning |
+| [Test](./test/whatis/ep.md) |  |
 
 
 # 🚀 Quick Access Dashboard

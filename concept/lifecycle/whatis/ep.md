@@ -10,6 +10,7 @@
 [rm whatis]:      ../../roadmap/whatis/ep.md
 [concept whatis]: /concept/concept/whatis/ep.md
 [lfc list]: ../list/ep.md
+[entity whatis]: /concept/entity/whatis/ep.md
 
 Related topics
 
@@ -24,21 +25,21 @@ The concept of lifecycle
 
 # Definition
 
-## Entity
-- A **subject/something** taht exists on its own.
-- a term or [concept][concept whatis]
-- e.g.: project, human, folder, file, system, process, activity, software
 
 ## Lifecycle
-- **Purpose**: [Model][model whatis] of the **evolution** an entity
+- [Model][model whatis] the **evolution** an [entity][entity whatis]
 - can be formally defined in mathematics, using **graph theory** and its extension **Petri nets**.
+- Has a **start** and an **end**.
+
+**Key point**
+- An **entity's lifecycle** exists as soon as a lifecycle is attached to it.
+- When it's done: the entity evolution can be described through the lifecycle's stages
+
 
 # Model
 - Defines the set of **stages/phases** the entity goes through
 - **Ordered**: each **stages/phases** follows another.
-- Has a **start** and an **end**.
 - The default lifecycle of any entity is: `new → exists → end`
-- An **entity's lifecycle** exists as soon as a lifecycle is attached to it.
 
 ```yaml
 lifecycle:

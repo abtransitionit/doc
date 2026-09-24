@@ -5,7 +5,6 @@
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
-[lifecycle whatis]: ../whatis/lfc.md
 
 
 
@@ -152,7 +151,7 @@ You specify the **objective**.
 
 Because software has traditionally worked like this:
 ```
-*Human → software → result
+Human → software → result
 ```
 
 You have to know how to use the software.

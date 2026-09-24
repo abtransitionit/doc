@@ -40,6 +40,7 @@ A lifecycle can be used, in various context, from building software to planning 
 
 | Context | representation of the lifecycle's phases |
 |-|-|
+| Default | `New` → `Exists` → `End`
 | Theoretical | `A` → `B` → `C` → `D` → `A` → `A` → `D`
 | Biology | `birth` → `development` → `reproduction` → `death`
 | Location | `Paris` → `lille` → `Marseille` → `lille`

@@ -28,16 +28,13 @@ The concept of project
 # Definition
 
 ## Project
-A subject/entity 
-  - that has a [lifecycle][lfc whatis]
-  - to which is attach a [lifecycle][lfc whatis]
+- Starts as an **idea** or **vision**.
+- End up with one or more **values** for one or more stakeholders.
+- Can be modeled, represented and managed using the concept of [lifecycle][lfc whatis]
+- The [lifecycle][lfc whatis]'s stages 
+  - defines a path to transform that **idea** into those **values**.
+  - decribes the project's evolution
 
-## Project
-- Usually starts as an **idea** or **vision**.
-- Usually end up with one or more **values** for one or more stakeholders.
-- Defines a path to transform that **idea** into those **values**.
-- Can be modeled and represented using the concept of [lifecycle][lfc whatis] and [roadmap][rm project whatis]
-- Is represented by a lifecycle (its stages).
 
 ## Program
 - a collection of projects

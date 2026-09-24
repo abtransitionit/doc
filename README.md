@@ -39,6 +39,7 @@ Todo:
 | :--- | - | :--- |
 | [project](./concept/project/whatis/ep.md) | concept |
 | [metadoc](./project/metadoc/whatis/ep.md) | project | |
+| [feca](./project/feca/whatis/ep.md) | project | |
 | [rctl](./project/rctl/whatis/ep.md) | project | |
 | [rpro](../project/rpro/whatis/ep.md) | | 
 | [gotest](../project/gotest/whatis/ep.md) | project| |

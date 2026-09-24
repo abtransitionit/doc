@@ -21,7 +21,7 @@ Welcome to the Software Projects portal. This space ...
 
 | Project | Kind | Purpose |
 | - | - | - |
-| [MetaDoc](./metadoc/whatis/ep.md) | soft | Documentation platform — authoring, rendering, and publishing |
+| [Feca](./feca/whatis/ep.md) | soft | |
 | [MetaDoc](./metadoc/whatis/ep.md) | soft | Documentation platform — authoring, rendering, and publishing |
 | [RPro](./rpro/whatis/ep.md) | soft | Resource provisioning — deploy and configure resources on hosts |
 | [RCtl](./rctl/whatis/ep.md) | soft | Resource control — manage operations on provisioned resources |
