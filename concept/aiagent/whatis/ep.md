@@ -334,6 +334,17 @@ That's the big transition happening right now.
 
 If you want, I can next explain **how an AI agent actually works internally — the LLM → tool call → observation → reasoning → next tool call loop**, with a concrete example. That's probably the best next step.
 
+# Todo
+- Agen IA
+- Proto Agent
+- Instance
+  - Open claw
+  - Meta Muse
+
 # Reference
 - https://github.com/tomevault-io
 - https://github.com/tomevault-io/companyos
+- https://openclaw.ai/
+- https://openclaws.io/fr/
+- https://muse.ai/
+

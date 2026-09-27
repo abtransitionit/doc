@@ -137,7 +137,7 @@ project create my-project --blueprint software-project --template java-service
 
 **Representation**
 
-Each piece of project information may be represented as:
+Each piece of project information may be **represented** as:
 
 * One Markdown file
 * Multiple Markdown files
@@ -170,7 +170,12 @@ Each piece of project information may be accessed through:
 * Other interfaces
 
 > 🚀 **Note:** The **instantiation** defines the representation, storage, and access mechanisms.
+
 > 🚀 **Note:** The project implementation determines **how that information is represented, stored, accessed, and managed**.
+
+## Instantiation Use Cases Example
+
+cf. [Bootstrap a software project][bootsrap howto]
 
 
 # 3. Core Principles
@@ -2229,12 +2234,12 @@ Post-release activities may include:
 
 **Expected Deliverables**
 
-```text
-operation/
-├── monitoring.md
-├── incidents.md
-├── metrics.md
-└── improvements.md
+```yaml
+operation:
+  - monitoring
+    incidents
+    metrics
+    improvements
 ```
 
 **Exit Criteria**
