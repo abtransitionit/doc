@@ -40,29 +40,3 @@ A project model can be instantiated using different representations and storage 
 | 03 | One Folder, One File per Artifact | file system | one folder | |
 
 
-
-### Use Case 01
-
-1 Folder, 1 File per Artifact
-
-* **Storage:** file system
-* **Folder:** 1
-* **Representation:** one Markdown file per phase artifacts
-
-### Use Case 02
-
-1 Folder, 1 File for all Artifact
-
-* **Storage:** file system
-* **Folder:** 1
-* **Representation:** one Markdown file for all phase artifacts
-
-### Use Case 03
-
-N Folder, 1 File per Artifact
-
-* **Storage:** file system
-* **Folder:** 1 per lifecycle stage
-* **Representation:** one Markdown file per phase artifacts
-
-Theorically, The number of use case id FolderxFileXArtifact with ...
