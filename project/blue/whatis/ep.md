@@ -19,163 +19,78 @@ Related topics
 | [How-to bootsrap a software project][bootsrap howto] | internal |      |
 
 
-<h1 align="center">Project: Project Blue</h1>
+<h1 align="center">Project: Blue</h1>
 
-A Software Project Management Blueprint
+A reusable, instantiable software project model
 
-# 1. Purpose
+## 1. Purpose
 
-Defines a reusable **project model** that can be **instantiated** to create software projects.
+Define a **reusable project model** that can be **instantiated** into concrete software projects, covering the path from **vision** to **production release and evolution**:
 
-The project model defines a path from **vision** to **production release and evolution**, covering:
+- Vision and goals
+- Project lifecycle
+- Artifacts per phase
+- Constraints (milestones, quality gates)
+- Decision mechanisms, conventions, standards 🚧
+- Validation, delivery, artifact relationships 🚧
+- Project evolution and roadmap
+- Iterative development, PoC and MVP validation
 
-* Initial **vision and goals**
-* Project lifecycle
-* Artifacts to produce at each phase of the lifecycle
-* Lifecycle constraints (e.g. milestones, quality gates)
-* Decision mechanisms (🚧)
-* Project management conventions (🚧)
-* Project standards (🚧)
-* Validation and delivery practices (🚧)
-* Relationships between artifacts (🚧)
-* **Project evolution and roadmap**
-* Iterative development
-* [PoC][poc whatis] and [MVP][mvp whatis] validation
+> 🚀 The blueprint is independent of the project's **physical representation** (files, DB, tools) and of the **instantiation mechanism** (manual, tool, automation).
 
-> 🚀 **Note:** The blueprint is independent of the physical representation of the project (e.g. files, DB, tool).
+## 2. How It Works
 
-> 🚀 **Note:** The blueprint is independent of the mechanism used to instantiate it (e.g. manually, tool).
-
-## How it works
-
-* The blueprint is designed to be **instantiated for individual projects**.
-* Each project contains the **project-specific** information.
-
-```text
-Software Project Blueprint
-
-        │
-        │ instantiation
-        ▼
-
-      Project
-
-        │
-        ├── my-project
-        ├── another-project
-        └── future-project
-```
-
-```text
-BLUEPRINT
-    │
-    ├── Project A
-    ├── Project B
-    ├── Project C
-    └── Project N
-```
+- The blueprint is **instantiated** per project
+- Each project holds its own project-specific information.
 
 ```
-The Logic
-   │
-   ├──> Blueprint     → defines the project model
-   ├──> Project model → defines lifecycle, artifacts, relationships, rules, etc.
-   ├──> Instantiation → creates a project and establishes its initial implementation choices
-   └──> Project       → contains the project-specific information, and everything to start working
+BLUEPRINT ──instantiation──▶ Project
+                               ├── my-project
+                               ├── another-project
+                               └── future-project
 ```
 
-> 🚀 **Note:** This separation - model vs. instanciation - allows the same project model to be implemented in different ways without changing the conceptual definition of a software project.
+**The logic**
 
+- **Blueprint** → defines the project model
+- **Project model** → lifecycle, artifacts, relationships, rules
+- **Instantiation** → creates a project and its initial implementation choices
+- **Project** → project-specific information, ready to work
 
-# 2. Objectives
+This **model vs. instantiation** separation lets the same model be implemented in different ways without changing its conceptual definition.
 
-The blueprint aims to:
+## 3. Objectives and Vision
 
-* Provide **one blueprint that can adapt to different software projects**.
-* Turn an initial idea into an **actionable project**.
-* Define clear **decision points, milestones, and deliverables**.
-* Encourage **early validation** and clear progression through PoCs and MVPs.
-* Maintain a consistent **single source of truth** for project documentation.
-* Make project **status, decisions, risks, and progress** transparent, traceable, and historical.
-* Keep **product, business, and technical concerns** clearly separated.
-* Support projects of different **sizes and levels of complexity**.
+- Turn an idea into an actionable project
+- One blueprint, adaptable to different projects
+- Define clear decision points, milestones, deliverables
+- Early validation via PoCs and MVPs
+- Support for different sizes and complexity levels
+- Define a Single Source of Truth for documentation
+- Transparent, traceable status, decisions, risks, progress
+- Separation of product, business, and technical concerns
 
-# Vision
+## 4. Vision
 
-The **(logical) project model** is **independent** of how the project is **instantiated** and how project information is:
+The **logical project model** is independent of its **instantiated** and its **implementation**: how information is represented, stored, accessed, and managed.
 
-* Represented
-* Stored
-* Accessed
-* Managed
+| Aspect | Independent of |
+|---|---|
+| Instantiation | Manual, tool, or automation |
+| Representation | Markdown, YAML/JSON, DB, document store, PM system, … |
+| Storage | Filesystem, Git, DB, remote service, cloud, … |
+| Access | Files/CLI, web, API, PM tools, automation, … |
 
-**Instantiation**
+Example of instanciation with a CLI:
 
-The blueprint can be instantiated manually, by a tool, or by an automation mechanism.
-
-For example, a future tool could do:
-
-```text
+```
 project create my-project
-
 project create my-project --blueprint software-project --template java-service
 ```
 
-```text
-                 Blueprint
-                     │
-          ┌──────────┴──────────┐
-          │                     │
-      Manual                 Generator
-    instantiation           / bootstrap
-          │                     │
-          └──────────┬──────────┘
-                     ▼
-              Project Instance
-```
+> 🚀 The **instantiation** defines the representation, storage, and access mechanisms. The **implementation** defines how information is represented, stored, accessed, and managed.
 
-
-**Representation**
-
-Each piece of project information may be **represented** as:
-
-* One Markdown file
-* Multiple Markdown files
-* Structured files (e.g. YAML, JSON)
-* Database records
-* Documents in a document store
-* Records managed by a project management system
-* A combination of representations
-
-**Storage**
-
-Each piece of project information may be stored in:
-
-* A local filesystem
-* A Git repository
-* A database
-* A remote service
-* Cloud storage
-* Another storage mechanism
-
-**Access**
-
-Each piece of project information may be accessed through:
-
-* Files and command-line tools
-* Web interfaces
-* APIs
-* Project management tools
-* Custom automation
-* Other interfaces
-
-> 🚀 **Note:** The **instantiation** defines the representation, storage, and access mechanisms.
-
-> 🚀 **Note:** The project implementation determines **how that information is represented, stored, accessed, and managed**.
-
-## Instantiation Use Cases Example
-
-cf. [Bootstrap a software project][bootsrap howto]
+See: [Bootstrap a software project][bootstrap howto]
 
 
 # 3. Core Principles
