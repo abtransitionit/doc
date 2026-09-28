@@ -40,8 +40,12 @@ Define a **reusable project model** that can be **instantiated** into concrete s
 
 ## 2. How It Works
 
-- The blueprint is **instantiated** per project
-- Each project holds its own project-specific information.
+
+A project model can be instantiated using different representations and storage structures:
+
+- The **blueprint** defines the logical project model and is **instantiated** to create a specific Software project
+- The **Instantiation** determines how that model is represented, stored, and accessed in this concrete software project.
+- Each project, then,  holds its own project-specific information.
 
 ```
 BLUEPRINT ──instantiation──▶ Project

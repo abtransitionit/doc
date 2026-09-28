@@ -26,11 +26,7 @@ a Software Project Management Blueprint
   
 # Bootstrap a Software Project
 
-This tutorial describes how to instantiate the **Software Project Blueprint**.
-- The **blueprint** defines the logical project model.
-- The **Instantiation** determines how that model is represented, stored, and accessed in a concrete software project.
-
-A project model can be instantiated using different representations and storage structures:
+These tutorials describes how to instantiate the **Software Project Blueprint**.
 
 
 | Use Case | Title | Storage | Structure | Representation |
