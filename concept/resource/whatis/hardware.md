@@ -1,13 +1,16 @@
 [//]: #(home)
-[home]: ../../README.md
+[home domain]: ../../README.md
+[home doc]:     ../../../README.md
+[home topic]:   ../whatis/ep.md
 
+[↖ Concept][home domain] · [↖ Resource][home topic] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md
 [machine whatis]: ../whatis/host.md
 [term list]:      ../list/term.md
 [tool whatis]:    ../../tool/whatis/ep.md
-[res whatis]:     ../whatis/res.md
+[res whatis]:     ../whatis/ep.md
 
 
 
@@ -24,14 +27,16 @@ Related topics
 
 <h1 align="center">Hardware resource</h1>
 
+The concept of resource
+
 
 # Definition
-- A device real or virtual
+- A resource
 - Used to build [Machines][machine whatis]
 - A **virtual hardware resource** is a [software][tool whatis] that communicate with the backed **real hardware resource**.
 
 
-### Kind
+# Kind
 
 | Name| Semantic | Examples |
 | - | - | - |

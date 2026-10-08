@@ -5,8 +5,13 @@
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
-[lifecycle whatis]: ../whatis/lfc.md
+[res whatis]: /concept/resource/whatis/ep.md
 
+Related topics
+
+| Topic | Location | Kind |
+|-|-|-|
+|[What is a Resource][res whatis]|see|
 
 
 
@@ -24,10 +29,12 @@ The concept of model
 - abstraction
 
 ## Model
+- A thing that represents another thing
 - A simplified version of something
-- That sometning can be real, abstract, conceptual, virtual
-- Abstracts away the complexity of the initial entity to **focus** on a specific desired aspect
 - defines a simplified version (the model) of a complex entity
+- a piece of code/software
+- That sometning can be conceptual (aka. abstract), physical or virtual
+- Abstracts away the complexity of the initial entity to **focus** on a specific desired aspect
 - **"something"** includes anything: entities, relations between entities, processes, ...
 
 ## Modeling
@@ -40,6 +47,9 @@ The concept of model
 - the specific version is purpose-dependent
 
 
+## Kind
+- **virtual**: code/software for a physcical thing
+- **abstract** code/software for a virtual resource or a code/software
 
 
 

@@ -5,17 +5,10 @@
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(functional)
-[host list]:           ../list/host.md
-[host physical list]:  ../list/host.md#physical-hosts
-[host virtual list]:   ../list/host.md#virtual-hosts
-[host container list]: ../list/host.md#container-host
-[res whatis]:       ../whatis/res.md
-[provider whatis]:  ../whatis/provider.md
-[forge whatis]:     ../whatis/ep.md
+[cluster whatis]:   /concept/cluster/whatis/ep.md
+[host list]:        ../list/host.md
+[res whatis]:       /concept/resource/whatis/ep.md
 [os whatis]:        ../whatis/os.md
-[provision whatis]: ../whatis/provision.md
-[cloud provider whatis]: #
-[tool whatis]:      ../whatis/tool.md
 [hypervisor whatis]: ../whatis/hypervisor.md
 [host howto]: ../howto/host.md
 
@@ -24,6 +17,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
+|[What is a cluster][cluster whatis]|internal
 |[What is a resource][res whatis]|internal
 |[What is an OS][os whatis]|internal
 |[List of host][host list]|internal
