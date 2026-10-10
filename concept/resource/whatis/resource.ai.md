@@ -1,43 +1,4 @@
 
-# Resource
-
-* a thing that can be [operated][Operation] on in a [system][System]
-
-
-## Resource Categories
-
-
-| Category                | Description                                   | Examples                            |
-| ----------------------- | --------------------------------------------- | ----------------------------------- |
-| Storage Resource        | stores data or state                          | file, database                      |
-| Data Resource           | informational content                         | dataset, logs                       |
-| Compute Resource        | executes operations                           | service, process                    |
-| Model Resource          | produces outputs from inputs using operations | rule-based system, function service |
-| Infrastructure Resource | provides system capacity                      | physical machine, cloud node        |
-| Host Resource           | execution environment for compute             | VM, container                       |
-| Runtime Resource        | active running instance of compute            | running service                     |
-
-
-
-## Storage Resource
-
-* stores/persists data or system state for other resources
-
-
-## Data Resource
-
-* contains informational content
-* can be **structured** or **unstructured** (eg. logs or datasets)
-* input or output of an [operation][Operation] or [process][Process]
-
-
-## Compute Resource
-
-* performs execution or computation logic
-* runs operations on input to produce outputs
-* transforms input resources into output resources
-
-
 
 ## Model Resource
 

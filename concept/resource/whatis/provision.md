@@ -1,12 +1,15 @@
-[//]: #(home)
-[home]:  ../whatis/ep.md
+[//]: #\(home\)
+[home domain]: ../../README.md
+[home doc]: ../../../README.md
+[home topic]: ../whatis/ep.md
+
+[↖ resource][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(functional)
 [provision howto]: ../howto/provision.md
 [res whatis]:      ../whatis/res.md
 [env whatis]:      ../whatis/host.md
 
-[←][home] 
 
 Related topics
 
@@ -26,7 +29,7 @@ Related topics
 # Definition
 
 ## Provision
-* Depending on the context, **provision** generally means:**install, create, add, define, manage** and **configure**
+* Depending on the context, **provision** generally means:**install, create, add, define, manage** or **configure**
 * **Provisioning** a resource make that [resource][res whatis] available and ready for use.
 
 ## Provisioner
@@ -128,3 +131,8 @@ Physical server
                  │           │
              containers   containers/VMs
 ```             
+
+# Todo
+**Provisioning a host** could mean
+  - create that host
+  - install resources on a host

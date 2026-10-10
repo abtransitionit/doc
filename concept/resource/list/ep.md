@@ -4,6 +4,7 @@
 
 [//]: #(ref)
 [res whatis]:  ../whatis/ep.md
+[res hardware whatis]:  ../whatis/hardware.md
 [repo whatis]: /concept/repository/whatis/ep.md
 
 [↖][home]
@@ -25,17 +26,15 @@ Related topics
 | Resource              | Composition | Nature   | Models    | Notes |
 |-|-|-|-|-|
 | Machine               | Composite   | Physical | —         | CPU + disk + memory |
-| Disk                  | Atomic      | Physical | —         |       |
 | VM                    | Atomic      | Virtual  | a machine |       |
 | Container             | Atomic      | Virtual  | a machine |       |
 | Cluster               | Collection  | Virtual  | ?         | a set of hosts / VMs |
-| vNIC                  | Atomic      | Virtual  | a NIC     |       |
-| vDisk                 | Atomic      | Virtual  | a Disk    |       |
 | File                  | Atomic      | Abstract | data      |       |
 | Directory             | Collection  | Abstract | a set     | a set of files |
 | Filesystem            | Composite   | Abstract | ?         | blocks + inodes + layout |
 | Volume mount          | ?           | ?        | ?         | resource or relation? |
 | [Repository][repo whatis]            | Composite   | Abstract | ?         | files + history + config |
+| [Hardware][res hardware whatis] |
 | Process               | Atomic      | Abstract | an execution |    |
 | Package               | Atomic      | Abstract | a distribution unit | |
 | User                  | Atomic      | Abstract | an identity |      |
@@ -48,25 +47,138 @@ Related topics
 | Quota                 | Atomic      | Abstract | a limit   |       |
 | Namespace             | Collection  | Abstract | ?         | a set of names |
 
+# Todo - Infrastructure
+is physical or virtual
+  - Computing infrastructure
+  - Load balancer
+  - network
+  - Virtual machines
+  - Storage
+  - Networks
+  - Databases
+  - Load balancers
+  - Kubernetes
+  - Physical servers
+  - Object storage
+  - etc.
+
+
+
+# List of Hardware Resources <a id="hardware"></a>
+
+| Resource              | Composition | Nature   | Models    | Notes |
+|-|-|-|-|-|
+| Disk                  | Atomic      | Physical | —         |       |
+| vNIC                  | Atomic      | Virtual  | a NIC     |       |
+| vDisk                 | Atomic      | Virtual  | a Disk    |       |
+
+## Kind
+
+| Name| Semantic | Examples |
+| - | - | - |
+| Compute Resource | A resource that performs computation | CPU core, CPU thread, GPU, TPU, NPU |
+| Memory Resource | Volatile working storage directly accessible during computation| RAM, vRAM |
+| Storage Resource | Persistent capacity for storing data | HDD, SSD, NVMe, SAN volume|
+| Network Resource | Connectivity and data-transfer capacity| NIC, bandwidth, IP address|
+| Device Resource | A hardware device exposed to or usable by computation| USB device, GPU, FPGA, TPM|
+
+
+
+
+| Term | Full English Term | What QEMU Handles |
+| --- | --- | --- |
+| **vDisk** | Virtual Disk / Drive | Emulates the storage controller and interfaces with host storage files. <li>backed by disk image files like `.qcow2` or `.raw`|
+| **vNIC** | Virtual Network Interface Card | Emulates the network controller and connects the VM to host networks. <li>E.g. VirtIO-net, e1000, rtl8139|
+| **vUSB** | Virtual USB Controller / Device | Emulates USB ports/buses or forwards host physical USB devices. |
+| **vCPU** | Virtual CPU | Handled by KVM (for hardware speed) or QEMU's TCG engine (for software emulation). |
+| **vGPU** |Virtual Graphics| Emulated display adapters <li>Ee.g., VirtIO-GPU, QXL, VGA) or PCI pass-through devices.
+
+---
+
+# Files and Objects
+- **Local filesystem**: files, directories, symlinks, permissions, ownership.
+- **Remote filesystem**: NFS, SMB/CIFS, SSHFS, rsync targets, SFTP.
+- **Object storage**: AWS S3, GCS, Azure Blob, MinIO, Ceph RADOS Gateway, Backblaze B2.
+- **Content-addressed stores**: Git LFS, IPFS, OCI registries (for blobs).
+- **Structured stores**: databases, key-value stores, secrets managers (Vault, AWS Secrets Manager).
+- **Concerns**: atomicity, partial writes, large files, streaming, encryption at rest, versioning, eventual consistency, presigned URLs, multipart uploads.
+
+# Virtual Machines
+- **Cloud providers**: AWS EC2, GCP Compute, Azure VM, OVH, Hetzner, DigitalOcean, Scaleway.
+- **Private virtualization**: VMware vSphere, Proxmox, XCP-ng, Hyper-V, KVM/libvirt.
+- **Local virtualization**: QEMU, VirtualBox, Multipass, Lima, Colima.
+- **Bare-metal provisioning**: MAAS, Tinkerbell, iPXE, Foreman.
+- **Edge/embedded**: Raspberry Pi, ESP32, IoT fleets.
+- **Concerns**: images/AMIs, flavors/sizes, networking (VPC, security groups, floating IPs), storage volumes, cloud-init/user-data, SSH key injection, lifecycle (start/stop/reboot/terminate), pricing models, quotas, spot vs. on-demand.
+
+# Clusters
+- **Kubernetes on VMs**: kubeadm, k3s, RKE2, Talos, Kubespray.
+- **Kubernetes in containers**: kind, k3d, minikube (docker driver), Podman-based.
+- **Managed Kubernetes**: EKS, GKE, AKS, OVH Managed K8s, DigitalOcean DOKS.
+- **OpenStack**: DevStack, Kolla-Ansible, OpenStack on bare metal, TripleO.
+- **Other orchestrators**: Nomad, Docker Swarm, HashiCorp Consul clusters.
+- **Data/ML clusters**: Spark, Ray, Hadoop, Slurm, Dask.
+- **Concerns**: bootstrap, join tokens, CNI, CSI, ingress, RBAC, upgrades, node pools, autoscaling, multi-tenancy, federation.
+
+# Git Repositories
+- **Hosting platforms**: GitHub, GitLab, Bitbucket, Gitea, Forgejo, Codeberg.
+- **Self-hosted**: bare Git over SSH, Gitolite, GitLab CE, Gitea.
+- **Local**: working trees, bare repos, worktrees, submodules.
+- **Operations**:
+  - Create/delete repository.
+  - Initialize from template (GitHub template repos, Cookiecutter, Copier).
+  - Mirror / fork / import.
+  - Reset history (orphan branch, squash, `git filter-repo`).
+  - Branch/tag management, protection rules.
+  - Webhooks, deploy keys, collaborators, teams.
+  - CI/CD wiring (Actions, Pipelines, Runners).
+  - Submodules, LFS, sparse checkout.
+- **Concerns**: authentication (SSH keys, PATs, OAuth apps, GitHub Apps), rate limits, pagination, idempotency of "create if not exists," atomic multi-repo operations.
+
+
+
+## Resource Categories
+
+
+| Category                | Description                                   | Examples                            |
+| ----------------------- | --------------------------------------------- | ----------------------------------- |
+| Storage Resource        | stores data or state                          | file, database                      |
+| Data Resource           | informational content                         | dataset, logs                       |
+| Compute Resource        | executes operations                           | service, process                    |
+| Infrastructure Resource | provides system capacity                      | physical machine, cloud node        |
+| Model Resource          | produces outputs from inputs using operations | rule-based system, function service |
+| Host Resource           | execution environment for compute             | VM, container                       |
+| Runtime Resource        | active running instance of compute            | running service                     |
+
+
+
+## Storage Resource
+
+* stores/persists data or system state for other resources
+
+
+## Data Resource
+
+* contains informational content
+* can be **structured** or **unstructured** (eg. logs or datasets)
+* input or output of an [operation][Operation] or [process][Process]
+
+
+## Compute Resource
+
+* performs execution or computation logic
+* runs operations on input to produce outputs
+* transforms input resources into output resources
+
+
+
+
+
+
 # Operation on resources <a id='ope'></a>
 - [repo/git](#repo-git)
 
 ## [↑](#ope) repo/git
-- collection
-  - list
-  - info
-- individual
-  - delete repo:history 
-  - change visibility
-  - archive
-  - delete repo
-  - reset-history
-  - rewrite branches
-  - change remotes
-  - info
-  - clone remote repo
-  - create local repo
-
 |Res type||Description|Provider|Example|
 |-|-|-|-|-|
 |[git authentication](#git-authent)|[gitrepo](#git-repository)|github, gitlab, local||

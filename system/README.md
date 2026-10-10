@@ -25,3 +25,5 @@ Welcome to the Systems portal. This space ...
 |--------|---------|
 | [Kubernetes](./k8s/whatis/ep.md) | Container orchestration |
 | [Linux](./linux/whatis/ep.md) | Operating system |
+| [OpenAPI](./openapi/whatis/ep.md) |  |
+| [gRPC](./grpc/whatis/ep.md) |  |

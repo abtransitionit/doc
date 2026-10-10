@@ -37,11 +37,11 @@ Related topics
 | read      | Atomic     |
 | modify    | Atomic     |
 
-# Todo
+# List of Resource Operations
 
 |resource|operation|
 |-|-|
-|go-module|init, list|
+|go:module|init, list|
+|repo:git|add, update, delete|
 |container|start, stop, configure|
-|container image|create, instanciate, configure|
-|git repoitory|clone, reset-history, delete|
+|container image|start, stop, configure|

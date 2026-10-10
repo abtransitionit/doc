@@ -6,12 +6,12 @@
 
 [//]: #(ref)
 [model whatis]:     /concept/model/whatis/ep.md
-[res list]:         ../list/res.md
+[res list]:         ../list/ep.md
 [res hard whatis]:  ../whatis/hardware.md
 [host whatis]:      ../whatis/host.md
 [repo whatis]:      /concept/repository/whatis/ep.md
 [provision whatis]: ../whatis/provision.md
-[operation whatis]: ../whatis/operation.md
+[ope whatis]: ../whatis/operation.md
 [env whatis]:       ../whatis/env.md
 
 
@@ -22,7 +22,7 @@ Related topics
 |[What is a Model][model whatis]|see|
 |[What is a Env][env whatis]|see|
 |[What is a Host][host whatis]|see|
-|[What is an Operation][operation whatis]|see|
+|[What is an Operation][ope whatis]|see|
 |[What is a Hardware Resource][res hard whatis]|see|
 |[List of Resources][res list]|see|
 
@@ -38,7 +38,7 @@ The concept of resource
 
 - May be physical, virtual or abstract
 - Can be [provisioned][provision whatis] in an [Environment][env whatis]
-- Can be operated on / managed / controlled
+- Can be [operated][ope whatis] on / managed / controlled
 
 # Key idea
 

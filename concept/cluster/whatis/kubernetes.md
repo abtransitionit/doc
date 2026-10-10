@@ -7,7 +7,7 @@
 
 [//]: #(ref)
 [host whatis]: /concept/machine/whatis/host.md
-
+[cncf whatis]: https://www.cncf.io/
 Related topics
 
 | Topic                                          | Location | Kind |
@@ -17,10 +17,16 @@ Related topics
 
 The concept of Kubernetes Cluster
 
+
 # Definition
 - Aka. K8s, K8s cluster
+- Distrinuted plaform
 - Orchestrates [containers](#) lifecycle
-- uses both declarative and imperative mode
+- **self-healing**
+- Optimized for **declarative** mode, but also usable in **imperative** mode
+- Resource-oriented system based on YAML manifests.
+- written in **Go**
+- **Modular** and **pluggable** by design
 
 # Key Idea
 - Containerized applications and infrastructure are modeled as a set of **Kubernetes resources**.
@@ -65,15 +71,235 @@ The concept of Kubernetes Cluster
   - **Current/Actual state** = what's running now.
   - **Desired state** = what the manifest says.
 
+**reconcile** 
+- means trying to make the actual state of a resource **match** the desired state of that resource.
+
 
 **Controller**
 - A background control loop
 - Continuously compares a resource's **actual** and **desired** state.
-- Reconciles them when they differ, changing the actual state until it matches the desired state.
+- **Reconciles** them when they differ, changing the actual state until it matches the desired state.
+- Is resource specific. Each kind of resource has its controller
 
 **Workload** 
 - a containerized application or task that Kubernetes must runs and manages.
-Kubernetes provides several built-in workload resources for managing Pods. Examples include Deployment, StatefulSet, DaemonSet, Job, and CronJob.
+- Kubernetes provides several built-in **workload** resources for managing Pods. 
+- cf. **workload** [resources](#kubernetes-is-resource-oriented)
+
+
+
+# Kubernetes: a Container Lifecycle Orchestrator
+
+Kubernetes manages lifecycle of containerized applications. It can **automatically**:
+
+* **Deploy**, **start**, **run**, **stop**, and **scale** containers through `Pods` and `controllers`.
+* Ensure the **self-healing** of containerized applications in response to various types of failures.
+
+# Kubernetes ensures self-healing
+
+Kubernetes implements self-healing through the reconciliation jobs done by the controllers.
+
+Examples:
+- If a container terminates unexpectedly, the kubelet attempts to restart it according to the Pod's restart policy.
+- If a node fails, Kubernetes detects the node failure and may replace or reschedule affected Pods, depending on the workload controller and cluster conditions.
+
+
+| # | Failure                                  | Kubernetes response                                               |
+| - | ---------------------------------------- | ----------------------------------------------------------------- |
+| 1 | Service inside container is unresponsive | Restarts container if liveness probe fails.                       |
+| 2 | a repeated `404` not found inside container   | Restarts container according to restart policy.                   |
+| 3 | Main process inside container exits      | Restarts container according to restart policy.                   |
+| 4 | Container runs out of memory             | May terminate container; restarts it according to restart policy. |
+| 5 | Container fails its startup probe        | Restarts container after repeated failures.                       |
+| 6 | Container repeatedly crashes             | Applies restart backoff; does not fix the root cause.             |
+
+
+## 1. Service inside the container is unresponsive
+
+* Use case: A container runs an NGINX web server.
+* Root process (PID 1): `nginx` (or its master process, depending on how the container is launched).
+* **Liveness** probe: Kubernetes sends an HTTP request to the server's health endpoint (`/healthz`).
+* Failure: NGINX stops responding, and the probe times out or receives an unsuccessful status code.
+* Kubernetes response: Restarts the container after the configured failure threshold is reached.
+
+
+## 2. Example: NGINX returns `404`
+
+* Use case: A container runs an NGINX web server.
+* Root process (PID 1): `nginx` (depending on how the container is launched).
+* **Liveness** probe: Kubernetes sends an HTTP request to `/healthz`.
+* Failure: NGINX returns `404 Not Found` because that endpoint does not exist.
+* Kubernetes response: The probe fails. If the probe reaches its **failure threshold**, Kubernetes restarts the container.
+
+> ⚠️ A `404` doesn't necessarily mean NGINX is unhealthy. It might simply mean the requested URL doesn't exist. That's why you should configure the probe to check an endpoint that accurately reflects the condition you're trying to detect.
+
+## 3. Main process inside the container exits
+
+* Use case: A container runs a Node.js application.
+* Root process (PID 1): `node server.js`.
+* Detection: The container runtime detects that the main process has exited.
+* Failure: The Node.js process crashes because of an unhandled exception.
+* Kubernetes response: Restarts the container according to its restart policy.
+
+## 4. Container runs out of memory
+
+* Use case: A container runs a Java application with a memory limit.
+* Root process (PID 1): `java -jar app.jar`.
+* Detection: The Linux kernel on the Kubernetes node uses cgroups to limit the container's memory usage and may terminate a process with an OOM kill when the memory limit is exceeded.
+* Failure: The Java process is terminated by an out-of-memory (OOM) kill.
+* Kubernetes response: Restarts the container according to its restart policy, if applicable. The termination reason is typically reported as `OOMKilled`.
+
+## 5. Container fails its startup probe
+
+* Use case: A container runs a Java application that takes time to initialize.
+* Root process (PID 1): `java -jar app.jar`.
+* **Startup** probe: Kubernetes checks whether the application has completed startup.
+* Failure: The application does not start within the configured probe's **failure threshold**.
+* Kubernetes response: Restarts the container.
+
+## 6. Container repeatedly crashes
+
+* Use case: A container runs an application that requires a configuration file.
+* Root process (PID 1): `python app.py`.
+* Detection: The container runtime detects that the main process has exited.
+* Failure: The application repeatedly crashes because a required configuration file is missing.
+* Kubernetes response: Repeatedly attempts to restart the container, applying increasing delays (`CrashLoopBackOff`). The underlying configuration problem remains unresolved.
+
+> Note: The root process is the process running as PID 1 inside the container. The exact command depends on the container image's `ENTRYPOINT` and `CMD`.
+
+
+# Kubernetes: a Platform
+
+Kubernetes is composed of elements of different types.
+
+|Element type|Example|
+|-|-|
+|command-line tools|`kubectl`, `kubeadm`|
+|services|`API server`, `controllers`, `scheduler`, `datastore`, daemons|
+|configuration files|
+|environment variables|
+
+# Kubernetes: a cluster
+kubernetes is by design distributed. It must be installed on a set of [hosts][host whatis] (aka. **nodes**).
+
+
+| Environment | Node type | Notes |
+|-|-|-|
+|Production-like| VM |
+|Dev, Test| Container | cf. [kind](#)
+
+# Kubernetes is Resource-Oriented
+
+- Kubernetes model a **containerized application** as a set of kubernetes **resources**
+- Kubernetes resources can be **grouped conceptually into categories**
+- There isn't a **official Kubernetes taxonomy**
+
+A useful classification is:
+
+| Category                                | Purpose                                          | Common Kubernetes resources                                                   |
+| --------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **Workload resources**                  | Run and manage Pods / applications               | `Deployment`, `StatefulSet`, `DaemonSet`, `Job`, `CronJob`                    |
+| **Service / networking resources**      | Provide network access to workloads              | `Service`, `Ingress`, `NetworkPolicy`, `Gateway`, `HTTPRoute`                 |
+| **Configuration resources**             | Store application configuration                  | `ConfigMap`, `Secret`                                                         |
+| **Storage resources**                   | Request and provide persistent storage           | `PersistentVolumeClaim`, `PersistentVolume`, `StorageClass`, `VolumeSnapshot` |
+| **Cluster / infrastructure resources**  | Describe or control cluster-level infrastructure | `Node`, `Namespace`, `ResourceQuota`, `LimitRange`                            |
+| **Access control / security resources** | Define authentication/authorization permissions  | `ServiceAccount`, `Role`, `ClusterRole`, `RoleBinding`, `ClusterRoleBinding`  |
+| **Metadata / organization resources**   | Organize and identify resources                  | `Namespace`, `Label`, `Annotation`*                                           |
+| **Autoscaling resources**               | Automatically adjust workload capacity           | `HorizontalPodAutoscaler`, `VerticalPodAutoscaler`*                           |
+| **Policy resources**                    | Control how workloads may behave or be scheduled | `PodDisruptionBudget`, `NetworkPolicy`, `ResourceQuota`, `LimitRange`         |
+
+> ⚠️ `Labels` and `annotations` aren't actually Kubernetes `kind`s; they're metadata attached to resources. 
+
+> ⚠️ `VerticalPodAutoscaler` is also not part of the Kubernetes core API; it's an additional component.
+
+> ⚠️ **workload resource** is a specific Kubernetes concept while **configuration**, **cluster** are not a official classification; They are only **useful organizational groupings**
+
+The same classification as a tree:
+
+```text
+Kubernetes API resources
+│
+├── Workloads
+│   ├── Deployment
+│   ├── StatefulSet
+│   ├── DaemonSet
+│   ├── Job
+│   └── CronJob
+│
+├── Networking
+│   ├── Service
+│   ├── Ingress
+│   ├── NetworkPolicy
+│   └── Gateway / HTTPRoute
+│
+├── Configuration
+│   ├── ConfigMap
+│   └── Secret
+│
+├── Storage
+│   ├── PersistentVolume
+│   ├── PersistentVolumeClaim
+│   └── StorageClass
+│
+├── Security / Access
+│   ├── ServiceAccount
+│   ├── Role
+│   ├── ClusterRole
+│   ├── RoleBinding
+│   └── ClusterRoleBinding
+│
+└── Cluster / Administration
+    ├── Node
+    ├── Namespace
+    ├── ResourceQuota
+    └── LimitRange
+```
+
+
+# Kubernetes is Modular by design
+
+- Kubernetes is, by design, built from independent **components** that communicate.
+- Each component has a clear **responsibility** and defined **capabilities**.
+- Most components are written in **Go**.
+
+Core components include:
+
+| Component| Role|
+|-|-|
+| [API Server](#)| exposes the Kubernetes API|
+| Built-in [Controllers](#)| watch specific resources and reconcile them (eg. node controller, replication controller)|
+| Controller Manager| runs the **built-in** controllers|
+| [Scheduler](#)| assigns workloads's pods to nodes|
+| [Kubelet](#)| manages containers on each node|
+| Kube-proxy| manages network rules for services|
+| [etcd](#)| stores the cluster state (key-value datastore)|
+
+# Kubernetes is Plugable by design
+
+Kubernetes itself does not implement **any** low-level container operations. It does **not** directly:
+* how to **manage** (eg. start, stop, or pause) containers
+* how containers *communicate* on the **network**
+* how **storage** is attached to containers
+
+Instead, it defines standard interfaces and delegates these responsibilities to **external components** that implement them.
+
+| Interface| Meaning| Delegated task managed| Component type| Examples|
+|-|-|-|-|-|
+| [CRI](#)| **C**ontainer **R**untime **I**nterface| **container lifecycle operations** (start/stop/pause)| container runtimes| containerd, CRI-O|
+| [CNI](#)| **C**ontainer **N**etwork **I**nterface| <li>**networking** (pod IPs, routing, policies) <li> pod-to-pod communication| network plugins| Cilium, Calico, Flannel|
+| [CSI](#)| **C**ontainer **S**torage **I**nterface| <li>**storage management** (attach/detach, mount) <li> persistent volumes| storage systems| OpenEBS, NFS, Ceph, cloud volumes|
+| [Webhook](#)| Admission controller| extend API validation and mutation| webhooks| validating webhook, mutating webhook|
+
+**TODO: Other optional components include**:
+
+| Component| Role|
+|-|-|
+| Cloud Controller Manager|manages cloud provider-specific controllers|
+| Ingress Controller| manages **external** access to **internal** services (HTTP/HTTPS)|
+| DNS (CoreDNS)| provides DNS for services inside the cluster|
+
+# Kubernetes is Declarative
+# Kubernetes can be Imperative
 
 # How it works
 
@@ -379,68 +605,162 @@ Those controllers handle:
 - **Abstraction:** you describe *what* you want; K8s handles *how* containers actually run.
 
 
-# Classifying K8s resources
 
-- Kubernetes resources can be **grouped conceptually into categories**, 
-- There isn't **one single official Kubernetes taxonomy** that says
 
-A useful practical classification is:
+# Kubernetes Tenant
 
-| Category                                | Purpose                                          | Common Kubernetes resources                                                   |
-| --------------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------------- |
-| **Workload resources**                  | Run and manage Pods / applications               | `Deployment`, `StatefulSet`, `DaemonSet`, `Job`, `CronJob`                    |
-| **Service / networking resources**      | Provide network access to workloads              | `Service`, `Ingress`, `NetworkPolicy`, `Gateway`, `HTTPRoute`                 |
-| **Configuration resources**             | Store application configuration                  | `ConfigMap`, `Secret`                                                         |
-| **Storage resources**                   | Request and provide persistent storage           | `PersistentVolumeClaim`, `PersistentVolume`, `StorageClass`, `VolumeSnapshot` |
-| **Cluster / infrastructure resources**  | Describe or control cluster-level infrastructure | `Node`, `Namespace`, `ResourceQuota`, `LimitRange`                            |
-| **Access control / security resources** | Define authentication/authorization permissions  | `ServiceAccount`, `Role`, `ClusterRole`, `RoleBinding`, `ClusterRoleBinding`  |
-| **Metadata / organization resources**   | Organize and identify resources                  | `Namespace`, `Label`, `Annotation`*                                           |
-| **Autoscaling resources**               | Automatically adjust workload capacity           | `HorizontalPodAutoscaler`, `VerticalPodAutoscaler`*                           |
-| **Policy resources**                    | Control how workloads may behave or be scheduled | `PodDisruptionBudget`, `NetworkPolicy`, `ResourceQuota`, `LimitRange`         |
+There are **three** ways to implement isolation:
 
-> ⚠️ `Labels` and `annotations` aren't actually Kubernetes `kind`s; they're metadata attached to resources. 
+| Model | Isolation level | What is shared | Use case | Notes |
+|-|-|-|-|-|
+| **Namespace** | Soft / Logical | Control plane + nodes | Trusted internal teams |logical isolation within a shared cluster
+| **Node pool** | Medium / Physical compute | Control plane only | Stronger separation needed |dedicated worker nodes per tenant
+| **Cluster per tenant** | Hard / Full physical | Nothing | Untrusted or regulated tenants | full physical isolation
 
-> ⚠️ `VerticalPodAutoscaler` is also not part of the Kubernetes core API; it's an additional component.
 
-> ⚠️ **workload resource** is a specific Kubernetes concept while **configuration**, **cluster** are not a official classification; They are only **useful organizational groupings**
+**Tools that implement Tenants**
+|||
+|-|-|
+| **Capsule** | <li>defines a `Tenant` CRD that groups namespaces under shared policies (RBAC, quotas, network rules) <li> Cluster admin creates Tenants <li>tenant owners self-serve namespaces within them.
+| **vCluster** | <li> Virtual control plane per tenant. <li>Stronger isolation than namespaces <li>lighter than dedicated clusters.
+| **Kubernetes native** |no Tenant primitive; Namespaces + RBAC + NetworkPolicy + ResourceQuota is the manual pattern.
 
-The same classification as a tree:
 
-```text
-Kubernetes API resources
-│
-├── Workloads
-│   ├── Deployment
-│   ├── StatefulSet
-│   ├── DaemonSet
-│   ├── Job
-│   └── CronJob
-│
-├── Networking
-│   ├── Service
-│   ├── Ingress
-│   ├── NetworkPolicy
-│   └── Gateway / HTTPRoute
-│
-├── Configuration
-│   ├── ConfigMap
-│   └── Secret
-│
-├── Storage
-│   ├── PersistentVolume
-│   ├── PersistentVolumeClaim
-│   └── StorageClass
-│
-├── Security / Access
-│   ├── ServiceAccount
-│   ├── Role
-│   ├── ClusterRole
-│   ├── RoleBinding
-│   └── ClusterRoleBinding
-│
-└── Cluster / Administration
-    ├── Node
-    ├── Namespace
-    ├── ResourceQuota
-    └── LimitRange
+# Kubernetes probe
+
+A probe is a check Kubernetes performs to determine the state of a container's application.
+
+## Kind of probes (What to check)
+
+| Probe type | Purpose                                                     | Failure response                                                |
+| ---------- | ----------------------------------------------------------- | --------------------------------------------------------------- |
+| Liveness   | Checks whether the application is still alive.              | Restarts the container after repeated failures.                 |
+| Readiness  | Checks whether the application is ready to receive traffic. | Marks the Pod as not ready, so it stops receiving regular Service traffic until ready again. |
+| Startup    | Checks whether the application has finished starting.       | Restarts the container after repeated failures.                 |
+
+**Probe-specific behavior**: 
+- A **liveness** or **startup** probe can trigger a restart
+- A **readiness** probe instead controls whether the Pod receives regular Service traffic.
+
+## Probe mechanisms (How to check)
+
+Each probe type can use one of these mechanisms:
+
+| Mechanism  | How it works                                                  |
+| ---------- | ------------------------------------------------------------- |
+| HTTP GET   | Sends an HTTP request and evaluates the response status code. |
+| TCP Socket | Checks whether a TCP connection can be established.           |
+| Exec       | Runs a command inside the container and checks its exit code. |
+| gRPC       | Calls the gRPC health-check protocol.                         |
+
+For example, you can configure 
+- an HTTP liveness probe
+- a TCP   readiness probe
+- an exec startup probe.
+
+
+## Use case
+
+For an HTTP probe (Liveness, Ready or Startup), Kubernetes evaluates the HTTP response status code:
+
+| HTTP status code            | Probe result |
+| --------------------------- | ------------ |
+| `200 OK`                    | Success      |
+| `301 Moved Permanently`     | Success      |
+| `399`                       | Success      |
+| `404 Not Found`             | Failure      |
+| `500 Internal Server Error` | Failure      |
+
+Kubernetes considers HTTP status codes from 200 to 399 successful for HTTP probes.
+
+
+## Configuration
+
+**Use case**
+```yaml
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 8080
+  initialDelaySeconds: 10
+  periodSeconds: 5
+  timeoutSeconds: 2
+  failureThreshold: 3
+  successThreshold: 1
 ```
+Meaning:
+- Kubernetes waits 10 seconds before starting the first probe.
+- Kubernetes sends an HTTP GET request to /healthz:8080
+- Kubernetes waits 2 seconds for the probe to complete
+- Kubernetes retries the probe every 5-second: 
+- Failure occurs after 3 consecutives retries (ie. probe failure).
+
+
+**The parameter `successThreshold`**
+- Must be `1`  for `Liveness` probe:
+- Must be `1`  for `Startup` probe:
+- Can be `> 1` for `Readiness` probe:
+
+
+
+# Tools around Kubernetes
+## 1. Reconciliation (GitOps & CD Engines)
+
+**Main feature:** Continuously reconcile Kubernetes cluster resources from declarative manifests stored in a Git repository.
+
+### Pure-Play Open Source Reconciliation
+
+* **[Argo CD](https://argo-cd.readthedocs.io/en/stable/):** Graduated CNCF project. Best known for its intuitive Web UI, multi-tenant cluster management, and deep Helm/Kustomize support.
+* **[Flux](https://fluxcd.io/):** Graduated CNCF project. Modular, lightweight, CLI/Kubernetes-native set of controllers powered by the *GitOps Toolkit*.
+
+### Progressive Delivery & Advanced Rollouts
+
+*These tools extend the reconciliation loop to handle traffic routing and strategy-based releases (Canary, Blue/Green).*
+
+* **[Argo Rollouts](https://argoproj.github.io/argo-rollouts/):** A Kubernetes CRD/controller that replaces standard Deployments to provide automated canary analysis and blue-green releases.
+* **[Flagger](https://flagger.app/):** A CNCF progressive delivery tool (part of Flux) that reconciles traffic routing (`Istio`, `Linkerd`, `NGINX`) based on Prometheus metrics to automate **canary deployments**.
+
+### Infrastructure & External Resource Reconciliation
+
+*These tools extend Kubernetes reconciliation beyond cluster-internal YAMLs to cloud infrastructure.*
+
+* **[Crossplane](https://www.crossplane.io/):** A CNCF Graduated project that lets you manage external cloud infrastructure (AWS S3, GCP CloudSQL, Azure VMs) directly through Kubernetes custom resources using the standard reconciliation loop.
+* **[Flux Helm Operator](https://fluxcd.io/flux/components/helm/):** Controller dedicated strictly to declarative Helm release management and chart automated syncs.
+
+### Enterprise & Managed GitOps Platforms
+
+*Commercial and wrapper solutions built on top of the core open-source engines.*
+
+* **[Codefresh](https://codefresh.io/):** Enterprise-grade GitOps platform built directly around Argo CD to provide enterprise RBAC, multi-cluster dashboards, and compliance management.
+* **[Harness GitOps](https://www.harness.io/):** An enterprise continuous delivery platform featuring a managed GitOps service powered by Argo CD/Flux engines.
+
+
+## 2. Ingress & Traffic Management
+Main feature: Route incoming external network traffic safely to internal services within the cluster.
+- [Ingress NGINX](https://kubernetes.github.io/ingress-nginx/): The standard Kubernetes-maintained Ingress controller built around NGINX.
+- [Traefik](https://traefik.io/traefik/): Cloud-native edge router and reverse proxy with automatic SSL and dynamic config support.
+- [HAProxy Ingress](https://haproxy-ingress.github.io/): High-performance Ingress controller tailored for low-latency and high-traffic loads.
+
+## 3. Service Mesh & Advanced Networking (CNI)
+Main feature: Handle service-to-service communication, encryption (mTLS), observability, and networking policies.
+- [Cilium](https://cilium.io/): CNCF Graduated project. High-performance CNI and service mesh leveraging Linux eBPF for security, routing, and deep packet visibility.
+- [Istio](https://istio.io/): CNCF Graduated project. Feature-rich service mesh providing advanced traffic routing, security, and telemetry proxies.
+- [Calico](https://www.tigera.io/project-calico/): Widely adopted CNI plugin focusing on network performance and strict security policies.
+
+## 4. Observability & Monitoring
+Main feature: Collect metrics, logs, and traces to monitor application and cluster health.
+- [Prometheus](https://prometheus.io/): The industry standard for metric collection, alerting, and time-series data storage.
+- [Grafana](https://grafana.com/): Dashboard and visualization platform that pairs seamlessly with `Prometheus`, `Loki`, and `Tempo`.
+- [OpenTelemetry](https://opentelemetry.io/): CNCF framework for collecting unified metrics, logs, and traces across distributed services.
+
+## 5. Storage & Persistence
+Main feature: Provide persistent, distributed storage volumes to stateful Kubernetes Pods.
+- [Rook](https://rook.io/): Cloud-native storage orchestrator that turns Ceph into a self-managing Kubernetes storage service.
+- [Longhorn](https://longhorn.io/): Lightweight, highly available persistent block storage system designed specifically for Kubernetes.
+
+## 6. Security, Policy & Runtime Protection
+Main feature: Enforce policy governance, scan for vulnerabilities, and detect runtime security threats.
+- [Kyverno](https://kyverno.io/): Kubernetes-native policy engine that uses plain YAML to validate, mutate, and generate configurations.
+- [OPA / Gatekeeper](https://www.openpolicyagent.org/): Flexible policy engine used to audit and enforce compliance at the Kubernetes admission control layer.
+- [Falco](https://falco.org/): CNCF Graduated runtime security threat detector that intercepts Linux system calls in real-time.
+

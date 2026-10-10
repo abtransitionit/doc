@@ -27,6 +27,20 @@ Related topics
 
 The concept of host
 
+
+# Todo
+## System
+A set of components considered as a single entity.
+
+## Computing System
+A **system** with computational capabilities, typically provided by CPU(s)
+```
+Computing System
+ ├── CPU
+ └── ...
+```
+
+
 # Definition
 
 ## Machine

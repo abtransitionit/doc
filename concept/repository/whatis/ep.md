@@ -42,17 +42,32 @@ repo-git                 (Composite)
 ├── config               (Atomic)
 └── refs                 (Composite)
 ```
-- container image repositories
+
+- container image registry
+
 ```yaml
-# Every node in that tree is a resource
+# Every node in that tree is a resource  - A OCI container registry holds repositories
+repo-registry                         (Composite)
+├── repositories                      (Collection of image repository)
+├── catalogs                          (Collection of catalog)
+├── config                            (Atomic)
+├── policies                          (Atomic)
+└── signatures                        (Collection of signature)
+```
+
+- container image repositories (e.g. Docker Hub, GHCR, Quay, AWS ECR, Harbor...)
+
+```yaml
+# Every node in that tree is a resource - A repository holds container images of the same name, tagged differently 
 repo-image                        (Composite)
-├── tags                          (Collection of tag)
+├── tags                          (Collection of tag)   - e.g. :1.25, :latest
 ├── manifests                     (Collection of manifest)
-├── blobs                         (Collection of blob)
+├── blobs                         (Collection of blob)  - e.g. library/nginx
 ├── config                        (Atomic)
 └── signatures                    (Collection of signature)
 ```
 - package repositories (Debian, RPM, Dnf, Apt, Npm)
+
 ```yaml
 # Every node in that tree is a resource
 repo-package                      (Composite)
@@ -82,9 +97,22 @@ See [Operations on Resources][ope whatis] for generic and collection operations.
 
 | Level | Acts on | Examples of Operations |
 |-|-|-|
-| Repo | whole repo state | `commit`, `push`, `pull`, `clone` |
-| Sub-collection | a set inside | `list branches`, `list tags`, `list remotes`, `list commits` |
+| Repo | whole repo state | `commit`, `push`, `pull`, `clone`|
+| Sub-collection | a set inside | `list branches`, `list tags`, `list remotes`, `list commits`, `list` |
 | Item | one member | `checkout <branch>`, `read <commit>`, `read <file>` |
+| All |  |  `info`, `inspect` |
+
+**Todo: classify**
+- delete repo
+- delete repo:history 
+- change repo:visibility
+- reset-history
+- rewrite branches
+- change remotes
+- archive
+- clone remote repo
+- create local repo
+
 
 ## Container image repository
 
@@ -193,13 +221,3 @@ rctl add git:my-org/my-repo --file main.go
 
 
 
-# Example - container registry
-- A OCI container registry holds repositories - the whole service (Docker Hub, GHCR, Quay, AWS ECR, Harbor...).
-- A repository holds container images
-- A container image holds a manifest, config, and blobs (layers).
-- Container registry 
-- A repository inside a Container registry 
-    — e.g. library/nginx. 
-    - holds container images of the same name, tagged differently (:1.25, :latest).
-
-# Example - git registry

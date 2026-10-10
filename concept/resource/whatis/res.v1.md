@@ -11,25 +11,8 @@ Related topics
 
 
 
-# Definition
-- May be physical, virtual or abstract
-- Can be [provisioned](../whatis/provision.md)
-- can be [operated](../whatis/operate.md) on
-
-# Example
-- [List of resource][res list]
 
 
-
-## Operation on resource
-Operation on a resources are often resource-specifics. Example of operation on resource are:
-
-|resource|operation|
-|-|-|
-|gom|init, list|
-|git:repo|add, update, delete|
-|container|start, stop, configure|
-|container image|start, stop, configure|
 
 
 

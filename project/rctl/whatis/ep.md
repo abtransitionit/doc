@@ -7,7 +7,10 @@
 
 [//]: #\(doc\)
 [project software howto]: /project/blueprj/howto/boostrap.md
-[res whatis]:             /concept/machine/whatis/res.md
+[res whatis]:             /concept/resource//whatis/ep.md
+[provision whatis]:             /concept/resource/whatis/provision.md
+[ope whatis]:             /concept/resource/whatis/operation.md
+[tool whatis]:            /concept/tool/whatis/ep.md
 [adr list]:   ../adr/ep.md
 
 Related topics
@@ -23,19 +26,36 @@ Related topics
 - The project is currently defining its core concepts and architecture.
 
 
-<h1 align="center">Project: RCtl / Rpro</h1>
-
-a System to provision and control Resources
+<h1 align="center">Project</h1>
 
 # Todo
-- define backend, provider, drviver
+- The  system exposes **operations/capabilities** that a resource supports.
+- a resource supports `restart`, The system exposes that operation to a **caller**. 
+- The **execution** is an **invocation** of that operation.
+- The  system must be able to expose a **subset** of all resource's capabilities.
+  - allow some role only to have access to specific subset.
+
+# Todo
+- a System to provision and control Resources
+- System Code Name: RCtl, RPro, ROpe
+# Todo
+- define: backend, provider, drviver, provisioner, operator, controller
+
+# Todo
+
+
+The system might interact with or rely on:
+- Container Runtime: e.g; CRI-o, containerd, Docker
+- Hypervisor: e.g; VMware, KVM, Hyper-V
+- platform: e.g. OpenStack, AWS, OVHcloud, Kubernetes
+- Any CLIs or APIs.
 
 
 # Phase 01 — Vision
 
 ## Problem
 
-Provisioning and operating resources usually requires different tools, commands, systems, configurations, and procedures because resources, mechanisms, and targets each vary in both **kind** and **granularity**. This complexity can be broken down into a few key dimensions:
+[Provisioning][provision whatis] and [operating][ope whatis] [resources][res whatis] usually requires different [tools][tool whatis], commands, systems, configurations, and procedures because resources, mechanisms, and targets each vary in both **kind** and **granularity**. This complexity can be broken down into a few key dimensions:
 
 | Dimension | Question it answers | Example
 |---|---| ---|
@@ -87,8 +107,11 @@ An agent (human or tool) should express **what** should be provisioned or operat
 # Phase 02 - Terminology and concepts
 
 ## Resource
-
-something the system can provision or operate.
+- cf. [Resource][res whatis] 
+- **Contrast**: 
+  - A **Target** hosts a resource. 
+  - A **Mechanism** acts on it
+  - An **Operation** is what you do to it.
 
 - **Answers**: *What is being acted upon?*
 - **May be**:
@@ -100,7 +123,6 @@ something the system can provision or operate.
   - a cloud service (e.g., a database, a queue, a bucket)
   - a cluster (e.g., OpenStack on bare metal, Kubernetes on VMs or containers)
   - pre-existing, **but** brought under the system's control and operational scope
-- **Contrast**: A **Target** hosts it. A **Mechanism** acts on it. An **Operation** is what you do to it.
 
 
 ## Mechanism

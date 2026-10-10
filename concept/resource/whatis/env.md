@@ -40,4 +40,4 @@ The concept of Environment
 - Composite — e.g. 1 cluster of containers / VMs / bare-metal
 
 # Member
-- See [List of Environments](../list/env.md)   ← link, not a duplicate list
+- See [List of Environments][env list]
