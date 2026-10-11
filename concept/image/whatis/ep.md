@@ -84,12 +84,15 @@ The concept of Image
     - **Restore** → written back to a physical or virtual device.
     - **Clone**   → copied to create an identical device.
 - **Formats**:
-    - **RAW** (`.img`, `.dd`) — plain byte-for-byte copy.
-    - **ISO** (`.iso`) — optical disc image.
-    - **QCOW2** (`.qcow2`) — QEMU/KVM, supports snapshots.
-    - **VMDK** (`.vmdk`) — VMware.
-    - **VHD / VHDX** (`.vhd`, `.vhdx`) — Microsoft Hyper-V.
-    - **DMG** (`.dmg`) — Apple.
+    | Format | Extension | Description |
+    | ------ | --------- | ----------- |
+    | RAW    | `.img`, `.dd` | Plain byte-for-byte copy. |
+    | ISO    | `.iso`    | Optical disc image. |
+    | QCOW2  | `.qcow2`  | QEMU/KVM, supports snapshots. |
+    | VMDK   | `.vmdk`   | VMware. |
+    | VHD    | `.vhd`    | Microsoft Hyper-V. |
+    | VHDX   | `.vhdx`   | Microsoft Hyper-V (newer format). |
+    | DMG    | `.dmg`    | Apple. |
 
 
 
@@ -98,12 +101,18 @@ The concept of Image
 - size range from from 10 to 20 GBs
 - **Instantiated** into a **VM** by the **hypervisor**.
 - **Formats**:
-    - **VMDK** (`.vmdk`) — VMware.
-    - **VHD / VHDX** (`.vhd`, `.vhdx`) — Microsoft Hyper-V.
-    - **QCOW2** (`.qcow2`) — QEMU/KVM.
-    - **AMI** — Amazon Machine Image (AWS-specific).
-    - **OVA / OVF** (`.ova`, `.ovf`) — portable VM packaging.
-    - **RAW** (`.img`) — plain, hypervisor-agnostic.
+    | Name  | Extension | Tag                        | Description                                                                  |
+    | ----- | --------- | -------------------------- | ---------------------------------------------------------------------------- |
+    | QCOW2 | .qcow2    | KVM, QEMU, Xen             | Copy-on-write disk image format supporting snapshots and thin provisioning.  |
+    | QED   | .qed      | KVM, QEMU                  | QEMU Enhanced Disk; an older format superseded by QCOW2.                     |
+    | RAW   | .raw, .img| Hypervisor-agnostic        | Plain disk image format with minimal overhead.                               |
+    | VDI   | .vdi      | VirtualBox                 | Native VirtualBox virtual disk format.                                       |
+    | VHD   | .vhd      | Hyper-V, VirtualBox, Xen   | Microsoft Virtual Hard Disk format.                                          |
+    | VHDX  | .vhdx     | Hyper-V                    | Newer VHD format supporting larger disks and improved resilience.            |
+    | VMDK  | .vmdk     | VMware, VirtualBox, QEMU   | Virtual Machine Disk format, commonly used by VMware.                        |
+    | AMI   | .ami      | AWS EC2                    | Amazon Machine Image used to launch EC2 instances.                           |
+    | OVA   | .ova      | VMware, VirtualBox, others | Archive packaging a virtual machine and its associated files.                |
+    | OVF   | .ovf      | VMware, VirtualBox, others | Open Virtualization Format for describing and distributing virtual machines. |  
 - **Operations**:
     - **Instantiate** → hypervisor attaches the image as the VM's vDISK and boots the VM from it.
     - **Convert**    → reformat between hypervisor disk formats( e.g., VMDK ↔ QCOW2 ↔ VHDX, or → AMI)..
@@ -111,9 +120,6 @@ The concept of Image
     - **Customize**  → inject config, credentials, or software before first boot (cloud-init, sysprep, Packer).
     - **Export**     → package for distribution or archival (e.g., OVA/OVF).
 
-
-
-  
 # Other images
 
 ## 1. Golden Image
@@ -126,3 +132,6 @@ The concept of Image
 - May retain machine-specific configuration and data.
 - Can sometimes be converted or exported into a VM image. 
 - 
+
+# Reference
+- https://docs.openstack.org/glance/yoga/user/formats.html

@@ -7,13 +7,16 @@
 [//]: #(ref)
 [res whatis]: /concept/resource/whatis/ep.md
 [ope whatis]: /concept/resource/whatis/operation.md
+[container whatis]: /concept/image/whatis/container.md
+[registry container list]: /concept/image/list/registry.md
 
 Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
-|[Whatis a Resource][res whatis]|
-|[Whatis an Operation][ope whatis]|
+|[What is a Resource][res whatis]|
+|[What is an Operation][ope whatis]|
+|[What is a Container][container whatis]|
 
 <h1 align="center">What is a Repository</h1>
 
@@ -43,7 +46,7 @@ repo-git                 (Composite)
 └── refs                 (Composite)
 ```
 
-- container image registry
+- container image [regitry][registry container list]
 
 ```yaml
 # Every node in that tree is a resource  - A OCI container registry holds repositories
@@ -55,7 +58,7 @@ repo-registry                         (Composite)
 └── signatures                        (Collection of signature)
 ```
 
-- container image repositories (e.g. Docker Hub, GHCR, Quay, AWS ECR, Harbor...)
+- container image **repository**
 
 ```yaml
 # Every node in that tree is a resource - A repository holds container images of the same name, tagged differently 

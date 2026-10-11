@@ -1,0 +1,11 @@
+---
+
+# Virtual Network [already defined] in cloud@openstack:project
+network:
+  ## Pool for fip@(public, admin)
+  fipadmin:
+    name: FIP_ADMINISTRATION_DINUM
+  ## Pool for fip@(publi, front)
+  fipfront:
+    name: FIP_PUBLICATION_DINUM
+

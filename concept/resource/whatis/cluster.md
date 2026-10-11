@@ -1,8 +1,9 @@
 [//]: #(home)
 [home domain]: ../../README.md
 [home doc]:     ../../../README.md
+[home topic]:   ../whatis/ep.md
 
-[↖ Concept][home domain] · [↖ Doc][home doc]
+[↖ Resource][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(functional)
 [env whatis]: ../whatis/env.md

@@ -1,0 +1,26 @@
+---
+
+# Dependency
+## tmpvm
+
+# Virtual Machine
+vm:
+  bastion:
+    type:    "{{ tmpvm.bastion.type }}"
+    id:      "{{ tmpvm.bastion.id }}"
+    name:    "{{ tmpvm.bastion.name }}"
+    flavor:  "MO1.1"
+    image:   "ubuntu22.04"
+    keyssh:  "mxkey01"
+    dns:     [ "8.8.8.8-rie", "8.8.4.4-rie" ]
+    network: "{{ tmpvm.bastion.network }}"
+  frontneopage:
+    type:    "{{ tmpvm.front.type }}"
+    id:      "{{ tmpvm.front.id }}"
+    name:    "{{ tmpvm.front.name }}"
+    flavor:  "MO1.1"
+    image:   "ubuntu22.04"
+    keyssh:  "mxkey01"
+    dns:     [ "8.8.8.8-rie", "8.8.4.4-rie" ]
+    network: "{{ tmpvm.front.network }}"
+

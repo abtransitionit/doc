@@ -1,0 +1,72 @@
+# ---------------
+# Define > Host
+## Define > 1 Host > per > Openstack:Project
+# ---------------
+
+[vm01]
+local01 ansible_connection=local
+
+[vm02]
+local02 ansible_connection=local
+
+[vm03]
+local03 ansible_connection=local
+
+[vm04]
+local04 ansible_connection=local
+
+[vm05]
+local05 ansible_connection=local
+
+[vm06]
+local06 ansible_connection=local
+
+[vm07]
+local07 ansible_connection=local
+
+
+# ---------------
+# Define > subGroup@ansible
+# Define > cloud@openstack:project
+# ---------------
+
+[ovh_mx_sandbox_gr9:children]
+vm01
+
+[ovh_mx_sandbox_uk1:children]
+vm02
+
+[dinum_dev:children]
+vm03
+
+[dinum_test:children]
+vm04
+
+[dinum_devops:children]
+vm05
+
+[dinum_recette:children]
+vm06
+
+[aduneo_dev:children]
+vm07
+
+
+# ---------------
+# Define > Group@ansible
+# Define > cloud@openstack:project
+# ---------------
+
+
+[dinum:children]
+dinum_dev
+dinum_devops
+dinum_recette
+dinum_test
+
+[ovh:children]
+ovh_mx_sandbox_uk1
+ovh_mx_sandbox_gr9
+
+[aduneo:children]
+aduneo_dev

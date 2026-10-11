@@ -1,0 +1,32 @@
+---
+
+lobj: "{{ INPUT }}"
+# lfip: "{{ INPUT }}"
+
+stack:
+  name: "st_{{ lobj.type }}_{{ lobj.id }}"
+
+heat:
+  folder:
+    path: /var/tmp
+  file:
+    name: tpl.heat.{{ lobj.type }}.yml
+
+# Declare Var
+## Will contains vm property
+lvm_port_id:
+lvm_ip:
+lvm_fip:
+lfip_ops_id:
+
+sshconf:
+  folder:
+    path: /home/dockadm/.ssh/config.d
+    # path: /var/tmp
+  file:
+    name: 
+      src: "tpl.ssh"
+      dst: "{{ lobj.vm.name }}"
+
+
+

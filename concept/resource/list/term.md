@@ -1,11 +1,13 @@
 [//]: #(home)
-[home]: ../../README.md
-[top]: #
+[home domain]: ../../README.md
+[home doc]:     ../../../README.md
+[home topic]:   ../whatis/ep.md
+
+[↖ Resource][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [res whatis]: ../whatis/ep.md
 
-[↖][home]
 
 Related topics
 

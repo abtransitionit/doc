@@ -1,0 +1,6 @@
+---
+
+- name: Copy  > file@(tpl, sshconf) > to > localhost:{{ sshconf.folder.path }}/{{ sshconf.file.name.dst }}
+  ansible.builtin.template:
+    src:   "templates/{{ sshconf.file.name.src }}.j2"
+    dest:  "{{ sshconf.folder.path }}/{{ sshconf.file.name.dst }}"

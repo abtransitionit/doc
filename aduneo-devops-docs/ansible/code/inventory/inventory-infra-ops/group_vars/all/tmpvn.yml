@@ -1,0 +1,28 @@
+---
+
+# Child Dependency: NOP
+
+# Parent Dependency (used by var)
+## this:tmpfip
+## this:tmpvm
+## xx:vn
+
+# Ansible:Role Dependency (used by Ansible:role): NOP
+
+# Virtual Network
+tmpvn:
+  admin:
+    type: vn
+    id:   admin
+    name: vn_admin
+    cidr: 192.29.1.0/24
+    subnet:
+      name: vn_admin_subnet
+  app:  
+    type: vn
+    id:   app
+    name: vn_app
+    cidr: 192.11.2.0/24
+    subnet:
+      name: vn_app_subnet
+

@@ -1,0 +1,39 @@
+---
+
+# Child Dependency (uses var)
+## all:tmprt
+## this:vn
+
+# Parent Dependency: NOP
+
+# Ansible:Role Dependency (used by Ansible:role):
+## rt_create
+
+# Virtual Router
+## type:Public mean bind vn to World outside openstack via openstack:network that have access to World
+rt:
+  app:
+    type:      "{{ tmprt.app.type }}"
+    id:        "{{ tmprt.app.id }}"
+    name:      "{{ tmprt.app.name }}"
+    member: 
+      gateway: "{{ vn.public.gui }}"
+      subnet:
+        -      "{{ vn.app.subnet.name }}"
+  admin:
+    type:      "{{ tmprt.admin.type }}"
+    id:        "{{ tmprt.admin.id }}"
+    name:      "{{ tmprt.admin.name }}"
+    member: 
+      gateway: "{{ vn.public.admin }}"
+      subnet:
+        -      "{{ vn.admin.subnet.name }}"
+## type:Private mean bind vn to vn
+  internal:  
+    type: "{{ tmprt.internal.type }}"
+    id:   "{{ tmprt.internal.id }}"
+    name: "{{ tmprt.internal.name }}"
+    member:
+      subnet:  
+        - "{{ vn.admin }}"
+        - "{{ vn.app }}"

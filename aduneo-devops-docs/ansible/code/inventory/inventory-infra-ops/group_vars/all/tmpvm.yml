@@ -1,0 +1,38 @@
+---
+
+# Child Dependency (uses var)
+## this:tmpvn
+## this:sgi
+
+# Parent Dependency (used by var)
+## xx:vm
+
+# Ansible:Role Dependency (used by Ansible:role): NOP
+
+# Virtual Machine
+tmpvm:
+  bastion:
+    type: vm
+    id:   bastion
+    sg:
+      -   "{{ sgi.std.name }}"
+    network: 
+      - "{{ tmpvn.admin  }}"
+      - "{{ tmpvn.app    }}"
+  test:
+    type:  vm
+    id:    test
+    sg:
+      - "default"
+      - "{{ sgi.std.name }}"
+    network: 
+      - "{{ tmpvn.app  }}"
+  front:
+    type:  vm
+    id:    front  
+    sg:
+      - default 
+      - "{{ sgi.std }}"
+    network: 
+      - "{{ tmpvn.app  }}"
+

@@ -1,0 +1,38 @@
+---
+
+# Child Dependency
+## tmprt
+## vn
+
+# Parent Dependency: NOP
+
+# Role Dependency: NOP
+
+# Virtual Router
+## type:Public
+rt:
+  app:
+    type: "{{ tmprt.app.type }}"
+    id:   "{{ tmprt.app.id }}"
+    name: "{{ tmprt.app.name }}"
+    member: 
+      gateway: "{{ vn.public.gui }}"
+      subnet:
+        -      "{{ vn.app.subnet.name }}"
+  admin:
+    type: "{{ tmprt.admin.type }}"
+    id:   "{{ tmprt.admin.id }}"
+    name: "{{ tmprt.admin.name }}"
+    member: 
+      gateway: "{{ vn.public.admin }}"
+      subnet:
+        -      "{{ vn.admin.subnet.name }}"
+## type:Private
+  internal:  
+    type: "{{ tmprt.internal.type }}"
+    id:   "{{ tmprt.internal.id }}"
+    name: "{{ tmprt.internal.name }}"
+    member:
+      subnet:  
+        - "{{ vn.admin }}"
+        - "{{ vn.app }}"

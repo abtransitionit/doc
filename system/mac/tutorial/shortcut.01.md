@@ -5,13 +5,13 @@ on run {input, parameters}
 	-- ============================================================
 	-- Purpose:
 	--   1. Scan the "Junk" mailbox in Apple Mail
-	--   2. Identify messages whose sender email address ends with ".id"
+	--   2. Identify messages whose sender email address ends with several suffix
 	--   3. Display the count in the list of matching sender addresses
 	--   4. Display the list of matching sender addresses
 	--
 	-- Important:
-	--   This script DOES NOT delete anything.
-	--   It only displays the matching sender addresses.
+	--   This script DOES delete matching messages automatically
+	--   after you click Continue.
 	-- ============================================================
 	
 	tell application "Mail"

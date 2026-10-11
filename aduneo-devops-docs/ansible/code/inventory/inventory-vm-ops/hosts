@@ -1,0 +1,17 @@
+# ---------------
+# Define > Host
+# ---------------
+
+[vm_bastion]
+[vm_neopage_front]
+[vm_neopage_back]
+[vm_neopage_db]
+[vm_neopage_neosyn]
+[vm_nginx_rp_neopage]
+[vm_nginx_rp_tooling]
+[vm_ovh_mx_ovh1]
+[vm_ovh_mx_ovh2]
+[vm_ovh_mx_ovh3]
+[vm_ovh_mx_ovh4]
+
+

@@ -1,0 +1,27 @@
+heat_template_version: 2018-08-31
+description: >
+description: >
+  Tpl@(Ops, Heat) to create:
+  -  1 Fip (Floating Ip)
+
+# param@input used by resource
+## Vm
+parameters:
+  fip_network:
+    type: string    
+    description: fip:network:name
+    default: FIP_ADMINISTRATION_DINUM    
+
+# resource to create
+resources:
+  ## fip
+  fip:
+    type: OS::Neutron::FloatingIP
+    properties:
+      floating_network: { get_param: fip_network }
+
+# param@ouput provided by the resource creation at runtime
+outputs:
+  fip_name:
+    description: fip:name
+    value: { get_attr: [ fip, floating_ip_address ] }

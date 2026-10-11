@@ -8,72 +8,126 @@
 [//]: #(ref)
 [host whatis]: /concept/machine/whatis/host.md
 [image whatis]: ../whatis/ep.md
-
+[repo whatis]: /concept/repository/whatis/ep.md
 Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
+|[What is a Repository][repo whatis]
 
 <h1 align="center">What is a Container</h1>
 
 The concept of Container
 
 # Definition
+
+## Registry
+- A service
+- Stores and distributes container images
+- Contains repositories that contain container images identified by tags or digests
+
 ## Container
+
 - Instance of [container image][image whatis]
-- Essentially a **chrooted** folder with security enhanced
-  - **Namespaces**: effective chroot folder - cannot see outside
-  - **PID Namespace** : container process tree starts at PID 1
-  - Network Namespace (private eth0, routing tables, firewall)
-  - **Resource Limits**: cgroups (caps RAM, CPU, I/O usage) 
-  - **User Namespace**: Root inside = unprivileged user
-* An isolated environment sharing the host OS kernel
-  - allows **isolation** between **groups of processes** running on the same OS kernel.
-* Provides OS-level virtualization (lightweight, near-zero overhead)
-- **shares** the **host kernel** and have separate 
-    - process spaces
-    - filesystems
-    - Networking
-    - Users
-    - etc
+- **isolated environment** sharing the host **OS kernel**
+- **Namespaces** (workspace isolation):
+    * **PID**: isolated process tree starting at **PID 1**
+    * **Network**: private `eth0`, routing tables, and firewall rules
+    * **User**: root inside = unprivileged user outside
+    * **Mount**: isolated filesystem root (`/`)
+- **cgroups** (resource control). Enforces limits on: CPU, RAM, and Disk I/O usage
 
 
-## System Container (LXC/LXD) vs. Application Container (Docker)
+## LXC (**L**inu**X** **C**ontainers)
 
-* **System Container (LXC/LXD):** Behaves like a full virtual machine (boots systemd, init, runs SSH, full Linux OS instance), but shares the host kernel.
-* **Application Container (Docker):** Packaging tool designed to run a single process/application statelessly.
+- A wrapper around **Linux kernel features**
+- Set of CLIs, C library (`liblxc`), and config files toolset acting as a low-level userspace interface.
+- Relies directly on Linux kernel features:
+    - **Namespaces:** Process, network, mount, user, and IPC isolation.
+    - **cgroups (Control Groups):** Resource limits (CPU, Memory, Disk).
+    - **Seccomp / AppArmor / SELinux:** Security filtering and access control.
 
-# LXC / LXD
+## LXD (**L**inu**X** daemon)
+- written in `go`
+- community fork is `incus`
+- Manages both system 
+    - containers (not OCI-compliant - LXD-specific images)
+    - VMs through the same interface and tooling.
+- runs as a background service/Daemon listening on a local UNIX socket or HTTPS port.
+- CLI example= `lxc launch ubuntu:22.04 my-container` talk to daemon
+- Wrapper around LXC and integrate with QEMU
+- Mangae Container & VM via API
+- Allows local or remote control of containers over a network.
+- Behaves like a full VM (boots systemd, init, runs SSH, full Linux OS instance), but shares the host kernel.
+- Handles 
+    - storage pools
+    - network bridges
+    - image downloads
+    - translates API requests into container or VM execution.
+- Provides VM-like operational features:
+    - **Image Management:** Centralized hub for official OS image templates.
+    * **Profiles & Storage:** 
+        - Reusable resource policies
+        - storage pools (ZFS, btrfs, LVM)
+        - custom virtual networks.
+    - **Live Migration & Clustering:** Move running containers across host nodes with zero downtime.
+    - **QEMU Integration:** Manages system containers and full Virtual Machines under one unified interface.
+- Supports image management, clustering, live migration, and advanced storage/networking backends (ZFS, Ceph, OVN).
 
-LXC (**L**inu**X** **C**ontainers): **The Core Userspace Engine**
-LXC (LinuX Containers): Low-Level Container Engine
-- A set of CLI and C libraries that build "lightweight sandboxes" directly inside Linux.
-* A low-level userspace interface for Linux kernel containment features.
-* Relies directly on Linux kernel primitives:
-* **cgroups (Control Groups):** Resource limiting (CPU, Memory, I/O).
-* **Namespaces:** Process, network, mount, user, and IPC isolation.
-* **Seccomp / AppArmor / SELinux:** Security filtering and isolation.
-* Operates directly via local configuration files and low-level CLI commands.
+ # Incus
+ - Fork of **LXD** in 2023
+ - Debian has deprecated **LXD** in favor of Incus
+ - Hosted by Canonical (Ubuntu)
+ - Often described as lightweight VM because or System Container because
+    - It manage more like a VM
+    - 
 
-LXD (pronounced **L-X-D**): **The Container & VM Management Daemon**
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    USER / CLIENT                            │
+│         (CLI: lxc ...  |  REST API: HTTPS)                  │
+└──────────────────────────┬──────────────────────────────────┘
+                           │
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  LXD  —  System daemon + REST API + orchestration           │
+│  • Manages containers & VMs as "instances"                  │
+│  • Images, storage pools, networks, clustering, projects    │
+│  • Talks to liblxc via Go bindings                          │
+└──────────────────────────┬──────────────────────────────────┘
+                           │  (Go bindings → liblxc)
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  LXC  —  Low-level C library + tools (liblxc, lxc-*)        │
+│  • Creates & starts containers                              │
+│  • Config templates, hooks, C API / bindings                │
+└──────────────────────────┬──────────────────────────────────┘
+                           │  (syscalls)
+                           ▼
+┌─────────────────────────────────────────────────────────────┐
+│  KERNEL FEATURES                                            │
+│  • Namespaces  → isolation (pid, net, mnt, uts, ipc, user)  │
+│  • cgroups     → resource limits (CPU, RAM, I/O, devices)   │
+│  • Seccomp     → syscall filtering                          │
+│  • Capabilities, AppArmor/SELinux, overlayfs, etc.          │
+└─────────────────────────────────────────────────────────────┘
 
-* A modern, REST API-driven container and virtual machine manager built on top of LXC.
-* Extends LXC to manage both **system containers** and **full VMs** (via QEMU integration).
-* Supports image management, clustering, live migration, and advanced storage/networking backends (ZFS, Ceph, OVN).
+LXD → LXC → Kernel
+```
 
-lxd / incus: **Background Daemon**
 
-* `lxd` (or its open-source community fork, `incus`) runs as a background service listening on a local UNIX socket or HTTPS port.
-* Handles storage pools, network bridges, image downloads, and translates API requests into container or VM execution.
+| Layer | Role | Adds |
+|-------|------|------|
+| **Kernel** | Primitives | Isolation & resource control |
+| **LXC** | C library | Easy, programmatic use of those primitives |
+| **LXD** | Daemon/API | Multi-host orchestration, images, networking |
 
-CLI:
+# LXD containe vs OCI container
 
-* **`lxc-create` / `lxc-start`:** Low-level legacy tools used to interact directly with LXC without the LXD daemon.
-* **`lxc`:** The modern unified command-line tool used to control the **LXD** daemon (e.g., `lxc launch ubuntu:22.04 my-container`).
+
 
 # How it works
 
-Here are the **4 distinct use cases**, broken down by virtualization type, security boundary, and performance:
 
 ## 1. Low-Level LXC (Standalone / Direct Engine)
 

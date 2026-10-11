@@ -206,3 +206,14 @@ Linux kernel
 
 
 
+# Lxd > C'est quoi
+
+
+Lxd est 
+  - 1 outils linux
+  - le successuer de Lxc (d'ou son nom)
+  - est basé sur Lxc
+
+Lxd permet de
+  - créer des container
+  - créer des vm

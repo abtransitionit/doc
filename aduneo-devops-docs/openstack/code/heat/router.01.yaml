@@ -1,0 +1,27 @@
+heat_template_version: 2018-08-31
+description: >
+description: >
+  Tpl@(Ops, Heat) to create:
+  -  1 sg/sgr
+
+# param@input used by resource
+## Vm
+parameters:
+  router_name:
+    type: string    
+    description: fip:network:name
+    default: router-front    
+
+# resource to create
+resources:
+  ## router
+  sg:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      name: { get_param: router_name }
+
+# param@ouput provided by the resource creation at runtime
+outputs:
+  fip_name:
+    description: router:info
+    value: { get_attr: [ router ] }

@@ -1,0 +1,25 @@
+---
+
+# Virtual Network
+vn:
+  admin:
+    type: "{{ tmpvn.admin.type }}"
+    id:   "{{ tmpvn.admin.id   }}"
+    name: "{{ tmpvn.admin.name }}"
+    cidr: "{{ tmpvn.admin.cidr }}"
+    dns:  [ "8.8.8.8-dinum", "8.8.4.4" ]
+    subnet:
+      name: "{{ tmpvn.admin.subnet.name }}"
+  front:  
+    type: "{{ tmpvn.front.type }}"
+    id:   "{{ tmpvn.front.id   }}"
+    name: "{{ tmpvn.front.name }}"
+    cidr: "{{ tmpvn.front.cidr }}"
+    dns:  [ "8.8.8.8-dinum", "8.8.4.4" ]
+    subnet:
+      name: "{{ tmpvn.admin.subnet.name }}"
+  public:
+    admin:
+      name: FIP_ADMINISTRATION_DINUM
+    front:
+      name: FIP_PUBLICATION_DINUM

@@ -1,0 +1,48 @@
+---
+
+# Child Dependency
+## tmpvm
+## dns
+
+# Parent Dependency
+## fip
+
+# Role Dependency: NOP
+
+vm_image:  "Ubuntu 22.04"
+vm_keyssh: "mxkey01"
+vm_flavor: "d2-2"
+
+# Virtual Machine
+vm:
+  bastion:
+    type:    "{{ tmpvm.bastion.type }}"
+    id:      "{{ tmpvm.bastion.id }}"
+    name:    "{{ tmpvm.bastion.name }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.bastion.network }}"
+    sg:      "{{ tmpvm.bastion.sg }}"
+  test:
+    type:    "{{ tmpvm.test.type }}"
+    id:      "{{ tmpvm.test.id }}"
+    name:    "{{ tmpvm.test.name }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.bastion.network }}"
+    sg:      "{{ tmpvm.front.sg }}"
+  front:
+    type:    "{{ tmpvm.front.type }}"
+    id:      "{{ tmpvm.front.id }}"
+    name:    "{{ tmpvm.front.name }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.front.network }}"
+    network: "{{ tmpvm.front.sg }}"
+    sg:      "{{ tmpvm.front.sg }}"

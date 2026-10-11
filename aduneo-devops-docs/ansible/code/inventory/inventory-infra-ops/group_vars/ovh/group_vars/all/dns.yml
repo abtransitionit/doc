@@ -1,0 +1,13 @@
+---
+
+# Child Dependency: NOP
+
+# Parent Dependency (used by var)
+## this:vn
+## this:vm
+
+# Role Dependency: NOP
+
+dns:
+ - "8.8.8.8"
+ - "8.8.4.4"

@@ -1,0 +1,23 @@
+---
+
+# Dependency
+## tmpvr
+## network
+## vn
+
+# Virtual Router
+vr:
+  admin:
+    type: "{{ tmpvr.admin.type }}"
+    id:   "{{ tmpvr.admin.id }}"
+    name: "{{ tmpvr.admin.name }}"
+    network: 
+      gateway:   "{{ network.fipadmin }}"
+      secondary: "{{ vn.admin }}"
+  front:  
+    type: "{{ tmpvr.front.type }}"
+    id:   "{{ tmpvr.front.id }}"
+    name: "{{ tmpvr.front.name }}"
+    network:
+      gateway:   "{{ network.fipfront }}"
+      secondary: "{{ vn.front }}"

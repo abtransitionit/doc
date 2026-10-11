@@ -5,13 +5,14 @@ on run {input, parameters}
 	-- ============================================================
 	-- Purpose:
 	--   1. Scan the "Junk" mailbox in Apple Mail
-	--   2. Identify messages whose sender email address ends with ".id"
+	--   2. Identify messages whose sender email contains a specific string
+	--   2. Use a loop
 	--   3. Display the count in the list of matching sender addresses
 	--   4. Display the list of matching sender addresses
 	--
 	-- Important:
-	--   This script DOES NOT delete anything.
-	--   It only displays the matching sender addresses.
+	--   This script DOES delete matching messages automatically
+	--   after you click Continue.
 	-- ============================================================
 	
 	tell application "Mail"
@@ -19,7 +20,7 @@ on run {input, parameters}
 		-- STEP 1: Ask user which suffix to use
 		-- ============================================================
 		set dialogChoice to ""
-		set SenderAdrCriteriaList to {"76.4949881"}
+		set SenderAdrCriteriaList to {"76.4949881", "no-reply"}
 		
 		-- Ask user to choose a suffix from the list
 		set senderAdrCriteriaChoice to choose from list SenderAdrCriteriaList ¬
@@ -60,7 +61,7 @@ on run {input, parameters}
 			set theAddress to extract address from (sender of theMessage)
 			-- Store the MESSAGE REFERENCE itself (not the contents)
 			set theMail to theMessage
-			-- check the sender's email match the criteria
+			-- Check the criteria ---> sender address contains criteriaString
 			if theAddress contains senderAdrCriteria then
 				-- add the MESSAGE REFERENCE to the list
 				set end of ListMailToDelete to theMail

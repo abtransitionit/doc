@@ -11,9 +11,11 @@
 [artifact whatis]: #
 [prj software whatis]: /concept/project/kind/software/whatis/ep.md
 [software whatis]: ../whatis/software.md
-[tool list]:       /tool/README.md
-[language whatis]: /concept/language/whatis/ep.md
+[tool list]:       ../list/ep.md
+[tool arm list]:   /tool/README.md
+[language list]: /language/README.md
 [tool howto]:      ../howto/ep.md
+[ssg whatis]:      ../whatis/ssg.md
 
 Related topics
 
@@ -25,6 +27,7 @@ Related topics
 |[List of tools][tool list]|internal| list |
 |[List of languagess][language list]|internal| list |
 |[How-to for CLI][tool howto]|internal|  |
+|[List of  ARM Tools][tool arm list]|external|  |
 
 
 
@@ -418,7 +421,8 @@ def square(a, b):
 - It may be defined or embedded inside a library, SDK, or program.
 - It may be supplied externally at runtime (e.g. a database, YAML/JSON file, environment variable, or user input)
 
-
+# Kind of Tool
+- [SSG][ssg whatis]
 
 # Todo
 Execution Environment 

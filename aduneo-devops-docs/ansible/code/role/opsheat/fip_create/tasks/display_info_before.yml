@@ -1,0 +1,22 @@
+---
+
+- name: Info@debug
+  debug:
+    msg: 
+      - "stack:name      > {{ stack.name }}"
+      - "file:heat:path  > {{ heat.folder.path }}/{{ heat.file.name }}"
+      - "input"
+      - "{{ lobj }}"
+      - "Vm:Port:Id      > {{ lvm_port_id.stdout  }}"
+      - "Vm:fip          > {{ lvm_fip.stdout      }}"
+
+- name: Info@debug
+  debug:
+    msg: 
+      - "Fip:Id@ops"
+      - "{{ lfip_ops_id.stdout_lines }}"
+  when: lobj.provided is defined
+
+
+
+# - "Vm:Port:Id      > {{ lvm_port_id.stdout_lines[0]  }}"

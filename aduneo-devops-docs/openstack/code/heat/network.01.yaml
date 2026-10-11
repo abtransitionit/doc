@@ -1,0 +1,40 @@
+heat_template_version: 2018-08-31
+description: >
+  Tpl@(Ops, Heat) to create:
+  -  1 network
+
+# param@input used by resource
+parameters:
+  ## Network
+  network_root_name:
+    type: string    
+    description: Name of the VLan on VRack:Default
+    default:     vn-front
+  network_subnet_name:
+    type: string    
+    description: Name of the VLan:Subnet on VRack:Default
+    default:     vn-front-subnet
+  network_cidr:
+    type: string    
+    description: VLan:Ip:Range@possible
+    default:     192.68.0.0/24
+
+# resource to create
+resources:
+  ## network
+  network:
+    type: OS::Neutron::Net
+    properties:
+      name: { get_param: network_root_name  }
+      port_security_enabled: true
+  ## network:subnet
+  network_subnet:
+    type: OS::Neutron::Subnet
+    properties: 
+      network_id: { get_resource: network           }
+      name:       { get_param: network_subnet_name  }
+      cidr:       { get_param: network_cidr         }
+      dns_nameservers: [ "8.8.8.8", "8.8.4.4" ]
+      enable_dhcp: true
+      ip_version: 4
+

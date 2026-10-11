@@ -1,0 +1,13 @@
+---
+
+# Child Dependency: NOP
+
+# Parent Dependency
+## vn
+## vm
+
+# Role Dependency: NOP
+
+dns:
+ - "8.8.8.8"
+ - "8.8.4.4"

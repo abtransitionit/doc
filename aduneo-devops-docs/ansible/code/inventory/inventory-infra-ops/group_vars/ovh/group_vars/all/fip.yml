@@ -1,0 +1,40 @@
+---
+
+# Child Dependency (uses var)
+## all:tmpfip
+## this:vn
+## this:vm
+
+# Parent Dependency:NOP
+
+# Role Dependency: NOP
+
+# (Public) Floating Ip
+fip:
+  vm_bastion:
+    type:     "{{ tmpfip.vm_bastion.type    }}"
+    id:       "{{ tmpfip.vm_bastion.id      }}"
+    name:     "{{ tmpfip.vm_bastion.name    }}"
+    vm:       "{{ vm.bastion                }}"
+    # provided: "51.210.146.125"
+    network: 
+      src:    "{{ vn.public.admin           }}"
+      dst:    "{{ tmpfip.vm_bastion.network }}"
+  vm_front:
+    type:     "{{ tmpfip.vm_front.type      }}"
+    id:       "{{ tmpfip.vm_front.id        }}"
+    name:     "{{ tmpfip.vm_front.name      }}"
+    vm:       "{{ vm.front                  }}"
+    # provided: "51.210.146.1"
+    network: 
+      src:    "{{ vn.public.gui             }}"
+      dst:    "{{ tmpfip.vm_front.network   }}"
+  vm_test:
+    type:     "{{ tmpfip.vm_test.type      }}"
+    id:       "{{ tmpfip.vm_test.id        }}"
+    name:     "{{ tmpfip.vm_test.name      }}"
+    vm:       "{{ vm.test                  }}"
+    # provided: "51.210.146.1"
+    network: 
+      src:    "{{ vn.public.gui             }}"
+      dst:    "{{ tmpfip.vm_test.network   }}"

@@ -3,7 +3,7 @@
 [home doc]:     ../../../README.md
 [home topic]:   ../whatis/ep.md
 
-[↖ Concept][home domain] · [↖ Resource][home topic] · [↖ Doc][home doc]
+[↖ Resource][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [lifecycle whatis]: ../whatis/lfc.md

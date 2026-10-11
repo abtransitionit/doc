@@ -1,0 +1,27 @@
+---
+
+# Child Dependency (uses var)
+## this:tmpvn
+
+# Parent Dependency (used by var)
+## xx:fip
+
+# Ansible:Role Dependency (used by Ansible:role): NOP
+
+# (Public) Floating Ip
+tmpfip:
+  vm_bastion:
+    type:    fip
+    id:      vm_bastion
+    name:    fip_vm_bastion
+    network: "{{ tmpvn.admin.name }}"
+  vm_front:
+    type:    fip
+    id:      vm_front
+    name:    fip_vm_front
+    network: "{{ tmpvn.app.name }}"
+  vm_test:
+    type:    fip
+    id:      vm_test
+    name:    fip_vm_test
+    network: "{{ tmpvn.app.name }}"

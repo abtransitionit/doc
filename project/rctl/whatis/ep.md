@@ -146,7 +146,6 @@ The underlying platform or system hosting a resource.
   - a cloud (e.g., AWS, OVH, Azure, GCP)
   - a local filesystem or an S3 bucket
   - a CI/CD runner or a sandbox
-  - a cloud region or a multi-cloud setup
   - an edge device or an IoT node
   - local or remote, public or private
 - **Contrast**: A **Resource** is what is hosted. A **Mechanism** is how it's acted upon. A **Target** is the execution context — the *where*.

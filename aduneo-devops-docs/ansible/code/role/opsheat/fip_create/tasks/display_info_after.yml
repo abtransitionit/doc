@@ -1,0 +1,28 @@
+---
+
+- name: Get > Fip:Info > with > cli > openstack floating ip  list --port {{ lvm_port_id.stdout }} ...
+  register: result
+  ansible.builtin.shell: openstack floating ip  list --port {{ lvm_port_id.stdout }} -c 'Floating IP Address' -c 'Fixed IP Address' -c Port -c Status -c 'Floating Network'
+
+- name: Get > Fip:Vm:Ip > with > cli > openstack floating ip  list --port {{ lvm_port_id.stdout }} ...
+  register: result01
+  ansible.builtin.shell: openstack floating ip  list --port {{ lvm_port_id.stdout }} -c "Fixed IP Address" -f value
+
+- name: Get > Vm:Info > with > cli > openstack server list --ip {{ result01.stdout }}
+  register: result02
+  ansible.builtin.shell: openstack server list --ip {{ result01.stdout }}
+  when: result01.stdout_lines | length > 0
+
+
+- name: Info@debug
+  debug:
+    msg: 
+      - "{{ lobj.type }}"
+      - "{{ result.stdout_lines }}"
+
+- name: Info@debug
+  debug:
+    msg: 
+      - "Vm"
+      - "{{ result02.stdout_lines }}"
+  when: result01.stdout_lines | length > 0

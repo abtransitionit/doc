@@ -1,0 +1,73 @@
+---
+
+# Child Dependency (uses var)
+## this:sri
+
+# Parent Dependency (used by var)
+## this:tmpvm
+
+# Ansible:Role Dependency (used by Ansible:role)
+## infra:sg_create
+
+# Security Group of type Ingress (SGI) that allow connection from outside --> vm
+sgi:
+  ping:
+    type:   sg
+    stype:  sgi
+    id:     ping
+    name:   sgi_ping
+    description: allow ping only
+    sr:
+      - "{{ sri.ping }}"
+  ssh_bastion:
+    type:   sg
+    stype:  sgi
+    id:     ssh_bastion
+    name:   sgi_ssh_bastion
+    description: allow ssh only from bastion
+    sr:
+      - "{{ sri.ssh_bastion }}"
+  ssh:
+    type:   sg
+    stype:  sgi
+    id:     ssh
+    name:   sgi_ssh
+    description: allow ssh only
+    sr:
+      - "{{ sri.ssh }}"
+  std:
+    type:   sg
+    stype:  sgi
+    id:     std
+    name:   sgi_std
+    description: allow ping and ssh
+    sr:
+      - "{{ sri.ping }}"
+      - "{{ sri.ssh }}"
+  http:
+    type:   sg
+    stype:  sgi
+    id:     http
+    name:   sgi_http
+    description: allow http only on port:80,8080
+    sr:
+      - "{{ sri.http1 }}"
+      - "{{ sri.http2 }}"
+  ssl:
+    type:   sg
+    stype:  sgi
+    id:     ssl
+    name:   sgi_ssl
+    description: allow https only on port 443
+    sr:
+      - "{{ sri.https }}"
+  https:
+    type:   sg
+    stype:  sgi
+    id:     https
+    name:   sgi_https
+    description: allow http on port:80,8080 and https on port 443
+    sr:
+      - "{{ sri.http1 }}"
+      - "{{ sri.http2 }}"
+      - "{{ sri.https }}"

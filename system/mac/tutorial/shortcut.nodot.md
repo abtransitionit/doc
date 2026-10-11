@@ -5,25 +5,23 @@ on run {input, parameters}
 	-- ============================================================
 	-- Purpose:
 	--   1. Scan the "Junk" mailbox in Apple Mail
-	--   2. Identify messages whose sender email address ends with ".id"
+	--   2. Identify messages whose sender email address ends with several suffix
 	--   3. Display the count in the list of matching sender addresses
 	--   4. Display the list of matching sender addresses
 	--
 	-- Important:
-	--   This script DOES NOT delete anything.
-	--   It only displays the matching sender addresses.
+	--   This script DOES delete matching messages automatically
+	--   after you click Continue.
 	-- ============================================================
 	
 	tell application "Mail"
 		-- ============================================================
 		-- STEP 1: Ask user which suffix to use
 		-- ============================================================
-		set dialogChoice to ""
-		set SenderAdrCriteriaList to {".id", ".us", ".biz", ".me", ".uk.com", ".com", ".uk", ".eu"}
+		set dialogChoice to ""		
+		set senderAdrCriteria to "."
 		
-		repeat with senderAdrCriteriaItem in SenderAdrCriteriaList
-		set senderAdrCriteria to contents of senderAdrCriteriaItem
-				
+		
 		-- define var: Junk mailbox
 		set junkMailbox to junk mailbox
 		-- define var: Junk mailbox
@@ -49,7 +47,7 @@ on run {input, parameters}
 			-- Store the MESSAGE REFERENCE itself (not the contents)
 			set theMail to theMessage
 			-- check the sender's email match the criteria
-			if theAddress ends with senderAdrCriteria then
+			if theAddress does not contain senderAdrCriteria then
 				-- add the MESSAGE REFERENCE to the list
 				set end of ListMailToDelete to theMail
 				-- add the sender's email address to the list of matching messages
@@ -79,7 +77,8 @@ on run {input, parameters}
 			buttons {"Cancel", "Continue"} ¬
 			cancel button "Cancel" ¬
 			default button "Cancel" ¬
-			with title "Messages matching the suffix " & senderAdrCriteria
+			with title "Messages matching the criteria " & senderAdrCriteria
+
 		-- Stop the script if Cancel is clicked
 		if button returned of dialogChoice is "Cancel" then
 			return input
@@ -124,7 +123,7 @@ on run {input, parameters}
 				" message(s) still in Junk" buttons {"Ok"} default button ¬
 				"Ok" with title "Cancelled"
 		end if
-		end repeat
+		
 	end tell
 	return input
 end run

@@ -1,0 +1,26 @@
+---
+
+- name: Get > Data > from > Input
+  include_tasks: 
+    file: get_data.yml
+
+- name: Display > info > before > play
+  include_tasks: 
+    file: display_info_before.yml
+
+- name: Copy > Heat
+  include_tasks: 
+    file: copy_heat.yml
+
+- name: Play > Heat
+  include_tasks: 
+    file: play_heat.yml
+
+- name: Copy > Sshconf
+  include_tasks: 
+    file: copy_ssh.yml
+
+- name: Display > info > after > play
+  include_tasks: 
+    file: display_info_after.yml
+

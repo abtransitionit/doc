@@ -1,0 +1,10 @@
+---
+
+# "Floating" Public Ip to access
+## the Bastion
+## the App:Front:Gui
+fip:
+  bastion:
+    ip: 11.0.23.dinum
+  front:
+    ip: 10.0.23.dinum

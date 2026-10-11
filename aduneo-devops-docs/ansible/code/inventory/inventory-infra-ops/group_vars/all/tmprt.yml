@@ -1,0 +1,23 @@
+---
+
+# Child Dependency: NOP
+
+# Parent Dependency (used by var)
+## xx:rt
+
+# Ansible:Role Dependency (used by Ansible:role): NOP
+
+# Virtual Router
+tmprt:
+  app:
+    type: rt
+    id:   app
+    name: rt_app
+  admin:
+    type: rt
+    id:   admin
+    name: rt_admin
+  internal:  
+    type: rt
+    id:   internal
+    name: rt_internal  

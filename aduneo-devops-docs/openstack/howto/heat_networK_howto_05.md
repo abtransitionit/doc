@@ -1,0 +1,74 @@
+heat_template_version: 2018-08-31
+description: >
+description: >
+  Tpl@(Ops, Heat) to create:
+  -  1 vm
+
+# param@input used by resource
+## Vm
+parameters:
+  vm_name:
+    type: string    
+    description: Vm:network
+    default:     opv-front
+  vm_network:
+    type: string    
+    description: Vm:network
+    default:     Ext-Net
+  vm_key_ssh:
+    type: string    
+    description: Vm:key@(pub, ssh) to set
+    default:     mxkey01
+  vm_image_id:
+    type: string    
+    description: Vm:Image to use
+    default:     Ubuntu 22.04
+  vm_cpuram_id:
+    type: string    
+    description: define Vm:Ram and Vm:Cpu
+    default:     d2-2
+    constraints:
+      - allowed_values: [ b2-7, d2-2, d2-4, c2-7, MO1.1 ]
+        description: Value must be in > B2-7, D2-4, C2-7
+
+# resource to create
+resources:
+  ## vm
+  vm:
+    type: OS::Nova::Server
+    properties:
+      name:     { get_param: vm_name      }
+      key_name: { get_param: vm_key_ssh   }
+      image:    { get_param: vm_image_id  }
+      flavor:   { get_param: vm_cpuram_id }
+      networks:
+        - network: { get_param: vm_network }
+
+# param@ouput provided by the resource creation at runtime
+outputs:
+  vm_name:
+    description: Vm:Info
+    value: { get_attr: [vm] }
+  vm_ip:
+    description: Vm:Ip
+    value: { get_attr: [vm, first_address] }
+  vm_network:
+    description: Vm:Networks
+    value: { get_attr: [vm, networks] }
+
+
+# # param@ouput provided by the resource creation at runtime
+# outputs:
+#   vm_name:
+#     description: Vm:Info
+#     value: { get_attr: [vm] }
+#   vm_ip:
+#     description: Vm:Ip
+#     value: { get_attr: [vm, first_address] }
+#   vm_network:
+#     description: Vm:Networks
+#     value: { get_attr: [vm, networks] }
+
+# {% if vrouter.network.gateway is defined %}
+#       external_gateway_info: { network: {{ vrouter.network.gateway }} }
+# {% endif %}

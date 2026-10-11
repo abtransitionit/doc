@@ -1,0 +1,9 @@
+---
+
+- name: Create > {{ lobj.name }}
+  ignore_errors: true
+  no_log: true
+  openstack.cloud.stack:
+    name:     "{{ stack.name }}"
+    state:    present
+    template: "{{ heat.folder.path }}/{{ heat.file.name }}"

@@ -1,0 +1,10 @@
+---
+
+galaxy_info:
+  author: Amar BELGACEM
+  description: Create Oject@Openstack
+  company: Dinum/Aduneo
+  license: Dinum
+  galaxy_tags: []
+
+dependencies: []

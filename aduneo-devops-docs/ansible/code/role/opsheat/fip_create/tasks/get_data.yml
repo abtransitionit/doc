@@ -1,0 +1,14 @@
+---
+
+- name: Get >  Vm:Port:Id > with cli >  openstack port list --server {{ lobj.vm.name }} --network {{ lobj.network.dst }} -f value -c ID
+  register: lvm_port_id
+  ansible.builtin.shell: openstack port list --server {{ lobj.vm.name }} --network {{ lobj.network.dst }} -f value -c ID
+
+- name: Get >  Fip:Id > with cli > openstack floating ip show {{ lobj.provided }} -c id -f value
+  register: lfip_ops_id
+  ansible.builtin.shell: openstack floating ip show {{ lobj.provided }} -c id -f value
+  when: lobj.provided is defined
+
+- name: Get >  Vm:Fip > with cli > openstack floating ip list --port {{ lvm_port_id.stdout_lines[0] }}  -f value -c 'Floating IP Address'
+  register: lvm_fip
+  ansible.builtin.shell: openstack floating ip list --port {{ lvm_port_id.stdout_lines[0] }}  -f value -c 'Floating IP Address'

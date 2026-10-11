@@ -1,0 +1,36 @@
+---
+
+# Child Dependency
+## tmpvn
+## dns
+
+# Parent Dependency
+## fip
+## rt
+
+# Role Dependency: NOP
+
+# Virtual Network
+vn:
+  admin:
+    type: "{{ tmpvn.admin.type }}"
+    id:   "{{ tmpvn.admin.id   }}"
+    name: "{{ tmpvn.admin.name }}"
+    cidr: "{{ tmpvn.admin.cidr }}"
+    dns:  "{{ dns }}"
+    subnet:
+      name: "{{ tmpvn.admin.subnet.name }}"
+  app:  
+    type: "{{ tmpvn.app.type }}"
+    id:   "{{ tmpvn.app.id   }}"
+    name: "{{ tmpvn.app.name }}"
+    cidr: "{{ tmpvn.app.cidr }}"
+    dns:  "{{ dns }}"
+    subnet:
+      name: "{{ tmpvn.app.subnet.name }}"
+  public:
+    admin:
+      name: Ext-Net
+    gui:
+      name: Ext-Net
+

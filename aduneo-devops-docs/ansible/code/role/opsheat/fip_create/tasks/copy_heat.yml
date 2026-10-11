@@ -1,0 +1,6 @@
+---
+
+- name: Copy  > file@(tpl, heat) > to > localhost:{{ heat.folder.path }}/{{ heat.file.name }}
+  ansible.builtin.template:
+    src:   "templates/{{ heat.file.name }}.j2"
+    dest:  "{{ heat.folder.path }}/{{ heat.file.name }}"

@@ -1,0 +1,51 @@
+---
+
+# Child Dependency: NOP
+
+# Parent Dependency (used by var)
+## this:sgi
+
+# Ansible:Role Dependency (used by Ansible:role): NOP
+
+# Security Group rule of type ingress (SRI) to be bind to Security Group of type ingress 
+sri:
+  ping:
+    direction: ingress
+    ethertype: IPv4
+    remote_ip_prefix: 0.0.0.0/0
+    protocol: icmp
+  ssh:
+    direction: ingress
+    ethertype: IPv4
+    remote_ip_prefix: 0.0.0.0/0
+    protocol: tcp
+    port_range_min: 22 
+    port_range_max: 22
+  ssh_bastion:
+    direction: ingress
+    ethertype: IPv4
+    remote_security_group: sg_ssh_bastion
+    protocol: tcp
+    port_range_min: 22 
+    port_range_max: 22
+  http1:
+    direction: ingress
+    ethertype: IPv4
+    remote_ip_prefix: 0.0.0.0/0
+    protocol: tcp
+    port_range_min: 80 
+    port_range_max: 80
+  http2:
+    direction: ingress
+    ethertype: IPv4
+    remote_ip_prefix: 0.0.0.0/0
+    protocol: tcp
+    port_range_min: 8080
+    port_range_max: 8080
+  https:
+    direction: ingress
+    ethertype: IPv4
+    remote_ip_prefix: 0.0.0.0/0
+    protocol: tcp
+    port_range_min: 443 
+    port_range_max: 443

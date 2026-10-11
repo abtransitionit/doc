@@ -1,0 +1,50 @@
+---
+
+# Child Dependency (uses var)
+## all:tmpvm
+## this:dns
+
+# Parent Dependency (used by var)
+## this:fip
+
+# Ansible:Role Dependency (used by Ansible:role)
+## infra:vm_create
+
+# vm_image:        "Ubuntu 22.04"
+vm_image:        "mxi_packer_ubuntu"
+vm_keyssh:       "mxkey01"
+vm_flavor:       "d2-2"
+vm_name_prefix:  "ovhops"
+
+# Virtual Machine
+vm:
+  bastion:
+    type:    "{{ tmpvm.bastion.type }}"
+    id:      "{{ tmpvm.bastion.id }}"
+    name:    "{{ vm_name_prefix }}_{{ tmpvm.bastion.id }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.bastion.network }}"
+    sg:      "{{ tmpvm.bastion.sg }}"
+  front:
+    type:    "{{ tmpvm.front.type }}"
+    id:      "{{ tmpvm.front.id }}"
+    name:    "{{ vm_name_prefix }}_{{ tmpvm.front.id }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.front.network }}"
+    sg:      "{{ tmpvm.front.sg }}"
+  test:
+    type:    "{{ tmpvm.test.type }}"
+    id:      "{{ tmpvm.test.id }}"
+    name:    "{{ vm_name_prefix }}_{{ tmpvm.test.id }}"
+    flavor:  "{{ vm_flavor}}"
+    image:   "{{ vm_image }}"
+    keyssh:  "{{ vm_keyssh }}"
+    dns:     "{{ dns }}"
+    network: "{{ tmpvm.test.network }}"
+    sg:      "{{ tmpvm.test.sg }}"

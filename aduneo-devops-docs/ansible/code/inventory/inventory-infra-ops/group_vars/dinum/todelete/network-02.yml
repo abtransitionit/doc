@@ -1,0 +1,15 @@
+---
+
+# Virtual Network [already defined] in cloud@openstack:project
+network:
+  ## Pool for fip@(public, admin)
+  fipadmin:
+    type: fip
+    id: fipadmin
+    name: Ext-Net
+  ## Pool for fip@(publi, front)
+  fipfront:
+    type: fip
+    id: fipfront
+    name: Ext-Net
+
