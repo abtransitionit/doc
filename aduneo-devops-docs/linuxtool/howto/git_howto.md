@@ -24,7 +24,7 @@ wget https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar
 # rename it
 mv bfg-1.14.0.jar bfg.jar
 # get repo
-lTOKEN="glpat-EnzrUH_ipK-N7QSoavch"
+lTOKEN="xxx"
 git clone --mirror https://xxx:${lTOKEN}@git.aduneo.com/client-dinum/dinum-docker.git
 # Clean file
 java -jar /tmp/bfg.jar --delete-files jason.war dinum-docker.git

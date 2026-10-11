@@ -22,7 +22,6 @@ lHEAT_STACK_NAME="mxst-vm"
 openstack stack show ${lHEAT_STACK_NAME}
 ```
 
-https://xx:glpat-R4pevtLzu8L1CjxAUwZE@forge.dgfip.finances.rie.gouv.fr/dinsic/maia/maia-docker.git
 
 
 # Create Stack
