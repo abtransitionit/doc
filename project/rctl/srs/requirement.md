@@ -6,8 +6,8 @@
 [↖ Project Blue][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #\(doc\)
-[vision howto]:      ../whatis/ep.md#core-vision
-[terminology howto]: ../whatis/ep.md#phase-02---terminology-and-concepts
+[vision whatis]:      ../whatis/ep.md#core-vision
+[terminology whatis]: ../whatis/ep.md#phase-02---terminology-and-concepts
 
 Related topics
 
@@ -17,28 +17,20 @@ Related topics
 |[What is a Repository][repo whatis]|
 
 
----
-
-[cli howto]: ../howto/cli-grammar.md
-[REQ-01]: ../../spec/REQ-01-requirements.md
-[SPEC-01]: ../../spec/SPEC-01-architecture.md
-[ADR-02]: ../../adr/ADR-02-decoupled-output-formatting.md
 
 **Document's status**
 - Early development.
 - The project is currently defining its core concepts and architecture.
 
 
-<h1 align="center">Project: RCtl — SRS</h1>
+<h1 align="center">Project: RCtl — Requirement</h1>
 
 # Requirements Register
 
 |Key|value|
 |-|-|
-|Project|RCtl
 |version|v0.1
-|Vision|[vision][vision whatis]
-|Terminology|[terminology][terminology whatis]
+|Derived from|[Vision][vision whatis] and [terminology][terminology whatis]
 |Last updated|<2026-10-11>
 
 **Terminology**
@@ -71,21 +63,22 @@ Related topics
 | -- | ----- | ------- | ------ | ---- | -------- | ----- | --------- | ------ | --------- |
 | REQ-001 | Model | 0.1 | draft | functional | must | Resource model | represent resources through a resource model. | Vision §Core vision; T&C §Model, §Resource | Resources need their own representation. |
 | REQ-002 | Model | 0.1 | draft | functional | must | Target model | represent targets through a target model. | Vision §Core vision; T&C §Model, §Target | Targets need their own representation. |
-| REQ-003 | Model | 0.1 | draft | functional | must | Distinct models | keep the resource model and the target model distinct. | T&C §Model, §Resource, §Target (your correction) | A resource is not a target; conflating them breaks the model. |
-| REQ-004 | Model | 0.1 | draft | functional | must | Model relationships | represent relationships between resources and targets in the common model. | Vision §Core vision; T&C §Model | Relationships are part of the model. |
-| REQ-005 | Capabilities | 0.1 | draft | functional | must | Provision | provision resources. | Vision §Core vision; T&C §Provisioning | Core capability. |
-| REQ-006 | Capabilities | 0.1 | draft | functional | must | Operate | operate resources. | Vision §Core vision; T&C §Operation | Core capability. |
-| REQ-007 | Capabilities | 0.1 | draft | functional | must | Expose existing resources | expose a pre-existing resource within its model. | Vision §Strategy; T&C §Expose/Adopt/Import | Strategy: expose/adopt. |
-| REQ-008 | Capabilities | 0.1 | draft | functional | must | Adopt existing resources | adopt a pre-existing resource so it becomes manageable as if the system had created it. | Vision §Strategy; T&C §Expose/Adopt/Import | First-class citizen. |
-| REQ-009 | Capabilities | 0.1 | draft | functional | must | Compose into workflows | compose resources, tools, and capabilities into complete workflows. | Vision §Strategy; T&C §Composing | The system is the glue. |
-| REQ-010 | Capabilities | 0.1 | draft | non-functional | must | Rely on existing tooling | rely on existing tools, platforms, and APIs as building blocks rather than reimplementing them. | Vision §Strategy | Don't reinvent specialized tooling. |
-| REQ-011 | Capabilities | 0.1 | draft | non-functional | must | Unifying layer, not replacement | serve as a unifying layer over external tooling rather than a replacement for it. | Vision §Strategy | Layer, not replacement. |
-| REQ-012 | Independence | 0.1 | draft | functional | must | Provision regardless of target | provision a resource regardless of the target where it resides. | Vision §Target Outcome; T&C §Target | Target independence. |
-| REQ-013 | Independence | 0.1 | draft | functional | must | Operate regardless of target | operate a resource regardless of the target where it resides. | Vision §Target Outcome; T&C §Target | Target independence. |
-| REQ-014 | Independence | 0.1 | draft | functional | must | Provision regardless of mechanism | provision a resource regardless of the mechanism used to manage it. | Vision §Target Outcome; T&C §Mechanism | Mechanism independence. |
-| REQ-015 | Independence | 0.1 | draft | functional | must | Operate regardless of mechanism | operate a resource regardless of the mechanism used to manage it. | Vision §Target Outcome; T&C §Mechanism | Mechanism independence. |
-| REQ-016 | Independence | 0.1 | draft | functional | must | Kind coverage | support resources of different kinds. | Vision §Problem; T&C §Resource, §Kind | Kind varies. |
-| REQ-017 | Independence | 0.1 | draft | functional | must | Granularity coverage | support resources at different granularities, from atomic to composite. | Vision §Problem; T&C §Granularity | Granularity varies. |
+| REQ-003 | Model | 0.1 | draft | functional | must | Model relationships | represent relationships between resources and targets. | Vision §Core vision; T&C §Model | Relationships are part of the model. |
+| REQ-004 | Capabilities | 0.1 | draft | functional | must | Provision | provision resources. | Vision §Core vision; T&C §Provisioning | Core capability. |
+| REQ-005 | Capabilities | 0.1 | draft | functional | must | Operate | operate resources. | Vision §Core vision; T&C §Operation | Core capability. |
+| REQ-006 | Capabilities | 0.1 | draft | functional | must | Expose existing resources | expose a pre-existing resource within its model. | Vision §Strategy; T&C §Expose/Adopt/Import | Strategy: expose/adopt. |
+| REQ-007 | Capabilities | 0.1 | draft | functional | must | Adopt existing resources | adopt a pre-existing resource so it becomes manageable as if the system had created it. | Vision §Strategy; T&C §Expose/Adopt/Import | First-class citizen. |
+| REQ-008 | Capabilities | 0.1 | draft | functional | must | Compose into workflows | compose resources, tools, and capabilities into complete workflows. | Vision §Strategy; T&C §Composing | The system is the glue. |
+| REQ-009 | Capabilities | 0.1 | draft | non-functional | must | Rely on existing tooling | rely on existing tools, platforms, and APIs as building blocks rather than reimplementing them. | Vision §Strategy | Don't reinvent specialized tooling. |
+| REQ-010 | Capabilities | 0.1 | draft | non-functional | must | Unifying layer, not replacement | serve as a unifying layer over external tooling rather than a replacement for it. | Vision §Strategy | Layer, not replacement. |
+| REQ-011 | Independence | 0.1 | draft | functional | must | Provision regardless of target | provision a resource regardless of the target where it resides. | Vision §Target Outcome; T&C §Target | Target independence. |
+| REQ-012 | Independence | 0.1 | draft | functional | must | Operate regardless of target | operate a resource regardless of the target where it resides. | Vision §Target Outcome; T&C §Target | Target independence. |
+| REQ-013 | Independence | 0.1 | draft | functional | must | Provision regardless of mechanism | provision a resource regardless of the mechanism used to manage it. | Vision §Target Outcome; T&C §Mechanism | Mechanism independence. |
+| REQ-014 | Independence | 0.1 | draft | functional | must | Operate regardless of mechanism | operate a resource regardless of the mechanism used to manage it. | Vision §Target Outcome; T&C §Mechanism | Mechanism independence. |
+| REQ-015 | Independence | 0.1 | draft | functional | must | Kind coverage | support resources of different kinds. | Vision §Problem; T&C §Resource, §Kind | Kind varies. |
+| REQ-016 | Independence | 0.1 | draft | functional | must | Granularity coverage | support resources at different granularities, from atomic to composite. | Vision §Problem; T&C §Granularity | Granularity varies. |
+| REQ-017 | Capabilities | 0.1 | draft | functional | must | Capability discovery | determine which operations a resource supports. | T&C §Operation | The system must know the capabilities before exposing them. |
+| REQ-018 | Capabilities | 0.1 | draft | functional | must | Capability exposure | expose the operations that a resource supports. | T&C §Operation | Operations are surfaced to the operator/agent. |
 
 ## What changed vs v0.4
 
@@ -132,3 +125,10 @@ REQ-004 "Model relationships" still says *"in the common model"* — but we just
 - **(C)** *"represent relationships between resources, and between resources and targets."* (both kinds)?
 
 Which one reflects your intent?
+
+# Todo
+vision: 
+- REQ-001 (resource model), 
+- REQ-002 (target model), 
+- REQ-011/013 (target/mechanism independence) 
+- REQ-017/018 (capability discovery/exposure)

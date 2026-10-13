@@ -1,6 +1,11 @@
+[//]: #(doc)
+[cv whatis]: /_vocabulary/whatis/ep.md
+
 <h1 align="center">Documentation System</h1>
 
-Welcome to the organization knowledge portal. This workspace is organized into distinct spaces.
+Welcome to the organization knowledge portal. This workspace is organized into distinct spaces. Whenever possible, use the [controlled vocabulary][cv whatis] when writing or updating any document to ensure consistent terminology across the knowledge base.
+
+
 
 
 # 📚 Reference & Evergreen Knowledge
@@ -11,6 +16,7 @@ Welcome to the organization knowledge portal. This workspace is organized into d
 | [Language](./language/README.md) | Idiomatic code patterns, syntax rules, and reference guides (Go, Bash, etc.). |
 | [Tool](./tool/README.md) | Operating manuals, configurations, and reference docs for products and runtimes (`algernon`, `certbot`, `jelly`, etc.). |
 | [System](./system/README.md) | cloud, Os, Openstack, Kubernetes, etc. |
+| [Controlled Vocabulary](./_vocabulary/whatis/ep.md) | The knowledge Base Controlled Vocabulary |
 | Template|Template vs. Class (Practical usage ) template of a concept, language, tool, system | 
 
 
@@ -20,7 +26,7 @@ Welcome to the organization knowledge portal. This workspace is organized into d
 Todo: list 
 - active projects
 - archived projects
-- current  projects when working on several
+- current  projects when working on several 
 ```
 | Space | Focus |
 | :--- | :--- |

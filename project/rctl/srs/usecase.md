@@ -8,7 +8,7 @@
 [//]: #\(doc\)
 [vision howto]:      ../whatis/ep.md#core-vision
 [terminology howto]: ../whatis/ep.md#phase-02---terminology-and-concepts
-[requirement list]:  ../srs/ep.md
+[requirement list]:  ../srs/requirement.md
 Related topics
 
 | Topic | Location| Kind |
@@ -17,12 +17,6 @@ Related topics
 |[What is a Repository][repo whatis]|
 
 
----
-
-[cli howto]: ../howto/cli-grammar.md
-[REQ-01]: ../../spec/REQ-01-requirements.md
-[SPEC-01]: ../../spec/SPEC-01-architecture.md
-[ADR-02]: ../../adr/ADR-02-decoupled-output-formatting.md
 
 **Document's status**
 - Early development.
@@ -36,7 +30,7 @@ Related topics
 |Key|value|
 |-|-|
 |version|v0.1
-|Derived from|[Requirements Register][requirement list]
+|Derived from|[Requirements list][requirement list]
 |Last updated|<2026-10-11>
 
 ## Legend
@@ -58,6 +52,7 @@ Related topics
 - [UC-06 — Use different mechanisms for the same operation](#uc-06)
 - [UC-07 — Reset a resource](#uc-07)
 - [UC-08 — Inspect the model](#uc-08)
+- [UC-09 — Install a package on a VM](#uc-09)
 - [Coverage check](#coverage-check)
 - [Candidate gaps](#candidate-gaps)
 
@@ -247,6 +242,33 @@ Related topics
 
 - The resource model (REQ-001), target model (REQ-002), and their relationships (REQ-003) are all queryable.
 - Filtering exercises kind coverage (REQ-015) and granularity coverage (REQ-016).
+
+
+<a id="uc-09"></a>
+# [UC-09](#uc-09) — Install a package on a VM
+
+[↑ Index](#index)
+
+- **Actor**: Operator
+- **Goal**: Install a package on a VM.
+- **Covers**: REQ-001, REQ-002, REQ-003, REQ-004, REQ-005, REQ-011, REQ-013, REQ-017, REQ-018
+- **Status**: draft
+
+## Main flow
+
+1. Operator declares the VM as a **target**.
+2. Operator declares the package as a **resource**.
+3. System associates the package with the VM (REQ-003).
+4. System discovers the operations the VM supports (REQ-017) and exposes them (REQ-018).
+5. System selects a mechanism appropriate to the VM (`apt`, `dnf`, …) and the package (REQ-013).
+6. System provisions the package on the VM (REQ-004).
+7. Operator checks the package status (REQ-005).
+
+## Notes
+
+- The VM is the **target**; the package is the **resource**. Same VM would be a **resource** in an operation like *rebuild this VM*.
+- Provisioning works regardless of the VM's location — local, remote, or cloud (REQ-011).
+- The chosen mechanism is hidden from the operator (REQ-013).
 
 ---
 

@@ -13,8 +13,12 @@
 
 Other concepts to define or put in the right location
 
-# Virtualization
 
-Virtualization allow to create 1 Os (i.e Machine) in 1 Os (i.e Machine)
+
+# Todo
+
+## Virtualization
+- The concept of creating Nested Machine: Machine inside Machine
   - 1 Os (Machine) denote 1 Os@**guest** (Machine@**Virtual**)
   - 1 Os (Machine) denote 1 Os@**Host**  (Machine@**Physical**)
+## Isolated environment

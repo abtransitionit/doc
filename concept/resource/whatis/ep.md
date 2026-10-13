@@ -36,7 +36,6 @@ The concept of resource
 
 # Definition
 
-- May be physical, virtual or abstract
 - Can be [provisioned][provision whatis] in an [Environment][env whatis]
 - Can be [operated][ope whatis] on / managed / controlled
 
@@ -57,7 +56,7 @@ The concept of resource
 - **Composite**  — member are parts of **different kinds** (each named, distinct).
 - **Collection** — member are items of the **same kind** (a set - e.g. a directory, a [repository][repo whatis], a cluster).
 
-**Nature**
+**Nature** <a id='nature'></a>
 - **Physical** - a physical machine, a physical disk.
 - **Virtual**  - a virtual model of a physical resource
 - **Abstract** - an abstract model of a software/code

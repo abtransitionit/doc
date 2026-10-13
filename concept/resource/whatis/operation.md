@@ -8,6 +8,7 @@
 [//]: #(ref)
 [res whatis]:  /concept/resource/whatis/ep.md
 [ope list]:    ../list/operation.md
+[ope howto]:    ../howto/operation.md
 [host whatis]: /concept/machine/whatis/host.md
 
 
@@ -18,11 +19,10 @@ Related topics
 |[What is a Host][host whatis]|see|
 |[What is a Resource][res whatis]|see|
 |[List of Operations][ope list]|see|
+|[How-to for Operations][ope howto]|see|
 
 
 <h1 align="center">What is a Resource Operation</h1>
-
-
 
 
 
@@ -70,6 +70,30 @@ Operation can be classified in this categories
 | Write | update, modify, patch, edit, set, assign|
 | Delete | delete, remove, destroy, terminate, purge|
 | Observability | monitor, observe, log, trace, inspect, describe, audit, info|
+
+# Terminology
+
+| Level | Verb | Reads as | Notes |
+| ----- | ---- | -------- |-------- |
+| 1 - session | **apply** | apply now, for me |configured for current login session only
+| 2 - runtime | **load** | load now, for the whole VM |configured for whole VM, all session, until reboot
+| 3 - persistent | **enable** | load now and after reboot |configured whole VM, survives reboot
+
+
+**Example**:
+- **load** a module means: Load a kernel module for the current boot.
+- **enable** a module means: load it and Enable it across reboots."
+
+**Example**:
+
+| Resource | Level 1 (session) | Level 2 (runtime) | Level 3 (persistent) |
+| -------- | ----------------- | ----------------- | -------------------- |
+| kernel module | ❌ | `load` | `enable` |
+| environment variable | ✅ | ✅ (system-wide env) | ✅ (e.g. `/etc/environment`) |
+| service | ❌ | `start` | `enable` |
+| shell alias | ✅ | ❌ | ✅ (profile) |
+| mount | ❌ | `mount` | `fstab` |
+
 
 # Example of Operation
 See [List of Operations][ope list]
