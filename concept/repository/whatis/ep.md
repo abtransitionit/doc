@@ -7,6 +7,7 @@
 [//]: #(ref)
 [res whatis]: /concept/resource/whatis/ep.md
 [ope whatis]: /concept/resource/whatis/operation.md
+[repo list]: ../list/ep.md
 [container whatis]: /concept/image/whatis/container.md
 [registry container list]: /concept/image/list/registry.md
 
@@ -17,6 +18,7 @@ Related topics
 |[What is a Resource][res whatis]|
 |[What is an Operation][ope whatis]|
 |[What is a Container][container whatis]|
+|[List of Repositories][repo list]|
 
 <h1 align="center">What is a Repository</h1>
 

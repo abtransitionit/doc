@@ -26,6 +26,7 @@ Welcome to the Concepts portal. This space helps dig, clarify, or understand a c
 | [Log](./log/whatis/ep.md) |  |
 | [Model](./model/whatis/ep.md) | Simplified representation of something — built to focus on a specific aspect for a given purpose |
 | [Concept](./concept/whatis/ep.md) | Mental representation carried by a string — articulated through definitions, examples, and models to be shared |
+| [Isolation](./isolation/whatis/ep.md) | Mental representation carried by a string — articulated through definitions, examples, and models to be shared |
 | [Image](./image/whatis/ep.md) | Allocatable capacity — CPU, memory, storage, and network consumed by workloads |
 | [Resource](./concept/whatis/ep.md) | Allocatable capacity — CPU, memory, storage, and network consumed by workloads |
 | [Host](./machine/whatis/host.md) | Physical infrastructure — servers, VMs, and bare-metal hosts |

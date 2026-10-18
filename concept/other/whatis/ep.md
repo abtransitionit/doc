@@ -22,3 +22,5 @@ Other concepts to define or put in the right location
   - 1 Os (Machine) denote 1 Os@**guest** (Machine@**Virtual**)
   - 1 Os (Machine) denote 1 Os@**Host**  (Machine@**Physical**)
 ## Isolated environment
+
+# Reverse proxy

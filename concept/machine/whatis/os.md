@@ -1,5 +1,9 @@
 [//]: #(home)
-[home]:  ../whatis/ep.md
+[home domain]: ../../README.md
+[home doc]:     ../../../README.md
+[home topic]:  ../whatis/ep.md
+
+[↖ Machine][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(functional)
 [os list]: ../list/os.md
@@ -7,7 +11,6 @@
 [host whatis]: ../whatis/host.md
 [tool whatis]: ../whatis/tool.md
 
-[←][home] 
 
 Related topics
 

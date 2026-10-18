@@ -24,12 +24,14 @@ Welcome to the Tools portal. This space ...
 
 | Tool | Type | Purpose |
 |------|---------|---------|
-| Aft | [Tool](./aft/whatis/ep.md) | |
-| Algernon | [Tool](./algernon/whatis/ep.md) | Web server — serves markdown file on the fly|
-| Jelly | [Tool](./Jelly/whatis/ep.md) | Manages Multimedia resources (audio, video) |
+| [Linux](./linux/whatis/ep.md) | Tool | |
+| [Aft](./aft/whatis/ep.md) | Tool | |
+| [Algernon](./algernon/whatis/ep.md) | Tool | Web server — serves markdown file on the fly|
+| [Jelly](./Jelly/whatis/ep.md) | Tool | Manages Multimedia resources (audio, video) |
+| [Caddy](./caddy/whatis/ep.md) | Tool | Manages Multimedia resources (audio, video) |
 | RPro | [Tool](./rpro/whatis/ep.md), [Project](../project/rpro/whatis/ep.md) | CLI for provisioning resources on hosts |
 | RCtl | [Tool](./rctl/whatis/ep.md), [Project](./project/rctl/whatis/ep.md) | CLI for controlling operations on resources |
-| Cerbot | [Tool](./cerbot/whatis/ep.md) | |
+| [Cerbot](./cerbot/whatis/ep.md) | Tool | |
 
 # 🚀 Quick Access Dashboard
 

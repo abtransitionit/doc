@@ -98,7 +98,24 @@ The underlying platform or system hosting a resource.
 
 - **Contrast**: A **Resource** is what is hosted. A **Mechanism** is how it's acted upon. A **Target** is the execution context — the *where*.
 
+# Wrapped Target
+A wrapped target is a base target reached through a transport mechanism.
 
+```
+Resource: a kernel module
+└── Target: a local OS
+    ├── Action: build   → Command: make -C …   → Mechanism: make
+    ├── Action: install → Command: apt install … → Mechanism: apt
+    ├── Action: load    → Command: modprobe <mod> → Mechanism: modprobe
+    ├── Action: load    → Command: insmod <mod>.ko → Mechanism: insmod
+    └── Action: enable  → Command: echo … >> …  → Mechanism: shell
+└── Target: VM over SSH
+    └── derives from: local OS
+        transport: ssh
+```
+- Inherits the base target's actions, commands, and mechanisms.
+- Prefixes each mechanism with the transport: ssh + make, ssh + apt, ssh + modprobe, …
+**- TODO  Open: can a wrapped target itself be wrapped? (e.g. jump host + VM over SSH)**
 
 # Resource vs Target
 

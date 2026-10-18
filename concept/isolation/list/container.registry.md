@@ -1,9 +1,9 @@
 [//]: #(home)
-[home set]: ../../README.md
+[home domain]: ../../README.md
 [home doc]: ../../../README.md
-[home topic]: ../whatis/ep.md
+[home topic]:  ../whatis/ep.md
 
-[↖ Image][home topic] · [↖ Concept][home set] · [↖ Doc][home doc]
+[↖ Isolation][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 
@@ -12,7 +12,7 @@ Related topics
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 
-<h1 align="center">List of Container Runtime</h1>
+<h1 align="center">List of Container Registry</h1>
 
 The concept of Container Runtime
 

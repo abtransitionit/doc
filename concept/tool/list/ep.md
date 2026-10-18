@@ -7,11 +7,8 @@
 
 
 [//]: #(ref)
-[tool list]: /tool/README.md
-[ssg list]: ../list/ssg.md
-[tool arm list]: https://developer.arm.com/ecosystem-dashboard/linux
 
-
+Related Topics
 
 | Topic | Location | Kind |
 |-|-|-|
@@ -24,7 +21,8 @@ The concept of Tool
 
 
 # List
-- List of [ARM tool][tool arm list]
-- List of [documented tool][tool list]
-- List of [SSG tool][ssg list]
+- List of [ARM tool](https://developer.arm.com/ecosystem-dashboard/linux)
+- List of [documented tool](/tool/README.md)
+- List of [SSG tool](../list/ssg.md)
+- List of [Firewall tool](../list/firewall.md)
 

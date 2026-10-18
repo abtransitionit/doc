@@ -764,3 +764,10 @@ Main feature: Enforce policy governance, scan for vulnerabilities, and detect ru
 - [OPA / Gatekeeper](https://www.openpolicyagent.org/): Flexible policy engine used to audit and enforce compliance at the Kubernetes admission control layer.
 - [Falco](https://falco.org/): CNCF Graduated runtime security threat detector that intercepts Linux system calls in real-time.
 
+
+
+# Todo
+```
+kubectl apply -f network-tool.yaml
+kubectl exec -it network-tool -- sh
+```

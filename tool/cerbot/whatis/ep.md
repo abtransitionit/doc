@@ -6,6 +6,7 @@
 
 [//]: #(doc)
 [cert whatis]:      ../whatis/cert.md
+[caddy whatis]:      /tool/caddy/whatis/ep.md
 [challenge whatis]: ../whatis/cert.md
 
 
@@ -18,6 +19,7 @@ Related topics
 |[What is a Challenge](../whatis/challenge.md)|internal
 |[What is a Certificate](../whatis/cert.md)|internal
 |[What is Let's Encrypt](../whatis/letsencrypt.md)|internal
+|[What is Caddy][caddy whatis]|internal
 
 <h1 align="center">What is Cerbot</h1>
 

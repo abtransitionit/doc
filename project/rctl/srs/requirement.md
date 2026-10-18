@@ -77,8 +77,30 @@ Related topics
 | REQ-014 | Independence | 0.1 | draft | functional | must | Operate regardless of mechanism | operate a resource regardless of the mechanism used to manage it. | Vision §Target Outcome; T&C §Mechanism | Mechanism independence. |
 | REQ-015 | Independence | 0.1 | draft | functional | must | Kind coverage | support resources of different kinds. | Vision §Problem; T&C §Resource, §Kind | Kind varies. |
 | REQ-016 | Independence | 0.1 | draft | functional | must | Granularity coverage | support resources at different granularities, from atomic to composite. | Vision §Problem; T&C §Granularity | Granularity varies. |
-| REQ-017 | Capabilities | 0.1 | draft | functional | must | Capability discovery | determine which operations a resource supports. | T&C §Operation | The system must know the capabilities before exposing them. |
-| REQ-018 | Capabilities | 0.1 | draft | functional | must | Capability exposure | expose the operations that a resource supports. | T&C §Operation | Operations are surfaced to the operator/agent. |
+| REQ-017 | Capabilities | 0.1 | draft | functional | must | Capability discovery |  determine which capabilities a resource (kind) has. | T&C §Operation | The system must know the operations before exposing them. |
+| REQ-018 | Capabilities | 0.1 | draft | functional | must | Capability exposure | expose a subset or all of a resource's capabilities as operations. | T&C §Operation | Operations are surfaced to the operator/agent. |
+| REQ-019 | Model | 0.1 | draft | functional | should | Wrapped target | represent a wrapped target as a base target plus a transport mechanism. | <your statement> | A VM over SSH is a local OS reached via `ssh`. |
+| REQ-020 | Capabilities | 0.1 | draft | functional | should | Wrapped target inheritance | inherit a base target's actions, commands, and mechanisms in a wrapped target, prefixing each with the transport mechanism. | <your statement> | Avoids duplicating the action/mechanism set per target. |
+| REQ-021 | Capabilities | 0.1 | draft | functional | must | Operation–capability match | reject a requested operation that does not correspond to a capability of the resource. | <your statement 2b> | A request must be valid for the resource kind. |
+| REQ-022 | Capabilities | 0.1 | draft | functional | must | Request lifecycle | model a request as having a lifecycle. | <your statement> | A request is not a one-shot event; it has states. |
+| REQ-023 | Capabilities | 0.1 | draft | functional | must | Request outcome | classify each request as accepted, rejected, or ignored. | T&C §Request | The lifecycle must expose at least these three outcomes. |
+| REQ-024 | Capabilities | 0.1 | draft | functional | must | Execution outcome | classify the execution of an accepted request as succeeded or failed. | T&C §Request | Acceptance and success are distinct. |
+| REQ-025 | Model | 0.1 | draft | functional | must | Unique resource ID | assign a unique ID to every resource instance. | <your statement> | Stable handle for referencing resources. |
+| REQ-026 | Model | 0.1 | draft | functional | must | Identity attributes | record the kind-specific attributes that locate a resource within its target (e.g. a file's path, a service's endpoint, a database's host/port/name). | <your statement + examples> | The ID names the resource; the attributes let the system reach it. |
+| REQ-027 | Model | 0.1 | draft | functional | must | Hierarchical kind | represent a resource's kind as a hierarchical path of one or more segments. | <your statement> | Kinds are refined by depth, not fixed at two levels. |
+| REQ-028 | Model | 0.1 | draft | functional | must | Kind assignment | assign each resource exactly one kind. | <your statement> | Ambiguity about what a resource is must be excluded. |
+
+
+**REQ-026**
+
+Examples:
+- **File:** ID + path
+- **Service:** ID + endpoint
+- **Database:** ID + host/port/name
+
+**REQ-019**, **REQ-020**
+- cf. model > wrapped Target
+
 
 ## What changed vs v0.4
 

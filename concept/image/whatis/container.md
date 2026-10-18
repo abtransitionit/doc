@@ -8,35 +8,40 @@
 [//]: #(ref)
 [host whatis]: /concept/machine/whatis/host.md
 [image whatis]: ../whatis/ep.md
+[container whatis]: /concept/isolation/whatis/container.md
 [repo whatis]: /concept/repository/whatis/ep.md
 Related topics
 
 | Topic                                          | Location | Kind |
 | ---------------------------------------------- | -------- | ---- |
 |[What is a Repository][repo whatis]
+|[What is a Container][container whatis]
 
-<h1 align="center">What is a Container</h1>
+<h1 align="center">What is a Container Image</h1>
 
-The concept of Container
+The concept of Container Image
 
 # Definition
+
+- an Artifact (ie. a static compressed binary file)
+- lives in a [repositorry][repo whatis]
+- Allow to build [container][container whatis]
 
 ## Registry
 - A service
 - Stores and distributes container images
 - Contains repositories that contain container images identified by tags or digests
 
-## Container
 
-- Instance of [container image][image whatis]
-- **isolated environment** sharing the host **OS kernel**
-- **Namespaces** (workspace isolation):
-    * **PID**: isolated process tree starting at **PID 1**
-    * **Network**: private `eth0`, routing tables, and firewall rules
-    * **User**: root inside = unprivileged user outside
-    * **Mount**: isolated filesystem root (`/`)
-- **cgroups** (resource control). Enforces limits on: CPU, RAM, and Disk I/O usage
+# Kind
 
+- Non-Root User: 
+    - processes inside container run as unrpiviledge user
+    - Container runtime can still launch contanier as root
+- Rootless container: 
+    - processes inside container run as unrpiviledge user
+    - The container runtime uses Linux User Namespaces
+    - It maps Container UID 0 to an unprivileged Host UID
 
 ## LXC (**L**inu**X** **C**ontainers)
 

@@ -136,7 +136,8 @@
     
 - **Device**: Basically, a hardware resource
 
-- **Meta**: About itself or about something of the same kind.
+- **Meta**: 
+  - Something is meta when it describes or defines other things of the same kind.
   - **Example**: 
     - Metadata describes other data.
     - Meta-definition is a definition about a definition
@@ -150,6 +151,13 @@
 
 
 
+## Related to Execution
+
+Related to the execution of an action, operation or task
+
+- **completed**  = succeeded OR failed
+- **succeeded**  ⊂ completed
+- **failed**     ⊂ completed
 ## Related to Resource
 
 - **Atomic** Resource: 
@@ -276,6 +284,11 @@ A CPU could be represented in several ways:
 - A resource of kind Compute — if the kind represents a broader category of computational resources.
 - A resource of kind Hardware — if the kind represents the general class of physical components.
 
+
+# Todo 
+
+- **Nested and composite describe different aspects**: A structure can be composite and contain nested structures.
+- **Atomic and composite are context-dependent**: The same resource can be represented differently in different models.
 
 
 

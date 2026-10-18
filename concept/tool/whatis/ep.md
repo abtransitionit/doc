@@ -147,9 +147,8 @@ Tool
 This model shows how a software capability turns user intent into business value:
 
 ```
-┌─────────┐    provides    ┌──────────────┐    enables    ┌────────┐   contributes   ┌──────┐ achieves  ┌──────┐
-│   TOOL  │ ─────────────> │  CAPABILITY  │ ───────────>  │ ACTION │ ──────────────> │ TASK │ ────────> │ GOAL │
-└─────────┘                └──────────────┘               └────────┘                 └──────┘           └──────┘
+      provides                enables             contributes         achieves
+Tool ──────────> Capability ───────────> Action ──────────────> Task ────────> Goal
 ```
 
 
