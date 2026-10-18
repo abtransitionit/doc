@@ -19,7 +19,8 @@
 
 <div align="center">
 
-# Project Blue Documentation Blueprint
+<h1>Project Blue - Documentation Blueprint</h1>
+
 
 **A standardized, instantiable framework for software architecture and project governance**
 
@@ -29,13 +30,12 @@
 
 </div>
 
----
 
-## Executive Overview
+# Overview
 
-This blueprint serves as a reusable canvas to structure, document, and govern software projects from inception through execution. It establishes a unified documentation architecture, standardized metadata, and clear delivery phases.
+This blueprint serves as a reusable canvas to structure, document, and govern software projects from their idea through execution. It establishes a **unified** documentation architecture, standardized metadata, and clear delivery phases.
 
-### Core Blueprint Components
+## Core Blueprint Components
 
 * **[Document Metadata Header](#metadata-specification)** — mandatory traceability and semantic version block applied to every file.
 * **[Document Revision Log](#document-revision-history)** — standardized change log format embedded in individual deliverables.

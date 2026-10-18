@@ -19,11 +19,24 @@ Related topics
 | [How-to bootsrap a software project][bootsrap howto] | internal |      |
 
 
-<h1 align="center">Project: Blue</h1>
+<div align="center">
 
-A reusable, instantiable software project model
+<h1>Project Blue - Documentation Blueprint</h1>
 
-## 1. Purpose
+
+**A standardized, instantiable framework for software architecture and project governance**
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Specification](https://img.shields.io/badge/Spec-v1.0-blue)
+![Format](https://img.shields.io/badge/Format-Markdown-green)
+
+</div>
+
+# Overview
+
+This blueprint serves as a reusable canvas to structure, document, and govern software projects from their idea through execution. It establishes a **unified** documentation architecture, standardized metadata, and clear delivery phases.
+
+# 1. Purpose
 
 Define a **reusable project model** that can be **instantiated** into concrete software projects, covering the path from **vision** to **production release and evolution**:
 
@@ -38,7 +51,7 @@ Define a **reusable project model** that can be **instantiated** into concrete s
 
 > 🚀 The blueprint is independent of the project's **physical representation** (files, DB, tools) and of the **instantiation mechanism** (manual, tool, automation).
 
-## 2. How It Works
+# 2. How It Works
 
 
 A project model can be instantiated using different representations and storage structures:
@@ -63,7 +76,7 @@ BLUEPRINT ──instantiation──▶ Project
 
 This **model vs. instantiation** separation lets the same model be implemented in different ways without changing its conceptual definition.
 
-## 3. Objectives and Vision
+# 3. Objectives and Vision
 
 - Turn an idea into an actionable project
 - One blueprint, adaptable to different projects

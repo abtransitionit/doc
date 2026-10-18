@@ -17,17 +17,20 @@
 [metada whatis]: ../whatis/tpl.metadata.md
 [changelog whatis]: ../whatis/tpl.changelog.md
 [metadata whatis]: ../whatis/tpl.metadata.md
-Related topics
-
-| Topic                            | Location | Kind |
-| -------------------------------- | -------- | ---- |
-| [Whatis a Lifecycle][lfc whatis] | internal |      |
-| [How-to bootsrap a software project][bootsrap howto] | internal |      |
 
 
-<h1 align="center">Project: Blue</h1>
 
-A reusable, instantiable software project model
+<div align="center">
+
+<h1>Project Blue - Documentation Blueprint</h1>
+
+**A standardized, instantiable framework for software project architecture and governance**
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Specification](https://img.shields.io/badge/Spec-v1.0-blue)
+![Format](https://img.shields.io/badge/Format-Markdown-green)
+
+</div>
 
 # Intro
 

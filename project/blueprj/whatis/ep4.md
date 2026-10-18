@@ -16,11 +16,33 @@
 [version history whatis]: ../whatis/tpl.historylog.md
 [metadata whatis]: ../whatis/tpl.metadata.md
 
-<h1 align="center">Project: Blue</h1>
 
-<p align="center"><i>A reusable, instantiable software project model</i></p>
+<div align="center">
 
----
+<h1>Project Blue - Documentation Blueprint</h1>
+
+
+**A standardized, instantiable framework for software architecture and project governance**
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Specification](https://img.shields.io/badge/Spec-v1.0-blue)
+![Format](https://img.shields.io/badge/Format-Markdown-green)
+
+</div>
+
+
+# Overview
+
+This blueprint serves as a reusable canvas to structure, document, and govern software projects from their idea through execution. It establishes a **unified** documentation architecture, standardized metadata, and clear delivery phases.
+
+
+## Core Blueprint Components
+
+* **[Document Metadata Header](#metadata-specification)** — mandatory traceability and semantic version block applied to every file.
+* **[Document Revision Log](#document-revision-history)** — standardized change log format embedded in individual deliverables.
+* **[Project Changelog](#project-changelog)** — global [`CHANGELOG.md`](./CHANGELOG.md) to track release baselines and architectural milestones.
+* **[Master Document Index](#project-dashboard)** — central dashboard ([`docs/INDEX.md`](./docs/INDEX.md)) for unified tracking.
+
 
 ## Intro
 
