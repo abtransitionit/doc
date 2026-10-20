@@ -24,10 +24,12 @@ Welcome to the Software Projects portal. This space ...
 | [BluePrj](./blueprj/whatis/ep.md) | soft | |
 | [Feca](./feca/whatis/ep.md) | soft | |
 | [MetaDoc](./metadoc/whatis/ep.md) | soft | Documentation platform — authoring, rendering, and publishing |
-| [RPro](./rpro/whatis/ep.md) | soft | Resource provisioning — deploy and configure resources on hosts |
-| [RCtl](./rctl/whatis/ep.md) | soft | Resource control — manage operations on provisioned resources |
+| [RMS](./rms/whatis/ep.md) | soft | a Resource Management System |
 | [GoTest](./gotest/whatis/ep.md) | soft | Go module testing — validate and verify Go packages |
 | [OmtOvh](./omtovh/whatis/ep.md) | soft |  |
+
+<!-- | [RPro](./rpro/whatis/ep.md) | soft | Resource provisioning — deploy and configure resources on hosts |
+| [RCtl](./rctl/whatis/ep.md) | soft | Resource control — manage operations on provisioned resources | -->
 
 
 # 🚀 Quick Access Dashboard

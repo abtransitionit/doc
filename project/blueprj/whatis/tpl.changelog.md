@@ -1,7 +1,7 @@
 [//]: # (home)
 [home domain]: ../../README.md
 [home doc]: ../../../README.md
-[home topic]: ../whatis/ep2.md
+[home topic]: ../whatis/ep.md
 
 [↖ Blue Project][home topic] · [↖ Project][home domain] · [↖ Doc][home doc]
 
@@ -13,21 +13,22 @@
 
 # Project: Blue — Project Changelog Template
 
-A global changelog template 
+A project changelog template 
 
 ![Status](https://img.shields.io/badge/Status-Draft-yellow)
 ![Version](https://img.shields.io/badge/Version-v1.0-blue)
 
 </div>
 
+
 | Field | Value |
 | :--- | :--- |
-| **Doc ID** | TPL-CL-BLUE |
+| **Doc-ID** | TPL-CHL-BLUE|
+| **Project** | BLUE |
 | **Path** | `tpl.changelog.md` |
 | **Last Updated** | 2026-10-18 |
 
-
-# Requirements
+# 1. Overview
 
 The project shall maintains a global changelog that adheres to [Keep a Changelog][changelog whatis] standard and  [Semantic Versioning][semantic versioning whatis]. It keeps tracks of cross-cutting project updates across:
 * Document release baselines
@@ -36,7 +37,7 @@ The project shall maintains a global changelog that adheres to [Keep a Changelog
 * Software releases and system updates
 
 
-# Reference Labels
+# 2. Reference Labels
 
 When logging changes, group items using these standard section categories:
 
@@ -51,7 +52,7 @@ When logging changes, group items using these standard section categories:
 | **Security** | Security mitigations, vulnerability fixes, or compliance audit updates. |
 
 
-# Example of Usage
+# 3. Example of Usage
 
 # [Unreleased]
 

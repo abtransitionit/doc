@@ -20,26 +20,28 @@
 [target context whatis]: #
 [target composition whatis]: #
 
-Related topics
+<div align="center">
 
-| Topic                            | Location | Kind |
-| -------------------------------- | -------- | ---- |
+# Project: RMS — Phase1: Overview
+
+Resource Management System
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Version](https://img.shields.io/badge/Version-v1.0-blue)
+
+</div>
 
 
-<h1 align="center">Project RMS - Phase1: Vision</h1>
 
-RMS aka. Resource Management System
+| Field | Value |
+| :--- | :--- |
+| **Doc-ID** | PP1-VIEW-01-RMS|
+| **Project** | RMS |
+| **Path** | `phase1-vision.md` |
+| **Last Updated** | 2026-10-18 |
 
-# Phase1 - Project Overview
 
-|Param|value|
-|-|-|
-| Document ID | PP1-RMS
-| Path | `phase1-vision.md`  
-| Status | Draft  
-| Version | 0.1 |
-
-## 1. Purpose
+# 1. Purpose
 
 a resource management system that can describe desired operations, their context, and eventually workflows.
 
@@ -65,7 +67,7 @@ This document defines the
 
 Detailed terminology, requirements, and domain modeling are specified in separate documents.
 
-## 2. Problem Statement
+# 2. Problem Statement
 
 Managing resources across different environments often requires deiiferent
 - Tools
@@ -88,7 +90,7 @@ These operations are **heterogeneous**, but they share common needs:
 
 **RMS** aims to provide a common model and execution framework for these tasks without requiring every resource type or mechanism to implement its own independent orchestration system. (TODO: EXPLAIN: what you mean)
 
-## 3. Objectives
+# 3. Objectives
 
 The project aims to:
 
@@ -103,9 +105,9 @@ The project aims to:
 9. **Provide usable interfaces:** expose resource-management functionality through a CLI and, where required, programmatic or agent-facing interfaces.
 10. **Enable reliable validation:** make execution outcomes observable and testable through defined results and acceptance criteria.
 
-## 4. Scope
+# 4. Scope
 
-### 4.1 In scope
+## 4.1 In scope
 
 The project is intended to cover:
 
@@ -125,7 +127,7 @@ The project is intended to cover:
 - Security controls appropriate to the operations and execution environments.
 - Testing, documentation, installation, and maintenance.
 
-### 4.2 Out of scope for the initial definition
+## 4.2 Out of scope for the initial definition
 
 The following are not assumed to be initial project requirements:
 
@@ -139,7 +141,7 @@ The following are not assumed to be initial project requirements:
 
 These points may be reconsidered during requirements analysis and architecture design.
 
-## 5. Intended Users
+# 5. Intended Users
 
 The anticipated users include:
 
@@ -151,7 +153,7 @@ The anticipated users include:
 
 These are intended user categories, not a commitment that every interface must be implemented in the initial release.
 
-## 6. High-Level Operating Model
+# 6. High-Level Operating Model
 
 At a conceptual level, the system is expected to support the following flow:
 
@@ -167,11 +169,11 @@ An action may itself require further decomposition. Execution ultimately reaches
 The exact responsibilities of planning, validation, scheduling, execution, and result tracking will be defined in the **requirements** and **domain model**.
 
 
-## 7. Design Principles
+# 7. Design Principles
 
 The project should follow these principles:
 
-### 7.1 Separation of concerns
+## 7.1 Separation of concerns
 The following should remain distinct concepts:
 
 - Resource identity
@@ -180,16 +182,16 @@ The following should remain distinct concepts:
 - Execution mechanisms
 - Interfaces 
 
-### 7.2 Composability
+## 7.2 Composability
 
 - [Complex operations][ope whatis] should be expressible as [plans][plan whatis] composed of smaller actions. 
 - Targets and execution [contexts][target context whatis] should support [composition][target composition whatis] where appropriate.
 
-### 7.3 Extensibility
+## 7.3 Extensibility
 
 The core model should not depend on a closed list of resource types or mechanisms.
 
-### 7.4 Explicit execution semantics
+## 7.4 Explicit execution semantics
 
 Distiinguish
 - Request admission
@@ -198,23 +200,23 @@ Distiinguish
 
 An accepted request is not necessarily a successful operation.
 
-### 7.5 Capability-aware execution
+## 7.5 Capability-aware execution
 
 The system should account for declared capabilities, access restrictions, execution context, and other constraints when determining whether an operation can be performed.
 
-### 7.6 Observable outcomes
+## 7.6 Observable outcomes
 
 Actions and plans should expose sufficient status and result information to support debugging, automation, and verification.
 
-### 7.7 Controlled complexity
+## 7.7 Controlled complexity
 
 The architecture should support complex workflows without requiring every simple operation to use unnecessary orchestration layers.
 
-### 7.8 Technology independence
+## 7.8 Technology independence
 
 Technology choices should follow from **requirements** and **validated design decisions**.
 
-## 8. Expected Deliverables
+# 8. Expected Deliverables
 
 The project is expected to produce:
 
@@ -229,7 +231,7 @@ The project is expected to produce:
 
 The exact initial release scope and delivery milestones remain to be established.
 
-## 9. Open Questions
+# 9. Open Questions
 
 The following questions remain unresolved and should be addressed in the appropriate documents:
 
@@ -246,7 +248,7 @@ These questions should not be answered by assumption in this document. They shou
 - **requirements** analysis
 -  and documented **design decisions**.
 
-## 10. Related Documents
+# 10. Related Documents
 
 | Document | Path | Relationship |
 |---|---|---|
@@ -254,16 +256,16 @@ These questions should not be answered by assumption in this document. They shou
 | Requirements Specification | `docs/03-requirements.md` | Establishes the functional and non-functional requirements. |
 | Domain Model | `docs/04-domain-model.md` | Defines the structure and relationships of the system's concepts. |
 
-## 11. Document Status
+# 11. Document Status
 
 This document is a proposal for review. Its purpose is to establish a shared understanding of the project's goals and boundaries before detailed requirements and design decisions are made.
 
 Changes should be made as the project scope becomes clearer and the other documents are developed.
 
 
-## 12 Idea
+# 12 Idea
 
-### Request model
+## Request model
 - intent -> request
 - intent, request -> get an id to be tracked
 - request have lifecycle

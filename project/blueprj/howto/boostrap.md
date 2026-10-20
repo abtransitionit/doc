@@ -19,9 +19,16 @@ Related topics
 | -------------------------------- | -------- | ---- |
 | [What is a software project][prj whatis] | internal |      |
 
-<h1 align="center">Project: Blue</h1>
+<div align="center">
 
-a Software Project Management Blueprint
+# Project: Blue — Documentation Blueprint
+
+A unified, reusable, instantiable blueprint to documentand govern software projects from idea to execution
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Version](https://img.shields.io/badge/Version-v1.0-blue)
+
+</div>
 
   
 # Bootstrap a Software Project

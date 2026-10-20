@@ -1,7 +1,7 @@
 [//]: # (home)
 [home domain]: ../../README.md
 [home doc]: ../../../README.md
-[home topic]: ../whatis/ep2.md
+[home topic]: ../whatis/ep.md
 
 [↖ Blue Project][home topic] · [↖ Project][home domain] · [↖ Doc][home doc]
 
@@ -11,7 +11,7 @@
 
 # Project: Blue — Document Revision Log History Specification
 
-A standardized Version History Log template for project deliverables
+A standardized Version History Log template for project deliverables.
 
 ![Status](https://img.shields.io/badge/Status-Draft-yellow)
 ![Version](https://img.shields.io/badge/Version-v1.0-blue)
@@ -21,10 +21,11 @@ A standardized Version History Log template for project deliverables
 | Field | Value |
 | :--- | :--- |
 | **Doc ID** | TPL-HIST-BLUE |
+| **Project** | BLUE |
 | **Path** | `tpl.historylog.md` |
 | **Last Updated** | 2026-10-18 |
 
-# Requirements
+# 1. Overview
 
 Each project document shall include a **Document Revision History**.
 
@@ -33,7 +34,7 @@ Each project document shall include a **Document Revision History**.
 | :--- | :--- | :--- | :--- |
 | YYYY-MM-DD | v0.1 | [Name] | Initial draft |
 
-# Example of Usage
+# 2. Example of Usage
 
 | Date | Version | Author | Changes Summary |
 | --- | --- | --- | --- |

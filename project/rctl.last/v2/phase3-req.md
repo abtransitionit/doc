@@ -14,8 +14,8 @@
 [host wrap whatis]: #
 [action whatis]: #
 [plan whatis]: #
-[intent whatis]:
-[request whatis]; #
+[intent whatis]: #
+[request whatis]: #
 [system whatis]: #
 [target context whatis]: #
 [target composition whatis]: #

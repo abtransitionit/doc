@@ -1,7 +1,7 @@
 [//]: # (home)
 [home domain]: ../../README.md
 [home doc]: ../../../README.md
-[home topic]: ../whatis/ep2.md
+[home topic]: ../whatis/ep.md
 
 [↖ Blue Project][home topic] · [↖ Project][home domain] · [↖ Doc][home doc]
 
@@ -12,7 +12,7 @@
 
 # Project: Blue — Dashboard Template
 
-A unified dashboard tracking all project deliverables, lifecycle statuses, and document links
+A unified dashboard tracking the project deliverables, lifecycle statuses, and document links
 
 
 ![Status](https://img.shields.io/badge/Status-Draft-yellow)
@@ -22,28 +22,17 @@ A unified dashboard tracking all project deliverables, lifecycle statuses, and d
 
 | Field | Value |
 | :--- | :--- |
-| **Doc ID** | TPL-DASH-BLUE |
-| **Path** | `tpl.dashboard.md` |
+| **Doc-ID** | TPL-DASH-BLUE|
+| **Project** | BLUE |
+| **Path** | `tpl.changelog.md` |
 | **Last Updated** | 2026-10-18 |
 
 
-# Requirements
+# 1. Overview
 
-The project shall maintains a Dashboard to give team members and stakeholders a single entry point to all project documentation, status tracking, and structural baselines.
+The project shall maintains a Dashboard to give team members and stakeholders a single entry point to the project documentation, status tracking, and structural baselines.
 
-# Document Metadata
-
-| Field | Value |
-| :--- | :--- |
-| **Doc-ID** | DASH-RMS|
-| **Project** | RMS (Resource Management System) |
-| **Path** | `docs/dashboard.md` |
-| **Status** | Draft |
-| **Version** | v0.1 |
-| **Last Updated** | 2026-10-18 |
-
-
-# 1. Master Document Index Table
+# 2. Master Document Index Table
 
 | Document ID | Title / Scope | File Path | Phase | Status | Ver. | Owner / Author |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
