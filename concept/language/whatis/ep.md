@@ -9,6 +9,7 @@
 [arabic whatis]: ../../../language/arabic/whatis/ep.md
 [tool whatis]:   /concept/tool/whatis/ep.md
 [language list]: /language/README.md
+[language written natural whatis]: ../whatis/wnl.md
 
 Related topics
 
@@ -16,6 +17,7 @@ Related topics
 |-|-|-|
 |[What is IPA][ipa whatis]|internal|
 |[What is a Software][tool whatis]|internal|
+|[What is Written Natural Language][language written natural whatis]|internal|
 |[List of Languages][language list]|internal|
 
 
@@ -27,7 +29,7 @@ The concept of language
 
 # Definition
 - A system of signs and rules used to communicate information, ideas, thoughts, emotions, or instructions.
-- can be formally defined in mathematics, in particular within the **theory of formal languages**.
+- Is formally defined in mathematics, in particular within the **theory of formal languages**.
 - can be classified into the following categories:
   * programming languages
   * body language
@@ -38,57 +40,17 @@ The concept of language
   * written languages.
   * non-written languages.
 
-## Written languages
+# Written languages
 
-Examples include:
+**Examples**:
 * Programming languages
-* Natural languages (French, Belgian Dutch, German, American English, Arabic, etc.)
+* [Natural languages][language written natural whatis] (French, Belgian Dutch, German, American English, Arabic, etc.)
 * Domain-specific languages (mathematics, medicine, philosophy, history, etc.)
 
-## Non-written languages
+# Non-written languages
 
-Examples include:
+**Examples**:
 * Spoken languages
 * Body language
 * Sign languages
-* ...
-
-# Written Natural Language
-Written natural languages use **signs** used to represent **words**, **sentences** and **sounds**
-
-## Signs
-
-A **sign** is any written symbol used in the language, such as:
-
-* letters
-* accents and other diacritics
-* commas
-* periods
-* punctuation marks (Question marks, Exclamation marks)
-* ...
-
-```go
-// Latin:
-A  é  ç  ,  .  ?  !
-
-//Arabic:
-ا  ب  ت  َ  ُ  ِ  ،  ؛ ؟
-```
-
-## Alphabet
-- The set of symbol (named **letters**) used by a language.
-- Not every sign used in a written language belongs to its alphabet.
-- Example:
-```go
-// Latin Letters (En, Fr, etc.) usualay have 26 letters
-a, b, c, ..., z
-
-// Arabic Letters is made of 28 letters
-...ا، ب، ت، ث، ج، ح، خ
-```
-
-
-## Sound
-- Each letter of an alphabet is associated with a conventional spoken name (or sound) when the alphabet is recited.
-- Cf. [IPA][ipa whatis]
 

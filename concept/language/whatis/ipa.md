@@ -1,17 +1,18 @@
-[//]: #(home)
-[home]: ../whatis/ep.md
+[//]: # (home)
+[home domain]: ../../README.md
+[home doc]: ../../../README.md
+[home topic]: ../whatis/ep.md
+
+[↖ Language][home topic] · [↖ Concept][home domain] · [↖ Doc][home doc]
 
 [//]: #(ref)
 [ipa whatis]: ../list/term.md#ipa
 
 
 
-[↖][home]
-
-
 <h1 align="center">What is IPA</h1>
 
-The concept of language:IPA
+The concept of IPA
 
 
 # Definition

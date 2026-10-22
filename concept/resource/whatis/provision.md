@@ -29,25 +29,23 @@ Related topics
 # Definition
 
 ## Provision
+* **Provisioning** a resource make it available and ready for use.
 * Depending on the context, **provision** generally means:**install, create, add, define, manage** or **configure**
-* **Provisioning** a resource make that [resource][res whatis] available and ready for use.
 
 ## Provisioner
 - An **Automation** concept
-- Something that do the provisioning creates/configures/manages infrastructure
-- Something that do the provisioning of a resource in an [environment][env whatis]
-- By extension: something that provision a resource creates/configures/manages resources
+- An [Agent] that provision a resource in an [environment][env whatis]
 - Example
-  - VM provisioner creates/configures VMs ready to be provisioned
-  - Bare-metal provisioner creates/configures Bare-metal servers ready to be provisioned
+  - Infrastructure provisioner creates/configures infrastuctures ready to be provisioned/managed
+  - VM provisioner creates/configures VMs ready to be provisioned/managed
+  - Bare-metal provisioner creates/configures Bare-metal servers ready to be provisioned/managed
 
 # Example
-**Provision a host** could mean
-  - create a host
-  - install resources on a host
+- **Provision a host** mean according to the context: create a host or install resources on a host
 
 
-# Bare-Metal provisioner
+**Bare-Metal provisioning**
+
 ```
 Physical server
        ↓
@@ -63,15 +61,6 @@ Configure OS
        ↓
 Ready server
 ```
-# VM provisioning
-```
-Existing physical server
-        ↓
-     Hypervisor
-        ↓
-      New VM
-```
-# Bare-metal provisioning
 ```
 Physical server
         ↓
@@ -79,6 +68,17 @@ Physical server
         ↓
    Ready machine
 ```
+
+**VM provisioning**
+
+```
+Existing physical server
+        ↓
+     Hypervisor
+        ↓
+      New VM
+```
+
 
 # Provisioner vs Hypervisor
 - A provisioner creates/configures infrastructure.
@@ -120,7 +120,7 @@ Physical server
              OS
 ```             
 ```
-                 Linux host OS
+                      OS
                        │
                        ▼
                  Container tech
@@ -130,6 +130,8 @@ Physical server
                 LXC         LXD
                  │           │
              containers   containers/VMs
+                 │           │
+              shared OS   shared OS
 ```             
 
 # Todo

@@ -74,7 +74,7 @@ File
 | Resource | Capability | Related verbs |
 |---|---|---|
 | File | Read data | Get, read, retrieve |
-| File | Write data | Store, write, save |
+| Folder | Write data | Store, write, save |
 
 ## Package
 

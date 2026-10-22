@@ -20,12 +20,6 @@ RMS. A unified Resource Management System
 </div>
 
 
-| Field            | Value              |
-| ---------------- | ------------------ |
-| **Doc-ID**       | PP-ARCH-01-RMS    |
-| **Project**      | RMS                |
-| **Path**         | `ppX.arch.md)` |
-| **Last Updated** | 2026-10-20         |
 
 # Architecture Principles
 ## Separation of Responsibilities
@@ -49,7 +43,7 @@ The system shall supports extensions through a plugin mechanism.
 
 
 
-## 2. System Components and Responsibilities
+# System Components and Responsibilities
 
 Describe what each component does:
 
@@ -77,3 +71,22 @@ Describe what each component does:
 - Use Request Lifecycle only if you later need to document the request's states, transitions, or detailed processing stages.
 
 
+<details>
+<summary><h1>Document Metadata</h1></summary>
+
+**Information**
+
+| Property | Value |
+|:--|:--|
+| **Doc-ID**       | PP-ARCH-01-RMS    |
+| **Project**      | RMS                |
+| **Path**         | `ppX.arch.md)` |
+| **Last Updated** | 2026-10-20         |
+
+**Revision History**
+
+| Date | Version | Author | Summary |
+|:--|:--|:--|:--|
+| 2026-10-18 | `v0.1` | amar | Initial draft |
+
+</details>

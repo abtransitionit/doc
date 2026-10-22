@@ -1,3 +1,3 @@
-[↖](../README.md) [rctl](whatis/ep.md)
+[↖](../README.md) [rms](whatis/ep.md)
 
 

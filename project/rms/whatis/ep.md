@@ -1,3 +1,4 @@
+
 [//]: # (home)
 [home domain]: ../../README.md
 [home doc]: ../../../README.md
@@ -20,17 +21,33 @@ RMS. A unified Resource Management System
 </div>
 
 
-| Field            | Value              |
-| ---------------- | ------------------ |
+
+
+The RMS follows a [project][blue whatis] framework
+
+
+1. [Overview](./pp1.vision.md)
+1. [Terminology](./pp1.term.md)
+1. [Architecture](./ppX.arch.md)
+
+<details>
+<summary><h1>Document Metadata</h1></summary>
+
+Information**
+
+| Property | Value |
+|:--|:--|
 | **Doc-ID**       | DASH-01-RMS    |
 | **Project**      | RMS                |
 | **Path**         | `ep.md(dashboard.md)` |
 | **Last Updated** | 2026-10-20         |
 
+**Revision History**
 
-# Index
+| Date | Version | Author | Summary |
+|:--|:--|:--|:--|
+| 2026-10-18 | `v0.1` | amar | Initial draft |
 
-1. [Overview](./pp1.vision.md)
-1. [Terminology](./pp1.term.md)
-1. [Architecture](./ppX.arch.md)
+</details>
+
 
