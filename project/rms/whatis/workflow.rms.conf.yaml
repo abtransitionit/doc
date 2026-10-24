@@ -1,0 +1,126 @@
+ssh:
+  delay: 120 # seconds - delay to wait for ssh to be reachable after reboot
+
+agent:
+  src: /tmp/luca
+  dst: /usr/local/bin/
+  chmod: 755
+
+file:
+  crc:  .profile.kbe   # custom RC file
+  binf: /usr/local/bin # binary folder - where to place agent and other binaries
+  kernel: 99-kbe.conf  # kernel config module and parameters file
+
+service: # os services to manage
+  crio:crio
+  kubelet:kubelet
+
+kernel: # kernel modules and parameters to set
+  module:
+    - name: overlay
+    - name: br_netfilter
+  param:
+    - name: net.ipv4.ip_forward
+      value: 1
+      Description: Enable IPv4 packet forwarding - core kernel parameter
+    - name: net.bridge.bridge-nf-call-iptables
+      value: 1
+      Description: Pass bridged IPv4 traffic to iptables - br_netfilter module parameter
+    - name: net.bridge.bridge-nf-call-ip6tables
+      value: 1
+      Description: Pass bridged IPv6 traffic to iptables - br_netfilter module parameter
+
+node:
+  bastion: local 
+  test: 
+    da: 
+      - o1u
+      - o2a
+    o1u: 
+      - o1u
+    o2a: 
+      - o2a
+    o4f: 
+      - o4f
+    o5d: 
+      - o5d
+  all: 
+    - o2a
+    - o1u
+    - o3r
+    - o4f
+    - o5d
+  cp:
+    - o1u
+  worker: 
+    - o2a
+    - o3r
+    - o4f
+    - o5d
+  helm:
+    - o1u
+  kubectl:
+    - o1u
+
+
+gopm: # go packages to install
+  cp:
+  - name: helm
+    version: 3.17.3
+  - name: cilium
+    version: 0.18.7
+  # - name: runc
+  #   version: 1.3.0
+  # - name: kind
+  #   version: latest
+  # - name: slirp4netns
+  #   version: 1.3.3
+
+
+
+onpm: # os native repos and packages to install
+  repo:
+    crio:
+      name: crio
+      fileName: kbe-crio
+      version: "1.32"
+    k8s:
+      name: k8s
+      fileName: kbe-k8s
+      version: "1.32"
+  pkg:
+    crio:crio
+    kubeadm:kubeadm
+    kubelet:kubelet
+    kubectl:kubectl
+    yq:yq
+
+kubectl: # manage kubectl
+  node:  # where to install
+    name: o1u
+helm: # helm objects to manage
+  repo:
+    - name: cilium
+  release:
+    - name: kbe-cilium
+      namespace: kube-system
+      chart:
+        qname: cilium/cilium
+        version: 1.18.5
+      param:
+        podCidr: 192.168.0.0/16
+  # upgrade:
+  #   - name: kbe-cilium
+  #     namespace: kube-system
+  #     chart:
+  #       qname: cilium/cilium
+
+cluster:
+  parameter:
+    podCidr: 192.168.0.0/16
+    serviceCidr: 172.16.0.0/16
+    k8sVersion:  1.32.0
+    cplaneName:  cpl
+
+containerRuntime:
+  socketName: unix:///var/run/crio/crio.sock

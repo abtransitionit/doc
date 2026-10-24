@@ -19,6 +19,7 @@ Related topics
 
 | Topic | Location | Kind |
 |-|-|-|
+|[What is a Resource - controlled vocabulary](/_vocabulary/whatis/ep.md)|
 |[What is a Model][model whatis]|see|
 |[What is a Env][env whatis]|see|
 |[What is a Host][host whatis]|see|
@@ -61,6 +62,7 @@ The concept of resource
 - **Virtual**  - a virtual model of a physical resource
 - **Abstract** - an abstract model of a software/code
 
+**Individual vs. Collection**
 
 
 # Example

@@ -3,7 +3,7 @@
 
 <h1 align="center">Documentation System</h1>
 
-Welcome to the organization knowledge portal. This workspace is organized into distinct spaces. Whenever possible, use the [controlled vocabulary][cv whatis] when writing or updating any document to ensure consistent terminology across the knowledge base.
+Welcome to the organization knowledge portal. This workspace is organized into distinct spaces. Whenever possible, it uses the [controlled vocabulary][cv whatis] when writing or updating any document to ensure consistent terminology across the knowledge base.
 
 
 

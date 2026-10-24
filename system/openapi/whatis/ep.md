@@ -22,3 +22,5 @@ The system OpenAPI
 
 # Definition
 
+# Resource
+- https://spec.openapis.org/arazzo/latest.html?trk=article-ssr-frontend-pulse_little-text-block

@@ -25,10 +25,16 @@ RMS. A unified Resource Management System
 
 The RMS follows a [project][blue whatis] framework
 
-
+# 📚 Project Lifecycle
 1. [Overview](./pp1.vision.md)
 1. [Terminology](./pp1.term.md)
 1. [Architecture](./ppX.arch.md)
+1. [Model](./pp1.model.md)
+
+# 📚 Project Discovery Tasks
+1. [List of tasks](../task/ep.md)
+
+# 📚 References
 
 <details>
 <summary><h1>Document Metadata</h1></summary>

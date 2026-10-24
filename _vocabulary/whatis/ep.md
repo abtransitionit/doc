@@ -10,67 +10,91 @@
 
 
 
-# Common Definition
+# Meta-definition
+- **Common Definition**: A general meaning of a term or expression that is independent of a specific **domain** or **context**.
+- **Computer Science Definition**: A meaning of a term or expression specific to the field of **computer science**.
+- **Controlled Vocabulary**: A subset of a domain specific definition in which definition of terms or expression are extended or overriden to ensure a shared understanding and reduce semantic ambiguity in document.
 
-## Meta-terms
-- **Common Definition**: A general meaning of a term that is independent of a specific **domain** or **context**.
-- **Computer Science Definition**: A meaning of a term specific to the field of **computer science**.
-- **Controlled Vocabulary**: A set of defined terms used consistently within a given scope to
-  - ensure a shared understanding
-  - reduce ambiguity
+# Common definition
 
-
-
-## Verbs
-- **Identify**: Determine which thing is being referred to.
-- **Create**: Bring something into **existence**.
-- **Provision**: Prepare something and make it available for use.
-- **Modify**: Change something.
-- **Operate**: Make something function or perform its intended function.
-- **Allocate**: Assign something to a particular use or purpose.
-- **Access**: Ability to reach or interact with something.
-- **Consume**: Use something or use up some of it.
-- **Manage**: Control or coordinate actions.
+| Term | Type | Definition | Lexical field/synonym |
+| -- | -- | -- | -- |
+| Set | noun |contains elements | Collection, Container
+| Element | noun |belongs to a set | Item, Component
+| Create | verb | bring something into existence | Build, Generate
+| Resource | noun | something that achieves a purpose | Thing
+| Action | noun | something to be done  | Task, Operation
+| Environment | noun | the context in which a resource exists, evolves |
+| Tool | noun | a resource used to perform an action|
+| Manage | verb |  | Handle, Use, Control, Coordinate, Orchestrate
 
 
-## Nouns and Expressions
-- **Set**: A collection of Elements.
-- **Element**: belongs to a set.
-- **Resource**: Anything that can be identified, managed, or used to achieve a purpose.
-- **Environment**: The context or setting in which something exists, operates, or is used.
-- **Tool**: Something used to perform an action or accomplish one or more tasks (no matter the granularity).
-- **Nested**: Contained within a thing of the same kind.
-- **Atomic**: Treated as a whole, single or indivisible.
-- **Granularity**: The level of detail at which something is considered.
-- **Physical**: Having a material existence in the physical world.
 
-### Model
-- An intentional, simplified representation of a complex thing, phenomenon, or concept.
-- **intentional** means the representation is created deliberately
-- **simplified** means it omits some details of what it represents.
+## Model
+An intentional, simplified representation of something, a phenomenon, or a concept.
+- **intentional**: the model is built on purpose, for a specific context
+- **simplified**: it focus only on specific properties, omitting complexity.
+- **representation**: It can be a string, a programing language structure, a yaml model, ...
+
+
 
 
 # Computer Science Terminology
 
-## Physical Resource
-- Have a material existence.
+| Term | Type | Definition | Lexical field |
+| -- | -- | -- | -- |
+| Provision | verb | make a resource available for use | Register, Prepare, Create, Install, Add, Instanciate, Assign, Allocate
+| Identify | verb | determine which thing is being referred to |
+| Manage | verb | | Update, Delete, Change, Modify, 
+| Action | noun | something to be done, performed | Function, Procedure
+| Task | noun | A unit of action | Job, Operation, Work, Instruction
+| Capability | noun | an action a resource provide or support | Feature, Ability
+| Operate | verb | make a resource perform its intended capability | Launch, Run, Execute, Drive, 
+| Nested | adj | contained within a resource of the same kind | Hierachical, Level, Recursive, Inner, Embeded
+| Granularity | noun | the level of detail a resource or action is represented | Detail, Whole, Resolution
+| Environment | noun | the context in which a resource is provisioned, managed and operated |
 
-## Virtual Resource
-- Model af a Physical Resource
-- A software-defined representations that reproduce some properties or capabilities of their physical counterparts.
-- a virtual resource is not necessarily a model of a physical resource. 
+## Modeling resource
+
+**Physical resource** — a real, tangible resource (you can touch it).
+- a server
+- a network switch
+- a hard disk
+- a CPU core
+
+**Logical resource** — a resource that exists as a concept, definition, configuration, or allocation, not as hardware.
+- an IP address
+- a DNS name
+- a user account
+- a file path
+- a database schema
+- a license
+
+**Virtual resource** — a model of a physical or logical resource.
+- the model is implemented in code/software (emulation, abstraction, simulation, class, object, instance)
+- Reproduces some of the properties or capabilities of that resource.
 - **example**, 
   - a virtual network may model physical networking
   - a virtual machine may provide a software-defined computing environment backed by physical resources.
 
-## Task
-- A unit of work to be done.
 
-## Action
-- Aka. Operation.
-- Something done or performed.
-- **Capability**: Something done or performed.
-- **Operation**: Something done or performed.
+
+
+## Provisioning Resource
+The following situation correspond to provisioning
+- assign 
+  - an IP address to a machine
+  - a CPU core to a VM
+  - a license to a user
+  - a port to a service
+  - bandwidth to a connection.
+- allocate RAM (or disk, GPU, etc.) for a program.
+
+
+
+
+
+
 
 ## System
 - A set of components designed to perform one or more tasks.
@@ -109,8 +133,6 @@
 
 
 
-## Environment
-- The context in which a resource is provisioned, managed and operated.
 
 ## Tool
 - Aka machine program
@@ -338,3 +360,18 @@ physical or virtual as the primary distinction and explain logical components se
 
 
 # Todo > Hardware resource, Device
+
+
+
+
+# Todo > Verbs
+- **Allocate**: Assign something to a particular use or purpose.
+- **Access**: Ability to reach or interact with something.
+- **Consume**: Use something or use up some of it.
+
+
+# Todo > Nouns and Expressions
+- **Atomic**: Treated as a whole, single or indivisible.
+- **Granularity**: The level of detail at which something is considered.
+- **Physical**: Having a material existence in the physical world.
+

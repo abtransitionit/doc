@@ -1,35 +1,44 @@
-[//]: #(home)
-[home]: ../../whatis/ep.md
 
-[//]: #(doc)
+[//]: # (home)
+[home domain]: ../../README.md
+[home doc]: ../../../README.md
+[home topic]: ../../whatis/ep.md
 
-[←][home]
+[↖ rms][home topic] · [↖ Project][home domain] · [↖ Doc][home doc]
 
-<h1 align="center">Rctl Task</h1>
+[//]: # (doc)
+[cli howto]: /concept/tool/howto/ep.md#design-the-grammar-of-a-cli
+
+<div align="center">
+
+# Project RMS — Task01 - CLI - SPECIFICATIOn
+
+RMS. A unified Resource Management System
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Version](https://img.shields.io/badge/Version-v0.1-blue)
+
+</div>
+
+Follows the [How-to: Design the Grammar of a CLI][cli howto].
+
+# Syntax
+
+```text
+rctl [command] [subcommand] [global flags] [args...]
+
+```
 
 
-# TASK-02: Draft Initial Configuration Schema Spec
 
-**TASK-02** (Config Schema): Fixes the inventory data structure (how hosts, IPs, keys, and environments are written in config files).
+# Subcommand
 
 
-* **Status:** In Review
-* **Assignee:** Lead Engineer
-* **Target Package:** `src/pkg/config`
-* **Governing Specs:** [`DOM-01`](../../spec/DOM-01-domain-model.md), [`SPEC-01`](../../spec/SPEC-01-architecture.md), [`ADR-01`](../../adr/ADR-01-pure-go-ssh-transport.md), [`ADR-03`](../../adr/ADR-03-statutory-non-root-local-scope.md)
+# Inventory specification
 
----
+## Canonical Inventory Schema Spec 
 
-## 1. Scratchpad & Ephemeral Notes
-
-* **Format Selection:** Standardize on YAML for human readability and native Go map/struct tag mapping.
-* **Scope Isolation:** Local host definition (`local`) must enforce non-root restrictions per `ADR-03`.
-* **Transport Defaults:** Global SSH defaults (port `22`, default user, private key location) must be overridable at both group and host levels.
-* **Authentication Fallbacks:** Support path-based identity files (`~/.ssh/id_rsa`) and explicit fallback to local SSH Agent sockets (`SSH_AUTH_SOCK`).
-
----
-
-## 2. Canonical Inventory Schema Spec (`inventory.yaml`)
+- filename: `inventory.yaml`
 
 ```yaml
 version: "1"
@@ -83,9 +92,8 @@ hosts:
 
 ```
 
----
 
-## 3. Go Internal Data Model Representation (`src/pkg/config`)
+## Go Internal Data Model Representation
 
 ```go
 package config
@@ -122,22 +130,45 @@ type Host struct {
 
 ```
 
----
 
-## 4. Schema Validation Rules
+## Schema Validation Rules
 
 1. **Unique Names:** Host and group identifiers must be unique alphanumeric strings (`[a-zA-Z0-9_-]+`).
 2. **Transport Types:** `transport` field strictly limited to `ssh` or `local`.
 3. **Local Scope Safeguard:** Host named `local` must have `transport: local`. Attempts to pass SSH identity files or custom ports to `local` fail validation.
 4. **Group Reference Integrity:** Every host listed under `groups.<name>.hosts` must exist in the root `hosts` mapping.
 
----
+# Ephemeral Notes
 
-## 5. Progress Checklist
 
-* [x] Define YAML inventory document layout
-* [x] Draft Go struct bindings for parsing
-* [x] Establish group-to-host association model
-* [x] Set explicit validation rules and safeguards
-* [ ] Implement YAML parser and validator package in `src/pkg/config`
+# Task Progression Checklist
+
+* [ ] remove all ansible like section [Inventory specification](#inventory-specification)
+* [ ] Implement YAML parser and validator package
+
+
+
+
+
+
+<details>
+<summary><h1>Document Metadata</h1></summary>
+
+**Information**
+
+| Property | Value |
+|:--|:--|
+| **Doc-ID**       | TASK-01-CLI-SPEC-RMS    |
+| **Project**      | RMS                |
+| **Path**         | `cli-01-spec.md` |
+| **Last Updated** | 2026-10-20         |
+
+**Revision History**
+
+| Date | Version | Author | Summary |
+|:--|:--|:--|:--|
+| 2026-10-18 | `v0.1` | amar | Initial draft |
+
+</details>
+
 

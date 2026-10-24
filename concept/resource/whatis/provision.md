@@ -9,7 +9,8 @@
 [provision howto]: ../howto/provision.md
 [res whatis]:      ../whatis/res.md
 [env whatis]:      ../whatis/host.md
-
+[operate whatis]:  ../whatis/operation.md
+[provision list]:  ../list/provision.md
 
 Related topics
 
@@ -19,6 +20,7 @@ Related topics
 |[What is a host][env whatis]|internal
 |[What is a operation ][operate whatis] |
 |[How-to provision][provision howto]|see
+|[List of provisioning examples][provision list]|see
 
 
 
@@ -31,6 +33,21 @@ Related topics
 ## Provision
 * **Provisioning** a resource make it available and ready for use.
 * Depending on the context, **provision** generally means:**install, create, add, define, manage** or **configure**
+
+## Lexical field
+
+**Provision** is a general term (hypernym). Depending on the resource, a more precise verb (hyponym) can be used.
+
+| Verb | Resource |
+| :--- | :--- |
+| **Create** | file, directory, user, unit, partition, namespace |
+| **Assign** | IP address, permission, ownership, capability |
+| **Attach / Mount** | filesystem, loop device, driver to device |
+| **Load** | kernel module, driver, plugin |
+| **Set** | parameter, limit, priority, context, route |
+| **Enable / Start** | service, unit, interface, timer |
+| **Register** | user in group, module in initramfs, entry in fstab |
+
 
 ## Provisioner
 - An **Automation** concept
