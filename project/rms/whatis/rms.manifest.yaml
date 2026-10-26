@@ -1,0 +1,68 @@
+version: "v1"
+cluster:
+  name: "kbe-cluster"
+  parameter:
+    podCidr: 192.168.0.0/16
+    serviceCidr: 172.16.0.0/16
+    k8sVersion: 1.32.0
+    cplaneName: cpl
+  containerRuntime:
+    socketName: unix:///var/run/crio/crio.sock
+
+ssh:
+  delay: 120
+
+agent:
+  src: /tmp/luca
+  dst: /usr/local/bin/
+  chmod: 755
+
+node:
+  bastion: local
+  all: [o2a, o1u, o3r, o4f, o5d]
+  cp: [o1u]
+  worker: [o2a, o3r, o4f, o5d]
+  helm: [o1u]
+  kubectl: [o1u]
+
+kernel:
+  module:
+    - name: overlay
+    - name: br_netfilter
+  param:
+    - name: net.ipv4.ip_forward
+      value: 1
+    - name: net.bridge.bridge-nf-call-iptables
+      value: 1
+
+repo:
+  package:
+    os:
+      crio: { name: crio, fileName: kbe-crio, version: "1.32" }
+      k8s: { name: k8s, fileName: kbe-k8s, version: "1.32" }
+
+package:
+  os:
+    crio: crio
+    kubeadm: kubeadm
+    kubelet: kubelet
+    kubectl: kubectl
+    yq: yq
+
+module:
+  go:
+    helm: { name: helm, version: 3.17.3 }
+    cilium: { name: cilium, version: 0.18.7 } 
+
+helm:
+  repo:
+    - name: cilium
+  release:
+    - name: kbe-cilium
+      namespace: kube-system
+      chart:
+        qname: cilium/cilium
+        version: 1.18.5
+      param:
+        podCidr: 192.168.0.0/16
+

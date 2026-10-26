@@ -122,6 +122,17 @@ Example of **Abstractions**:
 1. The System returns the result to the Agent.
 
 
+# Intended Users
+
+The anticipated users include:
+
+- **Operators:** use the CLI to inspect and manage resources.
+- **Automation developers:** define workflows that perform operations across resources.
+- **System integrators:** connect resource types and mechanisms to the framework.
+- **AI agents or other automated clients:** submit requests through supported interfaces.
+- **Project developers and maintainers:** implement, test, extend, and maintain the system.
+
+These are intended user categories, not a commitment that every interface must be implemented in the initial release.
 
 
 <details>

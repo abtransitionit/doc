@@ -26,9 +26,14 @@ RMS. A unified Resource Management System
 # Overview
 This discovery section follows the [How-to: Design the Grammar of a CLI][cli howto].
 
-RMS provides different command syntax.
+RMS supports different command syntax:
 - [Operational commands](#operational-commands) to perform CLI-level operations:
-- [Resource commands](#resource-commands) to operate on a resources:
+- [Resource commands](#resource-command) to operate on a resources:
+
+Each command supports:
+
+- A **Config file**: optional, context-defaulted.
+- A **Variable file**: optional, context-defaulted.
 
 ## Global Flags
 
@@ -37,9 +42,23 @@ RMS provides different command syntax.
 | Flag | Short | Type | Default | Description |
 |---|---|---|---|---|
 | `--config` | `-c` | `string` | `~/.rms/inventory.yaml` | Path to the inventory configuration file (YAML, JSON, or TOML). |
-| `--json` | `-j` | `bool` | `false` | Output structured JSON instead of human-readable text. |
-| `--yaml` | `-y` | `bool` | `false` | Output structured YAML instead of human-readable text. |
+| `--var` |  | `string` | `~/.rms/var.yaml` | Path to the variable file (var used in config file). |
+| `--out` | `-o` | `string` | `text` | Output format: `text`, `json`, or `yaml`. |
 | `--verbose` | `-v` | `bool` | `false` | Enable debug logging on stderr. |
+| `--help` | `-h` | `bool` | `false` | Display help information. |
+| `--version` |  | `bool` | `false` | Display version information. |
+
+
+
+The `--out` flag accepts the following selectors:
+
+| Selector | Description |
+|---|---|
+| `text` | Human-readable output (default). |
+| `json` | Structured JSON output. |
+| `yaml` | Structured YAML output. |
+
+
 
 ## Global Intent exit Codes
 
@@ -312,18 +331,244 @@ rms exec --host all --concurrency 5 -- "uptime"
 - RMS Return one **overall process exit code** to the calling shell/process.
 
 
-
 # Resource Command
 
 - Uses the [string representation][res model whatis] of a resource
 - Provision or operate one or more resource across environments
 
 ```sh
-rms <resource-kind>:<resource-adress> <operation> [flags] [args...]
+rms <resource-kind>:<resource-path> <operation> [global flags] [args...] [env]
 ```
 **Rules**
-- `<resource-adress>` can be used to select more than one resource of the same kind.
+- `<resource-path>` can be used to select more than one resource of the same kind.
 - `<resource-selector>` can be used if supported by the resource provider.
+
+
+
+```sh
+rms <resource kind>:<resource path> [global flags] [args...] [env]
+```
+
+# Examples
+
+In the following example an agent launch the rms CLI
+
+**Local target**
+
+```powershell
+rms service/linux:sshd start 
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `service/linux` |
+| Address | `sshd` |
+| Target | `local` |DEFAULT
+| Transport | `local` |INFER from target
+| Provider | `tool` |
+
+> RMS manages the resource through a local (system) `tool`.
+
+```sh
+rms file/file:/etc/hosts read
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `file/file` |
+| Address | `/etc/hosts` |
+| Target | `local` ||DEFAULT
+| Transport | `local` |INFER from target
+| Provider | `fs` |
+
+> RMS accesses the resource through local `filesystem` operations.
+
+```sh
+rms os/kernel/module:br_netfilter load
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `os/kernel/module` |
+| Address | `br_netfilter` |
+| Target | `local` |
+| Transport | `local` |INFER from target
+| Provider | `tool` |
+
+> RMS manages the resource through a local (system) `tool`.
+
+```sh
+rms os/kernel/module:br_netfilter load
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `os/kernel/module` |
+| Address | `br_netfilter` |
+| Target | `local` |
+| Transport | `local` |INFER from target
+| Provider | `fs` |
+
+> RMS manages the resource through local (system) files on the filesystem.
+
+```toml
+rms repo/git:/home/workspace/my-app remove history
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `repo/git` |
+| Address | `/home/workspace/my-app` |
+| Target | `local` |
+| Transport | `local` |INFER from target
+| Provider | `git` |
+
+> RMS manages the resource through local (system) files on the filesystem.
+
+
+**Remote Target via SSH**
+
+> RMS uses `SSH` to reach the target
+
+```sh
+rms service/linux:sshd start o1u
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `service/linux` |
+| Address | `sshd` |
+| Target | `o1u` | agent must supply information
+| Transport | `ssh` |INFER from target
+| Provider | `tool` | DEFAULT
+
+
+ > RMS manages the resource through a local (system) `tool`
+
+```sh
+rms file/folder:/home/mx/workspace/ create o1u
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `file/folder` |
+| Address | `/home/mx/workspace/` |
+| Target | `o1u` | agent must supply information
+| Transport | `ssh` |INFER from target
+| Provider | `fs` | DEFAULT
+
+> RMS accesses the resource through `filesystem` operations.
+
+```sh
+rms os/kernel/module:br_netfilter delete --provider='fs' o1u 
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `os/kernel/module` |
+| Address | `br_netfilter` |
+| Target | `o1u` | agent must supply information
+| Transport | `ssh` |INFER from target
+| Provider | `fs` | SUPPLY
+
+> RMS manages the resource through local (system) files on the filesystem.
+
+`rms file/file:/etc/nginx/nginx.conf read o1u:my-nginx-container`
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `file/file` |
+| Address | `/etc/nginx/nginx.conf` |
+| Target | `my-nginx-container` | agent must supply information
+| Transport | `ssh → container` |INFER from target
+| Provider | `fs` |DEFAULT
+
+**Remote Target via HTTP**
+
+```sh
+rms file/file:/etc/hosts delete https://ip
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Resource | `file/file` |
+| Address | `/etc/hosts` |
+| Target | `https://ip` |
+| Transport | `http` |INFER from target
+| Provider | `http` | DEFAULT
+
+> RMS manages the resource through `HTTP` operation (`GET`).
+
+```sh
+rms repo/git:my-org/go-luc delete history https://github.com
+```
+
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Resource | `repo/git` |
+| Address | `my-org/my-app` |
+| Target | `https://github.com` |
+| Transport | `ssh` |INFER from target
+| Provider | `http` | DEFAULT
+
+> RMS manages the resource through `HTTP` operation (`API`).
+
+```sh
+rms repo/git:my-org/go-luc delete history --provider='tool' https://github.com
+```
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Resource | `repo/git` |
+| Address | `my-org/my-app` |
+| Target | `https://github.com` |
+| Transport | `ssh` |INFER from target
+| Provider | `tool` | SUPPLY
+
+> RMS manages the resource through local tool (`gh`).
+
+`rms file/file:/etc/nginx/nginx.conf read local:my-nginx-container`
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `file/file` |
+| Address | `/etc/nginx/nginx.conf` |
+| Target | `my-nginx-container` | agent must supply information
+| Transport | `local:container` |INFER from target
+| Provider | `fs` |DEFAULT
+
+> RMS manages the resource through local tool (`gh`).
+
+```sh
+rms file/file:/prod/app-config.yaml read my-config-bucket
+```
+
+
+| Resource | Value | Notes
+| ----- | ----- | ----- |
+| Kind | `file/file` |
+| Address | `/config/app.yaml` |
+| Target | `my-config-bucket`| agent must supply information
+| Transport | `s3` |INFER from target
+| Provider | `s3` |DEFAULT
+
+
+
+## Examples summary
+
+| Kind | Address | Target | Provider(s) |
+| ---- | ------- | ------ | ----------- |
+| `service/linux` | `sshd` | `local` | `tool` |
+| `service/linux` | `sshd` | remote VM (SSH) | `tool`, `tool+ssh` |
+| `file/file` | `/etc/hosts` | `local` | `fs` |
+| `file/file` | `/etc/hosts` | `https://ip` | `http` |
+| `file/file` | `my-bucket/config/app.yaml` | `aws-prod` (conf) | `s3` |
+| `file/folder` | `/home/mx/workspace/` | `o1u` | `ssh+fs` |
+| `os/kernel/module` | `br_netfilter` | `local` | `tool` |
+| `os/kernel/module` | `br_netfilter` | `local` | `fs` |
+| `os/kernel/module` | `br_netfilter` | `o1u` | `ssh+fs` |
+| `repo/git` | `my-org/my-app` | `local` | `git` |
 
 
 

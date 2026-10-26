@@ -14,6 +14,7 @@
 [tool list]:       ../list/ep.md
 [tool arm list]:   /tool/README.md
 [language list]: /language/README.md
+[language whatis]: /concept/language/whatis/ep.md
 [tool howto]:      ../howto/ep.md
 [ssg whatis]:      ../whatis/ssg.md
 

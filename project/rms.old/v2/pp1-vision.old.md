@@ -141,17 +141,6 @@ The following are not assumed to be initial project requirements:
 
 These points may be reconsidered during requirements analysis and architecture design.
 
-# 5. Intended Users
-
-The anticipated users include:
-
-- **Operators:** use the CLI to inspect and manage resources.
-- **Automation developers:** define workflows that perform operations across resources.
-- **System integrators:** connect resource types and mechanisms to the framework.
-- **AI agents or other automated clients:** submit requests through supported interfaces.
-- **Project developers and maintainers:** implement, test, extend, and maintain the system.
-
-These are intended user categories, not a commitment that every interface must be implemented in the initial release.
 
 # 6. High-Level Operating Model
 
@@ -167,54 +156,6 @@ At a conceptual level, the system is expected to support the following flow:
 An action may itself require further decomposition. Execution ultimately reaches actions that the system can execute directly.
 
 The exact responsibilities of planning, validation, scheduling, execution, and result tracking will be defined in the **requirements** and **domain model**.
-
-
-# 7. Design Principles
-
-The project should follow these principles:
-
-## 7.1 Separation of concerns
-The following should remain distinct concepts:
-
-- Resource identity
-- capabilities
-- Operation definitions
-- Execution mechanisms
-- Interfaces 
-
-## 7.2 Composability
-
-- [Complex operations][ope whatis] should be expressible as [plans][plan whatis] composed of smaller actions. 
-- Targets and execution [contexts][target context whatis] should support [composition][target composition whatis] where appropriate.
-
-## 7.3 Extensibility
-
-The core model should not depend on a closed list of resource types or mechanisms.
-
-## 7.4 Explicit execution semantics
-
-Distiinguish
-- Request admission
-- Execution progress
-- Execution outcome
-
-An accepted request is not necessarily a successful operation.
-
-## 7.5 Capability-aware execution
-
-The system should account for declared capabilities, access restrictions, execution context, and other constraints when determining whether an operation can be performed.
-
-## 7.6 Observable outcomes
-
-Actions and plans should expose sufficient status and result information to support debugging, automation, and verification.
-
-## 7.7 Controlled complexity
-
-The architecture should support complex workflows without requiring every simple operation to use unnecessary orchestration layers.
-
-## 7.8 Technology independence
-
-Technology choices should follow from **requirements** and **validated design decisions**.
 
 # 8. Expected Deliverables
 

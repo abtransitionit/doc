@@ -5,8 +5,7 @@
 [↖ Tool][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
-[algernon whatis]: https://github.com/xyproto/algernon
-[algernon git]:    https://github.com/akumansley/aft
+[algernon git]:    https://github.com/xyproto/algernon
 
 Related topics
 

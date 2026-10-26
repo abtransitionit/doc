@@ -19,6 +19,7 @@ RMS. A unified Resource Management System
 </div>
 
 - A component
+- A pluggable driver
 - Describes **how** RMS accesses or manages the resource on that target.
 - Knows how to access and manage that a resource in a particular environment.
 - Describes **how** the resource is managed.

@@ -123,137 +123,16 @@ rctl inventory list --json
 rctl inventory validate --config ./specs/inventory.yaml
 ```
 
-# Resource Management Syntax
-
-```sh
-rms <resource kind>:<resource adress> [global flags] [args...] [host]
-```
-
-# Examples
-
-**Local target**
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `service/linux` |
-| Address | `sshd` |
-| Target | `local` |
-| Provider | `tool` |
-
-> RMS manages the service through a local (system) `tool`.
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `file/file` |
-| Address | `/etc/hosts` |
-| Target | `local` |
-| Provider | `fs` |
-
-> RMS accesses the file through local `filesystem` operations.
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `os/kernel/module` |
-| Address | `br_netfilter` |
-| Target | `local` |
-| Provider | `tool` |
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `os/kernel/module` |
-| Address | `br_netfilter` |
-| Target | `local` |
-| Provider | `fs` |
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `repo/git` |
-| Address | `/home/workspace/my-app` |
-| Target | `local` |
-| Provider | `git` |
-
-
-
-**Remote Target via SSH**
-
-> RMS uses `SSH` to reach the target
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `service/linux` |
-| Address | `sshd` |
-| Target | `o1u` |
-| Provider | `tool` / `tool+ssh` |
-
- > RMS manages the service through a local (system) `tool`
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `file/folder` |
-| Address | `/home/mx/workspace/` |
-| Target | `o1u` |
-| Provider | `fs` |
-
-> RMS accesses the folder through `filesystem` operations.
-
-| Field | Value |
-| ----- | ----- |
-| Resource | `os/kernel/module` |
-| Address | `br_netfilter` |
-| Target | `o1u` |
-| Provider | `fs` |
-
-
-
-**Remote Target via HTTP**
-
-| Field | Value |
-| ----- | ----- |
-| Resource | `file/file` |
-| Address | `/etc/hosts` |
-| Target | `https://ip` |
-| Provider | `http` |
-
-| Field | Value |
-| ----- | ----- |
-| Resource | `repo/git` |
-| Address | `my-org/my-app` |
-| Target | `github`(`https://ip`) |
-| Provider | `http` |
-
-**To Classify**
-
-> **HOW** RMS reach the target ?
-> **HOW** RMS reach the target ?
-
-| Field | Value |
-| ----- | ----- |
-| Kind | `file/file` |
-| Address | `/config/app.yaml` |
-| Target | `aws-prod` (conf) | `my-bucket` ()|
-| Provider | `s3` |
-
-> **TODO** — `aws-prod` supplies the execution context (credentials, connection settings).
-> **TODO** — The bucket does not need to be the target itself.
-
-
-
-
-## Examples summary
-
-| Kind | Address | Target | Provider(s) |
-| ---- | ------- | ------ | ----------- |
-| `service/linux` | `sshd` | `local` | `tool` |
-| `service/linux` | `sshd` | remote VM (SSH) | `tool`, `tool+ssh` |
-| `file/file` | `/etc/hosts` | `local` | `fs` |
-| `file/file` | `/etc/hosts` | `https://ip` | `http` |
-| `file/file` | `my-bucket/config/app.yaml` | `aws-prod` (conf) | `s3` |
-| `file/folder` | `/home/mx/workspace/` | `o1u` | `ssh+fs` |
-| `os/kernel/module` | `br_netfilter` | `local` | `tool` |
-| `os/kernel/module` | `br_netfilter` | `local` | `fs` |
-| `os/kernel/module` | `br_netfilter` | `o1u` | `ssh+fs` |
-| `repo/git` | `my-org/my-app` | `local` | `git` |
-
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
+-----
 
 
 ## managed resources

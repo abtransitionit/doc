@@ -9,9 +9,18 @@
 
 [↖ Concept][home domain] · [↖ Doc][home doc]
 
-<h1 align="center">What is a Reverse Proxy</h1>
+<div align="center">
+
+# What is a Reverse Proxy
 
 The Concept of Reverse Proxy
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Version](https://img.shields.io/badge/Version-v0.1-blue)
+
+</div>
+
+
 
 # Definition
 

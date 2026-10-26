@@ -23,7 +23,7 @@ Welcome to the Software Projects portal. This space ...
 | - | - | - |
 | [BluePrj](./blueprj/whatis/ep.md) | soft | |
 | [Feca](./feca/whatis/ep.md) | soft | |
-| [MetaDoc](./metadoc/whatis/ep.md) | soft | Documentation platform — authoring, rendering, and publishing |
+| [MyDoc](./mydoc/whatis/ep.md) | soft | Documentation platform — authoring, rendering, and publishing |
 | [RMS](./rms/whatis/ep.md) | soft | a Resource Management System |
 | [GoTest](./gotest/whatis/ep.md) | soft | Go module testing — validate and verify Go packages |
 | [OmtOvh](./omtovh/whatis/ep.md) | soft |  |
