@@ -29,7 +29,7 @@ Welcome to the Languages portal. This space ...
 | - | - | - |
 | [Arabic](./arabic/whatis/ep.md) | written |
 | [Bash](#) | script |
-| [Go](#) | compiled |
+| [Go](./go/whatis/ep.md) | compiled |
 
 # 🚀 Quick Access Dashboard
 

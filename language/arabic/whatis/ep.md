@@ -23,7 +23,16 @@ Related topics
 |[arabic alphabet svg][arabic Alphabet svg whatis]|external|
 |[what is Number][number whatis]|external|
 
-<h1 align="center">Arabic Language</h1>
+<div align="center">
+
+# Langage Arabic — Overview
+
+
+![Status](https://img.shields.io/badge/Status-Draft-yellow)
+![Version](https://img.shields.io/badge/Version-v0.1-blue)
+
+</div>
+
 
 
 # Aphabet
