@@ -27,5 +27,15 @@
 go env GOMODCACHE
 go env GOCACHE
 go clean -cache -modcache
+
+// run from worspace - with no cache
+go run -a ./go-tutorial/cmd/tuto
+
+// vet/test from worspace
+go -C ./go-tutorial vet  ./...
+go -C ./go-tutorial test ./...
+
+// build from worspace
+go -C ./go-tutorial build -o ./bin/tuto ./cmd/tuto
 ```
 
