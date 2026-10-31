@@ -23,9 +23,10 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [what is a package][package whatis] | internal |
+| Whatis | [Package][package whatis]| internal |
+
 
 # build
 ## build a package

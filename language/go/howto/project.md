@@ -25,11 +25,11 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [howto for go.mod][go.mod howto] | internal |
-| [howto for Module][module howto] | internal |
-| [howto for go CLI][cli go howto] | internal |
+| Howto | [Module][ module howto] . [go.mod][go.mod howto] . [go CLI][cli go howto]| internal |
+
+
 
 
 # Index <a id='index'></a>

@@ -24,10 +24,11 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [howto for go cli][cli go howto] | internal |
-| [list of cli][cli list] | internal |
+| List | [CLI][cli list]| internal |
+
+
 
 
 # Definition

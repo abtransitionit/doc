@@ -31,14 +31,11 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [what is go][go whatis] | internal |
-| [what is a package][package whatis] | internal |
-| [go module reference][module whatis ref] | internal |
-| [what is a library][library whatis] | internal |
-| [what is go.mod][go.mod whatis] | internal |
-| [what is go.sum][go.sum whatis] | internal |
+| Whatis | [Package][package whatis] . [library][library whatis] . [go.mod][go.mod whatis] . [go.sum][go.sum whatis]| internal |
+| Whatis | [Module reference][module whatis ref]| external |
+
 
 
 

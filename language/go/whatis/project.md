@@ -23,9 +23,9 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [howto for Package][package howto] | internal |
+| Howto | [Package][package howto]| internal |
 
 
 # Definition

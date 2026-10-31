@@ -8,6 +8,7 @@
 [//]: #(doc)
 [topic whatis]:  ../whatis/package
 [module howto]:    ../howto/module
+[project howto]:    ../howto/project.md
 [build howto]:    ../howto/build
 [build package howto]: ../howto/build#build-a-package
 [build all howto]:     ../howto/build#build-all-package-of-a-module
@@ -24,16 +25,13 @@
 
 </div>
 
-
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [howto build][build howto] | internal |
-| [howto for module][module howto] | internal |
-| [howto build a package][build package howto] | internal |
-| [howto build all packages of a module][build all howto] | internal |
-| [howto for go.mod][go.mod howto] | internal |
+| Howto | [Module][ module howto] . [Build][ build howto] . [build a package][build package howto] . [build all packages of a module][build all howto] . [Project][project howto] . [go.mod][go.mod howto]| internal |
+
+
 
 # import a package
 

@@ -25,9 +25,10 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [what is a package][package whatis] | internal |
+| Whatis | [Package][package whatis] | internal |
+
 
 # Definition
 - Applies to a [package][package whatis]; not a module

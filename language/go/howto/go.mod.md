@@ -22,9 +22,9 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [howto for module][module howto] | internal |
+| Howto | [Module][module howto]| internal |
 
 
 

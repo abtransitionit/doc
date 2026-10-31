@@ -30,12 +30,10 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [what is a module][module whatis] | internal |
-| [what is a source file][source whatis] | internal |
-| [what is go][go whatis] | internal |
-| [what is a build][build whatis] | internal |
+| Whatis | [Module][module whatis] . [Build][build whatis] . [Source file][source whatis]| internal |
+
 
 
 

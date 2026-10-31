@@ -27,11 +27,13 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [go.mod reference][go.mod whatis ref] | external |
-| [what is a module][module whatis] | internal |
-| [howto for go.sum][go.sum howto] | internal |
+| Whatis | [Module][module whatis]| internal |
+| Howto | [go.sum][go.sum howto]| internal |
+| Whatis | [go.mod reference][go.mod whatis ref]| external |
+
+
 
 
 # Definition

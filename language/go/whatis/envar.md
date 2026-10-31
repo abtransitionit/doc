@@ -6,15 +6,14 @@
 [↖ Go][home topic] · [↖ Language][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
-[topic list]:  ../list/envar
-[topic howto]: ../howto/envar
+[topic list]:  ../list/envar.md
 [cli go howto]: ../howto/cli.go.md
 
 <div align="center">
 
 # Langage Go - Whatis - envar
 
-[↑ Howto][topic howto] · [↑ List][topic list]
+[↑ List][topic list]
 
 
 ![Status](https://img.shields.io/badge/Status-Draft-yellow)
@@ -24,9 +23,10 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [Howto for go CLI][cli go howto] | internal |
+| Howto | [go CLI][cli go howto]| internal |
+
 
 
 # Definition

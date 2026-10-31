@@ -6,26 +6,20 @@
 [↖ Go][home topic] · [↖ Language][home domain] · [↖ Doc][home doc]
 
 [//]: #(doc)
-[envar howto]:  ../howto/envar
-[envar whatis]: ../whatis/envar
+[topic whatis]: ../whatis/envar
 
 
 <div align="center">
 
 # Langage Go — List of Envars
 
+[↑ Whatis][topic whatis]
+
 
 ![Status](https://img.shields.io/badge/Status-Draft-yellow)
 ![Version](https://img.shields.io/badge/Version-v0.1-blue)
 
 </div>
-
-
-# Related topics
-
-| Topic | Location | Kind |
-|-|-|-|
-| [what is a envar][envar whatis] | internal |
 
 # List 
 

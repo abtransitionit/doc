@@ -19,13 +19,13 @@
 
 </div>
 
-
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [what is a module][module whatis] | internal |
-| [what is go.mod][gomod whatis] | internal |
+| Whatis | [Module][module whatis] . [go.mod][gomod whatis]| internal |
+
+
 
 
 # Definition

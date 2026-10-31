@@ -25,15 +25,15 @@
 
 </div>
 
-
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [list of cli][cli list] | internal |
-| [what is a cli][cli whatis] | internal |
-| [howto for  module][module howto] | internal |
-| [what is go][go whatis] | internal |
+| Whatis | [CLI][cli whatis]| internal |
+| Howto | [Module][module howto]| internal |
+| List | [CLI][cli list]| internal |
+
+
 
 
 # Install on linux

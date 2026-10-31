@@ -7,7 +7,7 @@
 
 [//]: #(doc)
 [topic whatis]: ../whatis/module.md
-[module howto go]:  https://golang.org/doc/tutorial/create-module
+[module howto ref]:  https://golang.org/doc/tutorial/create-module
 [package howto]: ../howto/package.md
 [project howto]: ../howto/project.md
 [go.mod howto]: ../howto/go.mod
@@ -24,16 +24,13 @@
 
 </div>
 
-
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [go module howto reference][module howto go] | external |
-| [howto for go CLI][cli go howto] | internal |
-| [howto for package][package howto] | internal |
-| [howto for file go.mod][go.mod howto] | internal |
-| [howto for Project][project howto] | internal |
+| Howto | [Go CLI][cli go howto] . [Package][package howto]. [Project][project howto] . [go.mod][go.mod howto]| internal |
+| Howto | [Module Reference][module howto ref]| external |
+
 
 
 # Create a module

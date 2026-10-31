@@ -10,6 +10,8 @@
 [cli go howto]:    ../howto/cli.go.md
 [cli list]:        ../list/cli.md
 [channel whatis]:  ../whatis/channel.md
+[error whatis]:  ../whatis/logging.md
+[logging whatis]:  ../whatis/error.md
 
 <div align="center">
 
@@ -26,11 +28,17 @@
 
 # Related topics
 
-| Topic | Location | Kind |
+| Kind | Topic | Location |
 |-|-|-|
-| [What is a Channel][channel whatis] | internal |
-| [How-to for cli][cli go howto] | internal |
-| [list of cli][cli list] | internal |
+| Whatis | [Channel][channel whatis] . [Error][error whatis] . [Logging][logging whatis]| internal |
+| Howto | [CLI][cli go howto]| internal |
+| List | [CLI][cli list]| internal |
+
+
+
+
+# Mechanism
+The core mechanism of context is to utilize the "broadcast" nature of channel closure to notify all listening goroutines to stop working.
 
 
 # Definition
@@ -47,12 +55,12 @@ type Context interface {
 
 **Meaning**
 
-|Member|Kind|Description|Notes|
-| -- | -- | -- | -- |
+|Member|Description|Notes|
+| -- | -- | -- |
 | `Deadline()` | returns the time at which work should be cancelled, if any.
 | `Done()` | returns a channel closed when the context is cancelled or the deadline expires.
 | `Err()` | returns `nil` while active, or `context.Canceled` / `context.DeadlineExceeded` after cancellation.
-| `Value(key) | returns the value associated with `key`, or `nil`.|
+| `Value(key`) | returns the value associated with `key`, or `nil`.|
 
 It is implemented through a technical mechanism (interfaces, mutexes, channels, and goroutines under the hood) whose sole purpose is to **carry** three things:
 
@@ -65,6 +73,33 @@ It is implemented through a technical mechanism (interfaces, mutexes, channels, 
 - Custom Context Values: Injecting application-wide identifiers like
     - a unique execution ID
     - a tracing data
+
+
+
+# Operation
+- Cancel a Context
+
+## Cancel a context
+- means: closing its Done() channel.
+   ```go
+   // create a context
+   ctx, cancel := context.WithCancel(context.Background())
+
+    // cancel a context ... somewhere in the code
+    cancel() 
+
+    // Anywhere waiting on <-ctx.Done() now unblocks immediately
+   ```
+- cancel a context ⇒ sendi the stop signal ⇒ stop what you're doing ⇒
+
+- Who cancels? Whoever holds the cancel function 
+    - `context.WithCancel`, 
+    - `context.WithTimeout`
+    - `signal.NotifyContext` on Ctrl+C
+    - HTTP server on client disconnect, ...
+
+- Who listens? 
+    - a goroutines, via `<-ctx.Done()`.
 
 
 
@@ -242,3 +277,98 @@ Use it as the **first parameter** of any function that does I/O or may block, al
 
 # Key idea
 - The `Done()` method
+
+
+
+# Rule 1: Context is Always the First Parameter
+
+It **must** be the very first parameter. It is a convention
+
+Never put it in the middle or at the end of a parameter list.
+
+* **❌ Bad:** `func downloadFile(filename string, ctx context.Context) error`
+* **✅ Good:** `func downloadFile(ctx context.Context, filename string) error`
+
+
+# Rule 2: Never Store Context in Structs
+
+A context represents a **single request lifecycle or operation boundary**, not a long-lived object configuration.
+
+* **❌ Bad:** Storing a `ctx` as a field inside a service struct.
+* **✅ Good:** Passing `ctx` down explicitly through method calls as it flows through your call stack.
+
+```go
+type Downloader struct {
+    client *http.Client
+}
+
+// Pass ctx into the method, never store it in 'd'
+func (d *Downloader) Download(ctx context.Context, filename string) error {
+    // ...
+}
+
+```
+
+# Rule 3: Respect Cancellation (`ctx.Done()`)
+
+Any function that performs a **blocking operation** (like network requests, disk I/O, database queries, or long loops) **must** monitor `ctx.Done()` so it can abort immediately if the user cancels or a timeout occurs.
+
+In Go, you **listen** for cancellation using a `select` statement:
+
+```go
+func downloadFile(ctx context.Context, filename string) error {
+    // Simulate a slow operation, but watch for context cancellation
+    select {
+    case <-time.After(2 * time.Second): // Work finishes
+        if filename == "file2.txt" {
+            return errors.New("network timeout")
+        }
+        return nil
+    case <-ctx.Done():
+        // The parent cancelled, a timeout hit, or errgroup aborted!
+        // Return ctx.Err() to indicate why we stopped.
+        return ctx.Err() 
+    }
+}
+
+```
+
+---
+
+### Rule 4: Always Call `defer cancel()`
+
+When you create a child context with a timeout or cancellation function (like `context.WithTimeout` or `context.WithCancel`), you **must** immediately defer the cancel function.
+
+Failing to do this causes a **context leak**, leaking memory and internal timers until the program exits.
+
+```go
+func main() {
+    // Create a timeout context for the whole application lifecycle
+    ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+    defer cancel() // ⚠️ CRITICAL: Prevents memory and timer leaks!
+
+    // ... pass ctx down ...
+}
+
+```
+
+---
+
+### Rule 5: Context is for Request Scope, Not Optional Function Arguments
+
+Never use `context.Context` just to pass optional configuration parameters (like a string feature flag, a user ID, or a config setting) into a function. Context is strictly for:
+
+1. **Cancellation signals** (stop working now).
+2. **Deadlines / Timeouts** (stop working by X time).
+3. **Request-scoped values** (like tracing IDs or authentication tokens—use sparingly).
+
+---
+
+### How Context Ties Into Your `errgroup` Pattern
+
+When you used `errgroup.WithContext(ctx)` earlier, Go automatically linked context cancellation to your batch tasks:
+
+1. `ctx` enters `main`.
+2. `errgroup.WithContext(ctx)` creates a derived child context (`gCtx`).
+3. If **any** worker returns an error, `errgroup` automatically triggers cancellation on `gCtx`.
+4. All other running goroutines check `<-ctx.Done()` or pass `gCtx` to their sub-functions, allowing them to **abort instantly** instead of wasting CPU and network resources completing doomed tasks.
