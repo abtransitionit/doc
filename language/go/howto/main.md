@@ -74,3 +74,90 @@ func run(args []string, stdout, stderr io.Writer) int {
 - **Use the injected `run()` pattern** for any CLI tool or service you intend to maintain, test thoroughly, or parallelize in tests. This is the pattern that scales to production-grade testability.
 
 If your application grows further, the next step is to move the `run` logic into a separate `internal/app` package and keep `main` in `cmd/` purely for wiring .
+
+
+# Todo
+
+Yes! The logger and context are the foundational pillars, but in a true production-grade Go application, a well-architected `main()` function typically handles **three more critical things**:
+
+---
+
+### 1. Signal Handling (Graceful Shutdown)
+
+In production, your app runs in environments like Kubernetes, Docker containers, or cloud VMs. When the server wants to stop your app, it sends an OS signal (like `SIGTERM` or `SIGINT` when you press `Ctrl+C`).
+
+Instead of crashing instantly, your `main()` should listen for these signals and cancel the root context so active downloads or database writes can finish cleanly.
+
+```go
+// Listens for Ctrl+C or kill signals and automatically cancels the root context
+ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
+defer cancel()
+
+```
+
+---
+
+### 2. Configuration & Environment Loading
+
+Production apps don't hardcode values like file paths, timeouts, or API keys. They read them from environment variables or command-line flags right at the start of `main()`.
+
+```go
+// Example: reading a timeout flag or environment variable
+timeout := flag.Duration("timeout", 30*time.Second, "operation timeout")
+flag.Parse()
+
+```
+
+---
+
+### 3. Deferred Cleanup (`logger.Sync()`, etc.)
+
+Many production loggers (like Uber's Zap) buffer log entries in memory for performance. If your program exits abruptly, those logs might be lost. You should **always** defer a sync/flush right after initializing your logger.
+
+```go
+logger := logging.GetLogger(os.Stderr, loggerConf)
+defer logger.Sync() // Flushes any buffered log entries before main exits
+
+```
+
+---
+
+### The Anatomy of a Production-Grade `main()`
+
+Putting it all together, a professional production `main()` function in Go looks like this:
+
+```go
+func main() {
+    // 1. Initialize Configuration & Flags
+    flag.Parse()
+
+    // 2. Initialize Logger + Ensure buffer flushes on exit
+    loggerConf := logging.Config{Level: logging.LevelInfo, AsJSON: true, Backend: logging.Zap}
+    logger := logging.GetLogger(os.Stderr, loggerConf)
+    defer logger.Sync() // ⚠️ Crucial for Zap/structured loggers
+
+    // 3. Create a Root Context with OS Signal Handling (Graceful Shutdown)
+    ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
+    defer cancel()
+
+    // 4. Add a safety timeout on top of the signal context if needed
+    ctx, timeoutCancel := context.WithTimeout(ctx, 30*time.Second)
+    defer timeoutCancel()
+
+    logger.Info("Application starting...")
+
+    // 5. Execute your core business logic (passing context and logger)
+    files := []string{"file1.txt", "file2.txt", "file3.txt"}
+    if err := DownloadFilesBatch(ctx, logger, files); err != nil {
+        logger.Error("Application terminated with error", "error", err)
+        os.Exit(1)
+    }
+
+    logger.Info("Application shut down successfully")
+}
+
+```
+
+### Summary of `main()`'s Job:
+
+`main()` should be a **dumb orchestrator**. It doesn't perform business logic; its only job is to **wire things up** (config, logger, context, signals), **run the app**, and **handle the exit code** cleanly.

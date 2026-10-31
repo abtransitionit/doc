@@ -28,9 +28,17 @@
 
 
 # Create a repo on github
+```sh
+lPRJ_OWNER="abtransitionit"
+lPRJ_NAME="go-tutorial"
+lPRJ_DESC="a practical guide to GO code"
+
+# create remote repo from scratch
+gh repo create "${lPRJ_OWNER}/${lPRJ_NAME}" --private --description "${lPRJ_DESC}"
+```
 ```shell
 # define var
-lPRJ_NAME="my_prj"
+lPRJ_NAME="go-tutorial"
 lBRANCH="main"
 
 # create remote repo from scratch
