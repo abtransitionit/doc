@@ -111,16 +111,20 @@ go help mod edit
 
 # Test code without generating binary
 ```sh
-# without generating binary
-go run main.go 
-go run main.go kbe
+go run main.go     # build and put binary into cache GOCACHE
+go run -a main.go  # binary not reused from GOCACHE. always re-build
+
+# pass agv to main
+go run main.go kbe 
 go run main.go kbe init
+
+# launch code from outside
 go run -C /var/tmp/luc main.go
 ```
 
 
 # install a go cli
-Use case: you need a `Go` program as a command-line executable.
+Use case: you need a `Go` program as a CLI.
 ```go
 // define var
 lGO_CLI="golang.org/x/pkgsite/cmd/pkgsite@latest"
@@ -140,3 +144,20 @@ meaning
 
 # Test a go CLI
 - test a `go` CLI from a go project without building it
+
+
+# Quick reference
+
+| Goal | Command |
+|------|---------|
+| No build cache | `go run -a ./go-tutorial/cmd/tuto` |
+| No build cache + clean cache first | `go clean -cache && go run -a ./go-tutorial/cmd/tuto` |
+| Ignore workspace | `GOWORK=off go run ./go-tutorial/cmd/tuto` |
+| Force re-download modules | `go clean -modcache && go run ./go-tutorial/cmd/tuto` |
+
+# `Go mod tidy` with workspace
+
+```sh
+# from workspace folder
+go work sync
+```

@@ -29,3 +29,21 @@
 |-|-|-|
 | Howto | [Logging][logging howto]| internal |
 
+
+**managing errors**
+```go
+if err := downloadFile(f); err != nil {
+    return fmt.Errorf("failed to process file: %w", err)
+}
+```
+
+**managing errors**
+```go
+// generic
+fmt.Errorf("<operation> <resource>: %w", err)
+
+// example
+fmt.Errorf("reading file %q: %w", path, err)
+fmt.Errorf("parsing yaml %q: %w", path, err)
+fmt.Errorf("opening database %q: %w", dsn, err)
+```
