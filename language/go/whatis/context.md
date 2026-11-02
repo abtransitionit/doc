@@ -37,11 +37,13 @@
 
 
 
-# Mechanism
-The core mechanism of context is to utilize the "broadcast" nature of channel closure to notify all listening goroutines to stop working.
-
-
 # Definition
+
+
+## Context
+Defines **execution constraints** and allow to pass kvpair to specific functions.
+
+Exposes a channel (ie; `Done()`)
 
 `context.Context` is a data structure defined in the package `context`.
 ```go
@@ -52,28 +54,39 @@ type Context interface {
     Value(key any) any
 }
 ```
-
 **Meaning**
 
 |Member|Description|Notes|
 | -- | -- | -- |
-| `Deadline()` | returns the time at which work should be cancelled, if any.
+| `Deadline()` | returns the time at which task should be cancelled, if any.
 | `Done()` | returns a channel closed when the context is cancelled or the deadline expires.
 | `Err()` | returns `nil` while active, or `context.Canceled` / `context.DeadlineExceeded` after cancellation.
 | `Value(key`) | returns the value associated with `key`, or `nil`.|
 
-It is implemented through a technical mechanism (interfaces, mutexes, channels, and goroutines under the hood) whose sole purpose is to **carry** three things:
+**Mechanism**
 
-1. **Cancellation signals** - telling the process and their child to shut down gracefully or immediate.
-1. **Timeouts / Deadlines** — Setting a maximum execution time, combined with signal cancellation.
-1. **Custom Context Values** — Injecting application-wide identifiers (execution ID, tracing data, etc.).
+Under the hood (interfaces, mutexes, channels, and goroutines) context allows to implements these mechanisms:
+- **Cancellation**: Canceling a running task/process and their child (wait them to finish or force them to stop).
+- **Timeout**: Automatically stopping a task after a specified duration.
+- **Deadline**: Specifying the time by which a task must be completed.
+- **Values**: 
+    - Passing request-scoped data (e.g. request ID, authentication information, tracing metadata).
+    - Injecting application-wide identifiers (execution ID, tracing data, etc.).
+- **Parent propagation**: Inheriting cancellation, deadlines, or values from another context.
+- **Cancellation signal**: Receiving a `Done()` channel notification when cancellation occurs.
+- **Cancellation reason**: Retrieving a cancellation cause (`context.Cause`).
+
+## Empty Context
+A context, yet, with no mechanism availble (cancellation, timeout, deadline, kvpair).
+
+# Kind
+- root/ not root
 
 
-
-- Custom Context Values: Injecting application-wide identifiers like
-    - a unique execution ID
-    - a tracing data
-
+# Basic workflow
+- create an empty context
+- configure the context - add one or more capability (ie. mechanisms) 
+- pass it to a function
 
 
 # Operation

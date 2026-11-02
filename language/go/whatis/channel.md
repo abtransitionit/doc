@@ -322,3 +322,37 @@ Compare to receiving from an open (but empty) channel, which *blocks* until some
 
 
 So closing is a one-way "I'm done" signal — and that's exactly how `context` tells your goroutine "stop now."
+
+# Rules
+
+
+## Rule 1: Always initialize your channel
+
+```
+ch := make(chan string)
+```
+
+Never try to send or receive from an uninitialized channel.
+
+## Rule 2: Use `select` when you don't want to wait forever
+
+```
+select {
+case msg := <-ch:
+    fmt.Println(msg)
+
+default:
+    fmt.Println("Nothing to receive")
+}
+```
+
+That's it!
+
+Remember:
+
+- `make(chan T)` → Create a channel.
+- `<-ch` → Wait for a message.
+- `select + default` → Don't wait if nothing is available.
+- `close(ch)` → Signal that no more values will be sent.
+
+My advice: Don't overcomplicate channels yet. Master sending, receiving and closing first.
