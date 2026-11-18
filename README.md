@@ -5,6 +5,7 @@
 
 Welcome to the organization knowledge portal. This workspace is organized into distinct spaces. Whenever possible, it uses the [controlled vocabulary][cv whatis] when writing or updating any document to ensure consistent terminology across the knowledge base.
 
+This system try to strickly follows the concept of single source of trust at any level of the documentation
 
 
 
