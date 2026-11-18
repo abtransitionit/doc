@@ -12,7 +12,7 @@
 
 # What is a AI Model
 
-[↑ Howro][howto topic]
+[↑ Howto][howto topic]
 
 </div>
 
