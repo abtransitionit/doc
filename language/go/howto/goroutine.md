@@ -49,7 +49,7 @@ func sayHello() {
 - `main()`: the parent of `sayhello()`
 - `main()`: 
     - launch `sayhello()`
-    - immediatly after launch other instructions
+    - immediatly after, it launches other instructions
     - ends ... 
     - Maybe `sayHello()` has not finished is job ⇒ `sayHello()` is killed as parent ends
 
