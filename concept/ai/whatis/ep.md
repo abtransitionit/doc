@@ -24,6 +24,31 @@ The concept of AI
 
 
 
+# Todo
+- Tous les LLM sont des IA generatives
+- Tous les IA generatives ne sont pas des IA generatives
+- ChatGPT est basé sur 1 LLM
+- reseau de neurone: transformer: image, son, text
+- IA generatives englobe les LLM
+- IA Generatives dépassé par IA Agentique
+- LLM = anticipé quel va être le bion prochain mot
+    - entrainement = 1 algo = reproduire des texte humains = le prochain mots 
+    - generateur = 1 algo = 
+- 1 Token = 1 mot = 
+- Taille des LLM
+    - 2019 = GPT2 = 
+    - 20xx = GPT3 = 
+        - Technique d'apprentissage = alignement des modèles
+    - 20xx = GPT4 = 
+        - peux garder en memoire plusiuers milliers de page pour trouver le mot suivant
+- Detecteur d'IA dans les livres
+- technique
+    - supervisé = etant donné 1 text = puis-je attacher une étiquette humain/artificiel
+    - non supervisé
+- technique
+    - classification
+- Definir des metrique
+
 # Acronym
 
 | Term  | Meaning                                |
