@@ -28,3 +28,9 @@ Related topics
 # find all SUID file
 find / -perm -4000 -type f 2>/dev/null
 ```
+
+```sh
+# find all file containing the string "res.Path"
+find . -type f -exec grep -l 'res.Path' {} +
+find . -type f -exec grep -nH 'res.Path' {} +
+```
